@@ -1,0 +1,46 @@
+# Cisco CE Video Endpoints Macros - Language Selector
+This macro runs on any Cisco Video endpoint runnng CE firmware CE9.2.1 or newer.
+
+The learning sample gadget demonstrates how to use the User and Dialog objects. There is step-by-step instructions on how to instantiate the User and Dialog objects, get User and Dialog data, change the user's state, place a call, and create a screenpop in an iframe by building a url using a Dialog's call variable.
+
+![Sample Gadget Screenshot](Screenshot.png)
+
+This sample gadget contains the following files:
+
+     macro-samples/
+	readme.txt
+	language-selector/
+		language-selector.js
+		language-selector.js.xml
+
+
+## Requirements
+1. Cisco Video endpoint (MX, SX, DX and Room Kit devices)
+2. Firmware CE9.2.1 or newer.
+3. Admin user access to endpoint
+
+## Usage
+1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+
+## Additional Information
+##### XAPI
+Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
+
+## Disclaimer
+This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
+
+The sample macross are meant to:
+- Illustrate how to use the CE Macros.
+- Serve as an example of the step by step process of building a macro using the XAPI JavaScript Library
+- Provided as a guide for a developer to see how to initialize a macro and set up handlers for user and dialog updates.
+
+The sample macros are made available to Cisco partners and customers as a convenience to help minimize the cost of Cisco Finesse customizations. Cisco does not permit the use of this library in customer deployments that do not include Cisco Video Endpoint Hardware.
+
+## Support Notice
+[Support](http://developer.cisco.com/site/devnet/support) for the JavaScript library is provided on a "best effort" basis via DevNet. Like any custom deployment, it is the responsibility of the partner and/or customer to ensure that the customization works correctly and this includes ensuring that the macro is properly integrated into 3rd party applications.
+
+It is Cisco's intention to ensure macro compatibility across versions as much as possible and Cisco will make every effort to clearly document any differences in the XAPI across versions in the event that a backwards compatibility impacting change is made.
+
+Cisco Systems, Inc.<br>
+[http://www.cisco.com](http://www.cisco.com)<br>
+[http://developer.cisco.com/site/xapi](http://developer.cisco.com/site/xapi)

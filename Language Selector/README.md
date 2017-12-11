@@ -1,19 +1,24 @@
-# Cisco CE Video Endpoints Macros
-Here you can find a selection of macros for CE Video Endpoints. Macros is a great new feature intruduced in CE9.2 that allows you to write
+# Cisco CE Video Endpoints Macros - Language Selector
+This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to select the menu language on the Touch 10 and OSD on the video endpoint.
 
-Macros available:
+---
+Snapshot of Touch 10 Home Screen Panel with language selector:
+![Sample In-Room Control Screenshot](languageselector_homescreen.png)
+Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
+![Sample In-Room Control Screenshot](languageselector_panel_selected.png)
+---
 
 
-| Macro        | Description           |
-| :------------- |:-------------|
-| Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
-| AppleTV Control      | Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.      |
-| Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
-| One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
-| Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
-| SX80 GPIO | See how to get the SX80 codec to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
-| Video Compositing | TC Console is no longer supported on CE firmware. But with Macros and In-Room controls and APIs you have more options and flexibility than ever. |
+This sample gadget contains the following files:
 
+     macro-samples/
+	readme.txt
+	language-selector/
+		README.md (this file)
+		language-selector.js (the macro)
+		language-selector.js.xml (in-room control definition file)
+		languageselector_homescreen.png (sample image)
+		languageselector_panel_selected.png (sample image)
 
 
 ## Requirements
