@@ -13,7 +13,7 @@ This sample gadget contains the following files:
 
      macro-samples/
 	readme.txt
-	language-selector/
+	AppleTV Control/
 		README.md (this file)
 		AppleTV.js (the macro)
 		appletv.xml (in-room control definition file)
