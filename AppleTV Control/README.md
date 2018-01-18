@@ -1,10 +1,10 @@
-# Cisco CE Video Endpoints Macros - Language Selector
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to select the menu language on the Touch 10 and OSD on the video endpoint.
+# Cisco CE Video Endpoints Macros - Apple TV Controls
+This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to control an Apple TV directly via HDMI using CEC using the Touch 10.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with language selector:
+Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
 ![Sample In-Room Control Screenshot](languageselector_homescreen.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
+Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selector:
 ![Sample In-Room Control Screenshot](languageselector_panel_selected.png)
 ---
 
@@ -15,14 +15,14 @@ This sample gadget contains the following files:
 	readme.txt
 	language-selector/
 		README.md (this file)
-		language-selector.js (the macro)
-		language-selector.js.xml (in-room control definition file)
-		languageselector_homescreen.png (sample image)
-		languageselector_panel_selected.png (sample image)
+		AppleTV.js (the macro)
+		appletv.xml (in-room control definition file)
+		appleTV_homescreen.png (sample image)
+		appleTV_panel_selected.png (sample image)
 
 
 ## Requirements
-1. Cisco Video endpoint (MX, SX, DX and Room Kit devices)
+1. Cisco Video room device (Room Kit devices only)
 2. Firmware CE9.2.1 or newer.
 3. Admin user access to endpoint
 
