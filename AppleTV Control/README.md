@@ -3,9 +3,9 @@ This macro and corresponding In-Room Control sample demonstrates how to create a
 
 ---
 Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
-![Sample In-Room Control Screenshot](languageselector_homescreen.png)
+![Sample In-Room Control Screenshot](appleTV_homescreen.png)
 Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selector:
-![Sample In-Room Control Screenshot](languageselector_panel_selected.png)
+![Sample In-Room Control Screenshot](appleTV_panel_selected.png)
 ---
 
 
