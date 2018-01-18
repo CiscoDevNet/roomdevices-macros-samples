@@ -1,0 +1,33 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel-1</PanelId>
+    <Type>Home</Type>
+    <Icon>Tv</Icon>
+    <Order>1</Order>
+    <Name>Apple TV</Name>
+    <Page>
+      <Name>Apple TV</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>appletv_navigator</WidgetId>
+          <Type>DirectionalPad</Type>
+          <Options>size=4</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>appletv_menu</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=list</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>appletv_play</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=play_pause</Options>
+        </Widget>
+      </Row>
+      <PageId>AppleTV</PageId>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>
