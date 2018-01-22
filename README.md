@@ -1,5 +1,5 @@
-# Cisco CE Video Endpoints Macros
-Here you can find a selection of macros for CE Video Endpoints. Macros is a great new feature intruduced in CE9.2 that allows you to write
+# Cisco CE Room Devices - Macros
+Here you can find a selection of macros for CE Room Devices. Macros is a great new feature intruduced in CE9.2 that allows you to customise your Room Device. It it especially powerful in combination with the In-Room Control Extensions of the Cisco Touch 10 Control Panel.
 
 Macros available:
 
@@ -22,9 +22,10 @@ Macros available:
 2. Firmware CE9.2.1 or newer.
 3. Admin user access to endpoint
 
-## Usage
-1. Read the document [Working with Macros and In-room Controls](https://www.cisco.com/c/dam/en/us/td/docs/telepresence/endpoint/ce92/sx-mx-dx-room-kit-customization-guide-ce92.pdf) for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+## Getting Started
+1. Read the document [Working with Macros and In-room Controls](https://www.cisco.com/c/dam/en/us/td/docs/telepresence/endpoint/ce92/sx-mx-dx-room-kit-customization-guide-ce92.pdf) for a comprehensive introduction of In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
 2. Watch this video for a quick introduction of what In-Room Controls are: https://www.youtube.com/watch?v=7dw9zvvitp8
+
 
 ## Additional Information
 ##### XAPI
