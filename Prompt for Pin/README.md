@@ -1,6 +1,10 @@
 # Cisco CE Video Endpoints Macros - Prompt for Pin
 This macro and corresponding In-Room Control sample demonstrates how to automatically show a prompt for pin on the touch 10 when calling a webex bridge. It can easily be changed to get the same behavior for any number/calling service of your liking.
 
+---
+Snapshot of Touch 10 Home Screen Panel with input prompt:
+![Sample Touch Panel Screenshot](Touch10_sampleprompt.png)
+
 This sample gadget contains the following files:
 
      macro-samples/
@@ -8,6 +12,7 @@ This sample gadget contains the following files:
 	Prompt for Pin/
 		README.md (this file)
 		prompt_for_pin.js (the macro)
+    Touch10_sampleprompt.png (Example of input on Touch 10)
 
 ## Requirements
 1. Cisco Video room device
