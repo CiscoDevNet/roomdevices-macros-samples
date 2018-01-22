@@ -7,7 +7,7 @@ Snapshot of Touch 10 Home Screen Panel with input prompt:
 
 This sample gadget contains the following files:
 
-     macro-samples/
+macro-samples/
 	readme.txt
 	Prompt for Pin/
 		README.md (this file)
@@ -15,8 +15,8 @@ This sample gadget contains the following files:
     Touch10_sampleprompt.png (Example of input on Touch 10)
 
 ## Requirements
-1. Cisco Video room device
-2. Firmware CE9.2.1 or newer.
+1. Cisco Room Device with Touch 10 touchpanel
+2. Firmware CE9.2.1 or newer
 3. Admin user or integrator access to endpoint
 
 ## Usage
