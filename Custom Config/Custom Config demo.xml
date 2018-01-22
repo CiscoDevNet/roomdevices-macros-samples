@@ -1,0 +1,95 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel_1</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Sliders</Icon>
+    <Order>1</Order>
+    <Name>Custom Configs Demo</Name>
+    <Page>
+      <Name>Custom Configurations</Name>
+      <Row>
+        <Name>System State</Name>
+        <Widget>
+          <WidgetId>systemstate</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>standby</Key>
+              <Name>Standby</Name>
+            </Value>
+            <Value>
+              <Key>halfwake</Key>
+              <Name>Halfwake</Name>
+            </Value>
+            <Value>
+              <Key>awake</Key>
+              <Name>Awake</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Self View</Name>
+        <Widget>
+          <WidgetId>selfview</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>off</Key>
+              <Name>Off</Name>
+            </Value>
+            <Value>
+              <Key>pip</Key>
+              <Name>PIP</Name>
+            </Value>
+            <Value>
+              <Key>fullscreen</Key>
+              <Name>Fullscreen</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Speaker Track Demo</Name>
+        <Widget>
+          <WidgetId>diagnostics_onoff</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Room Volume</Name>
+        <Widget>
+          <WidgetId>volume</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Room Presets</Name>
+        <Widget>
+          <WidgetId>roompreset_reset</WidgetId>
+          <Name>Set to Default Experience</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>roompreset_boardroom</WidgetId>
+          <Name>Boardroom Meeting</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>roompreset_er</WidgetId>
+          <Name>Experience Review</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
