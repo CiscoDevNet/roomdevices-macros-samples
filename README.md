@@ -48,4 +48,4 @@ It is Cisco's intention to ensure macro compatibility across versions as much as
 
 Cisco Systems, Inc.<br>
 [http://www.cisco.com](http://www.cisco.com)<br>
-[http://developer.cisco.com/site/xapi](http://developer.cisco.com/site/xapi)
+[http://developer.cisco.com/site/roomdevices](http://developer.cisco.com/site/roomdevices)
