@@ -6,8 +6,9 @@ Macros available:
 
 | Macro        | Description           |
 | :------------- |:-------------|
-| Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
 | AppleTV Control      | Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.      |
+| Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
+| Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
 | Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
 | One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
 | Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
@@ -17,12 +18,13 @@ Macros available:
 
 
 ## Requirements
-1. Cisco Video endpoint (MX, SX, DX and Room Kit devices)
+1. Cisco Room Device (MX, SX, DX and Room Kit series)
 2. Firmware CE9.2.1 or newer.
 3. Admin user access to endpoint
 
 ## Usage
-1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+1. Read the document [Working with Macros and In-room Controls](https://www.cisco.com/c/dam/en/us/td/docs/telepresence/endpoint/ce92/sx-mx-dx-room-kit-customization-guide-ce92.pdf) for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+2. Watch this video for a quick introduction of what In-Room Controls are: https://www.youtube.com/watch?v=7dw9zvvitp8
 
 ## Additional Information
 ##### XAPI
