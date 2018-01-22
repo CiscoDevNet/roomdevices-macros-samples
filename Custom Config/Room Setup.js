@@ -4,7 +4,7 @@ function showRoomSetupNotification(eventtext){
     eventtext = eventtext.replace(/\"/g,"'"); // replace double quotes wiht single quotes for rendering purposes
     console.log(eventtext);
     xapi.command("UserInterface Message Alert Display", {Text: eventtext, Duration: 5});
-     
+
 }
 
 xapi.status.on('Audio Volume', (volume) => {
@@ -59,7 +59,7 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                     xapi.command("UserInterface Extensions Widget SetValue", {WidgetId: 'systemstate', Value: 'halfwake'});
                     break;
                 case 'awake':
-                    xapi.command("Standby Dectivate");
+                    xapi.command("Standby Deactivate");
                     xapi.command("UserInterface Extensions Widget SetValue", {WidgetId: 'systemstate', Value: 'awake'});
                     break;
             }
