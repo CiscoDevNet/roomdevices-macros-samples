@@ -35,7 +35,7 @@ This sample gadget contains the following files:
 ## Setup
 
 1. Connect the Apple TV device to the Cisco Room Device on one of the HDMI Inputs.
-2. Ensure that CEC is enabled for the input. This can be set using the configuration **xConfiguration Video Input Connector[*n*] CEC Mode** where *n* is the number of the HDMI input used.
+2. Ensure that CEC is enabled for this HDMI input. This can be set using the configuration **xConfiguration Video Input Connector[*n*] CEC Mode** where *n* is the number of the HDMI input used.
 3. Open up the AppleTV.js macro file. At the top of the macro there are two variables that you may need to configure.
     * *CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED*: Set this to the same input number (n) as in step 2
     * *CEC_LOGICAL_ADDRESS_FOR_APPLETV*: This is the CEC device number that the APPLE TV will have gotten from the CEC device list. You can find the assigned logical address by looking at the input status on the video endpoint by issuing **xStatus Video Input Connector ConnectedDevice CEC LogicalAddress**
