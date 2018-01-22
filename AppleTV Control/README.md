@@ -24,10 +24,23 @@ This sample gadget contains the following files:
 ## Requirements
 1. Cisco Video room device (Room Kit devices only)
 2. Firmware CE9.2.1 or newer.
-3. Admin user access to endpoint
+3. Apple TV
+4. Admin user access to endpoint
+5. CEC Mode enabled on the Input where the Apple TV is connected. See Setup
 
 ## Usage
 1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+
+
+## Setup
+
+1. Connect the Apple TV device to the Cisco Room Device on one of the HDMI Inputs.
+2. Ensure that CEC is enabled for the input. This can be set using the configuration **xConfiguration Video Input Connector[*n*] CEC Mode** where *n* is the number of the HDMI input used.
+3.
+4. Open up the AppleTV.js macro file. At the top of the macro there are two variables that you may need to configure.
+    * CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED: Set this to the same input number (n) as in step 2
+    * CEC_LOGICAL_ADDRESS_FOR_APPLETV: This is the CEC device number that the APPLE TV will have gotten from the CEC device list. You can find the assigned logical address by looking at the input status on the video endpoint by issuing **xStatus Video Input Connector ConnectedDevice CEC LogicalAddress**
+    
 
 ## Additional Information
 ##### XAPI
