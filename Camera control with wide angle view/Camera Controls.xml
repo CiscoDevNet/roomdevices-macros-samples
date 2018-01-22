@@ -1,0 +1,44 @@
+﻿<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel_1</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Camera</Icon>
+    <Order>1</Order>
+    <Name>Camera Control</Name>
+    <Page>
+      <Name>Camera Control</Name>
+      <Row>
+        <Name>Set active camera</Name>
+        <Widget>
+          <WidgetId>camera_left</WidgetId>
+          <Name>Left</Name>
+          <Type>Button</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>camera_right</WidgetId>
+          <Name>Right</Name>
+          <Type>Button</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>camera_wide</WidgetId>
+          <Name>Both (Wide Angle)</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Camera Control</Name>
+        <Widget>
+          <WidgetId>cameracontrol</WidgetId>
+          <Type>DirectionalPad</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <PageId>cameracontrol</PageId>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>

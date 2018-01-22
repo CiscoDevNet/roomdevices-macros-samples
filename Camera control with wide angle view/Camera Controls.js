@@ -1,5 +1,11 @@
 const xapi = require('xapi');
 
+const CAMERAID_CAMERA_LEFT = 1;
+const CAMERAID_CAMERA_RIGHT = 2;
+
+const CAMERACONNECTORID_CAMERA_LEFT = 1;
+const CAMERACONNECTORID_CAMERA_RIGHT = 2;
+
 let camera1active = false;
 let camera2active = false;
 
@@ -8,25 +14,21 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
   if (event.Type == 'clicked'){
         switch(event.WidgetId){
             case 'camera_left':
-                xapi.command("Camera PositionSet", {CameraId: '1',Tilt: '0',Pan: '0',Zoom: '8500'});
-                xapi.command("Video Input ComposedMainSource Delete");
-                xapi.command("Video Input SetMainVideoSource", {ConnectorId: '1'});
+                xapi.command("Camera PositionSet", {CameraId: CAMERAID_CAMERA_LEFT,Tilt: '0',Pan: '0',Zoom: '8500'});
+                xapi.command("Video Input SetMainVideoSource", {ConnectorId: CAMERACONNECTORID_CAMERA_LEFT});
                 camera1active = true;
                 camera2active = false;
                 break;
             case 'camera_right':
-                xapi.command("Camera PositionSet", {CameraId: '2',Tilt: '0',Pan: '0',Zoom: '8500'});
-                xapi.command("Video Input ComposedMainSource Delete");
-                xapi.command("Video Input SetMainVideoSource", {ConnectorId: '3'});
+                xapi.command("Camera PositionSet", {CameraId: CAMERAID_CAMERA_RIGHT,Tilt: '0',Pan: '0',Zoom: '8500'});
+                xapi.command("Video Input SetMainVideoSource", {ConnectorId: CAMERACONNECTORID_CAMERA_RIGHT});
                 camera1active = false;
                 camera2active = true;
                 break;
             case 'camera_wide':
-                xapi.command("Camera PositionSet", {CameraId: '1',Tilt: '260',Pan: '4320',Zoom: '8500'});
-                xapi.command("Camera PositionSet", {CameraId: '2',Tilt: '400',Pan: '-3500',Zoom: '8500'});
-                xapi.command("Video Input ComposedMainSource Delete");
-                xapi.command("Video Input ComposedMainSource Add", {ConnectorId: '1'});
-                xapi.command("Video Input ComposedMainSource Add", {ConnectorId: '3'});
+                xapi.command("Camera PositionSet", {CameraId: CAMERAID_CAMERA_LEFT,Tilt: '260',Pan: '4320',Zoom: '8500'});
+                xapi.command("Camera PositionSet", {CameraId: CAMERAID_CAMERA_RIGHT,Tilt: '400',Pan: '-3500',Zoom: '8500'});
+                xapi.command("Video Input SetMainVideoSource", {ConnectorId: [CAMERACONNECTORID_CAMERA_LEFT, CAMERACONNECTORID_CAMERA_RIGHT]});
                 camera1active = true;
                 camera2active = true;
                 break;
@@ -47,8 +49,8 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                         //noop
                     }
                     else{
-                        camera1active && xapi.command("Camera Ramp", {CameraId: '1',Pan: 'Right'});
-                        camera2active && xapi.command("Camera Ramp", {CameraId: '2',Pan: 'Right'});
+                        camera1active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_LEFT,  Pan: 'Right'});
+                        camera2active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_RIGHT, Pan: 'Right'});
                     }
                  break;
                 case 'left':
@@ -56,28 +58,28 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                         //noop
                     }
                     else{
-                        camera1active && xapi.command("Camera Ramp", {CameraId: '1',Pan: 'Left'});
-                        camera2active && xapi.command("Camera Ramp", {CameraId: '2',Pan: 'Left'});
+                        camera1active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_LEFT,  Pan: 'Left'});
+                        camera2active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_RIGHT, Pan: 'Left'});
                     }
                  break;
                 case 'up':
-                     camera1active && xapi.command("Camera Ramp", {CameraId: '1',Tilt: 'Up'});
-                     camera2active && xapi.command("Camera Ramp", {CameraId: '2',Tilt: 'Up'});
+                     camera1active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_LEFT,  Tilt: 'Up'});
+                     camera2active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_RIGHT, Tilt: 'Up'});
                  break;
                 case 'down':
-                     camera1active && xapi.command("Camera Ramp", {CameraId: '1',Tilt: 'Down'});
-                     camera2active && xapi.command("Camera Ramp", {CameraId: '2',Tilt: 'Down'});
+                     camera1active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_LEFT,  Tilt: 'Down'});
+                     camera2active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_RIGHT, Tilt: 'Down'});
                  break;
                 case 'center':
-                    xapi.command("Camera PositionReset", {CameraId: '1'});
+                    xapi.command("Camera PositionReset", {CameraId: CAMERAID_CAMERA_LEFT});
                  break;
                 default:
                  console.log(`Unhandled Navigation`);
             }
         }
         else if(event.Type == 'released'){
-                camera1active && xapi.command("Camera Ramp", {CameraId: '1',Tilt: 'Stop',Pan: 'Stop'});
-                camera2active && xapi.command("Camera Ramp", {CameraId: '2',Tilt: 'Stop',Pan: 'Stop'});
+                camera1active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_LEFT, Tilt: 'Stop',Pan: 'Stop'});
+                camera2active && xapi.command("Camera Ramp", {CameraId: CAMERAID_CAMERA_RIGHT,Tilt: 'Stop',Pan: 'Stop'});
         }
     }
 
