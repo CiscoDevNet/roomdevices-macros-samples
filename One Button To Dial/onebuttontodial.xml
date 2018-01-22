@@ -1,0 +1,22 @@
+﻿<Extensions>
+  <Version>1.4</Version>
+  <Panel>
+    <Icon>Handset</Icon>
+    <Type>Home</Type>
+    <Page>
+      <Name>Dialling</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>text</WidgetId>
+          <Name>Number is being dialled</Name>
+          <Type>Text</Type>
+          <Options>size=4;align=center;fontSize=normal</Options>
+        </Widget>
+      </Row>
+      <PageId>speed_dial</PageId>
+      <Options>hideRowNames=1</Options>
+    </Page>
+    <Name>Press me to dial</Name>
+  </Panel>
+</Extensions>
