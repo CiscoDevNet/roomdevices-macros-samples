@@ -1,4 +1,4 @@
-# Cisco CE Video Endpoints Macros - Apple TV Controls
+# Cisco CE Room Devices Macros - Speed Dials
 This macro and corresponding In-Room Control sample demonstrates how to create an in-room control panel with speed dials on the Touch 10.
 
 ---
@@ -32,7 +32,7 @@ This sample gadget contains the following files:
 
 ## Setup
 
-1. Open the JavaScript file and change the numbers that the speed dial buttons will dial. 
+1. Open the JavaScript file and change the numbers that the speed dial buttons will dial.
 
 
 ## Additional Information
