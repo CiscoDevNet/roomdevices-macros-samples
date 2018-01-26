@@ -1,44 +1,17 @@
-# Cisco CE Video Endpoints Macros - Apple TV Controls
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to control an Apple TV directly via HDMI using CEC using the Touch 10.
-
----
-Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
-![Sample In-Room Control Screenshot](appleTV_homescreen.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selector:
-![Sample In-Room Control Screenshot](appleTV_panel_selected.png)
----
+# Cisco CE Video Endpoints Macros - CodingExamples
+Here we will add more coding related examples on how to work with the macro language.
 
 
-This sample gadget contains the following files:
+| Macro        | Description           |
+| :------------- |:-------------|
+| multipleEqualAttributes      | How to deal with commands that allow multiple equal attributes      |
 
-     macro-samples/
-	readme.txt
-	AppleTV Control/
-		README.md (this file)
-		AppleTV.js (the macro)
-		appletv.xml (in-room control definition file)
-		appleTV_homescreen.png (sample image)
-		appleTV_panel_selected.png (sample image)
 
 
 ## Requirements
-1. Cisco Video room device (Room Kit devices only)
+1. Cisco Video room device
 2. Firmware CE9.2.1 or newer.
-3. Apple TV
-4. Admin user access to endpoint
-5. CEC Mode enabled on the Input where the Apple TV is connected. See Setup
 
-## Usage
-1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
-
-
-## Setup
-
-1. Connect the Apple TV device to the Cisco Room Device on one of the HDMI Inputs.
-2. Ensure that CEC is enabled for this HDMI input. This can be set using the configuration **xConfiguration Video Input Connector[*n*] CEC Mode** where *n* is the number of the HDMI input used.
-3. Open up the AppleTV.js macro file. At the top of the macro there are two variables that you may need to configure.
-    * *CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED*: Set this to the same input number (n) as in step 2
-    * *CEC_LOGICAL_ADDRESS_FOR_APPLETV*: This is the CEC device number that the APPLE TV will have gotten from the CEC device list. You can find the assigned logical address by looking at the input status on the video endpoint by issuing **xStatus Video Input Connector ConnectedDevice CEC LogicalAddress**
 
 
 ## Additional Information
