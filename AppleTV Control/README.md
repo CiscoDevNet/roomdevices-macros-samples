@@ -12,7 +12,6 @@ Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selec
 This sample gadget contains the following files:
 
      macro-samples/
-	readme.txt
 	AppleTV Control/
 		README.md (this file)
 		AppleTV.js (the macro)

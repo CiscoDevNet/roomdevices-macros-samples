@@ -8,7 +8,6 @@ Snapshot of Touch 10 Home Screen Panel with input prompt:
 This sample gadget contains the following files:
 
 macro-samples/
-	readme.txt
 	Prompt for Pin/
 		README.md (this file)
 		prompt_for_pin.js (the macro)

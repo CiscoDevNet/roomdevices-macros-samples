@@ -10,7 +10,6 @@ Snapshot of Touch 10 Home Screen Panel for the camera control selector:
 This sample gadget contains the following files:
 
      macro-samples/
-	readme.txt
 	Camera control with wide angle view/
 		README.md (this file)
 		Camera Controls.js (the macro)

@@ -12,7 +12,6 @@ Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
 This sample gadget contains the following files:
 
      macro-samples/
-	readme.txt
 	language-selector/
 		README.md (this file)
 		language-selector.js (the macro)

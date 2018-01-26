@@ -10,8 +10,7 @@ Snapshot of Touch 10 Home Screen Panel with  Speed Dial Control:
 This sample gadget contains the following files:
 
      macro-samples/
-	readme.txt
-	Speed Dials/
+	One Button To Dial/
 		README.md (this file)
 		onebuttontodial.js (the macro)
 		onebuttontodial.xml (in-room control definition file)

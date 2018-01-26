@@ -12,7 +12,6 @@ Snapshot of Touch 10 Home Screen Panel after pressing the Speed Dial selector:
 This sample gadget contains the following files:
 
      macro-samples/
-	readme.txt
 	Speed Dials/
 		README.md (this file)
 		Speed Dials.js (the macro)
