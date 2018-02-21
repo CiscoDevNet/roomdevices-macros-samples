@@ -1,13 +1,13 @@
 const xapi = require('xapi');
 const CEC_LOGICAL_ADDRESS_FOR_APPLETV = 4;
-const CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED = 1;
+const CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED = 2;
 
-const signinsequence = [ 'Right','Right','Right','Right', 'Ok', 'Left', 'Left', 'Left','Ok']; 
+const signinsequence = [ 'Right','Right','Right','Right', 'Ok', 'Left', 'Left', 'Left','Ok'];
 
 
 function sendCEC(key){
-    var cecstring = 'Video CEC KeyClick ConnectorDirection: Input ConnectorId: ' + CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED + ' LogicalAddress:' + CEC_LOGICAL_ADDRESS_FOR_APPLETV + ' NamedKey: ' + key;
-    xapi.command('Video CEC KeyClick', {ConnectorDirection: 'Input',  ConnectorId: CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED, LogicalAddress:CEC_LOGICAL_ADDRESS_FOR_APPLETV, NamedKey: key});
+    var cecstring = 'Video CEC Input KeyClick ConnectorId: ' + CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED + ' LogicalAddress:' + CEC_LOGICAL_ADDRESS_FOR_APPLETV + ' NamedKey: ' + key;
+    xapi.command('Video CEC Input KeyClick', {ConnectorId: CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED, LogicalAddress:CEC_LOGICAL_ADDRESS_FOR_APPLETV, NamedKey: key});
      console.log(`CEC command sent:` + cecstring);
 }
 
@@ -33,7 +33,7 @@ xapi.event.on('UserInterface Extensions Page Action', (event) => {
     if(event.PageId == 'AppleTV'){
         if(event.Type == 'Opened'){
          console.log(`AppleTV was opened`);
-         xapi.command('Presentation Start', {ConnectorId: '1'});
+         xapi.command('Presentation Start', {ConnectorId: CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED});
         }
         else{
          console.log(`AppleTV was closed`);
@@ -71,16 +71,16 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
         if(event.Type == 'clicked'){
              sendCEC('Back');
         }
-    }    
+    }
     else if(event.WidgetId == 'appletv_play'){
         if(event.Type == 'clicked'){
              sendCEC('Play');
         }
-    }    
+    }
     else if(event.WidgetId == 'appletv_signin'){
         if(event.Type == 'clicked'){
             sendCECSequence.apply(this, signinsequence);
         }
-    }    
+    }
 
 });
