@@ -12,7 +12,7 @@ Snapshot of Touch 10 Home Screen Panel after pressing the Dial Pad selector:
 This sample gadget contains the following files:
 
      macro-samples/
-	AppleTV Control/
+	Custom Dial Pad/
 		README.md (this file)
 		Dial Pad dialler.js (the macro)
 		roomcontrolconfig - dialpad.xml (in-room control definition file)
