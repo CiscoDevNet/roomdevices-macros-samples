@@ -16,7 +16,7 @@ Macros available:
 | Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
 | SX80 GPIO | See how to get the SX80 codec to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
 | Video Compositing | TC Console is no longer supported on CE firmware. But with Macros and In-Room controls and APIs you have more options and flexibility than ever. |
-
+|  Custom Dial Pad  |  Add a custom 10-digit Dial Pad to your Touch 10
 
 
 ## Requirements
