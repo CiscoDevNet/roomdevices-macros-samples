@@ -1,0 +1,9 @@
+<Extensions><Version>1.5</Version><Panel>
+    <PanelId>audiocall</PanelId>
+    <Type>Home</Type>
+    <Icon>Handset</Icon>
+    <Order>1</Order>
+    <Color>#30D557</Color>
+    <Name>Audio Call</Name>
+  </Panel>
+  </Extensions>
