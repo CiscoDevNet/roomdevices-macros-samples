@@ -1,0 +1,47 @@
+<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>panel_6</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Concierge</Icon>
+    <Order>5</Order>
+    <Color>#00D6A2</Color>
+    <Name>Timer</Name>
+    <Page>
+      <Name>Timer</Name>
+      <Row>
+        <Name>Egg timer (minutes)</Name>
+        <Widget>
+          <WidgetId>timer_quick_options</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>5</Key>
+              <Name>5</Name>
+            </Value>
+            <Value>
+              <Key>10</Key>
+              <Name>10</Name>
+            </Value>
+            <Value>
+              <Key>15</Key>
+              <Name>15</Name>
+            </Value>
+            <Value>
+              <Key>20</Key>
+              <Name>20</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>timer_text</WidgetId>
+          <Name>Text</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=right</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
