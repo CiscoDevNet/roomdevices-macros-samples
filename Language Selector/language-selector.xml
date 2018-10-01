@@ -1,48 +1,53 @@
-﻿<Extensions>
-  <Version>1.4</Version>
+<Extensions>
+  <Version>1.5</Version>
   <Panel>
-    <Icon>Language</Icon>
+    <PanelId>panel_1</PanelId>
     <Type>Home</Type>
+    <Icon>Language</Icon>
+    <Order>1</Order>
+    <Color>#D541D8</Color>
+    <Name>Language</Name>
     <Page>
-      <Name>Language</Name>
+      <Name>Select Language</Name>
       <Row>
         <Name>Row</Name>
         <Widget>
-          <WidgetId>lang_french</WidgetId>
-          <Name>French</Name>
-          <Type>Button</Type>
-          <Options>size=3</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Row</Name>
-        <Widget>
-          <WidgetId>lang_italian</WidgetId>
-          <Name>Italian</Name>
-          <Type>Button</Type>
-          <Options>size=3</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Row</Name>
-        <Widget>
-          <WidgetId>lang_german</WidgetId>
-          <Name>German</Name>
-          <Type>Button</Type>
-          <Options>size=3</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Row</Name>
-        <Widget>
-          <WidgetId>lang_english</WidgetId>
-          <Name>English</Name>
-          <Type>Button</Type>
-          <Options>size=3</Options>
+          <WidgetId>lang</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=1</Options>
+          <ValueSpace>
+            <Value>
+              <Key>english</Key>
+              <Name>English</Name>
+            </Value>
+            <Value>
+              <Key>norwegian</Key>
+              <Name>Norwegian</Name>
+            </Value>
+            <Value>
+              <Key>arabic</Key>
+              <Name>Arabic</Name>
+            </Value>
+            <Value>
+              <Key>chinesesimplified</Key>
+              <Name>Chinese Simplified</Name>
+            </Value>
+            <Value>
+              <Key>french</Key>
+              <Name>French</Name>
+            </Value>
+            <Value>
+              <Key>hebrew</Key>
+              <Name>Hebrew</Name>
+            </Value>
+            <Value>
+              <Key>spanish</Key>
+              <Name>Spanish</Name>
+            </Value>
+          </ValueSpace>
         </Widget>
       </Row>
       <Options>hideRowNames=1</Options>
     </Page>
-    <Name>Language</Name>
   </Panel>
 </Extensions>

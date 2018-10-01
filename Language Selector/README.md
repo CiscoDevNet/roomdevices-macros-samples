@@ -18,6 +18,7 @@ This sample gadget contains the following files:
 		language-selector.js.xml (in-room control definition file)
 		languageselector_homescreen.png (sample image)
 		languageselector_panel_selected.png (sample image)
+        ProvisionableApplicationPackage_language-selector.zip (Package for provisioning)
 
 
 ## Requirements
