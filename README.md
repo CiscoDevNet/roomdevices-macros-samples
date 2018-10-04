@@ -1,5 +1,5 @@
 # Cisco CE Room Devices - Macros
-Here you can find a selection of macros for CE Room Devices. Macros is a great new feature intruduced in CE9.2 that allows you to customise your Room Device. It it especially powerful in combination with the In-Room Control Extensions of the Cisco Touch 10 Control Panel.
+Here you can find a selection of macros for CE Room Devices. Macros is a great new feature intruduced in CE9.2 that allows you to customise your Room Device. It is especially powerful in combination with the In-Room Control Extensions of the Cisco Touch 10 Control Panel.
 
 Macros available:
 
@@ -7,18 +7,19 @@ Macros available:
 | Macro        | Description           |
 | :------------------------ |:-------------|
 | AppleTV Control      | Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.      |
-| Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
-| CodingExamples      | A collection of small snippets showing more common coding questions related to the macro language and XAPI usage.      |
-| Camera Control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
-| Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
-| Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
-| One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
-| Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
-| SX80 GPIO | See how to get the SX80 codec to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
-| Video Compositing | TC Console is no longer supported on CE firmware. But with Macros and In-Room controls and APIs you have more options and flexibility than ever. |
-| Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
 | Audio Call Dial Pad | Ereate an in-room control application that adds a dedicated audio call dial pad to the Touch 10 |
-
+| Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
+| Camera Control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
+| Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
+| CodingExamples      | A collection of small snippets showing more common coding questions related to the macro language and XAPI usage.      |
+| Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
+| Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
+| One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
+| Prompt for Pin | Automatically show a prompt for pin on the touch 10 when calling a webex bridge  |
+| SX80 GPIO | See how to get the SX80 codec to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
+| Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
+| Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
+| Video Compositing | TC Console is no longer supported on CE firmware. But with Macros and In-Room controls and APIs you have more options and flexibility than ever. |
 
 ## Requirements
 1. Cisco Room Device (MX, SX, DX and Room Kit series)
