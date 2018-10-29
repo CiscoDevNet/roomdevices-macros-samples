@@ -10,9 +10,9 @@ This sample gadget contains the following files:
 
 macro-samples/
 	Prompt for Pin/
-		README.md (this file)
-        QWERTY_Dialling.js (macro)
-        RemoteControl.js ( macro)
+	README.md (this file)
+       QWERTY_Dialling.js (macro)
+       RemoteControl.js ( macro)
     Touch10_sampleprompt.png (Example of input on Touch 10)
 
 ## Requirements

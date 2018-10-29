@@ -1,22 +1,20 @@
-# Cisco CE Video Endpoints Macros - Keyboard and RF Remote Controls
+# Cisco CE Video Endpoints Macros - Using USB input devices like Keyboard and RF Remote Controls to control the Room Devices.
 These macros demonstrate how to control a Cisco video endpoint using a USB Keyboard - or other input devices like remote controls buttons that uses USB and reports itself as a keybyard/H.I.D. device.
-The devices support standard USB Keyboards and should work with basically any type of keyboard. However, as we/Cisco have not tested all devices.
+The devices support standard USB Keyboards and should work with basically any type of keyboard. However, Cisco has not tested all devices.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with input prompt:
-![Sample Touch Panel Screenshot](Touch10_sampleprompt.png)
 
 This sample gadget contains the following files:
 
 macro-samples/
 	Prompt for Pin/
 	README.md (this file)
-       QWERTY_Dialling.js (macro)
-       RemoteControl.js ( macro)
-    Touch10_sampleprompt.png (Example of input on Touch 10)
+       QWERTY_Dialling.js (macro that allows dialling using a standard keyboard)
+       RemoteControl.js (macro that shows an example of binding button presses to device actions)
+
 
 ## Requirements
-1. SupporteddCisco Room Devices: All Room Kits (CE9.5). DX70, DX80.
+1. Supported Cisco Room Devices: All Room Kits (CE9.5). DX70, DX80.
 2. Firmware CE9.5 or newer. CE9.6/RoomOS October for DX Series.
 3. Admin user access to API
 
