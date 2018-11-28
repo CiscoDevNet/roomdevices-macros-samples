@@ -51,7 +51,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
             if (match !== null) {
                 var numbertodial = match[1];
                 numbertodial = DIALPREFIX_AUDIO_GATEWAY + numbertodial; // Here you can do some massaging of the number to dial, e.g. if it need prefixing or postfixing 
-                 xapi.command("dial", {Number: numbertodial, CallRate: '64', CallType: CALL_TYPES.AUDIO}).catch((error) => { console.error(error); });
+                 xapi.command("dial", {Number: numbertodial, CallType: CALL_TYPES.AUDIO}).catch((error) => { console.error(error); });
 
             }
             else{

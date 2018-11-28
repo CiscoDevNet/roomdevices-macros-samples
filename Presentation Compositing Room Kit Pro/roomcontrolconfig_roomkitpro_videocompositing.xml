@@ -1,7 +1,7 @@
 <Extensions>
   <Version>1.5</Version>
   <Panel>
-    <PanelId>multiline_demo</PanelId>
+    <PanelId>layout_demo</PanelId>
     <Type>Statusbar</Type>
     <Icon>Laptop</Icon>
     <Order>1</Order>
@@ -27,6 +27,21 @@
             <Value>
               <Key>threeplusthree</Key>
               <Name>3 + 3</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>local_source_layout</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>equal</Key>
+              <Name>Equal</Name>
+            </Value>
+            <Value>
+              <Key>prominent</Key>
+              <Name>Prominent</Name>
             </Value>
           </ValueSpace>
         </Widget>
@@ -245,30 +260,6 @@
       <Row>
         <Name>Main Source Control</Name>
         <Widget>
-          <WidgetId>main_source_layout</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=4</Options>
-          <ValueSpace>
-            <Value>
-              <Key>equal</Key>
-              <Name>Equal</Name>
-            </Value>
-            <Value>
-              <Key>onelarge</Key>
-              <Name>1 large</Name>
-            </Value>
-            <Value>
-              <Key>pip</Key>
-              <Name>PIP</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_6</WidgetId>
-          <Type>Spacer</Type>
-          <Options>size=4</Options>
-        </Widget>
-        <Widget>
           <WidgetId>widget_5</WidgetId>
           <Name>PC 1</Name>
           <Type>Text</Type>
@@ -333,6 +324,72 @@
           <WidgetId>main_source_6</WidgetId>
           <Type>ToggleButton</Type>
           <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Layout</Name>
+        <Widget>
+          <WidgetId>main_source_layout</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>equal</Key>
+              <Name>Equal</Name>
+            </Value>
+            <Value>
+              <Key>onelarge</Key>
+              <Name>1 large</Name>
+            </Value>
+            <Value>
+              <Key>pip</Key>
+              <Name>PIP</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>PIP Size</Name>
+        <Widget>
+          <WidgetId>main_source_PIP_size</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=3</Options>
+          <ValueSpace>
+            <Value>
+              <Key>auto</Key>
+              <Name>Auto</Name>
+            </Value>
+            <Value>
+              <Key>large</Key>
+              <Name>Large</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>PIP Location</Name>
+        <Widget>
+          <WidgetId>main_source_PIP_position</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=2</Options>
+          <ValueSpace>
+            <Value>
+              <Key>UpperLeft</Key>
+              <Name>Upper Left</Name>
+            </Value>
+            <Value>
+              <Key>UpperRight</Key>
+              <Name>Upper Right</Name>
+            </Value>
+            <Value>
+              <Key>LowerLeft</Key>
+              <Name>Lower Left</Name>
+            </Value>
+            <Value>
+              <Key>LowerRight</Key>
+              <Name>Lower Right</Name>
+            </Value>
+          </ValueSpace>
         </Widget>
       </Row>
       <Options/>
@@ -532,49 +589,6 @@
           <WidgetId>dualcontent_presentation_pip</WidgetId>
           <Type>ToggleButton</Type>
           <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Options/>
-    </Page>
-  </Panel>
-  <Panel>
-    <PanelId>panel_lights</PanelId>
-    <Type>Home</Type>
-    <Icon>Lightbulb</Icon>
-    <Order>2</Order>
-    <Color>#aa6633</Color>
-    <Name>Lights</Name>
-    <Page>
-      <Name>Hue Lights</Name>
-      <Row>
-        <Name>Power</Name>
-        <Widget>
-          <WidgetId>hue_power</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Color</Name>
-        <Widget>
-          <WidgetId>hue_color_red</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=red</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_green</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=green</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_blue</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=blue</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_yellow</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=yellow</Options>
         </Widget>
       </Row>
       <Options/>
