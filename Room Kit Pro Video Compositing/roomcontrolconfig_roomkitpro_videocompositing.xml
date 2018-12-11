@@ -1,14 +1,275 @@
 <Extensions>
   <Version>1.5</Version>
   <Panel>
-    <PanelId>multiline_demo</PanelId>
+    <PanelId>layout_demo</PanelId>
     <Type>Statusbar</Type>
     <Icon>Laptop</Icon>
     <Order>1</Order>
-    <Color>#02BBCC</Color>
-    <Name>Custom Share</Name>
+    <Color>#07C1E4</Color>
+    <Name>Layout demos</Name>
+    <Page>
+      <Name>Main Source</Name>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>widget_7</WidgetId>
+          <Name>This shows the main video stream compositing features of a Room Kit Pro</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=left</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Main Source Control</Name>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 1</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_1</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 2</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_2</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 3</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_3</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 4</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_4</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 5</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_5</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 6</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>main_source_6</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Layout</Name>
+        <Widget>
+          <WidgetId>main_source_layout</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>equal</Key>
+              <Name>Equal</Name>
+            </Value>
+            <Value>
+              <Key>onelarge</Key>
+              <Name>1 large</Name>
+            </Value>
+            <Value>
+              <Key>pip</Key>
+              <Name>PIP</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>PIP Size</Name>
+        <Widget>
+          <WidgetId>main_source_PIP_size</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=3</Options>
+          <ValueSpace>
+            <Value>
+              <Key>auto</Key>
+              <Name>Auto</Name>
+            </Value>
+            <Value>
+              <Key>large</Key>
+              <Name>Large</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>PIP Location</Name>
+        <Widget>
+          <WidgetId>main_source_PIP_position</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=2</Options>
+          <ValueSpace>
+            <Value>
+              <Key>UpperLeft</Key>
+              <Name>Upper Left</Name>
+            </Value>
+            <Value>
+              <Key>UpperRight</Key>
+              <Name>Upper Right</Name>
+            </Value>
+            <Value>
+              <Key>LowerLeft</Key>
+              <Name>Lower Left</Name>
+            </Value>
+            <Value>
+              <Key>LowerRight</Key>
+              <Name>Lower Right</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <PageId>mainsource</PageId>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Presentation</Name>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>widget_7</WidgetId>
+          <Name>This shows the presentation stream compositing features of a Room Kit Pro</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=left</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Presentation Control</Name>
+        <Widget>
+          <WidgetId>presentation_source_layout</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>equal</Key>
+              <Name>Equal</Name>
+            </Value>
+            <Value>
+              <Key>onelarge</Key>
+              <Name>1 large</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_6</WidgetId>
+          <Type>Spacer</Type>
+          <Options>size=4</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 1</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_1</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 2</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_2</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 3</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_3</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 4</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_4</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 5</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_5</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_5</WidgetId>
+          <Name>PC 6</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>presentation_source_6</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <PageId>presentationsource</PageId>
+      <Options/>
+    </Page>
     <Page>
       <Name>Local Layouts</Name>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>widget_7</WidgetId>
+          <Name>This shows the local video matrix compositing features of a Room Kit Pro. In CE9.6 you can also do local compositing with remote sites video stream</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=left</Options>
+        </Widget>
+      </Row>
       <Row>
         <Name>Presets</Name>
         <Widget>
@@ -27,6 +288,21 @@
             <Value>
               <Key>threeplusthree</Key>
               <Name>3 + 3</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>local_source_layout</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>equal</Key>
+              <Name>Equal</Name>
+            </Value>
+            <Value>
+              <Key>prominent</Key>
+              <Name>1 Large</Name>
             </Value>
           </ValueSpace>
         </Widget>
@@ -238,345 +514,7 @@
           <Options>size=1</Options>
         </Widget>
       </Row>
-      <Options/>
-    </Page>
-    <Page>
-      <Name>Main Source</Name>
-      <Row>
-        <Name>Main Source Control</Name>
-        <Widget>
-          <WidgetId>main_source_layout</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=4</Options>
-          <ValueSpace>
-            <Value>
-              <Key>equal</Key>
-              <Name>Equal</Name>
-            </Value>
-            <Value>
-              <Key>onelarge</Key>
-              <Name>1 large</Name>
-            </Value>
-            <Value>
-              <Key>pip</Key>
-              <Name>PIP</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_6</WidgetId>
-          <Type>Spacer</Type>
-          <Options>size=4</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 1</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_1</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 2</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_2</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 3</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_3</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 4</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_4</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 5</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_5</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 6</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>main_source_6</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Options/>
-    </Page>
-    <Page>
-      <Name>Presentation</Name>
-      <Row>
-        <Name>Presentation Control</Name>
-        <Widget>
-          <WidgetId>presentation_source_layout</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=4</Options>
-          <ValueSpace>
-            <Value>
-              <Key>equal</Key>
-              <Name>Equal</Name>
-            </Value>
-            <Value>
-              <Key>onelarge</Key>
-              <Name>1 large</Name>
-            </Value>
-            <Value>
-              <Key>pip</Key>
-              <Name>PIP</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_6</WidgetId>
-          <Type>Spacer</Type>
-          <Options>size=4</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 1</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_1</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 2</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_2</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 3</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_3</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 4</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_4</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 5</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_5</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_5</WidgetId>
-          <Name>PC 6</Name>
-          <Type>Text</Type>
-          <Options>size=1;fontSize=normal;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source_6</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Options/>
-    </Page>
-    <Page>
-      <Name>Dual content</Name>
-      <Row>
-        <Name>Main/Left</Name>
-        <Widget>
-          <WidgetId>dualcontent_main</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=3</Options>
-          <ValueSpace>
-            <Value>
-              <Key>1</Key>
-              <Name>PC 1</Name>
-            </Value>
-            <Value>
-              <Key>2</Key>
-              <Name>PC 2</Name>
-            </Value>
-            <Value>
-              <Key>3</Key>
-              <Name>PC 3</Name>
-            </Value>
-            <Value>
-              <Key>4</Key>
-              <Name>PC 4</Name>
-            </Value>
-            <Value>
-              <Key>5</Key>
-              <Name>PC 5</Name>
-            </Value>
-            <Value>
-              <Key>6</Key>
-              <Name>PC6</Name>
-            </Value>
-            <Value>
-              <Key>nothing</Key>
-              <Name>Nothing</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_2</WidgetId>
-          <Name>Include Camera PIP</Name>
-          <Type>Text</Type>
-          <Options>size=3;fontSize=small;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>dualcontent_main_pip</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Presentation/Rights</Name>
-        <Widget>
-          <WidgetId>dualcontent_presentation</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=3</Options>
-          <ValueSpace>
-            <Value>
-              <Key>1</Key>
-              <Name>PC 1</Name>
-            </Value>
-            <Value>
-              <Key>2</Key>
-              <Name>PC 2</Name>
-            </Value>
-            <Value>
-              <Key>3</Key>
-              <Name>PC 3</Name>
-            </Value>
-            <Value>
-              <Key>4</Key>
-              <Name>PC 4</Name>
-            </Value>
-            <Value>
-              <Key>5</Key>
-              <Name>PC 5</Name>
-            </Value>
-            <Value>
-              <Key>6</Key>
-              <Name>PC6</Name>
-            </Value>
-            <Value>
-              <Key>nothing</Key>
-              <Name>Nothing</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_1</WidgetId>
-          <Name>Include Camera PIP</Name>
-          <Type>Text</Type>
-          <Options>size=3;fontSize=small;align=right</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>dualcontent_presentation_pip</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Options/>
-    </Page>
-  </Panel>
-  <Panel>
-    <PanelId>panel_lights</PanelId>
-    <Type>Home</Type>
-    <Icon>Lightbulb</Icon>
-    <Order>2</Order>
-    <Color>#aa6633</Color>
-    <Name>Lights</Name>
-    <Page>
-      <Name>Hue Lights</Name>
-      <Row>
-        <Name>Power</Name>
-        <Widget>
-          <WidgetId>hue_power</WidgetId>
-          <Type>ToggleButton</Type>
-          <Options>size=1</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Color</Name>
-        <Widget>
-          <WidgetId>hue_color_red</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=red</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_green</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=green</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_blue</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=blue</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>hue_color_yellow</WidgetId>
-          <Type>Button</Type>
-          <Options>size=1;icon=yellow</Options>
-        </Widget>
-      </Row>
+      <PageId>locallayouts</PageId>
       <Options/>
     </Page>
   </Panel>
