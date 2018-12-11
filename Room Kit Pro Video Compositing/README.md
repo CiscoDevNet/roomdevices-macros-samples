@@ -24,7 +24,7 @@ This sample gadget contains the following files:
 
 ## Additional Information
 ##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
+Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/spark-room-kit-series/products-command-reference-list.html).
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
