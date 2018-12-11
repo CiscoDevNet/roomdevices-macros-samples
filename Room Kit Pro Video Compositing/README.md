@@ -6,7 +6,7 @@ This macro and corresponding In-Room Control sample demonstrates the video compo
 This sample gadget contains the following files:
 
      macro-samples/
-	language-selector/
+	Room Kit Pro Video Compositing/
 		README.md (this file)
 		CustomMainAndPresentation.js (the macro for main and presentation compositing)
 		LocalLayoutControls.js (the macro for local compositing)
