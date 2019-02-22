@@ -20,8 +20,8 @@ This sample gadget contains the following files:
      macro-samples/
 	HTTP Post - Report Issue/
 		README.md (this file)
-		macro-macro-Philips Hue Control.js (the macro)
-		panel_lights.xml (in-room control definition file)
+		ReportIssue.js (the macro)
+		ReportIssue.xml (in-room control definition file)
         touch_10_homescreen_reportissue.png (sample image)
         touch_10_selectissue.png (sample image)
         touch_10_specifyissue.png (sample image)
