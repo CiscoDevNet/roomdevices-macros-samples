@@ -1,0 +1,11 @@
+<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <PanelId>roomfeedback</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Concierge</Icon>
+    <Order>2</Order>
+    <Color>#FF3D67</Color>
+    <Name>Report Issue</Name>
+  </Panel>
+</Extensions>
