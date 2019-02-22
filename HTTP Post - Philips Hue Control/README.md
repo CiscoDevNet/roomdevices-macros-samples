@@ -12,7 +12,7 @@ Snapshot of Touch 10 Home Screen Panel after pressing the Hue button:
 This sample gadget contains the following files:
 
      macro-samples/
-	Timer/
+	HTTP Post - Philips Hue Control/
 		README.md (this file)
 		macro-macro-Philips Hue Control.js (the macro)
 		panel_lights.xml (in-room control definition file)
