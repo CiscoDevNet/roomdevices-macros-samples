@@ -44,7 +44,7 @@ xapi.event.on('CallDisconnect', (event) => {
 
 xapi.event.on('UserInterface Message TextInput Response', (event) => {
     switch(event.FeedbackId){
-        case 'feedback_step1':
+        case 'callrating':
                 sleep(1000).then(() => {
                     xapi.command("UserInterface Message TextInput Display", {
                               Duration: 0
