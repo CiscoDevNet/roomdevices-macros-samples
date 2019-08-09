@@ -1,24 +1,68 @@
 const xapi = require('xapi');
 
 
-const MONITORING_URL = 'https://instance.service-now.com/api/now/v1/table/incident'; // Specify a URL to a service like serviceNow etc.
+const SERVICE_NOW_INSTANCE_URL = 'yourinstance.service-now.com'; // Specify a URL to a service like serviceNow etc.
+
+const MONITORING_URL = 'https://' + SERVICE_NOW_INSTANCE_URL + '/api/now/v1/table/incident'; // Specify a URL to a service like serviceNow etc.
+
+
+const CONTENT_TYPE = "Content-Type: application/json";
+const ACCEPT_TYPE = "Accept:application/json";
+const SERVICENOW_USERNAMEPWD_BASE64 = 'YWRtaW46Q2lzY28xMjM='; // format is "username:password" for basic Authorization. This needs to be base64-encoded. Use e.g. https://www.base64encode.org/ to do this
+const SERVICENOW_AUTHTOKEN = "Authorization: Basic " + SERVICENOW_USERNAMEPWD_BASE64;
 
 var systemInfo = {
-    systemName: ''
-  , softwareVersion: ''
-  , softwareReleaseDate: ''
-  , videoMonitors: ''
+    softwareVersion : ''
+    , systemName : ''
+    , softwareReleaseDate : ''
 };
 
 
 function sendMonitoringUpdatePost(message){
-  
-     xapi.command('HttpClient Post', { 'Header': 'Content-Type: application/json' , 'Url':MONITORING_URL}
-     , JSON.stringify(Object.assign({'Message': message}, systemInfo)));
+        console.log('Message sendMonitoringUpdatePost: ' + message);
+        var messagecontent = {
+        description: systemInfo.softwareVersion
+      , short_description: systemInfo.systemName + ': ' + message
+    };
+
+     xapi.command('HttpClient Post', { 'Header': [CONTENT_TYPE, SERVICENOW_AUTHTOKEN] , 'Url':MONITORING_URL, 'AllowInsecureHTTPS': 'True'}, JSON.stringify(messagecontent));
+}
+
+
+function getServiceNowIncidentIdFromURL(url){
+
+    return xapi.command('HttpClient Get', { 'Header': [CONTENT_TYPE, SERVICENOW_AUTHTOKEN] , 'Url':url, 'AllowInsecureHTTPS': 'True'});
+
+}
+
+function raiseTicket(message){
+    console.log('Message raiseTicket: ' + message);
+    var messagecontent = {      description: systemInfo.softwareVersion      , short_description: message    };
+
+     xapi.command('HttpClient Post', { 'Header': [CONTENT_TYPE, SERVICENOW_AUTHTOKEN] , 'Url':MONITORING_URL, 'AllowInsecureHTTPS': 'True'}
+     , JSON.stringify(messagecontent)).then(
+    (result) => {
+      const serviceNowIncidentLocation = result.Headers.find(x => x.Key === 'Location');
+      var serviceNowIncidentURL = serviceNowIncidentLocation.Value;
+     var  serviceNowIncidentTicket;
+     getServiceNowIncidentIdFromURL(serviceNowIncidentURL).then(
+    (result) => {
+        var body = result.Body;
+        console.log('Got this from getServiceNowIncidentIdFromURL: ' + JSON.stringify(result));
+        serviceNowIncidentTicket =  JSON.parse(body).result.number;
+          xapi.command("UserInterface Message Alert Display", {
+              Title: 'ServiceNow receipt'
+              , Text:  'Your ticket id is ' + serviceNowIncidentTicket + '. Thanks for you feedback! Have an awesome day!'
+              , Duration: 10
+          }).catch((error) => { console.error(error); })
+    });
+
+        console.log('Got this from raiseTicket: ' + JSON.stringify(result));
+    });
 }
 
 xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
-    if(event.PanelId == 'roomfeedback'){
+    if(event.PanelId == 'reportissue'){
         xapi.command("UserInterface Message Prompt Display", {
               Title: "Report issue"
             , Text: 'Please select what the problem area is'
@@ -34,20 +78,11 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
 xapi.event.on('UserInterface Message TextInput Response', (event) => {
     switch(event.FeedbackId){
         case 'roomfeedback_step2_cleanliness':
-          xapi.command("UserInterface Message Alert Display", {
-              Title: 'Feedback receipt'
-              , Text: 'Thank you for you feedback! We have notified the cleaners! Have a great day!'
-              , Duration: 3
-          }).catch((error) => { console.error(error); });
-          sendMonitoringUpdatePost(systemInfo.systemName + ' needs cleaning' + ': ' + event.Text);
+          systemInfo.short_description = 'Cleaner issue';
+          raiseTicket(systemInfo.systemName + ' needs cleaning' + ': ' + event.Text);
           break;
         case 'roomfeedback_step2_other':
-          xapi.command("UserInterface Message Alert Display", {
-              Title: 'Feedback receipt'
-              , Text: 'Thank you for you feedback! Have a great day!'
-              , Duration: 3
-          }).catch((error) => { console.error(error); });
-          sendMonitoringUpdatePost('There is some issue in ' + systemInfo.systemName + ': ' + event.Text);
+          raiseTicket('There is some issue in ' + systemInfo.systemName + ': ' + event.Text);
           break;
     }
 });
@@ -94,13 +129,23 @@ xapi.event.on('UserInterface Message Prompt Response', (event) => {
           }
           break;
         case 'roomfeedback_step2':
-              xapi.command("UserInterface Message Alert Display", {
-                  Title: 'Feedback receipt'
-                  , Text: 'Thank you for you feedback! Have a great day!'
-                  , Duration: 3
-              }).catch((error) => { console.error(error); });
-              sendMonitoringUpdatePost('There is an audio/video issue in ' + systemInfo.systemName);
+              systemInfo.short_description = 'AV issue';
+              raiseTicket('There is an audio/video issue in ' + systemInfo.systemName);
               break;
+        case 'reportissue':
+            switch(event.OptionId){
+                case '1':
+                    raiseTicket(systemInfo.systemName + ' is having audio or video issues');
+                    break;
+                case '2':
+                    raiseTicket(systemInfo.systemName + ' needs cleaning');
+                    break;
+                case '3':
+                    raiseTicket(systemInfo.systemName + ' Just has someone complaining for no reason');
+                    break;
+            }
+            break;
+
     }
 });
 
@@ -110,16 +155,22 @@ function init(){
     systemInfo.softwareVersion = value;
   });
   xapi.config.get('SystemUnit Name').then((value) => {
-    systemInfo.systemName = value;
-  });  
+    if(value === ''){
+        xapi.status.get('SystemUnit Hardware Module SerialNumber').then((value) => {
+          systemInfo.systemName = value;
+        });
+    }
+    else{
+      systemInfo.systemName = value;
+    }
+  });
   xapi.status.get('SystemUnit Software ReleaseDate').then((value) => {
     systemInfo.softwareReleaseDate = value;
   });
-  xapi.status.get('Video Monitors').then((value) => {
-   systemInfo.videoMonitors = value;
-  });
-  
-  setTimeout( () => sendMonitoringUpdatePost('Monitoring macro was (re)started'), 2000);  
+  xapi.config.set('HttpClient Mode', 'On');
+
+  setTimeout( () => sendMonitoringUpdatePost('ServiceNow macro was (re)started'), 2000);
+
 }
 
 
