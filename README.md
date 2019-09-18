@@ -21,6 +21,7 @@ Macros available:
 | Room Kit Pro Video Compositing | With CE firmware you have more customisation options and flexibility than ever. |
 | Room Kit Pro/SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
 | Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
+| Smart Dual-Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
 | Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
 
 ## Requirements
