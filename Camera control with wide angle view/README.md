@@ -23,7 +23,7 @@ This sample gadget contains the following files:
 4. Admin user access to endpoint
 
 ## Usage
-1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+1. Read the document [Working with Macros and In-room Controls](https://www.cisco.com/c/dam/en/us/td/docs/telepresence/endpoint/ce92/sx-mx-dx-room-kit-customization-guide-ce92.pdf) for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
 
 ## Setup
 1. Connect two cameras to the Room Devices in two HDMI Inputs.
