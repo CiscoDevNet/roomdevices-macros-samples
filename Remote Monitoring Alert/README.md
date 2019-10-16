@@ -8,6 +8,8 @@ Provides on-screen alerts to OSD and Touch display when remote monitoring via th
 
 ![Remote Monitoring Alert flow](remoteMonitoringAlert.svg)
 
+*diagram editable via draw.io*
+
 Not extensively tested across a broad selection of code or systems, further contributions and issues welcome.
 
 ![touchUI](touchUI.png)
