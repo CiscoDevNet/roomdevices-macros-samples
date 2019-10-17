@@ -18,6 +18,7 @@ Macros available:
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
 | One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
 | Prompt for Pin | Automatically show a prompt for pin on the touch 10 when calling a webex bridge  |
+| Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Kit Pro Video Compositing | With CE firmware you have more customisation options and flexibility than ever. |
 | Room Kit Pro/SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
 | Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
