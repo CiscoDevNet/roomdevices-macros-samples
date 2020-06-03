@@ -10,7 +10,7 @@ const xapi = require('xapi');
 //Variables you are able to adjust as needed for the Room Capacity and Messaging
 const maxPeople = 1;  //Not to exceed occupancy for this room
 const alertTime = 20; //Time in seconds to display alert on screen and touch 10
-const text2Display = 'Room Capacity Has Been Limited, please reduce the number of people in this room to ' + maxPeople + ' people'; //Alert Text
+const text2Display = 'Room capacity has been limited, please reduce the number of people in this room to ' + maxPeople + ' people'; //Alert Text
 
 
 //Listed below is the code that runs the Room Capacity Alerting using the variables you edited above.  Generally this should not be edited.
