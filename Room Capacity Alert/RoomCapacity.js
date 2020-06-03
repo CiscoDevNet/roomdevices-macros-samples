@@ -32,7 +32,7 @@ function alertDisplay() {
 }
 
 function checkCount(count) {
-  if (count >= maxPeople) {
+  if (count > maxPeople) {
     alertDisplay()
     console.log('*** There are too many people in the room. ',count)
   }
