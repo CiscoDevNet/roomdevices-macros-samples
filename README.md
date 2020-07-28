@@ -20,6 +20,7 @@ Macros available:
 | Prompt for Pin | Automatically show a prompt for pin on the touch 10 when calling a webex bridge  |
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Capacity Alert | Display Alert on the device if a set capacity is exceeded - Based on people count API |
+| Room Cleaning and Usage | Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions. |
 | Room Kit Pro Video Compositing | With CE firmware you have more customisation options and flexibility than ever. |
 | Room Kit Pro/SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
 | Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
