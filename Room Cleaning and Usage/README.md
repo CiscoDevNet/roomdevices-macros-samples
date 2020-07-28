@@ -10,8 +10,8 @@ Snapshot of Room Alert Summary:
 ![Sample Room Alert Summary Screenshot](images/roomSummary.png)
 
 ## Requirements
-1. A Cisco webex Room, Board or Desk device
-2. A Touch 10 connected to the Webex Room or webex Board device to record cleaning events
+1. A Cisco Webex Room, Board or Desk device
+2. A Touch 10 connected to the Webex Room or Webex Board device to record cleaning events
 3. If using a device with an external camera, that camera must be a Cisco Quad Camera
 4. Admin user or integrator access to the Webex device
 5. Firmware CE9.12.3 or newer or RoomOS for enhanced people detection
