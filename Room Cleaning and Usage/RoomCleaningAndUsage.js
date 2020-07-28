@@ -4,7 +4,7 @@
 //
 // Room Capacity Alerting Macro
 // Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions.
-// Requires a Cisco Webex Room, Board or Desk device with at least peopleCount enabled. If using a Codec with external camera, the Quadcam is required to count people out of a call.
+// Requires a Cisco Webex Room, Board or Desk device with at least peopleCount enabled. If using a Codec with external camera, the Cisco Quad Camera is required to count people out of a call.
 // If using a Board, a Touch 10 is required to record cleaning events on the device.
 
 import xapi from 'xapi';
@@ -15,7 +15,7 @@ const DATABASE_NAME = 'RoomMonitoringDB'; //Name of the macro with db contents (
 const panelId = 'roomCleaningEvent'; //ID of the In-room control that records cleaning events
 const panelOrder = 1; //Position of the button
 const panelName = "Cleaned Room"; //Name of the button
-const panelType = "Statusbar" //Type of button
+const panelType = "Home" //Type of button
 const panelIcon = "Concierge" //Button icon
 const panelColor = '#07C1E4' //Button color
 const idleTimer = true; //Show idle timer true/false
