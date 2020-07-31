@@ -26,6 +26,7 @@ Macros available:
 | Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
 | Smart Dual-Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
 | Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
+| Tic Tac Toe      | Fun Game which allows the user to see how to update images and panels in real time with relation to user input!    |
 
 ## Requirements
 1. Cisco Room Device (MX, SX, DX, Room, Board or Desk series)
