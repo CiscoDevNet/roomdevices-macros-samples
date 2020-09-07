@@ -1,0 +1,13 @@
+<Extensions>
+  <Version>1.7</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>roomCleaningEvent</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Concierge</Icon>
+    <Color>#07C1E4</Color>
+    <Name>Cleaned Room</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>
