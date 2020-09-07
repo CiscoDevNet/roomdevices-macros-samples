@@ -35,7 +35,7 @@ function msgText(lastUsed, lastCleaned, timesUsed) {
 }
 
 //Macro variables, do not change
-const DEFAULT_ENV = {CLEANED:0,TIMESUSED:0};
+const DEFAULT_ENV = {CLEANED:0,TIMESUSED:0,PANELCREATION:0};
 const PREFIX = 'const json = ';
 let ENV;
 let timer = null;
@@ -350,13 +350,20 @@ xapi.on('ready', async () => {
   else {
     ENV = data;
   }
-
-  //Check if cleaning button exists and create it if it doesn't
-  let currentExtensions = await xapi.command('UserInterface Extensions List', {ActivityType: 'custom'});
-  let panelPresent = false;
-  for (var key in currentExtensions.Extensions.Panel) {
-    let panel = currentExtensions.Extensions.Panel[key];
-    if (panel.PanelId === panelId) panelPresent = true;
+  
+  if (ENV.PANELCREATION === 0) {
+    ENV.PANELCREATION = 1;
+    write(ENV);
+    //Check if cleaning button exists and create it if it doesn't
+    let currentExtensions = await xapi.command('UserInterface Extensions List', {ActivityType: 'custom'});
+    let panelPresent = false;
+    if (currentExtensions.Extensions) {
+      for (var key in currentExtensions.Extensions.Panel) {
+        let panel = currentExtensions.Extensions.Panel[key];
+        if (panel.PanelId === panelId) panelPresent = true;
+      }
+    }
+    if (!panelPresent) addActionPanel();
   }
-  if (!panelPresent) addActionPanel();
+  
 });
