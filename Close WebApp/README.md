@@ -21,7 +21,7 @@ This sample gadget contains the following files:
 
 ## Requirements
 1. Cisco Video room device
-2. Firmware CE9.2.1 or newer.
+2. Firmware CE9.12.1 or newer.
 4. Admin user access to endpoint
 
 ## Usage
