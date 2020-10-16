@@ -1,0 +1,13 @@
+<Extensions>
+  <Version>1.7</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>callmeeting</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Camera</Icon>
+    <Color>#07C1E4</Color>
+    <Name>Join Conference</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>
