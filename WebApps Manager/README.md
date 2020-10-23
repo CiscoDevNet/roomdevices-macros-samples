@@ -1,8 +1,8 @@
-# Cisco CE Room Devices Macros - Close WebApp
+# Cisco CE Room Devices Macros - On Device Web App Manager
 
 This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones.
 
-!(WebApps Manager.gif)
+![WebApps Manager](WebApps Manager.gif)
 
 ## Requirements
 1. A Cisco Webex Board or Desk device
