@@ -27,6 +27,7 @@ Macros available:
 | Smart Dual-Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
 | Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
 | Tic Tac Toe      | Fun Game which allows the user to see how to update images and panels in real time with relation to user input!    |
+| WebApps Manager  | This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones. |
 
 ## Requirements
 1. Cisco Room Device (MX, SX, DX, Room, Board or Desk series)
