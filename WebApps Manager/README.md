@@ -2,7 +2,7 @@
 
 This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones.
 
-![WebApps Manager](WebApps Manager.gif)
+![WebApps Manager](WebAppsManager.gif)
 
 ## Requirements
 1. A Cisco Webex Board or Desk device
