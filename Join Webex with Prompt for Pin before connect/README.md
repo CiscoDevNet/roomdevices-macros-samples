@@ -1,3 +1,5 @@
+# Note this macro is no longer needed with the release of the Join Webex Button from Middle of 2019 on CE Software!
+
 # Cisco CE Video Endpoints Macros - Join Webex dialler
 This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that adds a dedicated join webex button to the Touch 10.
 
