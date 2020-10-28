@@ -70,6 +70,7 @@ async function addWebApp() {
   </Extensions>
   `;
 
+  console.info(`Adding web app ${name}`);
   await xapi.Command.UserInterface.Extensions.Panel.Save({
     PanelId: `${webappPanelPrefix}${name}`,
   }, xml);
@@ -77,6 +78,7 @@ async function addWebApp() {
 
 // Remove a webapp from the device
 async function removeWebApp(PanelId) {
+  console.info(`Removing web app ${PanelId}`);
   await xapi.Command.UserInterface.Extensions.Panel.Remove({
     PanelId,
   });
@@ -84,6 +86,7 @@ async function removeWebApp(PanelId) {
 
 // Add the management panel
 async function addManagerPanel() {
+  console.info('Adding management panel');
   const extensions = await xapi.Command.UserInterface.Extensions.List();
   const webApps = !extensions?.Extensions?.Panel ? [] : extensions.Extensions.Panel.filter((panel) => {
     return panel.ActivityType === 'WebApp';
@@ -132,6 +135,9 @@ async function addManagerPanel() {
   await xapi.Command.UserInterface.Extensions.Panel.Save({
     PanelId: ManagerPanelId,
   }, xml);
+
+  // Update manager on layout change
+  xapi.Event.UserInterface.Extensions.Widget.LayoutUpdated.once(addManagerPanel);
 }
 
 // Startup!
@@ -151,9 +157,6 @@ async function main() {
       }
     }
   });
-
-  // Update manager on layout change
-  xapi.Event.UserInterface.Extensions.Widget.LayoutUpdated.on(addManagerPanel);
 }
 
 main();
