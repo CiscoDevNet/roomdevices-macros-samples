@@ -36,8 +36,7 @@ Macros available:
 
 ## Getting Started
 1. Read the document [Working with Macros and In-room Controls](https://www.cisco.com/c/dam/en/us/td/docs/telepresence/endpoint/ce92/sx-mx-dx-room-kit-customization-guide-ce92.pdf) for a comprehensive introduction of In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
-2. Watch this video for a quick introduction of what In-Room Controls are: https://www.youtube.com/watch?v=7dw9zvvitp8
-
+2. Watch this video for a quick introduction of what In-Room Controls are: https://youtu.be/IQ2Z104Xf50
 
 ## Additional Information
 ##### XAPI
