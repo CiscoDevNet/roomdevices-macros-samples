@@ -1,5 +1,5 @@
-# Cisco CE Video Endpoints Macros - Audio Call
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that adds a dedicated audio call dial pad to the Touch 10.
+# Audio Call
+Create an in-room control application that adds a dedicated audio call dial pad to the Touch 10
 
 ---
 Snapshot of Touch 10 Home Screen Panel with Audio Dialler:
@@ -9,39 +9,10 @@ Snapshot of Touch 10 Home Screen Panel after pressing the Audio Dialler:
 ---
 
 
-This sample gadget contains the following files:
-
-     macro-samples/
-	Audio Dialler/
-		README.md (this file)
-		audioCall.js (the macro)
-		audiocall.xml (in-room control definition file)
-		Touch10_AudioCall.png (sample image)
-		Touch10_homescreen_AudioCall.png (sample image)
-    ProvisionableApplicationPackage_AudioCall.zip (Package for provisioning)
-
-
 ## Requirements
 1. Cisco Video room device (Room Kit devices only)
 2. Firmware CE9.3.0 or newer.
 
-
-## Additional Information
-##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
-
-## How to provision
-Per codec:
-  Web:
-    - Log on to codec web interface with Admin Credentials
-    - Navigate to 'Maintenance' - 'Backup and Restore'
-    - Select 'Restore backup'
-    - Select the ZIP file in this repo (Package for provisioning)
-    - Press 'Upload file'
-    - Voilla, check your touch panel and you should now see goodness.
-
-  Scripting using API:
-    - xCommand Provisioning Service Fetch Mode:Add URL: 'https://<YourPath>/nameofroomdeviceprovisioningfile.zip'
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.

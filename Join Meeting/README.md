@@ -1,5 +1,7 @@
-# Cisco CE Room Devices Macros - Join Meeting Button
-This macro contains a Join Meeting Panel/Text Input for joining 3rd party non-Webex meetings. You can customize the postfix const in __JoinMeetingGeneric.js__ to simplfy your Join Meeting experience to virtually any 3rd party conferenceing platorm that supports Standard SIP dialing.  Such as @zoomcrc.com, @MSFT.tenant, or @yourdomain.com
+# Join Meeting Button
+A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings.
+
+You can customize the postfix const in __JoinMeetingGeneric.js__ to simplfy your Join Meeting experience to virtually any 3rd party conferencing platform that supports Standard SIP dialling.  Such as @zoomcrc.com, @MSFT.tenant, or @yourdomain.com
 
 ---
 Snapshot of Touch 10 Home Screen Panel showing the Join Meeting Button:
@@ -7,17 +9,6 @@ Snapshot of Touch 10 Home Screen Panel showing the Join Meeting Button:
 Snapshot of Touch 10 Home Screen Panel after the Join Meeting Button has been pressed:
 ![Sample In-Room Control Screenshot](JoinConferencePanel.png)
 ---
-
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	Join Meeting/
-		README.md (this file)
-		JoinMeetingGeneric.js (the macro)
-		JoinMeetingPanel.xml (UI extension)
-		JoinConferenceButton.png (sample image)
-		JoinConferencePanel.png (sample image)
 
 
 ## Requirements
@@ -31,12 +22,9 @@ This sample gadget contains the following files:
 
 ## Setup
 
-1. Open the JavaScript file `JoinMeetingGeneric.js` and fill in the `postfix` and 'panelID' on the top of the file. The macro should be set to be activated while the device is out of call. 
+1. Open the JavaScript file `JoinMeetingGeneric.js` and fill in the `postfix` and 'panelID' on the top of the file. The macro should be set to be activated while the device is out of call.
 2. Add either the 'JoinMeetingPanel.xml' to the UI Extension Editor or create your own with the panelID associated with the 'JoinMeetingGeneric.js' macro.
 
-## Additional Information
-##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.

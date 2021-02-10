@@ -1,4 +1,5 @@
 # Tic Tac Toe!
+Simple Tic Tac Toe game with UI extension panel.
 
 [![PartiallyFilledBoard](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/05_BoardFilling.png)](#)
 
@@ -40,7 +41,7 @@ The active turn of either player [X] or player [O] will show on the top most row
 
 To make your move, simply select on of the empty squares and it will then update the board and pass turns to the next player.
 
-You'll notice a bit of lag time between each move. At this time, in order to make any visual changes to buttons, a new XML file will need to be loaded into the board. This new UI will be built, based on the current input of the game and be loaded in. 
+You'll notice a bit of lag time between each move. At this time, in order to make any visual changes to buttons, a new XML file will need to be loaded into the board. This new UI will be built, based on the current input of the game and be loaded in.
 
 Once a player has achieve a "3 in a row" sequence, a prompt will display indicating the winner and the game board will be reset.
 
@@ -112,16 +113,16 @@ Though this Tic Tac Toe script is rudementry, it takes control of your UserInter
 * If we were to make some changes to this, you'll notice we can pass along functions and variables to generate this information as need.
 
   * Using the same example above, one could reformat the XML
-  
+
   ```xml
     <Row>
         <Name>row</Name>
         ${newRow(0, 2)}
       </Row>
   ```
-  
+
   * Passing along the function newRow helps us place in this new information as we need
-  
+
   ```javascript
     function newRow(start, finish) {
       let order;

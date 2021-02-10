@@ -3,7 +3,7 @@ const xapi = require('xapi');
 /*
 
 This macro demonstrates how to have a conditional autoanswer on a system. The macro, upon incoming call, checks whether the remote site is listed in the list of numbers to be auto answered.
-If it finds it, it prompts for a few seconds to allow for either an immediate answer OR to reject the 
+If it finds it, it prompts for a few seconds to allow for either an immediate answer OR to reject the call
 */
 
 const AUTOANSWER_NUMBERS = ['mynumber@example.com', 'myothernumber@example.com'];

@@ -1,5 +1,5 @@
-# Cisco CE Video Endpoints Macros - Apple TV Controls
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to control an Apple TV directly via HDMI using CEC using the Touch 10.
+# Apple TV Controls
+Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.
 
 ---
 Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
@@ -7,17 +7,6 @@ Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
 Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selector:
 ![Sample In-Room Control Screenshot](appleTV_panel_selected.png)
 ---
-
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	AppleTV Control/
-		README.md (this file)
-		AppleTV.js (the macro)
-		appletv.xml (in-room control definition file)
-		appleTV_homescreen.png (sample image)
-		appleTV_panel_selected.png (sample image)
 
 
 ## Requirements
@@ -39,10 +28,6 @@ This sample gadget contains the following files:
     * *CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED*: Set this to the same input number (n) as in step 2
     * *CEC_LOGICAL_ADDRESS_FOR_APPLETV*: This is the CEC device number that the APPLE TV will have gotten from the CEC device list. You can find the assigned logical address by looking at the input status on the video endpoint by issuing **xStatus Video Input Connector ConnectedDevice CEC LogicalAddress**
 
-
-## Additional Information
-##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.

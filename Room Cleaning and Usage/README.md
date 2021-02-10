@@ -1,4 +1,6 @@
-# Cisco Webex Room Macros - Room Cleaning and Usage Macro
+# Room Cleaning and Usage Macro
+Customisation for easily recording when a room has been cleaned, and show this to users.
+
 This macro demonstrates how to use the intelligence of a Cisco Webex Room device to record if a room is cleaned (via a UI Extensions button that the macro will automatically generate), how long it has been since the device detected someone and how many times people have been detected since it was last cleaned. It was also warn users if the room capacity has been exceeded. The macro will record cleaning times and the number of detections since last cleaned in a secondary macro which it will also create itself. The cleaning button is PIN protected, the PIN can be edited in the macro.
 
 ---

@@ -1,5 +1,4 @@
-# Cisco CE Video Endpoints Macros - Pin Code Lock
-
+# Pin Code Lock
 Protect your video device with a pin code lock that appears as soon as your system goes out of standby.
 
 ![Sample Touch Panel Screenshot](prompt.png)

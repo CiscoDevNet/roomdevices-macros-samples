@@ -1,20 +1,12 @@
-# Cisco CE Video Endpoints Macros - Camera Controls
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to control multiple cameras using the Touch 10. It also shows how to do simple video compositing stitching two cameras together as one wide angle image. As a bonus it also shows how to control whatever camera(s) are selected as the main source with one single in-room control.
+# Camera Controls
+Allows the user to control multiple cameras using the Touch 10. It also shows how to do simple video compositing stitching two cameras together as one wide angle image.
+
+As a bonus it also shows how to control whatever camera(s) are selected as the main source with one single in-room control.
 
 ---
 Snapshot of Touch 10 Home Screen Panel for the camera control selector:
 ![Sample In-Room Control Screenshot](camera_controls_touch10.png)
 ---
-
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	Camera control with wide angle view/
-		README.md (this file)
-		Camera Controls.js (the macro)
-		Camera Controls.xml (in-room control definition file)
-		camera_controls_touch10.png (sample image)
 
 
 ## Requirements
@@ -28,9 +20,7 @@ This sample gadget contains the following files:
 ## Setup
 1. Connect two cameras to the Room Devices in two HDMI Inputs.
 
-## Additional Information
-##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
+
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.

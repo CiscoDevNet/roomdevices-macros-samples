@@ -1,5 +1,5 @@
-# Cisco CE Room Devices Macros - Close WebApp
-This macro contains a close webapp/webview panel for non interactive devices that use Touch 10. The macro is self contained and only the file __WebApp Close.js__ is needed.
+# Close WebApp
+Add a 'Close web view' button to the Touch 10 that allows you to remove any web view from the main screen.
 
 ---
 Snapshot of Touch 10 Home Screen Panel after a Webapp is open a close webapp panel appears on the touch:
@@ -9,18 +9,8 @@ Snapshot of Touch 10 Home Screen Panel after a Webapp is open a button to open t
 ---
 
 
-This sample gadget contains the following files:
-
-     macro-samples/
-	Close WebApp/
-		README.md (this file)
-		WebApp Close.js (the macro)
-		CloseWebAppHomeScreen.png (sample image)
-		CloseWebAppPanel.png (sample image)
-
-
 ## Requirements
-1. Cisco Video room device
+1. Cisco Video room device that supports web engine
 2. Firmware CE9.12.1 or newer.
 4. Admin user access to endpoint
 
@@ -30,12 +20,8 @@ This sample gadget contains the following files:
 
 ## Setup
 
-1. Open the JavaScript file `WebApp Close.js` and fill in the list `WebApps` on the top of the file. Add the WebApp name and url you wish to see in you home screen. In case you are only interested in the close webapp/webview panel, leave the webApps variable empty like so  `const webApps = []`. The macro have to be activated while the device is out of call. 
+1. Open the JavaScript file `WebApp Close.js` and fill in the list `WebApps` on the top of the file. Add the WebApp name and url you wish to see in you home screen. In case you are only interested in the close webapp/webview panel, leave the webApps variable empty like so  `const webApps = []`. The macro have to be activated while the device is out of call.
 
-
-## Additional Information
-##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
