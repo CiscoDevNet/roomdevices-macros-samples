@@ -1,0 +1,31 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>end-call</PanelId>
+    <Origin>local</Origin>
+    <Type>InCall</Type>
+    <Icon>Handset</Icon>
+    <Color>#FF503C</Color>
+    <Name>End call</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>End call</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>end-call</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=4</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_2</WidgetId>
+          <Name>Drag slider to the right to end call</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=center</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>
