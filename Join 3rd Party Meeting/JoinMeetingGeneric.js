@@ -14,9 +14,8 @@ const CALL_TYPES = {
 };
 
 const MEETING_ID = 'meetingID';
-const PASSCODE = 'pass';
 const INROOMCONTROL_AUDIOCONTROL_PANELID = 'callmeeting'; /* This will be the Panel/Widget ID you are using in the UI Extension */
-const postfix = '@yourdomain.com'; /* Define the domain for the meeting service you are using.  Eg. @zoomcrc.com, @MSTeams.tenant, @yourbridge.com */
+const postfix = '@acme.com'; /* Define the domain for the meeting service you are using.  Eg. @zoomcrc.com, @MSTeams.tenant, @yourbridge.com */
 
 /* Use these to check that its a valid number (depending on what you want to allow users to call */
 const REGEXP_URLDIALER = /([a-zA-Z0-9@_\-\.]+)/; /* Use this one if you want to allow URL dialling */
@@ -55,22 +54,15 @@ xapi.Event.UserInterface.Message.TextInput.Response.on((event) => {
         case MEETING_ID:
           const regex = REGEXP_NUMERICDIALER; /* Change this to whatever filter you want to check for validity */
           const match = regex.exec(event.Text);
-        
+          console.log('match', match);   
           if (match !== null) {
-			  meetingID = match[1];
+			      meetingID = match[1];
+            const Number =  meetingID + postfix;
+            xapi.Command.Dial({ Number });
           }
           else{
               showDialPad("You typed in an invalid number. Please try again." );
           }
-          break;
-        case PASSCODE:
-          const pass = event.Text;
-          const numbertodial = meetingID + postfix;
-          xapi.Command.Dial({
-            Number: numbertodial,
-            Protocol: 'SIP',
-            CallType: CALL_TYPES.VIDEO
-          }).catch((error) => { console.error(error); });
           break;
     }
 });
