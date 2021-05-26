@@ -1,6 +1,8 @@
 # Cisco CE Room Devices - Macros
 Here you can find a selection of macros for CE Room Devices. Macros is a great new feature intruduced in CE9.2 that allows you to customise your Room Device. It is especially powerful in combination with the In-Room Control Extensions of the Cisco Touch 10 Control Panel.
 
+Note: The macros can also be browsed and saved easily from [roomos.cisco.com](https://roomos.cisco.com)
+
 Macros available:
 
 
