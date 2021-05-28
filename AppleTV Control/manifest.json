@@ -13,7 +13,7 @@
     "roomcontrol": {
       "items": [
         {
-          "payload": "./AppleTV.xml",
+          "payload": "./appletv.xml",
           "type": "url",
           "id": "appletv"
         }
