@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./AppleTV.js",
+          "type": "url",
+          "id": "appletv"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./appletv.xml",
+          "type": "url",
+          "id": "appletv"
+        }
+      ]
+    }
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
