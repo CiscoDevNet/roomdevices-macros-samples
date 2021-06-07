@@ -50,7 +50,7 @@ The scripts have been split for readability and to leverage a configuration sche
 
 **NOTE**: Do not make changes to the names of any file for this tool. Changes to the names will break functionality as data is being passed between them when active.
 
-* Download [JoinZoom_4-0-0.zip](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Join%20Zoom/Join%20Zoom%20and%20Zoom%20Tools/JoinZoom_4-1-0.zip)
+* Download [JoinZoom_4-0-0.zip](https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/Join%20Zoom%20with%20DTMF%20Zoom%20Tools/JoinZoom_4-1-0.zip)
 * Unzip the contents
   * JoinZoom_4-0-0.zip contains the following files
     * JoinZoom_Main_4-1-0.js
