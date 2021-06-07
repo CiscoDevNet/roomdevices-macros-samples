@@ -22,6 +22,9 @@ Version: 4-1-0
 * Some Knowledge on the Macro Editor
 * Some Knowledge on Editing Scripts
 
+## Video Demo and Walkthru
+* [On Edge with Dustin - **Updated** How to make your Zoom Experience better with Cisco Webex Devices!](https://youtu.be/nAkRILxaTmc)
+
 ## The roles and function for each script
 
 Join Zoom version 4-1-0 is split into 5 scripts
