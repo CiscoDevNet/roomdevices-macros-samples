@@ -1,0 +1,34 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "mymacro.js",
+          "id": "mymacro",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "mypanel.xml",
+          "id": "mypanel",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "myVariable",
+        "name": "My Variable",
+        "info": "The value the user chooses will be replaced inside the js that has id equal to domain",
+        "type": "string",
+        "default": "foobar",
+        "domain": "mymacro",
+        "required": true
+      }
+    ]
+  }
+}
