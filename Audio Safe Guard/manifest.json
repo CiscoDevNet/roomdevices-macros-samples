@@ -1,0 +1,28 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "Audio Safe Guard.js",
+          "id": "Audio Safe Guard",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "MAX_VOLUME",
+        "name": "Max volume",
+        "info": "The limit at which volume will be capped (0-100)",
+        "type": "number",
+        "default": 70,
+        "domain": "Audio Safe Guard",
+        "required": true
+      }
+    ]
+  }
+}

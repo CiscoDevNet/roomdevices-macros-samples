@@ -1,6 +1,8 @@
 # Learning: Audio safe guard
 If user tries to adjust volume below a treshold you set, the macro automatically sets the volume back to the max limit.
 
+![Screenshot](screenshot.png)
+
 This macro shows you how to:
 - Listen to changes to the system (feedback on status)
 - React to change and set values (command)
