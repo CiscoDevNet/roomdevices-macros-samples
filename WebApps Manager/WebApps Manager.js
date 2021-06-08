@@ -84,13 +84,20 @@ async function removeWebApp(PanelId) {
   });
 }
 
+async function getWebApps() {
+  const extensions = await xapi.Command.UserInterface.Extensions.List();
+  if (extensions.Extensions && extensions.Extensions.Panel) {
+    return extensions.Extensions.Panel.filter((panel) => {
+      return panel.ActivityType === 'WebApp';
+    });
+  }
+  return [];
+}
+
 // Add the management panel
 async function addManagerPanel() {
   console.info('Adding management panel');
-  const extensions = await xapi.Command.UserInterface.Extensions.List();
-  const webApps = !extensions?.Extensions?.Panel ? [] : extensions.Extensions.Panel.filter((panel) => {
-    return panel.ActivityType === 'WebApp';
-  });
+  const webApps = await getWebApps();
 
   const webAppsXml = webApps.map((app) => {
     const panelId = app.PanelId;
