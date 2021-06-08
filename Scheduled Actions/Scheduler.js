@@ -4,10 +4,8 @@ const Sunday = 0, Saturday = 6;
 
 
 const ScheduleTime = '10:00';  // Set this to the time you want to have the device do something
+
 const SchedulerDialNumber = 'mydailymeetingnumber@mydomain.com'; //The number/URL you want the device to call at schedule
-
-
-
 
 
 function schedule(time, action) {

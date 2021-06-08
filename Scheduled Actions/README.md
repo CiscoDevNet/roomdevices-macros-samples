@@ -1,13 +1,7 @@
-# Cisco CE Room Devices Macros - Scheduler
+# Scheduled action
+
 This macro sample demonstrates how to have the codec automatically perform actions, like placing a call, at a specified time and day.
 
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	Scheduler/
-		README.md (this file)
-		scheduler.js (the macro)
 
 ## Requirements
 1. Cisco Video room device
@@ -24,6 +18,7 @@ This sample gadget contains the following files:
 
 
 ## Additional Information
+
 ##### XAPI
 Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
 

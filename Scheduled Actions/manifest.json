@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "Scheduler.js",
+          "id": "Scheduler",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "ScheduleTime",
+        "name": "Time of day",
+        "info": "Format: HH:MM (24 hour clock), the time you want the action to occur, in the local timezone",
+        "type": "string",
+        "default": "10:00",
+        "domain": "Scheduler",
+        "required": true
+      },
+      {
+        "id": "SchedulerDialNumber",
+        "name": "Number to cal",
+        "type": "string",
+        "default": "fireplace@ivr.vc",
+        "domain": "Scheduler",
+        "required": true
+      }
+    ]
+  }
+}
