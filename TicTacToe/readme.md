@@ -1,7 +1,7 @@
 # Tic Tac Toe!
 Simple Tic Tac Toe game with UI extension panel.
 
-[![PartiallyFilledBoard](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/05_BoardFilling.png)](#)
+[![PartiallyFilledBoard](./05_BoardFilling.png)](#)
 
 ## Inspiration
 
@@ -25,17 +25,17 @@ This is a local multiplayer game, there is no single player mode or online optio
 
 When the Macro is loaded in and active, the User Interface for TicTacToe will load in for you on the Touch Device's home screen.
 
-[![HomeScreen](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/01_Home.png)](#)
+[![HomeScreen](./01_Home.png)](#)
 
 If you select the Tic Tac Toe button you could be greeted with one of 2 options.
 
 If the game board is empty, you'll go right into a new game
 
-[![NewGame](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/02_NewGame.png)](#)
+[![NewGame](./02_NewGame.png)](#)
 
 If the game board has had some play to it already, then you'll be given a choice on whether or not you'd like to continue
 
-[![Continue_or_Restart](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/08_ContinueFromLast.png)](#)
+[![Continue_or_Restart](./08_ContinueFromLast.png)](#)
 
 The active turn of either player [X] or player [O] will show on the top most row of the game board.
 
@@ -45,7 +45,7 @@ You'll notice a bit of lag time between each move. At this time, in order to mak
 
 Once a player has achieve a "3 in a row" sequence, a prompt will display indicating the winner and the game board will be reset.
 
-![X_Won](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/blob/master/Games/TicTacToe/images/06_XWon.png)
+![X_Won](./06_XWon.png)
 
 From here, you can wither choose to play again, or end your session.
 
