@@ -15,6 +15,7 @@ Macros available:
 | Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
 | Customer Satisfaction Survey| Want to add a survey at the end of a call? This macro does this for you |
 | In-Room Control Debugger | A helpful litte extension that shows a message on-screen every time a custom button is pressed or page opened and closed on the touch 10 |
+| Join Zoom with DTMF Zoom Tools | Join a Zoom call easily from a Webex Device |
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
 | Pin code lock | Require user to enter pin code when using the video system |
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
