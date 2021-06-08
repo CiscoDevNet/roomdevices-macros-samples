@@ -1,0 +1,34 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "JoinMeetingGeneric.js",
+          "id": "JoinMeetingGeneric",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "JoinMeetingPanel.xml",
+          "id": "JoinMeetingPanel",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "meetingDomain",
+        "name": "Meeting Domain",
+        "info": "Eg @zoomcrc.com. The url/domain for the 3rd party provider, without the actual meeting number",
+        "type": "string",
+        "default": "@yourbridge.com",
+        "domain": "JoinMeetingGeneric",
+        "required": true
+      }
+    ]
+  }
+}
