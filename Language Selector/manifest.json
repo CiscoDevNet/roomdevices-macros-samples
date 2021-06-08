@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "language-selector.js",
+          "id": "language-selector",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "language-selector.xml",
+          "id": "language-selector",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}

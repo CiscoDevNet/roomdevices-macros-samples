@@ -1,24 +1,11 @@
-# Cisco CE Video Endpoints Macros - Language Selector
+# Language Selector
 This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to select the menu language on the Touch 10 and OSD on the video endpoint.
 
----
 Snapshot of Touch 10 Home Screen Panel with language selector:
 ![Sample In-Room Control Screenshot](languageselector_homescreen.png)
 Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
 ![Sample In-Room Control Screenshot](languageselector_panel_selected.png)
----
 
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	language-selector/
-		README.md (this file)
-		language-selector.js (the macro)
-		language-selector.js.xml (in-room control definition file)
-		languageselector_homescreen.png (sample image)
-		languageselector_panel_selected.png (sample image)
-        ProvisionableApplicationPackage_language-selector.zip (Package for provisioning)
 
 
 ## Requirements
