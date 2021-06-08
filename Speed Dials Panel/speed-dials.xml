@@ -1,0 +1,26 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>speeddials</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Handset</Icon>
+    <Color>#00D6A2</Color>
+    <Name>Speed Dials</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Speed Dials</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>sd_fireplace@ivr.vc</WidgetId>
+          <Name>Call Fireplace</Name>
+          <Type>Button</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>

@@ -1,24 +1,14 @@
-# Cisco CE Room Devices Macros - Speed Dials
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control panel with speed dials on the Touch 10.
+# Speed Dials
 
----
-Snapshot of Touch 10 Home Screen Panel with  Speed Dial Control:
-![Sample In-Room Control Screenshot](SpeedDialHomescreen.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Speed Dial selector:
-![Sample In-Room Control Screenshot](SpeedDialOpened.png)
----
+This macro and corresponding In-Room Control sample demonstrates how to create an in-room control panel with speed dials on the Touch 10. A unique feature is that you can create the speed dial numbers without touching the macro, just add buttons in the UI Extensions editor, and add number as id, prefixed with sd.
 
+Eg to add a button to call reception, add a button and set it's id to:
+`sd_reception@acme.com`
 
-This sample gadget contains the following files:
+When you tap it, the macro will parse the id and call that number.
 
-     macro-samples/
-	Speed Dials/
-		README.md (this file)
-		Speed Dials.js (the macro)
-		roomcontrolconfig.xml (in-room control definition file)
-		SpeedDialHomescreen.png (sample image)
-		SpeedDialOpened.png (sample image)
-
+![Home screen button](homescreen.png)
+![Panel](panel.png)
 
 ## Requirements
 1. Cisco Video room device
@@ -26,6 +16,7 @@ This sample gadget contains the following files:
 4. Admin user access to endpoint
 
 ## Usage
+
 1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
 
 
