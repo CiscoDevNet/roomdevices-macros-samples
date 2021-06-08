@@ -19,6 +19,7 @@ Macros available:
 | Join Webex with Prompt for Pin before connect | Add a Join Webex meeting button to the touch panel. Prompts the user to enter meeting ID and host pin before actually dialling the webex bridge  |
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
 | One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
+| Pin code lock | Require user to enter pin code when using the video system |
 | Prompt for Pin | Automatically show a prompt for pin on the touch 10 when calling a webex bridge  |
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Capacity Alert | Display Alert on the device if a set capacity is exceeded - Based on people count API |

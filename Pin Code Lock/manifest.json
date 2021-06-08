@@ -1,0 +1,27 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./pin-code.js",
+          "type": "url",
+          "id": "pin-code"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "PIN_CODE",
+        "name": "Your pin code",
+        "info": "Numbers are recommended, but you can choose textual password instead",
+        "type": "string",
+        "default": "1234",
+        "domain": "pin-code",
+        "required": true
+      }
+    ]
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
