@@ -4,14 +4,6 @@ This macro displays an alert on the device when a set capacity is exceeded - Bas
 Example of the UI of the alert displayed on the UI of the device:
 ![Sample UI Screenshot of Room Capacity Alert](ScreenshotRoomCapacity.jpeg)
 
-This sample gadget contains the following files:
-
-     macro-samples/
-	Room Capacity Alert/
-		README.md (this file)
-		RoomCapacity.js (the macro)
-
-
 
 ## Requirements
 1. Cisco Webex Room Device (Room, Board or Desk Series)

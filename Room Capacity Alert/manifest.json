@@ -1,0 +1,38 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "RoomCapacity.js",
+          "id": "RoomCapacity",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "maxPeople",
+        "name": "Max people",
+        "info": "The max number of people allowed in the room. For testing, set to 0",
+        "type": "number",
+        "default": 1,
+        "domain": "RoomCapacity",
+        "required": true
+      },
+      {
+        "id": "alertTime",
+        "name": "Alert duration",
+        "info": "Number of seconds to show the alert on screen",
+        "type": "number",
+        "default": 20,
+        "domain": "RoomCapacity",
+        "required": true
+      }
+      
+    ]
+  }
+}
