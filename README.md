@@ -12,24 +12,20 @@ Macros available:
 | Audio Call Dial Pad | Ereate an in-room control application that adds a dedicated audio call dial pad to the Touch 10 |
 | Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
 | Camera Control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
-| CodingExamples      | A collection of small snippets showing more common coding questions related to the macro language and XAPI usage.      |
 | Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
-| Customer Satisfaction | Want to add a survey at the end of a call? This macro does this for you |
+| Customer Satisfaction Survey| Want to add a survey at the end of a call? This macro does this for you |
 | In-Room Control Debugger | A helpful litte extension that shows a message on-screen every time a custom button is pressed or page opened and closed on the touch 10 |
-| Join Webex with Prompt for Pin before connect | Add a Join Webex meeting button to the touch panel. Prompts the user to enter meeting ID and host pin before actually dialling the webex bridge  |
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
-| One Button to Dial      | Do you always dial into the same bridge number? Why not have a single speed dial button on the home screen to do this?   |
 | Pin code lock | Require user to enter pin code when using the video system |
-| Prompt for Pin | Automatically show a prompt for pin on the touch 10 when calling a webex bridge  |
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Capacity Alert | Display Alert on the device if a set capacity is exceeded - Based on people count API |
 | Room Cleaning and Usage | Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions. |
 | Room Kit Pro Video Compositing | With CE firmware you have more customisation options and flexibility than ever. |
-| Room Kit Pro/SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
-| Scheduler | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
-| Smart Dual-Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
-| Speed dials      | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
-| Tic Tac Toe      | Fun Game which allows the user to see how to update images and panels in real time with relation to user input!    |
+| Room Kit Pro SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
+| Scheduled Actions | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
+| Smart Dual Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
+| Speed dials Panel | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
+| TicTacToe      | Fun Game which allows the user to see how to update images and panels in real time with relation to user input!    |
 | WebApps Manager  | This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones. |
 
 ## Requirements
