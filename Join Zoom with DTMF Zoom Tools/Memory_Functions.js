@@ -20,12 +20,10 @@ import xapi from 'xapi';
 const config = {
     "storageMacro": "Memory_Storage", //Name for Storage Macro
     "autoImport": {
-        "mode": "custom", //Use: <boolean, "activeOnly", "custom", customActive>
-        "customImport": []//Only used with autoImport.custom and autoImport.customActive
+        "mode": "false", //Use: <true, false, "activeOnly", "custom">
+        "customImport": []//Only used when Auto import mode is set to custom
     }
 };
-
-export { mem };
 
 var mem = {
     "localScript": module.name
@@ -335,3 +333,5 @@ mem.info = function () {
             console.log(log);
     });
 };
+
+export { mem };
