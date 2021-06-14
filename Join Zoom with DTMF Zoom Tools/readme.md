@@ -1,6 +1,33 @@
 # Join Zoom and Zoom Tools
 
-Version: 4-1-0 
+Version: 4-1-1 
+
+## What's New in 4-1-1
+
+## Additions
+* Zoom Advanced Options
+ * New configuration items available to better define how this system will behave in call
+* DualScreen mode fully Functional
+ * On - Enables Dual Screen Mode
+ * Off - Disables Dual Screen Mode
+ * Auto - Attempts to determine if 2 Displays are connected.
+  * This check is performed every time the Join Zoom button is opened
+
+## Bug Fixes
+* UI warning on Sx Mx Dx Series Endpoints
+* Exports Failing to make it to Main on Sx Mx Dx Series Endpoints
+* Dual Screen Mode was not functional
+* Suppress Menu mode was not functional
+* Fix for new DTMF Feedback mode for Sx Mx Dx series, preventing the use of Zoom Tools
+
+## Changes Made
+* Removed Suppress Menu Config, now available in new advanced options
+* New strict host Key regex, to address the new advanced options
+* All exports in each script have been moved to bottom of the script
+
+## Important - Successful Update Requires the following: 
+* Removal of all scripts and UI elements of Join Zoom version 4-1-0 and lower
+* Replace Memory_Functions script with the one available here. Export has moved
 
 ## Inspiration
 * The continued need to improve up my previous Join Zoom iterations.
@@ -27,16 +54,16 @@ Version: 4-1-0
 
 ## The roles and function for each script
 
-Join Zoom version 4-1-0 is split into 5 scripts
-* JoinZoom_Main_4-1-0.js
+Join Zoom version 4-1-1 is split into 5 parts
+* JoinZoom_Main_4-1-1.js
   * The active script on the endpoint. Contains most of the code needed for successful operation 
-* JoinZoom_Config_4-1-0.js
+* JoinZoom_Config_4-1-1.js
   * Version 4-X-X was made to be more customizable
   * This configuration menu has several options for you to quickly edit key areas of the Macro, without needed to dig through all the code
-* JoinZoom_JoinText_4-1-0.js
+* JoinZoom_JoinText_4-1-1.js
   * Most Prompt-Based Text content is here, so you can edit to your language of choice or enter information that is more meaningful to your users.
-* JoinZoom_UI_4-1-0.xml
-  * The UI for all of join Zoom version 4-0-0
+* JoinZoom_UI_4-1-1.xml
+  * The UI for all of join Zoom version 4-X-X
   * This includes all pieces your users need to interact with
   * It includes 6 panels with various use cases, so don't be alarmed if you see a bunch in your User Interface Extensions Editor
 * Memory_Functions.js
@@ -53,36 +80,36 @@ The scripts have been split for readability and to leverage a configuration sche
 
 **NOTE**: Do not make changes to the names of any file for this tool. Changes to the names will break functionality as data is being passed between them when active.
 
-* Download [JoinZoom_4-0-0.zip](https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/Join%20Zoom%20with%20DTMF%20Zoom%20Tools/JoinZoom_4-1-0.zip)
+* Download [JoinZoom_4-1-1.zip](https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/Join%20Zoom%20with%20DTMF%20Zoom%20Tools/JoinZoom_4-1-1.zip)
 * Unzip the contents
-  * JoinZoom_4-0-0.zip contains the following files
-    * JoinZoom_Main_4-1-0.js
-    * JoinZoom_Config_4-1-0.js
-    * JoinZoom_JoinText_4-1-0.js
-    * JoinZoom_UI_4-1-0.xml
+  * JoinZoom_4-1-1.zip contains the following files
+    * JoinZoom_Main_4-1-1.js
+    * JoinZoom_Config_4-1-1.js
+    * JoinZoom_JoinText_4-1-1.js
+    * JoinZoom_UI_4-1-1.xml
     * Memory_Functions.js
 * Log into your Cisco Room Device as and admin
 * Navigate to the UI Extensions Editor
-* Drag and drop the ```JoinZoom_UI_4-1-0.xml``` into this editor
+* Drag and drop the ```JoinZoom_UI_4-1-1.xml``` into this editor
 * Export the configuration to the new UI elements to the endpoint.
 * Navigate to the Macro Editor
 * Import and Save each of the following Macros into the Room System
-   * JoinZoom_Main_4-1-0.js
-   * JoinZoom_Config_4-1-0.js
-   * JoinZoom_JoinText_4-1-0.js
+   * JoinZoom_Main_4-1-1.js
+   * JoinZoom_Config_4-1-1.js
+   * JoinZoom_JoinText_4-1-1.js
    * Memory_Functions.js
-* Once saved, only activate ```JoinZoom_Main_4-1-0.js```
-   * no issue will occur if you activate all, but Cisco Room systems have a limit to the # of active scripts running. Only ```JoinZoom_Main_4-1-0.js``` is needed
+* Once saved, only activate ```JoinZoom_Main_4-1-1.js```
+   * no issue will occur if you activate all, but Cisco Room systems have a limit to the # of active scripts running. Only ```JoinZoom_Main_4-1-1.js``` is needed
 * Refresh your browser
-   * Important, as Memory_Functions will make a change once ```JoinZoom_Main_4-1-0.js``` activates.
+   * Important, as Memory_Functions will make a change once ```JoinZoom_Main_4-1-1.js``` activates.
 
-Join Zoom version 4-1-0 should now be operational, set to a default configuration and ready for use 😄
+Join Zoom version 4-1-1 should now be operational, set to a default configuration and ready for use 😄
 
 ## Configuration Options
 
 **NOTE**: Values are case sensitive
 
-Join Zoom version 4-1-0 has a Configuration Macro called ```JoinZoom_Config_4-1-0.js```
+Join Zoom version 4-1-1 has a Configuration Macro called ```JoinZoom_Config_4-1-1.js```
 
 Between Lines 32-66is a config const for you to make changes too
 
