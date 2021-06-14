@@ -18,7 +18,18 @@
           "id": "appletv"
         }
       ]
-    }
+    },
+    "userParams": [
+      {
+        "id": "CONNECTOR_APPLE_TV",
+        "name": "Connector id",
+        "info": "Which input connector on video device is the Apple TV connected to?",
+        "type": "number",
+        "default": 2,
+        "domain": "appletv",
+        "required": true
+      }
+    ]
   },
   "profileName": "backup-tbjolset",
   "generatedAt": "20210526-1707"

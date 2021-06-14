@@ -1,13 +1,16 @@
 const xapi = require('xapi');
-const CEC_LOGICAL_ADDRESS_FOR_APPLETV = 4;
-const CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED = 2;
+
+// https://kwikwai.com/knowledge-base/the-hdmi-cec-bus/
+const CEC_PLAYBACK_DEVICE_LOGICAL_ADR = 4;
+
+const CONNECTOR_APPLE_TV = 2;
 
 const signinsequence = [ 'Right','Right','Right','Right', 'Ok', 'Left', 'Left', 'Left','Ok'];
 
 
 function sendCEC(key){
-    var cecstring = 'Video CEC Input KeyClick ConnectorId: ' + CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED + ' LogicalAddress:' + CEC_LOGICAL_ADDRESS_FOR_APPLETV + ' NamedKey: ' + key;
-    xapi.command('Video CEC Input KeyClick', {ConnectorId: CODEC_CONNECTOR_ID_WHERE_APPLE_TV_IS_CONNECTED, LogicalAddress:CEC_LOGICAL_ADDRESS_FOR_APPLETV, NamedKey: key});
+    var cecstring = 'Video CEC Input KeyClick ConnectorId: ' + CONNECTOR_APPLE_TV + ' LogicalAddress:' + CEC_PLAYBACK_DEVICE_LOGICAL_ADR + ' NamedKey: ' + key;
+    xapi.command('Video CEC Input KeyClick', {ConnectorId: CONNECTOR_APPLE_TV, LogicalAddress:CEC_LOGICAL_ADDRESS_FOR_APPLETV, NamedKey: key});
      console.log(`CEC command sent:` + cecstring);
 }
 
