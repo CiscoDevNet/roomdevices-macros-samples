@@ -1,0 +1,18 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "lib-weather.js",
+          "id": "lib-weather",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": []
+  }
+}
