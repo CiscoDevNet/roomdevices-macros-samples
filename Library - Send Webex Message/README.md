@@ -25,4 +25,4 @@ You can also use all the other APIs at developer.webex.com in similar fashion to
 
 ## Requirements
 
-* [xConfig HttpClient Mode](/xapi/Configuration.HttpClient.Mode/) must be `On`.
+* [xConfig HttpClient Mode](https://roomos.cisco.com/xapi/Configuration.HttpClient.Mode/) must be `On`.
