@@ -11,6 +11,7 @@ Macros available:
 | AppleTV Control      | Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.      |
 | Audio Call Dial Pad | Ereate an in-room control application that adds a dedicated audio call dial pad to the Touch 10 |
 | Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
+| Big Red Button | Quick action such as muting with a connected USB device |
 | Camera Control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
 | Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
 | Customer Satisfaction Survey| Want to add a survey at the end of a call? This macro does this for you |

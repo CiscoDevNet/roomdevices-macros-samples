@@ -1,0 +1,30 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "BigRedButton.js",
+          "id": "BigRedButton",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "action",
+        "name": "In-call action",
+        "info": "What happens when tapping button in call",
+        "type": "option",
+        "values": {
+          "toggleMute": "Mute yourself",
+          "endCall": "End call"
+        },
+        "domain": "BigRedButton"
+      }
+    ]
+  }
+}
