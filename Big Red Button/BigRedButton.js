@@ -1,6 +1,6 @@
 import xapi from 'xapi';
 
-const action = 'toggleMute'; // toggleMute, endCall
+const action = 'toggleMute';
 
 function toggleMute() {
   xapi.Command.Audio.Microphones.ToggleMute();
@@ -21,7 +21,8 @@ async function onKey({ Key, Type }) {
 
   if (Key === 'KEY_SPACE') {
     console.log('go!');
-    const inCall = await xapi.Status.Call.get().length > 0;
+    const calls = await xapi.Status.Call.get();
+    const inCall = calls.length > 0;
     if (inCall) {
       if (action === 'toggleMute') {
         toggleMute();
