@@ -9,11 +9,6 @@
           "type": "library"
         },
         {
-          "payload": "JoinZoom_Main_4-1-1.js",
-          "id": "JoinZoom_Main_4-1-1",
-          "type": "library"
-        },
-        {
           "payload": "Memory_Functions.js",
           "id": "Memory_Functions",
           "type": "library"
@@ -21,6 +16,11 @@
         {
           "payload": "JoinZoom_Config_4-1-1.js",
           "id": "JoinZoom_Config_4-1-1",
+          "type": "library"
+        },
+        {
+          "payload": "JoinZoom_Main_4-1-1.js",
+          "id": "JoinZoom_Main_4-1-1",
           "type": "url"
         }
       ]
