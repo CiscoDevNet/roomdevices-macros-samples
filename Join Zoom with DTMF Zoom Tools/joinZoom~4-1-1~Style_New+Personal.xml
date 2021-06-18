@@ -1,0 +1,130 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>6</Order>
+    <PanelId>joinZoom~4-1-1~Style_New+Personal</PanelId>
+    <Origin>local</Origin>
+    <Type>Never</Type>
+    <Icon>Briefing</Icon>
+    <Name>Join Zoom NEW+Personal</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Join Zoom</Name>
+      <Row>
+        <Name>Meeting ID</Name>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~MeetingId~Text</WidgetId>
+          <Name>5-40 Digit Meeting Id</Name>
+          <Type>Text</Type>
+          <Options>size=3;fontSize=normal;align=left</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~MeetingId~Enter</WidgetId>
+          <Name>Enter</Name>
+          <Type>Button</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Passcode</Name>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Passcode~Text</WidgetId>
+          <Name>Passcode</Name>
+          <Type>Text</Type>
+          <Options>size=3;fontSize=normal;align=left</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Passcode~Enter</WidgetId>
+          <Name>Enter</Name>
+          <Type>Button</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Role</Name>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Role</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>joinZoom~4-1-1~Style_New+Personal~Role~Participant</Key>
+              <Name>Participant</Name>
+            </Value>
+            <Value>
+              <Key>joinZoom~4-1-1~Style_New+Personal~Role~Host</Key>
+              <Name>Host</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~HostKey~Text</WidgetId>
+          <Name>- - - - - - - - - - - - - -</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=center</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~HostKey~CallZoom</WidgetId>
+          <Name>Connect to Zoom</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Personal Zoom</Name>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~HostKey~CallPersonalZoom</WidgetId>
+          <Name>Start your Zoom Personal Room</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Personal Meeting Status</Name>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Store~MeetingId~Text</WidgetId>
+          <Name>Meeting ID: Not Set || Passcode: Not Set || HostKey: Not Set</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=center</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Update Meeting Information</Name>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Store~MeetingId~Enter</WidgetId>
+          <Name>Enter Meeting ID</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Store~Passcode~Enter</WidgetId>
+          <Name>Enter Passcode</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Store~HostKey~Enter</WidgetId>
+          <Name>Enter Host Key</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>joinZoom~4-1-1~Style_New+Personal~Spacer</WidgetId>
+          <Type>Spacer</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>

@@ -1,0 +1,210 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>4</Order>
+    <PanelId>jzoomTools~4-1-1~Tools~host</PanelId>
+    <Origin>local</Origin>
+    <Type>Never</Type>
+    <Icon>Input</Icon>
+    <Color>#000000</Color>
+    <Name>Zoom Tools Host</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Host</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ToggleRecord~172</WidgetId>
+          <Name>Start/Stop Recording</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~LockUnlockMeeting~171</WidgetId>
+          <Name>Lock/Unlock Meeting</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~MuteOnEntry~174</WidgetId>
+          <Name>Enable/Disable Mute on Entry</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~MuteAll~176</WidgetId>
+          <Name>Mute All</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~UnMuteAll~177</WidgetId>
+          <Name>Un-Mute All</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~EnableDisableWaitingRoom~178</WidgetId>
+          <Name>Enable/Disable Waiting Room</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~EndMeeting~175</WidgetId>
+          <Name>End Meeting for All</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+    <Page>
+      <Name>General</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~raiseLowerHand~13</WidgetId>
+          <Name>Raise/Lower Hand</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ToggleChat~107</WidgetId>
+          <Name>Toggle Chat</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ToggleCaptions~108</WidgetId>
+          <Name>Toggle Captions</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~unMuteMic~12</WidgetId>
+          <Name>Un-Mute Zoom Microphone</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ShowParticipants~16</WidgetId>
+          <Name>Show Particpants List</Name>
+          <Type>Button</Type>
+          <Options>size=3</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~CloseParticipantsList~*</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=end</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ShowMeetingInfo~19</WidgetId>
+          <Name>Show Meeting Information</Name>
+          <Type>Button</Type>
+          <Options>size=3</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~CloseMeetingInfo~*</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=end</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~AdmitWaitingRoomParticipants~160</WidgetId>
+          <Name>Admit Waiting Room Participants</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+    <Page>
+      <Name>Video</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ChangeVideoLayout~11</WidgetId>
+          <Name>Change Video Layout</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~PreviousGallery~104</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=fast_bw</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~GalleryText</WidgetId>
+          <Name>Change Gallery Screen</Name>
+          <Type>Text</Type>
+          <Options>size=2;fontSize=normal;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~NextGallery~106</WidgetId>
+          <Type>Button</Type>
+          <Options>size=1;icon=fast_fw</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ShowHideNames~102</WidgetId>
+          <Name>Show/Hide Names On Video</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ShowHIdeActiveVideoOnContent~109</WidgetId>
+          <Name>Show/Hide Active Video on Content</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>zoomTools~4-1-1~ShowHideNonVideoParticipants~105</WidgetId>
+          <Name>Show/Hide Non Video Participants</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>

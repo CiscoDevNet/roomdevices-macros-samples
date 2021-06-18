@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "JoinZoom_JoinText_4-1-1.js",
+          "id": "JoinZoom_JoinText_4-1-1",
+          "type": "library"
+        },
+        {
+          "payload": "JoinZoom_Main_4-1-1.js",
+          "id": "JoinZoom_Main_4-1-1",
+          "type": "library"
+        },
+        {
+          "payload": "Memory_Functions.js",
+          "id": "Memory_Functions",
+          "type": "library"
+        },
+        {
+          "payload": "JoinZoom_Config_4-1-1.js",
+          "id": "JoinZoom_Config_4-1-1",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "joinZoom~4-1-1.xml",
+          "id": "joinZoom~4-1-1",
+          "type": "url"
+        },
+        {
+          "payload": "joinZoom~4-1-1~Style_New+Personal.xml",
+          "id": "joinZoom~4-1-1~Style_New+Personal",
+          "type": "url"
+        },
+        {
+          "payload": "joinZoom~4-1-1~Style_New.xml",
+          "id": "joinZoom~4-1-1~Style_New",
+          "type": "url"
+        },
+        {
+          "payload": "jzoomTools~4-1-1~Tools~Visible.xml",
+          "id": "jzoomTools~4-1-1~Tools~Visible",
+          "type": "url"
+        },
+        {
+          "payload": "jzoomTools~4-1-1~Tools~host.xml",
+          "id": "jzoomTools~4-1-1~Tools~host",
+          "type": "url"
+        },
+        {
+          "payload": "jzoomTools~4-1-1~Tools~participant.xml",
+          "id": "jzoomTools~4-1-1~Tools~participant",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}
