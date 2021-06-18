@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./block-outgoing.js",
+          "type": "url",
+          "id": "block-outgoing"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "NumberToBlock",
+        "name": "Number to block",
+        "info": "Partial number is also ok",
+        "type": "string",
+        "default": "macro.polo@cisco.com",
+        "domain": "block-outgoing",
+        "required": true
+      }
+    ]
+  }
+}
