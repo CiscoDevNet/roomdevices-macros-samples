@@ -11,6 +11,8 @@ const denyList = [
 ];
 
 xapi.Status.Call.on(e => {
+  if (!e || !e.RemoteNumber) return;
+
   const reject = denyList.some(number => number.toLowerCase().includes(e.RemoteNumber.toLowerCase()));
   const outgoing = e.Direction === 'Outgoing';
   if (outgoing && reject) {
