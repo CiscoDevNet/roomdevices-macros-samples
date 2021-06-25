@@ -13,7 +13,7 @@ Macros available:
 | Audio Safe Guard      | Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands     |
 | Block Outgoing Calls | Block certain numbers in a reject list from being called from the system. |
 | Big Red Button | Quick action such as muting with a connected USB device |
-| Camera Control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
+| Camera control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
 | Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
 | Customer Satisfaction Survey| Want to add a survey at the end of a call? This macro does this for you |
 | In-Room Control Debugger | A helpful litte extension that shows a message on-screen every time a custom button is pressed or page opened and closed on the touch 10 |
