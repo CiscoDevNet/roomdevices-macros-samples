@@ -1,0 +1,42 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "RoomCleaningAndUsage.js",
+          "id": "RoomCleaningAndUsage",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "RoomCleaningAndUsage.xml",
+          "id": "RoomCleaningAndUsage",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "pinCode",
+        "name": "Pin code",
+        "info": "Pin code number for cleaners",
+        "type": "string",
+        "default": "1234",
+        "domain": "RoomCleaningAndUsage",
+        "required": true
+      },
+      {
+        "id": "maxPeople",
+        "name": "Max people",
+        "info": "Max number of people allowed in the room",
+        "type": "number",
+        "default": 1,
+        "domain": "RoomCleaningAndUsage"
+      }
+    ]
+  }
+}

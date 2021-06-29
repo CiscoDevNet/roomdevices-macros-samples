@@ -1,13 +1,52 @@
 <Extensions>
-  <Version>1.7</Version>
+  <Version>1.8</Version>
   <Panel>
     <Order>1</Order>
-    <PanelId>roomCleaningEvent</PanelId>
-    <Origin>local</Origin>
+    <PanelId>roomCleaning</PanelId>
     <Type>Home</Type>
     <Icon>Concierge</Icon>
     <Color>#07C1E4</Color>
-    <Name>Cleaned Room</Name>
+    <Name>Room usage</Name>
     <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Room usage</Name>
+      <Row>
+        <Name>Last used</Name>
+        <Widget>
+          <WidgetId>roomCleaningTxtLastUsed</WidgetId>
+          <Name>-</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=right</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Last cleaned</Name>
+        <Widget>
+          <WidgetId>roomCleaningTxtLastCleaned</WidgetId>
+          <Name>-</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=right</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Used since cleaning</Name>
+        <Widget>
+          <WidgetId>roomCleaningTxtUsed</WidgetId>
+          <Name>-</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=normal;align=right</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>roomCleaningButtonClean</WidgetId>
+          <Name>Mark as clean...</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
   </Panel>
 </Extensions>
