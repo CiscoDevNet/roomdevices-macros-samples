@@ -11,6 +11,10 @@ Snapshot of Room Usage Message:
 Snapshot of Room Alert Summary:
 ![Sample Room Alert Summary Screenshot](images/roomSummary.png)
 
+---
+Snapshot of Room Usage Panel:
+![Sample Room Usage Message Screenshot](images/panelStats.png)
+
 ## Requirements
 1. A Cisco Webex Room, Board or Desk device
 2. A Touch 10 connected to the Webex Room or Webex Board device to record cleaning events
