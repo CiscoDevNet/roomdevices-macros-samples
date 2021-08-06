@@ -31,9 +31,9 @@ Join the **PROJECT: USB Mode** chat through Webex with this link: https://eurl.i
 
 ## What You'll Need
 * A Compatible Room Series Device
-  * [Compatible Endpoints List](#)
+  * [Compatible Room Device List](#compatible-room-devices)
 * A compatible USB Capture Device
-  * [Tested USB Capture Device List](#)
+  * [Tested USB Capture Device List](#tested-usb-capture-devices)
 * Administrator Access to both the Room Series device and the USB Capture device
 * Experience with
   * the Cisco Room Device Macro Editor
@@ -42,7 +42,7 @@ Join the **PROJECT: USB Mode** chat through Webex with this link: https://eurl.i
 * A copy of the USB mode Macro and the AV Design Guides
 
 **Please READ these guides before continuing**
-    * [Macros and Guides]()
+* [Macros and Guides]()
  
 ## How does this script function?
 * USB Mode is designed to configure the Room device to work alongside a USB Capture device
@@ -87,7 +87,7 @@ Join the **PROJECT: USB Mode** chat through Webex with this link: https://eurl.i
             * Save then Enable
         * USB Mode Version 2 should now be up and running and ready for use
 
-* [Directions for bulk Deployment using Ce-Deploy](#)
+* [Directions for bulk Deployment using Ce-Deploy](#bulk-deployment)
     * **NOTE**: Before Deploying in bulk, you may want to review the configurable options below.
 
 ## Configurable Options
