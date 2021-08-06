@@ -6,6 +6,8 @@
 | **Title** | Senior Technical Marketing Engineer | Video Services Engineer |
 | **Contact**| econeder@cisco.com |- - - |
 
+![Touch Panel Home](https://github.com/RobertMcGonigleJr/roomdevices-macros-samples/blob/patch-1/USB%20Mode/images/USB%20Mode%20Off.png)
+
 ## Release
 | | Script Version | Initial Release | Last Update |
 |--------|--------|-------|-------|
