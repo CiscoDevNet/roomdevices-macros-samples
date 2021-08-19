@@ -21,7 +21,7 @@ Snapshot of Room Navigator after the "MDT Demo" button has been pressed:
 3. Admin user access to endpoint
 
 ## Usage
-1. Please read the [MCS Deployment Guide](https://salesconnect.cisco.com/#/content-detail/7bb557e8-a59c-4a14-9475-43af9ab6d914) for an overview about how to set up and configure the Multi-Content Solution.
+1. Please read the [MCS Deployment Guide](MCS Deployment guide.pdf) for an overview about how to set up and configure the Multi-Content Solution.
 
 
 ## Disclaimer
