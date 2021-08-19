@@ -20,6 +20,7 @@ Macros available:
 | Join 3rd Party Meeting | A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom) |
 | Join Zoom with DTMF Zoom Tools | Join a Zoom call easily from a Webex Device |
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
+| Multi-Content Solution | Compose multiple video inputs to one presentation source and send to far-end |
 | Pin Code Lock | Require user to enter pin code when using the video system |
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Capacity Alert | Display Alert on the device if a set capacity is exceeded - Based on people count API |
