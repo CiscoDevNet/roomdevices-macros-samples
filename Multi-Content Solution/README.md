@@ -1,6 +1,6 @@
 # Multi-Content Solution
 
-<img src="./doctors.jpg">
+![Use case illustration](doctors.jpg)
 
 This is the macro and UI Extension used in the [Multi-Content Solution](https://projectworkplace.cisco.com/workspaces/special-purpose-rooms/multi-content/multi-content) in Project Workplace.
 The panel allow you to share either a single source, or a combination of 4.
