@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "MCS_with_laptop.js",
+          "id": "MCS_with_laptop",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "MCS_panel.xml",
+          "id": "MCS_panel",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+    ]
+  }
+}
