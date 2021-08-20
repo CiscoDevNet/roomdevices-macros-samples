@@ -15,8 +15,6 @@ Macros available:
 | Big Red Button | Quick action such as muting with a connected USB device |
 | Camera control with wide angle view      | Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.      |
 | Conditional Autoanswer with Prompt      | Auto answer on incoming calls - but only for a select number of remote sites      |
-| Customer Satisfaction Survey| Want to add a survey at the end of a call? This macro does this for you |
-| In-Room Control Debugger | A helpful litte extension that shows a message on-screen every time a custom button is pressed or page opened and closed on the touch 10 |
 | Join 3rd Party Meeting | A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom) |
 | Join Zoom with DTMF Zoom Tools | Join a Zoom call easily from a Webex Device |
 | Language Selector      | By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments. |
@@ -25,11 +23,10 @@ Macros available:
 | Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured |
 | Room Capacity Alert | Display Alert on the device if a set capacity is exceeded - Based on people count API |
 | Room Cleaning and Usage | Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions. |
-| Room Kit Pro Video Compositing | With CE firmware you have more customisation options and flexibility than ever. |
 | Room Kit Pro SX80 GPIO | See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall. |
 | Scheduled Actions | Have the endpint device automatically perform actions, like placing a call, at a specified time and day. |
 | Smart Dual Screen Presentation | Allows primary monitor on multiscreen systems to display preso content when not in a video call. |
-| Speed dials Panel | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
+| Speed Dials Panel | Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?     |
 | TicTacToe      | Fun Game which allows the user to see how to update images and panels in real time with relation to user input!    |
 | WebApps Manager  | This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones. |
 | Library - Send Webex Message | Send a Webex (chat) message from the video device using the Webex APIs |

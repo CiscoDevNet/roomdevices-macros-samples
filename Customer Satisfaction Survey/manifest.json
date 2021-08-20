@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "customersatisfaction.js",
+          "id": "customersatisfaction",
+          "type": "url"
+        },
+        {
+          "payload": "customersatisfaction_with_input.js",
+          "id": "customersatisfaction_with_input",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": []
+  }
+}

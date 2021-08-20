@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "Camera Controls.js",
+          "id": "Camera Controls",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "Camera Controls.xml",
+          "id": "Camera Controls",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}

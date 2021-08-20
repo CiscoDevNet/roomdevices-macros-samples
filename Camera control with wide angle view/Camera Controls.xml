@@ -1,7 +1,7 @@
 ﻿<Extensions>
   <Version>1.5</Version>
   <Panel>
-    <PanelId>panel_1</PanelId>
+    <PanelId>cameracontrolpanel</PanelId>
     <Type>Statusbar</Type>
     <Icon>Camera</Icon>
     <Order>1</Order>

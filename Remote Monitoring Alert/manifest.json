@@ -1,0 +1,18 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "remoteMonitoringAlert.js",
+          "id": "remoteMonitoringAlert",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": []
+  }
+}

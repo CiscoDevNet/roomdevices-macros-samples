@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "audioCall.js",
+          "id": "audioCall",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "audiocall.xml",
+          "id": "audiocall",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}
