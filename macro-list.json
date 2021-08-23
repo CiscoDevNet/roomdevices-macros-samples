@@ -1,0 +1,94 @@
+[
+    {
+        "title": "AppleTV Control",
+        "description": "Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed."
+    },
+    {
+        "title": "Audio Call Dial Pad",
+        "description": "Ereate an in-room control application that adds a dedicated audio call dial pad to the Touch 10"
+    },
+    {
+        "title": "Audio Safe Guard",
+        "description": "Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands"
+    },
+    {
+        "title": "Big Red Button",
+        "description": "Quick action such as muting with a connected USB device"
+    },
+    {
+        "title": "Block Outgoing Calls",
+        "description": "Block certain numbers in a reject list from being called from the system."
+    },
+    {
+        "title": "Camera control with wide angle view",
+        "description": "Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously."
+    },
+    {
+        "title": "Conditional Autoanswer with Prompt",
+        "description": "Auto answer on incoming calls - but only for a select number of remote sites"
+    },
+    {
+        "title": "Join 3rd Party Meeting",
+        "description": "A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom)"
+    },
+    {
+        "title": "Join Zoom with DTMF Zoom Tools",
+        "description": "Join a Zoom call easily from a Webex Device"
+    },
+    {
+        "title": "Language Selector",
+        "description": "By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments."
+    },
+    {
+        "title": "Library - Send Webex Message",
+        "description": "Send a Webex (chat) message from the video device using the Webex APIs"
+    },
+    {
+        "title": "Library - Weather Forecast",
+        "description": "Get global weather forecase from free Norwegian weather service"
+    },
+    {
+        "title": "Multi-Content Solution",
+        "description": "Compose multiple video inputs to one presentation source and send to far-end"
+    },
+    {
+        "title": "Pin Code Lock",
+        "description": "Require user to enter pin code when using the video system"
+    },
+    {
+        "title": "Remote Monitoring Alert",
+        "description": "Display OSD\\Touch warning text when video snapshots (aka remote monitoring) are being captured"
+    },
+    {
+        "title": "Room Capacity Alert",
+        "description": "Display Alert on the device if a set capacity is exceeded - Based on people count API"
+    },
+    {
+        "title": "Room Cleaning and Usage",
+        "description": "Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions."
+    },
+    {
+        "title": "Room Kit Pro SX80 GPIO",
+        "description": "See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall."
+    },
+    {
+        "title": "Scheduled Actions",
+        "description": "Have the endpint device automatically perform actions, like placing a call, at a specified time and day."
+    },
+    {
+        "title": "Smart Dual Screen Presentation",
+        "description": "Allows primary monitor on multiscreen systems to display preso content when not in a video call."
+    },
+    {
+        "title": "Speed Dials Panel",
+        "description": "Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?"
+    },
+    {
+        "title": "TicTacToe",
+        "description": "Fun Game which allows the user to see how to update images and panels in real time with relation to user input!"
+    },
+    {
+        "title": "WebApps Manager",
+        "description": "This macro allows simple management of ad-hoc local web apps on a device by providing a user interface to add new apps and remove existing ones."
+    }
+]
