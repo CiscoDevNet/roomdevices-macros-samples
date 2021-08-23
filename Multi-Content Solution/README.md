@@ -21,7 +21,7 @@ Snapshot of Room Navigator after the "MDT Demo" button has been pressed:
 3. Admin user access to endpoint
 
 ## Usage
-1. Please read the [MCS Deployment Guide](MCS Deployment guide.pdf) for an overview about how to set up and configure the Multi-Content Solution.
+1. Please read the [MCS Deployment Guide](MCS%20Deployment%20guide.pdf) for an overview about how to set up and configure the Multi-Content Solution.
 
 
 ## Disclaimer
