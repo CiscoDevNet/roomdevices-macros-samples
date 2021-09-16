@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "RememberMyAudio.js",
+          "id": "RememberMyAudio",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}

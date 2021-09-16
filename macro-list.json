@@ -70,6 +70,11 @@
         "symbol": "🔐"
     },
     {
+        "title": "Remember My Volume",
+        "description": "Ensure your volume setting is remembered, even after reboot.",
+        "symbol": "🔊"
+    },
+    {
         "title": "Remote Monitoring Alert",
         "description": "Display OSD\\Touch warning text when video snapshots (aka remote monitoring) are being captured",
         "symbol": "🚨"
