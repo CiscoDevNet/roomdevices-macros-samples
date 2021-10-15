@@ -9,7 +9,7 @@ const SchedulerDialNumber = 'mydailymeetingnumber@mydomain.com'; //The number/UR
 
 
 function schedule(time, action) {
-    let [alarmH, alarmM] = time.split(':');
+    let [alarmH, alarmM] = time.replace('.', ':').split(':');
     let now = new Date();
     now = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 //    print("Time now:" + now);
