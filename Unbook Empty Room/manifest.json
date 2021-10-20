@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "UnbookEmptyRoom.js",
+          "id": "UnbookEmptyRoom",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "USE_PEOPLE_COUNT_ONLY",
+        "name": "Don't use ultrasound detection",
+        "info": "Check this option for open meeting spaces, rooms with big glass walls etc where ultrasound does not detect people well",
+        "type": "bool",
+        "domain": "UnbookEmptyRoom",
+        "required": true
+      }
+    ]
+  }
+}

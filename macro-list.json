@@ -75,6 +75,11 @@
         "symbol": "🔊"
     },
     {
+        "title": "Unbook Empty Room",
+        "description": "If a room is booked but no one is there, unbook it.",
+        "symbol": "📅"
+    },
+    {
         "title": "Remote Monitoring Alert",
         "description": "Display OSD\\Touch warning text when video snapshots (aka remote monitoring) are being captured",
         "symbol": "🚨"
