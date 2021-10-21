@@ -20,5 +20,4 @@ The following metrics are used:
 
 - The device must have a calendar enabled. 
 
-- Also in the macro you have to set one of the 2 variables: ```const USE_PEOPLE_COUNT_ONLY``` OR
-```const USE_PRESENCE_AND_COUNT``` to ```true``` to make it work
+- Also in the macro you have to set one of the 2 variables: ```const USE_PEOPLE_COUNT_ONLY``` OR ```const USE_PRESENCE_AND_COUNT``` to ```true``` to make it work
