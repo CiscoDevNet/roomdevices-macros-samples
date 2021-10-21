@@ -18,6 +18,7 @@ The following metrics are used:
 
 **Requirements**
 
-The xAPI to Decline a meeting in this Macro is currently a Public-Preview API. Until it is made Public you will need to obtain a Developer Option Key for your device to have access to the API.
+- The device must have a calendar enabled. 
 
-This will only be needed while the API is in Public-Preview.
+- Also in the macro you have to set one of the 2 variables: ```const USE_PEOPLE_COUNT_ONLY``` OR
+```const USE_PRESENCE_AND_COUNT``` to ```true``` to make it work
