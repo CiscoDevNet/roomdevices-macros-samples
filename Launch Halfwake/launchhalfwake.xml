@@ -1,0 +1,13 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>halfwake</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Power</Icon>
+    <Color>#07C1E4</Color>
+    <Name>HalfWake</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>

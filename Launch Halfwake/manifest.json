@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "LaunchHalfwake.js",
+          "id": "LaunchHalfwake",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "launchhalfwake.xml",
+          "id": "halfwake",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": []
+  }
+}

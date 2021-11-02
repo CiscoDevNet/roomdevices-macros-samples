@@ -50,6 +50,11 @@
         "symbol": "💬"
     },
     {
+        "title": "Launch Halfwake",
+        "description": "Set your system in halfwake / signage mode instantly from the home screen",
+        "symbol": "😴"
+    },
+    {
         "title": "Library - Send Webex Message",
         "description": "Send a Webex (chat) message from the video device using the Webex APIs",
         "symbol": "💌"
