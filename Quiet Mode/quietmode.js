@@ -8,27 +8,27 @@
 
 
 // TODO:
-// add to roomos.cisco.com with option for times and turnoff
 // possibility to set hours from device
 
 import xapi from 'xapi';
 import { scheduleDaily } from './schedule';
 
 // When the device activates in the morning
-const dayStart = '08:00';
+const dayStart = '07:55';
 
 // When the device deactivates in the evening
-const dayEnd = '17:00';
+const dayEnd = '17:05';
 
 // This will power down the device completely
 const turnOffCompletely = false;
 
 // Disable all the default productity apps (Call, Whiteboard, ...)
-const toggleHomeScreenButtons = true;
+const toggleHomeScreenButtons = false;
 const toggleWakeOnMotion = true;
 const toggleUltrasound = true;
 const toggleSoundEffects = true;
 const toggleAssistant = true;
+const toggleBrightness = true;
 
 // Which image to use in quiet mode. leave empty for none
 const backgroundUrl = 'https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80';
@@ -92,7 +92,11 @@ async function setQuietMode(on) {
   if (toggleUltrasound) {
     xapi.Config.Audio.Ultrasound.MaxVolume.set(on ? 0 : 70);
   }
-
+  // for some weird reason, parts of the api is not public yet
+  // if (toggleBrightness) {
+  //   xapi.Config.Video.Output.Connector[1].BrightnessMode.set(value)
+  //   .catch(() => console.warn('Device cannot adjust brightness'));
+  // }
 }
 
 async function panelClicked(evt) {
