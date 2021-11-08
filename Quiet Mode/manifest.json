@@ -1,0 +1,51 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./schedule.js",
+          "type": "library",
+          "id": "schedule.js"
+        },
+        {
+          "payload": "./quietmode.js",
+          "type": "url",
+          "id": "quietmode.js"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./quietmode.xml",
+          "id": "quietmode",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "dayStart",
+        "name": "Start of day",
+        "info": "When your day starts. Format: HH:mm",
+        "type": "string",
+        "default": "08:00",
+        "domain": "quietmode.js",
+        "required": true
+      },
+      {
+        "id": "dayEnd",
+        "name": "End of day",
+        "info": "When your day ends. Format: HH:mm",
+        "type": "string",
+        "default": "17:00",
+        "domain": "quietmode.js",
+        "required": true
+      }
+
+    ]
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}

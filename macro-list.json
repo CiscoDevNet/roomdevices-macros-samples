@@ -75,6 +75,11 @@
         "symbol": "🔐"
     },
     {
+        "title": "Quiet Mode",
+        "description": "Make your device silent at the end of your workday",
+        "symbol": "🔕"
+    },
+    {
         "title": "Remember My Volume",
         "description": "Ensure your volume setting is remembered, even after reboot.",
         "symbol": "🔊"

@@ -1,0 +1,12 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>quietmode</PanelId>
+    <Type>Home</Type>
+    <Icon>Home</Icon>
+    <Color>#6F739E</Color>
+    <Name>Quiet Mode</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>
