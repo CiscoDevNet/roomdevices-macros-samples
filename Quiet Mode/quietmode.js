@@ -19,7 +19,7 @@ const dayStart = '07:55';
 // When the device deactivates in the evening
 const dayEnd = '17:05';
 
-// This will power down the device completely
+// This will power down the device completely. This renders most of the other settings useless
 const turnOffCompletely = false;
 
 // Disable all the default productity apps (Call, Whiteboard, ...)
@@ -56,6 +56,7 @@ async function setQuietMode(on) {
     const info = 'Shutting down device soon.<br>Power on with the button behind the screen.';
     xapi.Command.UserInterface.Message.Alert.Display({ Text: info, Duration: 10 });
     setTimeout(() => xapi.Command.SystemUnit.Boot( { Action: 'Shutdown' }), 10 * 1000);
+    return;
   }
 
   xapi.Command.UserInterface.Message.Alert.Display({ Text: msg, Duration: 10 });

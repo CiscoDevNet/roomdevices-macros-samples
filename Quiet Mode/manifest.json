@@ -42,8 +42,16 @@
         "default": "17:00",
         "domain": "quietmode.js",
         "required": true
+      },
+      {
+        "id": "turnOffCompletely",
+        "name": "Turn off completely",
+        "info": "Instead of setting do not disturb etc, power down device instead.",
+        "type": "bool",
+        "default": false,
+        "domain": "quietmode.js",
+        "required": true
       }
-
     ]
   },
   "profileName": "backup-tbjolset",
