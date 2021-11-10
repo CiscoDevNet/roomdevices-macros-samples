@@ -75,13 +75,13 @@ async function setQuietMode(on) {
       xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl })
         .catch(() => console.warn('Not able to set wallpaper'));
     }
+    xapi.Config.Video.Selfview.Default.Mode.set('Off');
   }
   else {
     xapi.Command.Conference.DoNotDisturb.Deactivate();
     if (backgroundUrl) {
       xapi.Command.UserInterface.Branding.Clear();
     }
-    xapi.Config.Video.Selfview.Default.Mode.set('Off');
   }
 
   if (toggleWakeOnMotion) {
