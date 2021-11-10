@@ -14,10 +14,13 @@ import xapi from 'xapi';
 import { scheduleDaily, isBeforeNow, isWeekend } from './schedule';
 
 // When the device activates in the morning
-const dayStart = '08:00';
+const dayStart = '07:55';
 
 // When the device deactivates in the evening
-const dayEnd = '17:00';
+const dayEnd = '17:05';
+
+const standbyDelayNormal = 10;
+const standbyDelayDoNotDisturb = 1;
 
 // This will power down the device completely. This renders most of the other settings useless
 const turnOffCompletely = false;
@@ -29,6 +32,7 @@ const toggleUltrasound = true;
 const toggleSoundEffects = true;
 const toggleAssistant = true;
 const toggleBrightness = true;
+const toggleStandbyDelay = true;
 
 // Which image to use in quiet mode. leave empty for none
 const backgroundUrl = 'https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80';
@@ -94,6 +98,9 @@ async function setQuietMode(on) {
   }
   if (toggleUltrasound) {
     xapi.Config.Audio.Ultrasound.MaxVolume.set(on ? 0 : 70);
+  }
+  if (toggleStandbyDelay) {
+    xapi.Config.Standby.Delay.set(on ? standbyDelayDoNotDisturb : standbyDelayNormal);
   }
   // for some weird reason, parts of the api is not public yet
   // if (toggleBrightness) {
