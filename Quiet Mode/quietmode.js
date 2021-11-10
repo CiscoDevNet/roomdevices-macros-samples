@@ -11,13 +11,13 @@
 // possibility to set hours from device
 
 import xapi from 'xapi';
-import { scheduleDaily } from './schedule';
+import { scheduleDaily, isBeforeNow, isWeekend } from './schedule';
 
 // When the device activates in the morning
-const dayStart = '07:55';
+const dayStart = '08:00';
 
 // When the device deactivates in the evening
-const dayEnd = '17:05';
+const dayEnd = '17:00';
 
 // This will power down the device completely. This renders most of the other settings useless
 const turnOffCompletely = false;
@@ -112,6 +112,11 @@ function init() {
   scheduleDaily(dayStart, () => setQuietMode(false), false);
   scheduleDaily(dayEnd, () => setQuietMode(true), false);
   xapi.Event.UserInterface.Extensions.Panel.Clicked.on(panelClicked);
+
+  // on boot, check whether to toggle mode
+  const isOfficeHoursNow = !isWeekend() && isBeforeNow(dayStart) && !isBeforeNow(dayEnd);
+  console.log('boot: set do not disturb', isOfficeHoursNow);
+  setQuietMode(!isOfficeHoursNow);
 }
 
 init();
