@@ -67,7 +67,9 @@ async function setQuietMode(on) {
   if (on) {
     xapi.Command.Conference.DoNotDisturb.Activate({ Timeout: 12 * 60 });
     if (backgroundUrl) {
-      xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl });
+      console.log('set wallpaper', backgroundUrl);
+      xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl })
+        .catch(() => console.warn('Not able to set wallpaper'));
     }
   }
   else {
