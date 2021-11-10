@@ -30,7 +30,7 @@
         "name": "Start of day",
         "info": "When your day starts. Format: HH:mm",
         "type": "string",
-        "default": "08:00",
+        "default": "07:55",
         "domain": "quietmode",
         "required": true
       },
@@ -39,7 +39,7 @@
         "name": "End of day",
         "info": "When your day ends. Format: HH:mm",
         "type": "string",
-        "default": "15:00",
+        "default": "17:05",
         "domain": "quietmode",
         "required": true
       },
@@ -55,15 +55,6 @@
 "https://images.unsplash.com/photo-1493441883526-0ed85220dc0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2666&q=80&t=waves": "Waves",
 "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80&t=forestandwaer": "Forest and water"
         },
-        "domain": "quietmode",
-        "required": true
-      },
-      {
-        "id": "turnOffCompletely",
-        "name": "Turn off completely",
-        "info": "Instead of setting do not disturb etc, power down device instead.",
-        "type": "bool",
-        "default": false,
         "domain": "quietmode",
         "required": true
       }

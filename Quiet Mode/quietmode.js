@@ -110,7 +110,6 @@ async function setQuietMode(on) {
 }
 
 async function panelClicked(evt) {
-  console.log(evt);
   if (evt.PanelId !== panelId) return;
   const isQuiet = (await xapi.Status.Conference.DoNotDisturb.get()) === 'Active';
   console.log('isquiet', isQuiet);
