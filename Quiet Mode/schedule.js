@@ -44,7 +44,7 @@ function schedule(time, action) {
     const h = Math.floor(difference / 3600);
     const m = Math.floor((difference / 60) % 60);
     const s = Math.floor(difference % 60);
-    console.log(time, ': fire in', h, 'hours', m, 'min', s, 'sec');
+    // console.log(time, ': fire in', h, 'hours', m, 'min', s, 'sec');
 
     return setTimeout(action, difference * 1000);
 }

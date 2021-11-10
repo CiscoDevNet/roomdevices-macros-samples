@@ -35,7 +35,7 @@ const toggleBrightness = true;
 const toggleStandbyDelay = true;
 
 // Which image to use in quiet mode. leave empty for none
-const backgroundUrl = 'https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80';
+const backgroundUrl = 'https://images.unsplash.com/photo-1620503374956-c942862f0372?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80&t=abstract';
 
 const panelId = 'quietmode';
 
@@ -52,24 +52,24 @@ async function setQuietMode(on) {
     return;
   }
 
+  xapi.Command.UserInterface.Extensions.Widget.SetValue({ Value: on ? 'on' : 'off', WidgetId: 'quiet-mode' });
+
   const msg = !on
-    ? 'Disabling quiet mode. Time to work!'
+    ? 'Disabling quiet mode.'
     : 'Enabling quiet mode. Time to chill!';
 
   if (on && turnOffCompletely) {
+    const warningTime = 10;
     const info = 'Shutting down device soon.<br>Power on with the button behind the screen.';
-    xapi.Command.UserInterface.Message.Alert.Display({ Text: info, Duration: 10 });
-    setTimeout(() => xapi.Command.SystemUnit.Boot( { Action: 'Shutdown' }), 10 * 1000);
+    xapi.Command.UserInterface.Message.Alert.Display({ Text: info, Duration: warningTime });
+    setTimeout(() => xapi.Command.SystemUnit.Boot( { Action: 'Shutdown' }), warningTime * 1000);
     return;
   }
 
-  xapi.Command.UserInterface.Message.Alert.Display({ Text: msg, Duration: 10 });
-
-  const buttonText = on ? 'Work Mode' : 'Quiet Mode';
-  xapi.Command.UserInterface.Extensions.Panel.Update({ PanelId: panelId, Name: buttonText });
+  xapi.Command.UserInterface.Message.Alert.Display({ Text: msg, Duration: 5 });
 
   if (on) {
-    xapi.Command.Conference.DoNotDisturb.Activate({ Timeout: 12 * 60 });
+    xapi.Command.Conference.DoNotDisturb.Activate();
     if (backgroundUrl) {
       console.log('set wallpaper', backgroundUrl);
       xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl })
@@ -79,9 +79,7 @@ async function setQuietMode(on) {
   }
   else {
     xapi.Command.Conference.DoNotDisturb.Deactivate();
-    if (backgroundUrl) {
-      xapi.Command.UserInterface.Branding.Clear();
-    }
+    xapi.Command.UserInterface.Branding.Clear();
   }
 
   if (toggleWakeOnMotion) {
@@ -109,17 +107,19 @@ async function setQuietMode(on) {
   // }
 }
 
-async function panelClicked(evt) {
-  if (evt.PanelId !== panelId) return;
-  const isQuiet = (await xapi.Status.Conference.DoNotDisturb.get()) === 'Active';
-  console.log('isquiet', isQuiet);
-  setQuietMode(!isQuiet);
+async function widgetAction(evt) {
+  const { WidgetId, Value, Type } = evt;
+  console.log(evt);
+  if (WidgetId === 'quiet-mode' && Type === 'released') {
+    const on = Value === 'on';
+    setQuietMode(on);
+  }
 }
 
 function init() {
   scheduleDaily(dayStart, () => setQuietMode(false), false);
   scheduleDaily(dayEnd, () => setQuietMode(true), false);
-  xapi.Event.UserInterface.Extensions.Panel.Clicked.on(panelClicked);
+  xapi.Event.UserInterface.Extensions.Widget.Action.on(widgetAction);
 
   // on boot, check whether to toggle mode
   const isOfficeHoursNow = !isWeekend() && isBeforeNow(dayStart) && !isBeforeNow(dayEnd);
