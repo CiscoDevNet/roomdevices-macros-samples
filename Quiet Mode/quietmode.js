@@ -79,7 +79,9 @@ async function setQuietMode(on) {
   }
   else {
     xapi.Command.Conference.DoNotDisturb.Deactivate();
-    xapi.Command.UserInterface.Branding.Clear();
+    if (backgroundUrl) {
+      xapi.Command.UserInterface.Branding.Clear();
+    }
   }
 
   if (toggleWakeOnMotion) {
