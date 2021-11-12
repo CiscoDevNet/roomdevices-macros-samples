@@ -29,7 +29,7 @@
           </ValueSpace>
         </Widget>
         <Widget>
-          <WidgetId>widget_2</WidgetId>
+          <WidgetId>quietmodeinfo</WidgetId>
           <Name>Quiet mode will prevent incoming calls, turn off notifications and sounds, not auto-wake up the display etc.</Name>
           <Type>Text</Type>
           <Options>size=4;fontSize=small;align=left</Options>
@@ -42,7 +42,7 @@
       <Row>
         <Name>Scheduled</Name>
         <Widget>
-          <WidgetId>quietmode-scheduled</WidgetId>
+          <WidgetId>quietmodescheduled</WidgetId>
           <Type>ToggleButton</Type>
           <Options>size=1</Options>
         </Widget>
@@ -50,7 +50,7 @@
       <Row>
         <Name>Start of Day</Name>
         <Widget>
-          <WidgetId>quietmode-start</WidgetId>
+          <WidgetId>quietmodestart</WidgetId>
           <Type>Spinner</Type>
           <Options>size=3</Options>
         </Widget>
@@ -58,7 +58,7 @@
       <Row>
         <Name>End of Day</Name>
         <Widget>
-          <WidgetId>quietmode-end</WidgetId>
+          <WidgetId>quietmodeend</WidgetId>
           <Type>Spinner</Type>
           <Options>size=3</Options>
         </Widget>

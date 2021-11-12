@@ -140,30 +140,32 @@ async function widgetAction(evt) {
     const on = Value === 'on';
     setQuietMode(on);
   }
-  else if (WidgetId === 'quietmode-start' && Type === 'released') {
+  else if (WidgetId === 'quietmodestart' && Type === 'released') {
     if (!userSettings.useSchedule) return;
     const change = Value === 'increment' ? +1 : -1;
     userSettings.dayStart = changeTime(userSettings.dayStart, change);
     onSettingsChanged();
+    save(userSettings);
   }
-  else if (WidgetId === 'quietmode-end' && Type === 'released') {
+  else if (WidgetId === 'quietmodeend' && Type === 'released') {
     if (!userSettings.useSchedule) return;
     const change = Value === 'increment' ? +1 : -1;
     userSettings.dayEnd = changeTime(userSettings.dayEnd, change);
     onSettingsChanged();
+    save(userSettings);
   }
-  else if (WidgetId === 'quietmode-scheduled' && Type === 'changed') {
+  else if (WidgetId === 'quietmodescheduled' && Type === 'changed') {
     userSettings.useSchedule = Value === 'on';
     onSettingsChanged();
+    save(userSettings);
   }
 }
 
 function onSettingsChanged() {
-    save(userSettings);
     const scheduled = userSettings.useSchedule;
-    setWidgetValue('quietmode-start', scheduled ? userSettings.dayStart : '-');
-    setWidgetValue('quietmode-end', scheduled ? userSettings.dayEnd : '-');
-    setWidgetValue('quietmode-scheduled', scheduled ? 'on' : 'off');
+    setWidgetValue('quietmodestart', scheduled ? userSettings.dayStart : '-');
+    setWidgetValue('quietmodeend', scheduled ? userSettings.dayEnd : '-');
+    setWidgetValue('quietmodescheduled', scheduled ? 'on' : 'off');
     schedule();
 }
 
@@ -200,6 +202,9 @@ async function init() {
   // on boot, check whether to toggle mode
   const isOfficeHoursNow = !isWeekend() && isBeforeNow(userSettings.dayStart) && !isBeforeNow(userSettings.dayEnd);
   setQuietMode(!isOfficeHoursNow);
+
+  // bug in ui extensions: need to make widgets update properly
+  xapi.Command.UserInterface.Extensions.Panel.Update({ PanelId: 'quietmode', Color: '#1D805E' });
 }
 
 init();

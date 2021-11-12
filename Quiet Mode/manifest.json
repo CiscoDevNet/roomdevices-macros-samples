@@ -26,30 +26,12 @@
     },
     "userParams": [
       {
-        "id": "dayStart",
-        "name": "Start of day",
-        "info": "When your day starts. Format: HH:mm",
-        "type": "string",
-        "default": "07:55",
-        "domain": "quietmode",
-        "required": true
-      },
-      {
-        "id": "dayEnd",
-        "name": "End of day",
-        "info": "When your day ends. Format: HH:mm",
-        "type": "string",
-        "default": "17:05",
-        "domain": "quietmode",
-        "required": true
-      },
-      {
         "id": "backgroundUrl",
         "name": "Wallpaper",
         "info": "What background would you like in quiet mode?",
         "type": "option",
         "values": {
-          "": "None",
+          "": "(Don't change)",
           "https://images.unsplash.com/photo-1488543882437-49f6f714ad05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2676&q=80&t=river": "River",
 "https://images.unsplash.com/photo-1620503374956-c942862f0372?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80&t=abstract": "Abstract",
 "https://images.unsplash.com/photo-1493441883526-0ed85220dc0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2666&q=80&t=waves": "Waves",
