@@ -1,8 +1,8 @@
 <Extensions>
   <Version>1.8</Version>
   <Panel>
-    <Order>1</Order>
-    <PanelId>quietmode-panel</PanelId>
+    <Order>3</Order>
+    <PanelId>quietmode</PanelId>
     <Origin>local</Origin>
     <Type>Home</Type>
     <Icon>Home</Icon>
@@ -33,6 +33,34 @@
           <Name>Quiet mode will prevent incoming calls, turn off notifications and sounds, not auto-wake up the display etc.</Name>
           <Type>Text</Type>
           <Options>size=4;fontSize=small;align=left</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=0</Options>
+    </Page>
+    <Page>
+      <Name>Settings</Name>
+      <Row>
+        <Name>Scheduled</Name>
+        <Widget>
+          <WidgetId>quietmode-scheduled</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Start of Day</Name>
+        <Widget>
+          <WidgetId>quietmode-start</WidgetId>
+          <Type>Spinner</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>End of Day</Name>
+        <Widget>
+          <WidgetId>quietmode-end</WidgetId>
+          <Type>Spinner</Type>
+          <Options>size=3</Options>
         </Widget>
       </Row>
       <Options/>

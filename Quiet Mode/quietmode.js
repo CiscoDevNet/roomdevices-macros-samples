@@ -6,23 +6,24 @@
  * @author Tore Bjolseth tbjolset@cisco.com
  */
 
+let userSettings = {
+  // Whether or not we will use the times below to automatically start/stop quiet mode
+  useSchedule: true,
 
-// TODO:
-// possibility to set hours from device
+  // When the device activates in the morning
+  dayStart: '08:00',
 
-import xapi from 'xapi';
-import { scheduleDaily, isBeforeNow, isWeekend } from './schedule';
+  // When the device deactivates in the evening
+  dayEnd: '17:00',
+}
 
-// When the device activates in the morning
-const dayStart = '07:55';
-
-// When the device deactivates in the evening
-const dayEnd = '17:05';
-
+// How many minutes it takes before we go to standby during office hours
 const standbyDelayNormal = 10;
-const standbyDelayDoNotDisturb = 1;
 
-// This will power down the device completely. This renders most of the other settings useless
+// How many minutes it takes before we go to standby after work hours
+const standbyDelayDoNotDisturb = 2;
+
+// This will power down the device completely instead of donotdisturb. This renders most of the other settings useless
 const turnOffCompletely = false;
 
 // Disable all the default productity apps (Call, Whiteboard, ...)
@@ -35,9 +36,21 @@ const toggleBrightness = true;
 const toggleStandbyDelay = true;
 
 // Which image to use in quiet mode. leave empty for none
-const backgroundUrl = 'https://images.unsplash.com/photo-1620503374956-c942862f0372?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80&t=abstract';
+const backgroundUrl = '';
 
-const panelId = 'quietmode';
+
+
+
+// -------------------------------------------------------------------------------
+// Internal code - feel free to change if you feel like it
+// -------------------------------------------------------------------------------
+
+import xapi from 'xapi';
+import { Scheduler, isBeforeNow, isWeekend } from './schedule';
+
+
+const timerDayStart = new Scheduler();
+const timerDayEnd = new Scheduler();
 
 async function isBusy() {
   const calls = await xapi.Status.SystemUnit.State.NumberOfActiveCalls.get();
@@ -109,23 +122,83 @@ async function setQuietMode(on) {
   // }
 }
 
+function changeTime(dateTime, change) {
+  const parts = dateTime.split(':');
+  const time = parseInt(parts[0]) + change;
+  return Math.max(0, Math.min(time, 23)) + ':' + parts[1];
+}
+
+function setWidgetValue(WidgetId, Value) {
+  xapi.Command.UserInterface.Extensions.Widget.SetValue({ WidgetId, Value })
+    .catch(() => console.warn('Unable to set widget value', WidgetId));
+}
+
 async function widgetAction(evt) {
   const { WidgetId, Value, Type } = evt;
-  console.log(evt);
+  // console.log(evt);
   if (WidgetId === 'quiet-mode' && Type === 'released') {
     const on = Value === 'on';
     setQuietMode(on);
   }
+  else if (WidgetId === 'quietmode-start' && Type === 'released') {
+    if (!userSettings.useSchedule) return;
+    const change = Value === 'increment' ? +1 : -1;
+    userSettings.dayStart = changeTime(userSettings.dayStart, change);
+    onSettingsChanged();
+  }
+  else if (WidgetId === 'quietmode-end' && Type === 'released') {
+    if (!userSettings.useSchedule) return;
+    const change = Value === 'increment' ? +1 : -1;
+    userSettings.dayEnd = changeTime(userSettings.dayEnd, change);
+    onSettingsChanged();
+  }
+  else if (WidgetId === 'quietmode-scheduled' && Type === 'changed') {
+    userSettings.useSchedule = Value === 'on';
+    onSettingsChanged();
+  }
 }
 
-function init() {
-  scheduleDaily(dayStart, () => setQuietMode(false), false);
-  scheduleDaily(dayEnd, () => setQuietMode(true), false);
+function onSettingsChanged() {
+    save(userSettings);
+    const scheduled = userSettings.useSchedule;
+    setWidgetValue('quietmode-start', scheduled ? userSettings.dayStart : '-');
+    setWidgetValue('quietmode-end', scheduled ? userSettings.dayEnd : '-');
+    setWidgetValue('quietmode-scheduled', scheduled ? 'on' : 'off');
+    schedule();
+}
+
+async function save(prefs) {
+  let json = JSON.stringify(prefs).replace(/"/g, '§'); // xapi doesnt like "
+  return xapi.Config.FacilityService.Service[5].Name.set(json);
+}
+
+async function load(defaults) {
+  const json = await xapi.Config.FacilityService.Service[5].Name.get();
+  try {
+    return JSON.parse(json.replace(/§/g, '"'));
+  }
+  catch(e) {
+    return defaults;
+  }
+}
+
+function schedule() {
+  timerDayStart.cancel();
+  timerDayEnd.cancel();
+  if (userSettings.useSchedule) {
+    timerDayStart.scheduleDaily(userSettings.dayStart, () => setQuietMode(false), false);
+    timerDayEnd.scheduleDaily(userSettings.dayEnd, () => setQuietMode(true), false);
+  }
+}
+
+async function init() {
+  userSettings = await load(userSettings);
+  onSettingsChanged();
+
   xapi.Event.UserInterface.Extensions.Widget.Action.on(widgetAction);
 
   // on boot, check whether to toggle mode
-  const isOfficeHoursNow = !isWeekend() && isBeforeNow(dayStart) && !isBeforeNow(dayEnd);
-  console.log('boot: set do not disturb', isOfficeHoursNow);
+  const isOfficeHoursNow = !isWeekend() && isBeforeNow(userSettings.dayStart) && !isBeforeNow(userSettings.dayEnd);
   setQuietMode(!isOfficeHoursNow);
 }
 
