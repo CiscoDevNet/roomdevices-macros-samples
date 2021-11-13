@@ -188,8 +188,8 @@ function schedule() {
   timerDayStart.cancel();
   timerDayEnd.cancel();
   if (userSettings.useSchedule) {
-    timerDayStart.scheduleDaily(userSettings.dayStart, () => setQuietMode(false), false);
-    timerDayEnd.scheduleDaily(userSettings.dayEnd, () => setQuietMode(true), false);
+    timerDayStart.scheduleDaily(userSettings.dayStart, () => setQuietMode(false), true);
+    timerDayEnd.scheduleDaily(userSettings.dayEnd, () => setQuietMode(true), true);
   }
 }
 
