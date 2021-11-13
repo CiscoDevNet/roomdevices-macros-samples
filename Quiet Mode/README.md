@@ -19,6 +19,10 @@ The mode can also be toggled manually by a button on the home screen, if you nee
 
 ## Updates
 
+13. Nov 2021:
+
+* Device was waking up in weekends, fixed
+
 12. Nov 2021:
 
 * Possible to set time for start/end of day on device itself
