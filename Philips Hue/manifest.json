@@ -1,0 +1,30 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/guido/main/src/ui-builder.js",
+          "type": "library",
+          "id": "ui-builder"
+        },
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/guido/main/src/ui.js",
+          "type": "library",
+          "id": "ui"
+        },
+        {
+          "payload": "./hue.js",
+          "type": "url",
+          "id": "hue"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+      ]
+    },
+    "userParams": []
+  },
+  "profileName": "backup-tbjolset"
+}
