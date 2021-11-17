@@ -23,7 +23,7 @@ Snapshot of Room Usage Panel:
 5. Firmware CE9.12.3 or newer or RoomOS for enhanced people detection
 
 ## Usage
-1. Read the document "Working with Macros and In-room Controls" for an overview about In-Room Controls, Macros as well as step-by-step instructions on how to build and upload your code.
+1.  See the latest version of the [Cisco Webex Board, Desk, and Room Series Customization Guide](https://www.cisco.com/c/en/us/support/collaboration-endpoints/spark-room-kit-series/products-installation-and-configuration-guides-list.html)    for a comprehensive introduction to UI extensions and macros; as well as step-by-step instructions on how to build and upload your code.
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
