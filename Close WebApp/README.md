@@ -1,10 +1,10 @@
 # Close WebApp
-Add a 'Close web view' button to the Touch 10 that allows you to remove any web view from the main screen.
+Add a 'Close web view' button to the touch controller that allows you to remove any web view from the main screen.
 
 ---
-Snapshot of Touch 10 Home Screen Panel after a Webapp is open a close webapp panel appears on the touch:
+Snapshot of Touch Controller Home Screen Panel after a Webapp is open a close webapp panel appears on the touch:
 ![Sample In-Room Control Screenshot](CloseWebAppPanel.png)
-Snapshot of Touch 10 Home Screen Panel after a Webapp is open a button to open the close panel appears on the touch :
+Snapshot of Touch Controller Home Screen Panel after a Webapp is open a button to open the close panel appears on the touch :
 ![Sample In-Room Control Screenshot](CloseWebAppHomeScreen.png)
 ---
 

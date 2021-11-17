@@ -4,10 +4,10 @@ A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings.
 You can customize the postfix const in __JoinMeetingGeneric.js__ to simplfy your Join Meeting experience to virtually any 3rd party conferencing platform that supports Standard SIP dialling.  Such as @zoomcrc.com, @MSFT.tenant, or @yourdomain.com
 
 ---
-Snapshot of Touch 10 Home Screen Panel showing the Join Meeting Button:
+Snapshot of Touch Controller Home Screen Panel showing the Join Meeting Button:
 ![Sample In-Room Control Screenshot](JoinConferenceButton.png)
 
-Snapshot of Touch 10 Home Screen Panel after the Join Meeting Button has been pressed:
+Snapshot of Touch Controller Home Screen Panel after the Join Meeting Button has been pressed:
 ![Sample In-Room Control Screenshot](JoinConferencePanel.png)
 ---
 

@@ -17,7 +17,7 @@ Snapshot of Room Usage Panel:
 
 ## Requirements
 1. A Cisco Webex Room, Board or Desk device
-2. A Touch 10 connected to the Webex Room or Webex Board device to record cleaning events
+2. A touch controller connected to the Webex Room or Webex Board device to record cleaning events
 3. If using a device with an external camera, that camera must be a Cisco Quad Camera
 4. Admin user or integrator access to the Webex device
 5. Firmware CE9.12.3 or newer or RoomOS for enhanced people detection
@@ -29,8 +29,8 @@ Snapshot of Room Usage Panel:
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
 
 The sample macros are meant to:
-- Illustrate how to use the CE Macros.
-- Serve as an example of the step by step process of building a macro using JavaScript and integration with the Codec XAPI
+- Illustrate how to use the macros.
+- Serve as an example of the step-by-step process of building a macro using JavaScript and integration with the device xPI
 - Provided as a guide for a developer to see how to initialize a macro and set up handlers for user and dialog updates.
 
 The sample macros are made available to Cisco partners and customers as a convenience to help minimize the cost of Cisco Finesse customizations. Cisco does not permit the use of this library in customer deployments that do not include Cisco Video Endpoint Hardware.
@@ -38,7 +38,7 @@ The sample macros are made available to Cisco partners and customers as a conven
 ## Support Notice
 [Support](http://developer.cisco.com/site/devnet/support) for the macros is provided on a "best effort" basis via DevNet. Like any custom deployment, it is the responsibility of the partner and/or customer to ensure that the customization works correctly and this includes ensuring that the macro is properly integrated into 3rd party applications.
 
-It is Cisco's intention to ensure macro compatibility across versions as much as possible and Cisco will make every effort to clearly document any differences in the XAPI across versions in the event that a backwards compatibility impacting change is made.
+It is Cisco's intention to ensure macro compatibility across versions as much as possible and Cisco will make every effort to clearly document any differences in the xAPI across versions in the event that a backwards compatibility impacting change is made.
 
 Cisco Systems, Inc.<br>
 [http://www.cisco.com](http://www.cisco.com)<br>

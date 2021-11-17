@@ -1,9 +1,10 @@
 # Language Selector
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that allows the user to select the menu language on the Touch 10 and OSD on the video endpoint.
+This macro and corresponding UI extension demonstrates how to create an application that allows the user to select the
+menu language on the touch screen of the video device.
 
-Snapshot of Touch 10 Home Screen Panel with language selector:
+Snapshot of Touch Controller Home Screen Panel with language selector:
 ![Sample In-Room Control Screenshot](languageselector_homescreen.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
+Snapshot of Touch Controller Home Screen Panel after pressing the language selector:
 ![Sample In-Room Control Screenshot](languageselector_panel_selected.png)
 
 
@@ -18,7 +19,7 @@ Snapshot of Touch 10 Home Screen Panel after pressing the language selector:
 
 ## Additional Information
 ##### XAPI
-Documentation for the XAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
+Documentation for the xAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
 
 ## Disclaimer
 This example is only a sample and is **NOT guaranteed to be bug free and production quality**.

@@ -2,9 +2,9 @@
 Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with Apple TV Control:
+Snapshot of Touch Controller Home Screen Panel with Apple TV Control:
 ![Sample In-Room Control Screenshot](appleTV_homescreen.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Apple TV Control selector:
+Snapshot of Touch Controller Home Screen Panel after pressing the Apple TV Control selector:
 ![Sample In-Room Control Screenshot](appleTV_panel_selected.png)
 ---
 

@@ -1,10 +1,10 @@
 # Cisco CE Video Endpoints Macros - HTTP Post - Philips Hue Control
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that can talk with a Philips Hue brige to control lights. 
+This macro and corresponding UI extension demonstrate how to create an application that can talk with a Philips Hue bridge to control lights. 
 
 ---
-Snapshot of Touch 10 Home Screen Panel with Hue button:
+Snapshot of Touch Controller Home Screen Panel with Hue button:
 ![Sample In-Room Control Screenshot](touch10_homescreeen_huebutton.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Hue button:
+Snapshot of Touch Controller Home Screen Panel after pressing the Hue button:
 ![Sample In-Room Control Screenshot](touch10_huepanel.png)
 ---
 

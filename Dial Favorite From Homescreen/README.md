@@ -1,8 +1,8 @@
 # Cisco CE Room Devices Macros - One Button to Dial
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control panel with a single one-button-to-dial speed dial on the Touch 10.
+This macro and corresponding UI Extension demonstrate how to create a panel with a single one-button-to-dial speed dial on the touch controller.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with  Speed Dial Control:
+Snapshot of Touch Controller Home Screen Panel with  Speed Dial Control:
 ![Sample In-Room Control Screenshot](onebuttontodial.png)
 ---
 

@@ -5,7 +5,7 @@ This macro allows simple management of ad-hoc local web apps on a device by prov
 
 ## Requirements
 1. A Cisco Webex Board or Desk device
-2. A Touch 10 connected to the Webex Room or Webex Board device to record cleaning events
+2. A touch controller connected to the Webex Room or Webex Board device to record cleaning events
 3. Firmware CE9.13 or newer or RoomOS
 
 ## Usage

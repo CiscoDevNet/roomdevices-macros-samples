@@ -1,10 +1,10 @@
 # Camera Controls
-Allows the user to control multiple cameras using the Touch 10. It also shows how to do simple video compositing stitching two cameras together as one wide angle image.
+Allows the user to control multiple cameras using the touch controller. It also shows how to do simple video compositing stitching two cameras together as one wide angle image.
 
-As a bonus it also shows how to control whatever camera(s) are selected as the main source with one single in-room control.
+As a bonus, it also shows how to control whatever camera(s) are selected as the main source from one single UI extension.
 
 ---
-Snapshot of Touch 10 Home Screen Panel for the camera control selector:
+Snapshot of Touch Controller Home Screen Panel for the camera control selector:
 ![Sample In-Room Control Screenshot](camera_controls_touch10.png)
 ---
 

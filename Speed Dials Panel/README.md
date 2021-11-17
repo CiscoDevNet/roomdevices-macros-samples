@@ -1,6 +1,6 @@
 # Speed Dials
 
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control panel with speed dials on the Touch 10. A unique feature is that you can create the speed dial numbers without touching the macro, just add buttons in the UI Extensions editor, and add number as id, prefixed with sd.
+This macro and corresponding UI extension demonstrate how to create a panel with speed dials on the touch controller. A unique feature is that you can create the speed dial numbers without touching the macro, just add buttons in the UI Extensions editor, and add number as id, prefixed with sd.
 
 Eg to add a button to call reception, add a button and set it's id to:
 `sd_reception@acme.com`

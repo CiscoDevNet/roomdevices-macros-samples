@@ -2,15 +2,15 @@
 This macro and corresponding In-Room Control sample demonstrates how to creata a report issue application that can send the report to your issue tracking tool of choice using HTTP Post, like ServiceNow 
 
 ---
-Snapshot of Touch 10 Home Screen Panel with Report Issue button:
+Snapshot of Touch Controller Home Screen Panel with Report Issue button:
 ![Sample In-Room Control Screenshot](touch_10_homescreen_reportissue.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Report Issue button:
+Snapshot of Touch Controller Home Screen Panel after pressing the Report Issue button:
 ![Sample In-Room Control Screenshot](touch_10_selectissue.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Cleanliness button:
+Snapshot of Touch Controller Home Screen Panel after pressing the Cleanliness button:
 ![Sample In-Room Control Screenshot](touch_10_specifyissue.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Audio/Video button:
+Snapshot of Touch Controller Home Screen Panel after pressing the Audio/Video button:
 ![Sample In-Room Control Screenshot](touch_10_specify_av-issue.png)
-Snapshot of Touch 10 Home Screen Panel report issue feedback:
+Snapshot of Touch Controller Home Screen Panel report issue feedback:
 ![Sample In-Room Control Screenshot](touch_10_feedbackreceipt.png)
 ---
 

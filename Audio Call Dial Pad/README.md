@@ -1,10 +1,10 @@
 # Audio Call
-Create an in-room control application that adds a dedicated audio call dial pad to the Touch 10
+Create a UI extension that adds a dedicated audio call dial pad to the touch controller.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with Audio Dialler:
+Snapshot of Touch Controller Home Screen Panel with Audio Dialler:
 ![Sample In-Room Control Screenshot](Touch10_homescreen_AudioCall.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Audio Dialler:
+Snapshot of Touch Controller Home Screen Panel after pressing the Audio Dialler:
 ![Sample In-Room Control Screenshot](Touch10_AudioCall.png)
 ---
 

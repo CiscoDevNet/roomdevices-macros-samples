@@ -16,7 +16,7 @@ Make sure that standby has not been disabled on your system, otherwise the pin p
 ## Requirements
 
 * CE 9.1 or greater
-* Supported on both Touch 10 and devices with touch screen, such as Desk Pro and the Webex Board
+* Supported on both touch controller and devices with touch screen, such as Desk Pro and the Webex Board
 
 ## Usage
 

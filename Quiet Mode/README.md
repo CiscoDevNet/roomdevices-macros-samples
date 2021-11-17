@@ -34,7 +34,7 @@ The mode can also be toggled manually by a button on the home screen, if you nee
 ## Requirements
 
 * CE 9.1 or greater
-* Supported on both Touch 10 and devices with touch screen, such as Desk Pro and the Webex Board
+* Supported on both touch controller and devices with touch screen, such as Desk Pro and the Webex Board
 
 ## Note
 
