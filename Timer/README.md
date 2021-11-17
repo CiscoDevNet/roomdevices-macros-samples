@@ -1,10 +1,10 @@
 # Cisco CE Video Endpoints Macros - Timer
-This macro and corresponding In-Room Control sample demonstrates how to create an in-room control application that adds a timer application to the Touch 10. The timer will show a countdown on the monitors during countdown and will play a tone at the end of the time.
+This macro and corresponding UI Extension sample demonstrates how to add a timer application to the touch controller. The timer will show a countdown on the monitors during countdown and will play a tone at the end of the time.
 
 ---
-Snapshot of Touch 10 Home Screen Panel with Timer:
+Snapshot of Touch Controller Home Screen Panel with Timer:
 ![Sample In-Room Control Screenshot](Touch10_homescreen_Timer.png)
-Snapshot of Touch 10 Home Screen Panel after pressing the Timer:
+Snapshot of Touch Controller Home Screen Panel after pressing the Timer:
 ![Sample In-Room Control Screenshot](Touch10_Timer.png)
 Snapshot of OSD after starting a Timer:
 ![Sample OSD Screenshot](OSD_Timer.png)
