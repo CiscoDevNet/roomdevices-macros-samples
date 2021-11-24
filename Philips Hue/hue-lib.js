@@ -48,7 +48,6 @@ class Hue {
     const data = { devicetype : 'CiscoWebexDevice' };
     const url = `https://${this.ip}/api`;
     const result = await fetch(url, 'Post', data);
-    console.log('create user', result);
     const body = JSON.parse(result.Body);
     const error = body[0].error;
     if (error) {

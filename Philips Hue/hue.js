@@ -7,23 +7,15 @@ const xapi = require('xapi');
 
 const hue = new Hue();
 
+// How often to poll hue bridge and update ui widgets. for demo set low
+// otherwise it shouldnt be necessary to poll more often than once a minute or so
+const pollInterval = 3;
+
 const colors = {
-  red: {
-    hue: 65384,
-    sat: 254,
-  },
-  blue: {
-    hue: 45304,
-    sat: 254,
-  },
-  yellow: {
-    hue: 9196,
-    sat: 254,
-  },
-  white: {
-   hue: 41346,
-    sat: 86,
-  }
+  red: { hue: 65384, sat: 254 },
+  blue: { hue: 45304, sat: 254 },
+  yellow: { hue: 9196, sat: 254 },
+  white: { hue: 41346, sat: 86 }
 };
 
 async function createUi(lights) {
@@ -39,7 +31,7 @@ async function createUi(lights) {
 
   setTimeout(async () => {
     await ui.panelSave('hue-lights', panel);
-    // ui.alert('Lights page created!');
+    if (lights) ui.alert('A user interface for your lights was created!');
   }, 1000);
 }
 
@@ -98,7 +90,6 @@ function startWizard() {
 }
 
 async function searchBridge() {
-  console.log('search bridge');
   try {
     const ip = await hue.discoverBridge();
     console.log('bridge', ip);
@@ -116,8 +107,7 @@ async function createPairing() {
     console.log('token', token);
     await hue.saveConfig();
     try {
-      const lights = await hue.getLightState();
-      // promptNextLight(lights);
+      await hue.getLightState();
       createUi(null);
     }
     catch(e) {
@@ -160,8 +150,6 @@ function promptNextLight(state) {
 
   showPromptDelayed(prompt, options, (chosen) => {
     state[nextId].gui = optionKeys[chosen];
-    console.log('update light', nextId);
-    // console.log('state updated', state);
     promptNextLight(state);
   });
 }
@@ -174,23 +162,47 @@ function onWidgetAction(e) {
       hue.setLightPower(id, Value === 'on');
     }
     else if (prop === 'bri') {
-      hue.setLightState(id, { bri: parseInt(Value) });
+      hue.setLightState(id, { on: true, bri: parseInt(Value) });
     }
     else if (prop === 'col') {
       const color = colors[Value];
-      console.log('set', Value, color);
       if (color) {
-        hue.setLightState(id, color);
+        hue.setLightState(id, Object.assign({ on: true } , color));
       }
     }
   }
 }
 
-async function pollState() {
+function testColor(col1, col2) {
+  const hueDiff = Math.abs(col1.hue - col2.hue);
+  return hueDiff < 10;
+}
+
+async function updateState() {
   const lights = await hue.getLightState();
-  Object.keys(lights).forEach((id) => {
-    const light = lights[id];
-    ui('huectrl-' + id + '-bri').setValue(String(light.state.bri));
+  const widgets = await xapi.Status.UserInterface.Extensions.Widget.get();
+  const controls = widgets.filter(w => w.WidgetId.startsWith('huectrl'));
+
+  controls.forEach(({ WidgetId }) => {
+    const [_, lightId, type] = WidgetId.match(/huectrl-(\d+)-(.*)/);
+    const state = (lights[lightId] && lights[lightId].state) || {};
+    const on = state.on && state.reachable;
+    const bri = on && state.bri || 0;
+    if (type === 'on') {
+      ui(WidgetId).setValue(on ? 'on' : 'off');
+    }
+    else if (type === 'bri') {
+      ui(WidgetId).setValue(bri);
+    }
+    else if (type === 'col') {
+      const color = on && Object.keys(colors).find(c => testColor(colors[c], state));
+      if (color) {
+        ui(WidgetId).setValue(color || '');
+      }
+      else {
+        ui(WidgetId).unsetValue();
+      }
+    }
   });
 }
 
@@ -200,6 +212,7 @@ async function panelClicked() {
     startWizard();
   }
   else {
+    updateState();
     console.log('already paired');
   }
 }
@@ -215,6 +228,8 @@ async function init() {
     const state = await hue.getLightState();
     promptNextLight(state);
   });
+  ui('hue-lights').onPanelClosed(() => console.log('stop polling'));
+  setInterval(updateState, pollInterval * 1000);
 }
 
 init();
