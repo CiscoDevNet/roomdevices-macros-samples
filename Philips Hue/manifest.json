@@ -14,6 +14,11 @@
           "id": "ui"
         },
         {
+          "payload": "./hue-lib.js",
+          "type": "library",
+          "id": "hue-lib"
+        },
+        {
           "payload": "./hue.js",
           "type": "url",
           "id": "hue"
@@ -22,6 +27,12 @@
     },
     "roomcontrol": {
       "items": [
+        {
+          "payload": "./huepanel.xml",
+          "id": "hue-lights",
+          "type": "url"
+        }
+
       ]
     },
     "userParams": []

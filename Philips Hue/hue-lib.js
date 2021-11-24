@@ -29,6 +29,21 @@ class Hue {
     return this.ip;
   }
 
+  isConfigured() {
+    return !!(this.ip && this.token);
+  }
+
+  async isConnected() {
+    if (!this.isConfigured()) return false;
+    try {
+      await this.getLightState();
+      return true;
+    }
+    catch (e) {
+      return false;
+    }
+  }
+
   async createToken() {
     const data = { devicetype : 'CiscoWebexDevice' };
     const url = `https://${this.ip}/api`;
@@ -59,12 +74,11 @@ class Hue {
   // }
   setLightState(lightId, state) {
     const url = `https://${this.ip}/api/${this.token}/lights/${lightId}/state`;
-    console.log(`PUTting to ${url}`, JSON.stringify(state));
+    // console.log(`PUTting to ${url}`, JSON.stringify(state));
     return fetch(url, 'Put', state);
   }
 
   setLightPower(lightId, on) {
-    return this.blink(lightId);
     return this.setLightState(lightId, { on });
   }
 

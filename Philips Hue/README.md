@@ -1,15 +1,47 @@
 # Philips Hue
 
-Easily discover and connect to your Philips Hue ecosystem, and build user interface for your lights and rooms.
+Easily discover and connect to your Philips Hue ecosystem and control individual lights
+or groups/rooms from your Webex device.
 
 <!-- ![Quiet Mode](quietmode.png) -->
-
 
 ## Description
 
 
+Nice if you want to:
 
-## Updates
+* Control the light in your home office or other rooms without opening your phone
+* Make the lights react to events on your device, such as incoming call, meeting starting
+* Show others you busy / in-call by making an indicator lamp red
+* Set the light color to match your virtual background, for a more realistic view
+* Control other peripherals in your home with the Philips Hue Smart Plug
+
+
+## Customise it yourself
+
+This extension let's you easily connect to the Hue bridge and create a stanard user interface for you lights,
+using UI Extensions. However, you may want to customize the user interface to exact purpose. You can do quite a
+lot without any programming by adding UI extensions that giving the specific widget ids.
+
+The widget will automatically control a specified light or group by having a widget id that matches this format:
+
+```
+huectr-<id>-<controltype>
+```
+
+Where id is either light id or group id. Control type can be:
+
+```
+on: toggle power if toggle button (alternate if push button)
+bri: brightness (use slider)
+col: color hue (slider or button group)
+sat: color saturation
+```
+
+Example: A home screen button to quickly toggle on/off a single light or room
+
+* Add an **action button** from the UI extensions
+* To toggle light #7, give id the panel id **huectr-7-on**
 
 
 ## Requirements
