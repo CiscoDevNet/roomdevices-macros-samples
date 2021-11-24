@@ -24,14 +24,19 @@ async function createUi(lights) {
   const settings = createSettings();
   const lightsPage = lights ? createLightsPage(lights) : null;
   const panel = Config({}, [
-    Panel({ name: 'Lights', icon: 'Lightbulb', color: 'orange' }, [
+    Panel({ name: 'Hue Lights', icon: 'Lightbulb', color: 'orange' }, [
       lightsPage, settings
     ])
   ]);
 
   setTimeout(async () => {
     await ui.panelSave('hue-lights', panel);
-    if (lights) ui.alert('A user interface for your lights was created!');
+    if (lights) {
+      ui.alert('A user interface for your lights was created!');
+      // needed to fix a bug due to widgets not being updated properly after creation
+      xapi.Command.UserInterface.Extensions.Panel.Update({
+        PanelId: 'hue-lights', Name: 'Lights' });
+    }
   }, 1000);
 }
 
@@ -209,6 +214,7 @@ function testColor(col1, col2) {
 }
 
 async function updateState() {
+  if (!hue.isConfigured()) return;
   const lights = await hue.getLightState();
   const widgets = await xapi.Status.UserInterface.Extensions.Widget.get();
   const controls = widgets.filter(w => w.WidgetId.startsWith('huectrl'));
