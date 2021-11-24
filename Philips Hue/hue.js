@@ -51,7 +51,7 @@ function createSettings() {
         Text({ widgetId: 'hue-bridge-status', size: 3, text: status, align: 'center', fontSize: 'normal' })
       ]),
       Row({ text: 'Hue Bridge' }, [
-        Button({ widgetId: 'hue-bridge-find', size: 3, text: 'Pair' }),
+        Button({ widgetId: 'hue-bridge-find', size: 3, text: 'Pair again' }),
       ]),
       // Row({ text: 'Create User Interface', }, [
       //   Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For rooms / groups' }),
