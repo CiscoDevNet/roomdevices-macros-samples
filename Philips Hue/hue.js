@@ -44,14 +44,14 @@ function createSettings() {
   const status = 'Paired to bridge';
   return (
     Page({ name: 'Settings' }, [
+      Row({ text: 'Create User Interface' }, [
+        Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For individual lights' }),
+      ]),
       Row({ text: 'Status' }, [
         Text({ widgetId: 'hue-bridge-status', size: 3, text: status, align: 'center', fontSize: 'normal' })
       ]),
       Row({ text: 'Hue Bridge' }, [
         Button({ widgetId: 'hue-bridge-find', size: 3, text: 'Pair' }),
-      ]),
-      Row({ text: 'Create User Interface' }, [
-        Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For individual lights' }),
       ]),
       // Row({ text: 'Create User Interface', }, [
       //   Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For rooms / groups' }),
@@ -114,6 +114,7 @@ async function createPairing() {
     try {
       await hue.getLightState();
       createUi(null);
+      ui.alert('You are paired. You can now create your own lights UI.');
     }
     catch(e) {
       console.error(e);
