@@ -34,8 +34,10 @@ async function createUi(lights) {
     if (lights) {
       ui.alert('A user interface for your lights was created!');
       // needed to fix a bug due to widgets not being updated properly after creation
-      xapi.Command.UserInterface.Extensions.Panel.Update({
-        PanelId: 'hue-lights', Name: 'Lights' });
+      setTimeout(() => {
+        xapi.Command.UserInterface.Extensions.Panel.Update({
+          PanelId: 'hue-lights', Name: 'Lights' });
+      }, 1000);
     }
   }, 1000);
 }
