@@ -94,7 +94,7 @@ async function searchBridge() {
     const ip = await hue.discoverBridge();
     console.log('bridge', ip);
     const prompt = { Title: 'Found Bridge!', Text: 'Tap the button on your Hue bridge to allow pairing, then tap Ok', FeedbackId: 'hue-pair' };
-    ui.prompt(prompt, ['Ok'], createPairing);
+    showPromptDelayed(prompt, ['Ok'], createPairing);
   }
   catch(e) {
     console.warn(e);
