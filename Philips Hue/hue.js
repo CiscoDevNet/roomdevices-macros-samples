@@ -1,6 +1,6 @@
 const ui = require('./ui');
 const {
-  Config, Panel, Page, Row, Text, Button, ToggleButton, Slider, GroupButton
+  Config, Panel, Page, Row, Text, Button, ToggleButton, Slider, IconButton
 } = require('./ui-builder');
 const Hue = require('./hue-lib');
 const xapi = require('xapi');
@@ -73,8 +73,8 @@ function createLightRow(id, name, hasSlider, hasColors) {
   return (
     Row({ text: name }, [
       ToggleButton({ widgetId: 'huectrl-' + id + '-on' }),
-      hasSlider && Slider({ widgetId: 'huectrl-' + id + '-bri' }),
-      hasColors && GroupButton({ widgetId: 'huectrl-' + id + '-col', buttons: colors }),
+      hasSlider && Slider({ widgetId: 'huectrl-' + id + '-bri', size: hasColors ? 2 : 3 }),
+      hasColors && IconButton({ widgetId: 'huectrl-' + id + '-col', icon: 'green' }),
     ])
   );
 }
@@ -154,21 +154,51 @@ function promptNextLight(state) {
   });
 }
 
+async function createColorPanel(id) {
+  const panelId = 'hue-colors';
+  const panel = Config({}, [
+    Panel({ panelId, type: 'Never', name: 'Hue Colors', icon: 'Lightbulb', color: 'orange' },
+      Page({ name: 'Hue Colors' }, [
+        Row({ text: 'Hue (Color)' }, Slider({ widgetId: 'huectrl-' + id + '-hue'})),
+        Row({ text: 'Saturation' }, Slider({ widgetId: 'huectrl-' + id + '-sat' })),
+        Row({}, Button({ widgetId: 'hue-colors-back', text: 'Back' })),
+      ]),
+    ),
+  ]);
+
+  await ui.panelSave(panelId, panel);
+  const state = await hue.getLightState();
+  if (state && state[id]) {
+    ui('huectrl-' + id + '-sat').setValue(state[id].state.sat);
+    ui('huectrl-' + id + '-hue').setValue(state[id].state.hue * 255 / 65535);
+  }
+  ui.panelOpen(panelId);
+}
+
 function onWidgetAction(e) {
   const { WidgetId, Value, Type } = e;
   if (WidgetId.startsWith('huectrl')) {
     const [_, id, prop] = WidgetId.split('-');
     if (prop === 'on') {
-      hue.setLightPower(id, Value === 'on');
+      hue.setLightPower(id, Value === 'on')
+        .catch(console.warn);
     }
     else if (prop === 'bri') {
-      hue.setLightState(id, { on: true, bri: parseInt(Value) });
+      hue.setLightState(id, { on: true, bri: parseInt(Value) })
+        .catch(console.warn);
+    }
+    else if (prop === 'hue') {
+      const h = Value * 65535 / 255;
+      hue.setLightState(id, { on: true, hue: h })
+        .catch(console.warn);
+    }
+    else if (prop === 'sat') {
+      hue.setLightState(id, { on: true, sat: parseInt(Value) })
+        .catch(console.warn);
     }
     else if (prop === 'col') {
-      const color = colors[Value];
-      if (color) {
-        hue.setLightState(id, Object.assign({ on: true } , color));
-      }
+      createColorPanel(id)
+        .catch(console.warn);
     }
   }
 }
@@ -194,15 +224,15 @@ async function updateState() {
     else if (type === 'bri') {
       ui(WidgetId).setValue(bri);
     }
-    else if (type === 'col') {
-      const color = on && Object.keys(colors).find(c => testColor(colors[c], state));
-      if (color) {
-        ui(WidgetId).setValue(color || '');
-      }
-      else {
-        ui(WidgetId).unsetValue();
-      }
-    }
+    // else if (type === 'col') {
+    //   const color = on && Object.keys(colors).find(c => testColor(colors[c], state));
+    //   if (color) {
+    //     ui(WidgetId).setValue(color || '');
+    //   }
+    //   else {
+    //     ui(WidgetId).unsetValue();
+    //   }
+    // }
   });
 }
 
@@ -228,6 +258,7 @@ async function init() {
     const state = await hue.getLightState();
     promptNextLight(state);
   });
+  ui('hue-colors-back').onButtonClicked(() => ui.panelOpen('hue-lights'));
   ui('hue-lights').onPanelClosed(() => console.log('stop polling'));
   setInterval(updateState, pollInterval * 1000);
 }
