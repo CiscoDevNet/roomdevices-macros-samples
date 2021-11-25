@@ -121,6 +121,10 @@ class Hue {
       const config = JSON.parse(json.replace(/§/g, '"'));
       this.ip = config.ip;
       this.token = config.token;
+      const lights = await this.getLightState();
+      for (const id in lights) {
+        console.log(`Light #${id}: ${lights[id].name} (${lights[id].type})`);
+      }
     }
     catch(e) {
       return {};
