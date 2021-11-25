@@ -11,13 +11,6 @@ const hue = new Hue();
 // otherwise it shouldnt be necessary to poll more often than once a minute or so
 const pollInterval = 3;
 
-const colors = {
-  red: { hue: 65384, sat: 254 },
-  blue: { hue: 45304, sat: 254 },
-  yellow: { hue: 9196, sat: 254 },
-  white: { hue: 41346, sat: 86 }
-};
-
 async function createUi(lights) {
   await ui.panelRemove('hue-lights');
 
