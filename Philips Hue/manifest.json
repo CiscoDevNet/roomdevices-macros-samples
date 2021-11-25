@@ -37,7 +37,8 @@
     },
     "userParams": [],
     "uninstall": [
-      { "type": "config", "path": "FacilityService Service 4 Name", "value": "" }
+      { "type": "config", "path": "FacilityService Service 4 Name", "value": "" },
+      { "type": "panel", "id": "hue-colors" }
     ]
   },
   "profileName": "backup-tbjolset"
