@@ -35,7 +35,10 @@
 
       ]
     },
-    "userParams": []
+    "userParams": [],
+    "uninstall": [
+      { "type": "config", "path": "FacilityService Service 4 Name", "value": "" }
+    ]
   },
   "profileName": "backup-tbjolset"
 }
