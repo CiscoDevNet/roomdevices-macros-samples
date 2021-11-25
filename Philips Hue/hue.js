@@ -176,7 +176,7 @@ function promptNextLight(state) {
 
 async function createColorPanel(id) {
   const panelId = 'hue-colors';
-  const legend = 'Red | Yellow | Green | Aqua | Blue | Purple | Pink | Red';
+  const legend = 'Red | Yellow | Lime | Green | Blue | Purple | Magenta | Pink |';
 
   const panel = Config({}, [
     Panel({ panelId, type: 'Never', name: 'Hue Colors', icon: 'Lightbulb', color: 'orange' },
