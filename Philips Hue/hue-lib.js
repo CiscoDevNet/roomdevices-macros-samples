@@ -85,6 +85,20 @@ class Hue {
     this.setLightState(lightId, { alert: 'select' });
   }
 
+  getType(state) {
+    const { type } = state;
+    if (type === "Color temperature light") {
+      return 'color-temperature';
+    }
+    if (type === "Extended color light") {
+      return 'color';
+    }
+    if (type === "Dimmable light") {
+      return 'brightness';
+    }
+    return 'power';
+  }
+
   saveConfig() {
     const prefs = { ip: this.ip, token: this.token };
     let json = JSON.stringify(prefs).replace(/"/g, '§'); // xapi doesnt like "

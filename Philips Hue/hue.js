@@ -81,7 +81,7 @@ function createLightRow(id, name, hasSlider, hasColors) {
     Row({ text: name }, [
       ToggleButton({ widgetId: 'huectrl-' + id + '-on' }),
       hasSlider && Slider({ widgetId: 'huectrl-' + id + '-bri', size: hasColors ? 2 : 3 }),
-      hasColors && IconButton({ widgetId: 'huectrl-' + id + '-col', icon: 'green' }),
+      hasColors && Button({ widgetId: 'huectrl-' + id + '-col', text: 'Color', size: 1 }),
     ])
   );
 }
@@ -143,7 +143,12 @@ function promptNextLight(state) {
       }
     }).filter(i => i); // remove empty
 
-    createUi(lights);
+    if (lights.length) {
+      createUi(lights);
+    }
+    else {
+      ui.alert('No lights were selected.');
+    }
     return;
   };
 
@@ -153,7 +158,14 @@ function promptNextLight(state) {
     FeedbackId: 'hue-prompt-controls',
   };
 
-  const options = ['None (skip)', 'Power only', 'Power and brightness', 'Power, brightness and color'];
+  const type = hue.getType(light);
+  const options = ['None (skip)', 'Power only'];
+  if (type === 'color' || type === 'brightness' || type === 'color-temperature') {
+    options.push('Brightness');
+  }
+  if (type === 'color') {
+    options.push('Brightness and color');
+  }
   const optionKeys = { 0: 'none', 1: 'power', 2: 'brightness', 3: 'color' };
 
   showPromptDelayed(prompt, options, (chosen) => {
@@ -164,11 +176,14 @@ function promptNextLight(state) {
 
 async function createColorPanel(id) {
   const panelId = 'hue-colors';
+  const legend = 'Red | Yellow | Green | Aqua | Blue | Purple | Pink | Red';
+
   const panel = Config({}, [
     Panel({ panelId, type: 'Never', name: 'Hue Colors', icon: 'Lightbulb', color: 'orange' },
       Page({ name: 'Hue Colors' }, [
-        Row({ text: 'Hue (Color)' }, Slider({ widgetId: 'huectrl-' + id + '-hue'})),
-        Row({ text: 'Saturation' }, Slider({ widgetId: 'huectrl-' + id + '-sat' })),
+        Row({ text: 'Colors'}, Text({ widgetId: 'huecolor', size: 4, fontSize: 'small', text: legend })),
+        Row({ }, Slider({ widgetId: 'huectrl-' + id + '-hue', size: 4 })),
+        Row({ text: 'Saturation' }, Slider({ widgetId: 'huectrl-' + id + '-sat', size: 4 })),
         Row({}, Button({ widgetId: 'hue-colors-back', text: 'Back' })),
       ]),
     ),
@@ -233,26 +248,15 @@ async function updateState() {
     else if (type === 'bri') {
       ui(WidgetId).setValue(bri);
     }
-    // else if (type === 'col') {
-    //   const color = on && Object.keys(colors).find(c => testColor(colors[c], state));
-    //   if (color) {
-    //     ui(WidgetId).setValue(color || '');
-    //   }
-    //   else {
-    //     ui(WidgetId).unsetValue();
-    //   }
-    // }
   });
 }
 
 async function panelClicked() {
-  console.log('panel');
   if (!hue.isConfigured()) {
     startWizard();
   }
   else {
     updateState();
-    console.log('already paired');
   }
 }
 
