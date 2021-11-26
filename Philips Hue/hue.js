@@ -200,20 +200,20 @@ function onWidgetAction(e) {
       hue.setLightPower(id, Value === 'on')
         .catch(console.warn);
     }
-    else if (prop === 'bri') {
+    else if (prop === 'bri'  && Type === 'changed') {
       hue.setLightState(id, { on: true, bri: parseInt(Value) })
         .catch(console.warn);
     }
-    else if (prop === 'hue') {
+    else if (prop === 'hue' && Type === 'changed') {
       const h = Value * 65535 / 255;
       hue.setLightState(id, { on: true, hue: h })
         .catch(console.warn);
     }
-    else if (prop === 'sat') {
+    else if (prop === 'sat' && Type === 'changed') {
       hue.setLightState(id, { on: true, sat: parseInt(Value) })
         .catch(console.warn);
     }
-    else if (prop === 'col') {
+    else if (prop === 'col' && Type === 'changed') {
       createColorPanel(id)
         .catch(console.warn);
     }
