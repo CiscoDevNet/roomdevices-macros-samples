@@ -17,7 +17,7 @@ async function createUi(lights) {
 
   const settings = createSettings();
   const lightsPage = lights ? createLightsPage(lights) : null;
-  const panel = Config({}, [
+  const panel = Config({ version: '1.5' }, [
     Panel({ name: 'Hue Lights', icon: 'Lightbulb', color: 'orange' }, [
       lightsPage, settings
     ])
@@ -172,7 +172,7 @@ async function createColorPanel(id) {
   const panelId = 'hue-colors';
   const legend = 'Red | Yellow | Lime | Green | Blue | Purple | Magenta | Pink |';
 
-  const panel = Config({}, [
+  const panel = Config({ version: '1.5' }, [
     Panel({ panelId, type: 'Never', name: 'Hue Colors', icon: 'Lightbulb', color: 'orange' },
       Page({ name: 'Hue Colors' }, [
         Row({ text: 'Colors'}, Text({ widgetId: 'huecolor', size: 4, fontSize: 'small', text: legend })),
