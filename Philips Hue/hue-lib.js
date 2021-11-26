@@ -13,7 +13,7 @@ function fetch(url, type, body) {
   return xapi.command('HttpClient ' + type, options, data);
 }
 
-const Colors = {
+const myColors = {
   red: { hue: 65384, sat: 254 },
   green: { hue: 19000, sat: 200 },
   blue: { hue: 45304, sat: 254 },
@@ -23,7 +23,7 @@ const Colors = {
 
 class Hue {
 
-  Colors = Colors;
+  Colors = myColors;
 
   setConfig(bridgeIp, token) {
     this.ip = bridgeIp;
