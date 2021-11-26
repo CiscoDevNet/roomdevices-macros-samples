@@ -23,7 +23,9 @@ const myColors = {
 
 class Hue {
 
-  Colors = myColors;
+  constructor() {
+    this.Colors = myColors;
+  }
 
   setConfig(bridgeIp, token) {
     this.ip = bridgeIp;
