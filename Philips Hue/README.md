@@ -26,29 +26,33 @@ lot without any programming by adding UI extensions that giving the specific wid
 The widget will automatically control a specified light or group by having a widget id that matches this format:
 
 ```
-huectr-<id>-<controltype>
+huectrl-<id>-<controltype>
 ```
 
 Where id is either light id or group id. Control type can be:
 
 ```
-on: toggle power if toggle button (alternate if push button)
+on: set power on or off (typically from switch)
+toggle: toggle power to opposite (typically from push button)
 bri: brightness (use slider)
 col: color hue (slider or button group)
-sat: color saturation
+sat: color saturation (slider or button group)
 ```
 
 Example: A home screen button to quickly toggle on/off a single light or room
 
 * Add an **action button** from the UI extensions
-* To toggle light #7, give id the panel id **huectr-7-on**
+* To toggle light #7, give id the panel id **huectrl-7-on**
+* To toggle brightness for light #3, give the slider widget id **huectrl-3-bri**
 
 
 ## Requirements
 
 * CE 9.1 or greater
 * Supported on both Touch 10 and devices with touch screen, such as Desk Pro and the Webex Board
-* Philips Hue bridge (reachable on the network from your video device)
+* Philips Hue bridge
+* Video device on same network as Hue bridge (or at least reachable)
+* Philips Hue bridge and lights already configured (eg from phone app)
 
 ## Note
 

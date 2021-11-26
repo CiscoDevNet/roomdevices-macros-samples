@@ -10,6 +10,7 @@ const hue = new Hue();
 // How often to poll hue bridge and update ui widgets. for demo set low
 // otherwise it shouldnt be necessary to poll more often than once a minute or so
 const pollInterval = 3;
+let lastState;
 
 async function createUi(lights) {
   await ui.panelRemove('hue-lights');
@@ -86,7 +87,7 @@ function showPromptDelayed(prompt, buttons, callback) {
 
 function startWizard() {
   const prompt = { Title: 'Starting Hue Wizard', Text: 'Tap Ok to discover the Hue bridge', FeedbackId: 'hue-find-bridge' };
-  ui.prompt(prompt, ['Ok'], searchBridge);
+  showPromptDelayed(prompt, ['Ok'], searchBridge);
 }
 
 async function searchBridge() {
@@ -216,6 +217,10 @@ function onWidgetAction(e) {
       createColorPanel(id)
         .catch(console.warn);
     }
+    else if (prop === 'toggle' && Type === 'clicked') {
+      const previous = lastState[id] && lastState[id].state.on;
+      hue.setLightPower(id, !previous);
+    }
   }
 }
 
@@ -227,6 +232,7 @@ function testColor(col1, col2) {
 async function updateState() {
   if (!hue.isConfigured()) return;
   const lights = await hue.getLightState();
+  lastState = lights;
   const widgets = await xapi.Status.UserInterface.Extensions.Widget.get();
   const controls = widgets.filter(w => w.WidgetId.startsWith('huectrl'));
 
