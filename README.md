@@ -2,8 +2,11 @@
 
 Macros allow you to customise your video devices and these are especially powerful in combination with the User Interface (UI) Extensions.
 
-The macros can also be browsed and saved easily from [roomos.cisco.com](https://roomos.cisco.com). If you connect your video device 
-to this website, you can load the macros and UI extensions directly. Then, it's simple to make adjustments and create your own tools.
+The macros can also be browsed and saved easily from [roomos.cisco.com](https://roomos.cisco.com/macros).
+
+If you connect your video device to this website, you can install the macros and UI extensions directly. Then, it's simple to make adjustments and create your own tools.
+
+![RoomOS Site](roomos.png)
 
 Here is selection of macros:
 
@@ -40,8 +43,8 @@ Here is selection of macros:
 3. Admin user access to endpoint.
 
 ## Getting Started
-1. Read about macros and explore the examples from [Cisco RoomOS for Webex Devices](https://roomos.cisco.com). 
-2. See the latest version of the [Cisco Webex Board, Desk, and Room Series Customization Guide](https://www.cisco.com/c/en/us/support/collaboration-endpoints/spark-room-kit-series/products-installation-and-configuration-guides-list.html) 
+1. Read about macros and explore the examples from [Cisco RoomOS for Webex Devices](https://roomos.cisco.com).
+2. See the latest version of the [Cisco Webex Board, Desk, and Room Series Customization Guide](https://www.cisco.com/c/en/us/support/collaboration-endpoints/spark-room-kit-series/products-installation-and-configuration-guides-list.html)
 for a comprehensive introduction of UI extensions and macros; as well as step-by-step instructions on how to build and upload your code.
 3. Watch this video for a quick introduction of what In-Room Controls are: https://youtu.be/IQ2Z104Xf50
 
