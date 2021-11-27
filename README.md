@@ -8,34 +8,6 @@ If you connect your video device to this website, you can install the macros and
 
 ![RoomOS Site](roomos.png)
 
-Here is selection of macros:
-
-
-| Macro        | Description           |
-| :------------------------ |:-------------|
-| AppleTV Control      | Add an Apple TV remote control to the touch controller. All communication is done directly via HDMI-CEC and no control system needed.      |
-| Audio Call Dial Pad | Add a dedicated audio call dial pad to the touch controller. |
-| Audio Safe Guard      | Enforce a maximum output volume on the device.     |
-| Block Outgoing Calls | Block certain numbers from being called from the system. |
-| Big Red Button | Perform a quick action with a third party device. For example, mute and unmute yourself by pressing a button on a connected USB device. |
-| Camera control with wide angle view      | Create a custom camera control page providing a wide angle view of two cameras and the ability to control multiple cameras simultaneously.      |
-| Conditional Autoanswer with Prompt      | Auto answer on incoming calls for a select number of remote sites.      |
-| Join 3rd Party Meeting | Join a third party non-Webex meeting (e.g., Microsoft Teams or Zoom) through a custom Join Meeting panel. |
-| Join Zoom with DTMF Zoom Tools | Join a Zoom call easily from a Webex Device. |
-| Language Selector      | Change the language on the user interface through a custom panel. |
-| Multi-Content Solution | Compose multiple video inputs into one presentation source and send it to the far-end. |
-| Pin Code Lock | Require a user to enter a PIN code when using the video system. |
-| Remote Monitoring Alert | Display OSD\Touch warning text when video snapshots (aka remote monitoring) are being captured. |
-| Room Capacity Alert | Display an alert on the device if a set capacity is exceeded. This is based on the people count API. |
-| Room Cleaning and Usage | Record cleaning events, shows time since last used, time since last cleaned, and number of times since last cleaned. Warn of capacity restrictions. |
-| Room Kit Pro SX80 GPIO | Perform actions when triggering a change on the built-in GPIO. Add a one-button-to-dial button on the wall. |
-| Scheduled Actions | Automatically perform actions at a specified time and day (e.g., place a call at 12:00). |
-| Smart Dual Screen Presentation | Allow the primary monitor on multiscreen systems to display presentation content when not in a video call. |
-| Speed Dials Panel | Provide speed dial buttons making commonly used numbers easily accessible. For example, maybe you want to add calling 911 or the Pizza Place more prominent?     |
-| TicTacToe      | Add a fun game which allows the user to see how to update images and panels in real-time and in relation to user input.    |
-| WebApps Manager  | Manage ad-hoc local web apps on a device by providing a UI to add new web apps and remove existing ones. |
-| Library - Send Webex Message | Send a Webex (chat) message from the video device using the Webex APIs. |
-| Library - Weather Forecast | Get the global weather forecast from the free Norwegian weather service. |
 
 ## Requirements
 1. Webex devices running Software version CE9.2.1 or newer (e.g., Webex Board, Desk, or Room Series).
