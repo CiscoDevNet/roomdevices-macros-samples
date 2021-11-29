@@ -19,6 +19,11 @@ The mode can also be toggled manually by a button on the home screen, if you nee
 
 ## Updates
 
+30. Nov 2021:
+
+* Added support for photo frame in half wake mode
+* Add settings for photo frame, and button to activate half wake
+
 13. Nov 2021:
 
 * Device was waking up in weekends, fixed
