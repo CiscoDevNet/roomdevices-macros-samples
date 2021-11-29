@@ -14,6 +14,7 @@ let lastState;
 
 async function createUi(lights) {
   await ui.panelRemove('hue-lights');
+  await ui.panelRemove('hue-colors');
 
   const settings = createSettings();
   const lightsPage = lights ? createLightsPage(lights) : null;
@@ -39,9 +40,10 @@ async function createUi(lights) {
 function createSettings() {
   const status = 'Paired to bridge';
   return (
-    Page({ name: 'Settings' }, [
+    Page({ pageId: 'hue-settings', name: 'Settings' }, [
       Row({ text: 'Create User Interface' }, [
         Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For individual lights' }),
+        Button({ widgetId: 'hue-wizard-groups', size: 3, text: 'For groups / rooms' }),
       ]),
       Row({ text: 'Status' }, [
         Text({ widgetId: 'hue-bridge-status', size: 3, text: status, align: 'center', fontSize: 'normal' })
@@ -49,9 +51,6 @@ function createSettings() {
       Row({ text: 'Hue Bridge' }, [
         Button({ widgetId: 'hue-bridge-find', size: 3, text: 'Pair again' }),
       ]),
-      // Row({ text: 'Create User Interface', }, [
-      //   Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For rooms / groups' }),
-      // ])
     ])
   );
 }
@@ -59,18 +58,20 @@ function createSettings() {
 function createLightsPage(lights) {
   const rows = [];
 
+  // console.log('create lights', lights);
   lights.forEach((light) => {
-    const { id, name, gui } = light;
+    const { name, gui, isGroup } = light;
+    const id = isGroup ? 'g' + light.id : light.id;
     const hasColor = gui === 'color';
     const hasBrightness = gui === 'color' || gui === 'brightness';
+
     rows.push(createLightRow(id, name, hasBrightness, hasColor));
   });
-  const lightPage = Page({ name: 'Lights' }, rows);
+  const lightPage = Page({ pageId: 'hue-controls', name: 'Lights' }, rows);
   return lightPage;
 }
 
 function createLightRow(id, name, hasSlider, hasColors) {
-  const colors = { white: 'White', blue: 'Blue', red: 'Red', yellow: 'Yellow' };
   return (
     Row({ text: name }, [
       ToggleButton({ widgetId: 'huectrl-' + id + '-on' }),
@@ -123,36 +124,36 @@ async function createPairing() {
   }
 }
 
-// we traverse each device in the hue state list, and add a prop saying which gui user wants for it (or none)
-function promptNextLight(state) {
+// we traverse each item in the hue state list, and add a prop saying which gui user wants for it (or none)
+function promptNextItem(state, isGroup) {
   // next device where no gui has not been defined yet
   const nextId = Object.keys(state).find(key => !(state[key].gui));
-  const light = state[nextId];
+  const item = state[nextId];
 
   if (!nextId) {
-    const lights = Object.keys(state).map((id) => {
+    const items = Object.keys(state).map((id) => {
       const { name, gui } = state[id];
       if (gui !== 'none') {
-        return { id, name, gui };
+        return { id, name, gui, isGroup };
       }
     }).filter(i => i); // remove empty
 
-    if (lights.length) {
-      createUi(lights);
+    if (items.length) {
+      createUi(items);
     }
     else {
-      ui.alert('No lights were selected.');
+      ui.alert('No items were selected.');
     }
     return;
   };
 
   const prompt = {
-    Title: `Found: ${light.name} (#${nextId})`,
-    Text: `Which controls would you like for this ${light.type}?`,
+    Title: `Found: ${item.name} (#${nextId})`,
+    Text: `Which controls would you like for this ${item.type}?`,
     FeedbackId: 'hue-prompt-controls',
   };
 
-  const type = hue.getType(light);
+  const type = hue.getType(item);
   const options = ['None (skip)', 'Power only'];
   if (type === 'color' || type === 'brightness' || type === 'color-temperature') {
     options.push('Brightness');
@@ -164,7 +165,7 @@ function promptNextLight(state) {
 
   showPromptDelayed(prompt, options, (chosen) => {
     state[nextId].gui = optionKeys[chosen];
-    promptNextLight(state);
+    promptNextItem(state, isGroup);
   });
 }
 
@@ -189,63 +190,76 @@ async function createColorPanel(id) {
     ui('huectrl-' + id + '-sat').setValue(state[id].state.sat);
     ui('huectrl-' + id + '-hue').setValue(state[id].state.hue * 255 / 65535);
   }
-  ui.panelOpen(panelId);
+
+  return ui.panelOpen(panelId);
 }
 
-function onWidgetAction(e) {
+async function onWidgetAction(e) {
   const { WidgetId, Value, Type } = e;
   if (WidgetId.startsWith('huectrl')) {
-    const [_, id, prop] = WidgetId.split('-');
-    if (prop === 'on') {
-      hue.setLightPower(id, Value === 'on')
-        .catch(console.warn);
+    try {
+      const [_, id, prop] = WidgetId.split('-');
+      if (prop === 'on') {
+        await hue.setLightPower(id, Value === 'on')
+        setTimeout(updateState, 500);
+      }
+      else if (prop === 'toggle' && Type === 'clicked') {
+        const previous = lastState[id] && lastState[id].state.on;
+        await hue.setLightPower(id, !previous);
+        setTimeout(updateState, 500);
+      }
+      // sliders:
+      else if (Type === 'released') {
+        if (prop === 'bri') {
+          await hue.setLightState(id, { on: true, bri: parseInt(Value) })
+        }
+        else if (prop === 'hue') {
+          const h = Value * 65535 / 255;
+          await hue.setLightState(id, { on: true, hue: h })
+        }
+        else if (prop === 'sat') {
+          await hue.setLightState(id, { on: true, sat: parseInt(Value) })
+        }
+        else if (prop === 'col') {
+          await createColorPanel(id)
+        }
+        setTimeout(updateState, 500);
+      }
     }
-    else if (prop === 'bri'  && Type === 'changed') {
-      hue.setLightState(id, { on: true, bri: parseInt(Value) })
-        .catch(console.warn);
-    }
-    else if (prop === 'hue' && Type === 'changed') {
-      const h = Value * 65535 / 255;
-      hue.setLightState(id, { on: true, hue: h })
-        .catch(console.warn);
-    }
-    else if (prop === 'sat' && Type === 'changed') {
-      hue.setLightState(id, { on: true, sat: parseInt(Value) })
-        .catch(console.warn);
-    }
-    else if (prop === 'col' && Type === 'changed') {
-      createColorPanel(id)
-        .catch(console.warn);
-    }
-    else if (prop === 'toggle' && Type === 'clicked') {
-      const previous = lastState[id] && lastState[id].state.on;
-      hue.setLightPower(id, !previous);
+    catch(e) {
+      console.warn('unable to process ui event', e);
     }
   }
 }
 
-function testColor(col1, col2) {
-  const hueDiff = Math.abs(col1.hue - col2.hue);
-  return hueDiff < 10;
-}
-
 async function updateState() {
   if (!hue.isConfigured()) return;
+
   const lights = await hue.getLightState();
+  const groups = await hue.getGroupState();
   lastState = lights;
   const widgets = await xapi.Status.UserInterface.Extensions.Widget.get();
-  const controls = widgets.filter(w => w.WidgetId.startsWith('huectrl'));
+  const controls = widgets.filter(w => w.WidgetId.startsWith('huectrl-'));
 
   controls.forEach(({ WidgetId }) => {
-    const [_, lightId, type] = WidgetId.match(/huectrl-(\d+)-(.*)/);
-    const state = (lights[lightId] && lights[lightId].state) || {};
-    const on = state.on && state.reachable;
+    const [_, id, type] = WidgetId.match(/huectrl-g?(\d+)-(.*)/);
+    const isGroup = WidgetId.startsWith('huectrl-g');
+    const state = !isGroup
+      ? lights[id] && lights[id].state
+      : groups[id] && groups[id].action;
+
+    const on = state.on; // && state.reachable; reachable not for groups
     const bri = on && state.bri || 0;
+    const sat = on && state.sat || 0;
+
     if (type === 'on') {
       ui(WidgetId).setValue(on ? 'on' : 'off');
     }
     else if (type === 'bri') {
       ui(WidgetId).setValue(bri);
+    }
+    else if (type === 'sat') {
+      ui(WidgetId).setValue(sat);
     }
   });
 }
@@ -268,11 +282,14 @@ async function init() {
   ui('hue-bridge-find').onButtonClicked(searchBridge);
   ui('hue-wizard-lights').onButtonClicked(async () => {
     const state = await hue.getLightState();
-    promptNextLight(state);
+    promptNextItem(state, false);
+  });
+  ui('hue-wizard-groups').onButtonClicked(async () => {
+    const state = await hue.getGroupState();
+    promptNextItem(state, true);
   });
   ui('hue-colors-back').onButtonClicked(() => ui.panelOpen('hue-lights'));
-  ui('hue-lights').onPanelClosed(() => console.log('stop polling'));
-  setInterval(updateState, pollInterval * 1000);
+  // setInterval(updateState, pollInterval * 1000);
 }
 
 init();

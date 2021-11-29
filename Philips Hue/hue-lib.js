@@ -10,6 +10,7 @@ function fetch(url, type, body) {
     'Header': 'Content-Type: application/json',
     'Timeout': 15,
   };
+  // console.log('fetch', type, url);
   return xapi.command('HttpClient ' + type, options, data);
 }
 
@@ -75,6 +76,13 @@ class Hue {
     return JSON.parse(result['Body']);
   }
 
+  async getGroupState() {
+    const url = `https://${this.ip}/api/${this.token}/groups/`;
+    const result = await fetch(url, 'Get');
+    return JSON.parse(result['Body']);
+
+  }
+
   // id: devices on the hue bridge are integers from 0 and up
   // State {
   //  on [bool],  power
@@ -83,18 +91,22 @@ class Hue {
   //  hue (intval * 65535) / 255 // color
   //  sat [0-255] // saturation
   // }
-  setLightState(lightId, state) {
-    const url = `https://${this.ip}/api/${this.token}/lights/${lightId}/state`;
-    // console.log(`PUTting to ${url}`, JSON.stringify(state));
+  setLightState(id, state) {
+    const isGroup = id.startsWith('g');
+    id = id.replace('g', '');
+
+    const path = isGroup ? `groups/${id}/action` : `lights/${id}/state`;
+    const url = `https://${this.ip}/api/${this.token}/${path}`;
     return fetch(url, 'Put', state);
   }
+
 
   setLightPower(lightId, on) {
     return this.setLightState(lightId, { on });
   }
 
   blink(lightId) {
-    this.setLightState(lightId, { alert: 'select' });
+    return this.setLightState(lightId, { alert: 'select' });
   }
 
   getType(state) {
@@ -107,6 +119,9 @@ class Hue {
     }
     if (type === "Dimmable light") {
       return 'brightness';
+    }
+    if (type === 'Room') {
+      return 'color'; // TODO look at individual lights
     }
     return 'power';
   }
