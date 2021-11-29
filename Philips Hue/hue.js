@@ -40,16 +40,15 @@ async function createUi(lights) {
 }
 
 function createSettings() {
-  const status = 'Paired to bridge';
   return (
     Page({ pageId: 'hue-settings', name: 'Settings' }, [
       Row({ text: 'Create User Interface' }, [
         Button({ widgetId: 'hue-wizard-lights', size: 3, text: 'For individual lights' }),
         Button({ widgetId: 'hue-wizard-groups', size: 3, text: 'For groups / rooms' }),
       ]),
-      Row({ text: 'Status' }, [
-        Text({ widgetId: 'hue-bridge-status', size: 3, text: status, align: 'center', fontSize: 'normal' })
-      ]),
+      // Row({ text: 'Status' }, [
+      //   Text({ widgetId: 'hue-bridge-status', size: 3, text: status, align: 'center', fontSize: 'normal' })
+      // ]),
       Row({ text: 'Hue Bridge' }, [
         Button({ widgetId: 'hue-bridge-find', size: 3, text: 'Pair again' }),
       ]),
