@@ -88,7 +88,7 @@ async function setQuietMode(on) {
 
   if (on) {
     xapi.Command.Conference.DoNotDisturb.Activate();
-    if (backgroundUrl) {
+    if (backgroundUrl && !userSettings.photoFrame) {
       console.log('set wallpaper', backgroundUrl);
       xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl })
         .catch(() => console.warn('Not able to set wallpaper'));
@@ -168,9 +168,11 @@ async function widgetAction(evt) {
     const on = Value === 'on';
     try {
       if (on) {
+        await xapi.Command.UserInterface.Branding.Clear();
         await xapi.Config.Standby.Signage.Mode.set('On');
         await xapi.Config.Standby.Signage.Url.set(photoFrameUrl);
         await xapi.Config.Standby.Signage.InteractionMode.set('Interactive');
+        await xapi.Config.Standby.Delay.set(standbyDelayNormal);
         userSettings.photoFrame = true;
       }
       else {
@@ -180,6 +182,7 @@ async function widgetAction(evt) {
       save(userSettings);
     }
     catch(e) {
+      console.warn(e);
       xapi.Command.UserInterface.Message.Alert.Display({
         Text: 'Not able to toggle - does your device support web content?', Duration: 5,
       });
