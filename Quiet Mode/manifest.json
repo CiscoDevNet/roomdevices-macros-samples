@@ -40,7 +40,12 @@
         "domain": "quietmode",
         "required": true
       }
+    ],
+    "uninstall": [
+      { "type": "config", "path": "Standby Signage Mode", "value": "Off" },
+      { "type": "config", "path": "FacilityService Service 5 Name", "value": "" }
     ]
+
   },
   "profileName": "backup-tbjolset",
   "generatedAt": "20210526-1707"

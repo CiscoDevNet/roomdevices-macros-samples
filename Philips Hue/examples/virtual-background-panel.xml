@@ -1,0 +1,53 @@
+<Extensions>
+  <Version>1.5</Version>
+  <Panel>
+    <Order>4</Order>
+    <PanelId>virtual-background</PanelId>
+    <Type>Home</Type>
+    <Icon>Tv</Icon>
+    <Color>#C233C4</Color>
+    <Name>Virtual Background</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Virtual Background</Name>
+      <Row>
+        <Name>Select Background</Name>
+        <Widget>
+          <WidgetId>virtual-background</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>User1</Key>
+              <Name>Fireplace</Name>
+            </Value>
+            <Value>
+              <Key>User2</Key>
+              <Name>Ocean</Name>
+            </Value>
+            <Value>
+              <Key>User3</Key>
+              <Name>Jungle</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>virtual-background-download</WidgetId>
+          <Name>Download images</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>virtual-background-delete</WidgetId>
+          <Name>Delete</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>

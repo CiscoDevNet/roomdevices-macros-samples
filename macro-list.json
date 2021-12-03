@@ -78,10 +78,24 @@
         "tags": "library"
     },
     {
+        "title": "Library - Guido",
+        "url": "https://github.com/cisco-ce/guido",
+        "description": "Library for working the Webex Device UI",
+        "symbol": "🎨",
+        "tags": "library"
+    },
+
+    {
         "title": "Multi-Content Solution",
         "description": "Compose multiple video inputs to one presentation source and send to far-end",
         "symbol": "🔀",
         "tags": "meeting room"
+    },
+    {
+        "title": "Philips Hue",
+        "description": "Control your lights from the video device",
+        "symbol": "💡",
+        "tags": "peripherals, home office"
     },
     {
         "title": "Pin Code Lock",

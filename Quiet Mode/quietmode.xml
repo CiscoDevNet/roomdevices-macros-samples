@@ -1,12 +1,12 @@
 <Extensions>
   <Version>1.8</Version>
   <Panel>
-    <Order>3</Order>
+    <Order>5</Order>
     <PanelId>quietmode</PanelId>
     <Origin>local</Origin>
     <Type>Home</Type>
     <Icon>Home</Icon>
-    <Color>#1D805F</Color>
+    <Color>#1D805E</Color>
     <Name>Quiet Mode</Name>
     <ActivityType>Custom</ActivityType>
     <Page>
@@ -38,7 +38,7 @@
       <Options>hideRowNames=0</Options>
     </Page>
     <Page>
-      <Name>Settings</Name>
+      <Name>Schedule</Name>
       <Row>
         <Name>Scheduled</Name>
         <Widget>
@@ -48,18 +48,48 @@
         </Widget>
       </Row>
       <Row>
-        <Name>Start of Day</Name>
+        <Name>Start Quiet Mode</Name>
+        <Widget>
+          <WidgetId>quietmodeend</WidgetId>
+          <Type>Spinner</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>End Quiet Mode</Name>
         <Widget>
           <WidgetId>quietmodestart</WidgetId>
           <Type>Spinner</Type>
           <Options>size=3</Options>
         </Widget>
       </Row>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Screen Saver</Name>
       <Row>
-        <Name>End of Day</Name>
+        <Name>Use Photo Frame</Name>
         <Widget>
-          <WidgetId>quietmodeend</WidgetId>
-          <Type>Spinner</Type>
+          <WidgetId>quietmode-screensaver</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Info</Name>
+        <Widget>
+          <WidgetId>quietmode-screensaver-info</WidgetId>
+          <Name>Photo frame shows curated photos while your device is in half wake (digital signage)</Name>
+          <Type>Text</Type>
+          <Options>size=3;fontSize=small;align=left</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>quietmode-halfwake</WidgetId>
+          <Name>Activate half wake</Name>
+          <Type>Button</Type>
           <Options>size=3</Options>
         </Widget>
       </Row>

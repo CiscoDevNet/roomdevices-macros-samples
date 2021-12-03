@@ -1,0 +1,45 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/guido/main/src/ui-builder.js",
+          "type": "library",
+          "id": "ui-builder"
+        },
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/guido/main/src/ui.js",
+          "type": "library",
+          "id": "ui"
+        },
+        {
+          "payload": "./hue-lib.js",
+          "type": "library",
+          "id": "hue-lib"
+        },
+        {
+          "payload": "./hue.js",
+          "type": "url",
+          "id": "hue"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./huepanel.xml",
+          "id": "hue-lights",
+          "type": "url"
+        }
+
+      ]
+    },
+    "userParams": [],
+    "uninstall": [
+      { "type": "config", "path": "FacilityService Service 4 Name", "value": "" },
+      { "type": "panel", "id": "hue-colors" }
+    ]
+  },
+  "profileName": "backup-tbjolset"
+}

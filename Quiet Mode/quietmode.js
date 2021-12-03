@@ -15,7 +15,11 @@ let userSettings = {
 
   // When the device deactivates in the evening
   dayEnd: '17:00',
+
+  photoFrame: false,
 }
+
+const photoFrameUrl = 'https://webexframe.netlify.app/';
 
 // How many minutes it takes before we go to standby during office hours
 const standbyDelayNormal = 10;
@@ -51,6 +55,7 @@ import { Scheduler, isBeforeNow, isWeekend } from './schedule';
 
 const timerDayStart = new Scheduler();
 const timerDayEnd = new Scheduler();
+let lastStandbyState = '';
 
 async function isBusy() {
   const calls = await xapi.Status.SystemUnit.State.NumberOfActiveCalls.get();
@@ -83,7 +88,7 @@ async function setQuietMode(on) {
 
   if (on) {
     xapi.Command.Conference.DoNotDisturb.Activate();
-    if (backgroundUrl) {
+    if (backgroundUrl && !userSettings.photoFrame) {
       console.log('set wallpaper', backgroundUrl);
       xapi.Command.UserInterface.Branding.Fetch({ Type: 'Background', URL: backgroundUrl })
         .catch(() => console.warn('Not able to set wallpaper'));
@@ -112,7 +117,7 @@ async function setQuietMode(on) {
   if (toggleUltrasound) {
     xapi.Config.Audio.Ultrasound.MaxVolume.set(on ? 0 : 70);
   }
-  if (toggleStandbyDelay) {
+  if (toggleStandbyDelay && !userSettings.photoFrame) {
     xapi.Config.Standby.Delay.set(on ? standbyDelayDoNotDisturb : standbyDelayNormal);
   }
   // for some weird reason, parts of the api is not public yet
@@ -159,6 +164,33 @@ async function widgetAction(evt) {
     onSettingsChanged();
     save(userSettings);
   }
+  else if (WidgetId === 'quietmode-screensaver' && Type === 'changed') {
+    const on = Value === 'on';
+    try {
+      if (on) {
+        await xapi.Command.UserInterface.Branding.Clear();
+        await xapi.Config.Standby.Signage.Mode.set('On');
+        await xapi.Config.Standby.Signage.Url.set(photoFrameUrl);
+        await xapi.Config.Standby.Signage.InteractionMode.set('Interactive');
+        await xapi.Config.Standby.Delay.set(standbyDelayNormal);
+        userSettings.photoFrame = true;
+      }
+      else {
+        await xapi.Config.Standby.Signage.Mode.set('Off');
+        userSettings.photoFrame = false;
+      }
+      save(userSettings);
+    }
+    catch(e) {
+      console.warn(e);
+      xapi.Command.UserInterface.Message.Alert.Display({
+        Text: 'Not able to toggle - does your device support web content?', Duration: 5,
+      });
+    }
+  }
+  else if (WidgetId === 'quietmode-halfwake') {
+    xapi.Command.Standby.Halfwake();
+  }
 }
 
 function onSettingsChanged() {
@@ -166,6 +198,7 @@ function onSettingsChanged() {
     setWidgetValue('quietmodestart', scheduled ? userSettings.dayStart : '-');
     setWidgetValue('quietmodeend', scheduled ? userSettings.dayEnd : '-');
     setWidgetValue('quietmodescheduled', scheduled ? 'on' : 'off');
+    setWidgetValue('quietmode-screensaver', userSettings.photoFrame ? 'on' : 'off');
     schedule();
 }
 
@@ -193,6 +226,14 @@ function schedule() {
   }
 }
 
+// if coming from standby, go to photo frame if on
+function onStandbyChanged(state) {
+  if (userSettings.photoFrame && lastStandbyState === 'Standby' && state === 'Off') {
+    xapi.Command.Standby.Halfwake();
+  }
+  lastStandbyState = state;
+}
+
 async function init() {
   userSettings = await load(userSettings);
   onSettingsChanged();
@@ -205,6 +246,9 @@ async function init() {
 
   // bug in ui extensions: need to make widgets update properly
   xapi.Command.UserInterface.Extensions.Panel.Update({ PanelId: 'quietmode', Color: '#1D805E' });
+
+  // detect when exiting standy
+  xapi.Status.Standby.State.on(onStandbyChanged);
 }
 
 init();
