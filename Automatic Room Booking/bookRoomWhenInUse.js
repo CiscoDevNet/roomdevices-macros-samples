@@ -75,7 +75,7 @@ function bookAutomatically() {
 function promptUser() {
     console.log("Displaying prompt.");
     xapi.command('UserInterface Message Prompt Display',
-                 {Text: `This rooom is not currently reserved.<br>Would you like to book this room?`,
+                 {Text: `This room is not currently reserved.<br>Would you like to book this room?`,
                   FeedbackId: 'bookRoom',
                   Duration: 30,
                   'Option.1': 'Yes',
