@@ -3,10 +3,13 @@
 Easily discover and connect to your Philips Hue ecosystem and control individual lights
 or groups/rooms from your Webex device.
 
-<!-- ![Quiet Mode](quietmode.png) -->
+![Simple UI on your device](hue2.jpeg)
+![Simple UI on your device](lights-ui.png)
+![Light controls from your home screen](homescreen.png)
+![Wizard to choose your lights](wizard.png)
+![Simple controls](screenshot.png)
 
 ## Description
-
 
 Nice if you want to:
 
