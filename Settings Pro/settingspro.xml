@@ -10,7 +10,15 @@
     <Name>Settings Pro</Name>
     <ActivityType>Custom</ActivityType>
     <Page>
-      <Name>General</Name>
+      <Name>Misc</Name>
+      <Row>
+        <Name>Ultrasound Pairing</Name>
+        <Widget>
+          <WidgetId>settingspro-ultrasound-pairing</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
       <Row>
         <Name>Hide "Work" Buttons</Name>
         <Widget>
@@ -20,10 +28,23 @@
         </Widget>
       </Row>
       <Row>
-        <Name>Ultrasound Pairing</Name>
+        <Name>Speaker Track Demo</Name>
         <Widget>
-          <WidgetId>settingspro-ultrasound-pairing</WidgetId>
-          <Type>ToggleButton</Type>
+          <WidgetId>settingspro-info-st</WidgetId>
+          <Name>Little green squares :)</Name>
+          <Type>Text</Type>
+          <Options>size=2;fontSize=small;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-speakertrack-start</WidgetId>
+          <Name>Start</Name>
+          <Type>Button</Type>
+          <Options>size=1</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-speakertrack-stop</WidgetId>
+          <Name>Stop</Name>
+          <Type>Button</Type>
           <Options>size=1</Options>
         </Widget>
       </Row>
@@ -39,7 +60,7 @@
       <Options/>
     </Page>
     <Page>
-      <Name>Media</Name>
+      <Name>Audio</Name>
       <Row>
         <Name>USBC Input Level</Name>
         <Widget>
@@ -58,7 +79,7 @@
         <Name>Share Audio Always</Name>
         <Widget>
           <WidgetId>settingspro-audio-share-txt</WidgetId>
-          <Name>Share audio when HDMI 1 is connected, event when not sharing presentation (for playing music etc). N/A on Desk series.</Name>
+          <Name>Share audio when HDMI 1 is connected, event when not sharing presentation (for sharing music etc). N/A on Desk series.</Name>
           <Type>Text</Type>
           <Options>size=3;fontSize=small;align=left</Options>
         </Widget>
@@ -73,54 +94,79 @@
     <Page>
       <Name>Immersive Share</Name>
       <Row>
-        <Name>Scale &amp; Opacity</Name>
+        <Name>Info</Name>
         <Widget>
-          <WidgetId>widget_12</WidgetId>
-          <Type>Slider</Type>
-          <Options>size=2</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_11</WidgetId>
-          <Type>Slider</Type>
-          <Options>size=2</Options>
-        </Widget>
-      </Row>
-      <Row>
-        <Name>Horizontal &amp; Vertical</Name>
-        <Widget>
-          <WidgetId>widget_12</WidgetId>
-          <Type>Slider</Type>
-          <Options>size=2</Options>
-        </Widget>
-        <Widget>
-          <WidgetId>widget_12</WidgetId>
-          <Type>Slider</Type>
-          <Options>size=2</Options>
+          <WidgetId>settingspro-immersive-info</WidgetId>
+          <Name>Share yourself on your PC or virtual background to see the effect of your changes.</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=left</Options>
         </Widget>
       </Row>
       <Row>
         <Name>Presets</Name>
         <Widget>
-          <WidgetId>widget_13</WidgetId>
+          <WidgetId>settingspro-immersive-preset</WidgetId>
           <Type>GroupButton</Type>
           <Options>size=4</Options>
           <ValueSpace>
             <Value>
-              <Key>1</Key>
+              <Key>center</Key>
+              <Name>Center</Name>
+            </Value>
+            <Value>
+              <Key>bottomLeft</Key>
               <Name>Bottom Left</Name>
             </Value>
             <Value>
-              <Key>2</Key>
+              <Key>bottomRight</Key>
               <Name>Bottom Right</Name>
-            </Value>
-            <Value>
-              <Key>3</Key>
-              <Name>Custom</Name>
             </Value>
           </ValueSpace>
         </Widget>
       </Row>
-      <Options/>
+      <Row>
+        <Name>Scale &amp; Opacity</Name>
+        <Widget>
+          <WidgetId>settingspro-info1</WidgetId>
+          <Name>Scale</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=small;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-immersive-scale</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Horizontal &amp; Vertical</Name>
+        <Widget>
+          <WidgetId>settingspro-info2</WidgetId>
+          <Name>Horizontal</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=small;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-immersive-x</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>settingspro-info3</WidgetId>
+          <Name>Vertical</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=small;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-immersive-y</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
     </Page>
     <Page>
       <Name>Web</Name>

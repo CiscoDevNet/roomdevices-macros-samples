@@ -54,6 +54,14 @@ const configHalfwake = 'Standby Halfwake Mode';
 onUi(widgetHalfwake, ({ Value }) => xapi.config.set(configHalfwake, Value === 'on' ? 'Manual' : 'Auto'));
 onConfig(configHalfwake, val => setWidget(widgetHalfwake, val === 'Auto' ? 'off' : 'on'));
 
+function cameraDiagnostics(start) {
+  const cmd = 'Cameras SpeakerTrack Diagnostics ' + (start ? 'Start' : 'Stop');
+  xapi.command(cmd);
+  const selfview = { Mode: start ? 'On' : 'Off', FullscreenMode: 'On' };
+  xapi.command('Video Selfview Set', selfview);
+}
+ui('settingspro-speakertrack-start').onButtonClicked(() => cameraDiagnostics(true));
+ui('settingspro-speakertrack-stop').onButtonClicked(() => cameraDiagnostics(false));
 
 // Audio section
 
@@ -151,7 +159,6 @@ ui('settingspro-immersive-y').onSliderChanged(val => {
 }, 0, 10000);
 ui('settingspro-immersive-preset').onGroupButtonPressed(val => {
   const values = immersivePos[val];
-  console.log('preset', val, values);
   if (values) {
     setImmersiveParam(values);
     setWidget('settingspro-immersive-scale', parseInt(values.Scale * 255 / 100));
