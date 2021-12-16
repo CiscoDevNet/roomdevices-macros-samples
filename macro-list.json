@@ -146,6 +146,13 @@
         "tags": "meeting room, peripherals"
     },
     {
+        "title": "Settings Pro",
+        "description": "The settings you never knew you always wanted.",
+        "symbol": "🛠",
+        "tags": "home office, web, audio"
+    },
+
+    {
         "title": "Scheduled Actions",
         "description": "Have the endpint device automatically perform actions, like placing a call, at a specified time and day.",
         "symbol": "📆",

@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/guido/main/src/ui.js",
+          "type": "library",
+          "id": "ui"
+        },
+        {
+          "payload": "./settings-pro.js",
+          "type": "url",
+          "id": "settings-pro"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./settingspro.xml",
+          "id": "settingspro",
+          "type": "url"
+        }
+
+      ]
+    },
+    "userParams": [],
+    "uninstall": [
+      { "type": "config", "path": "Audio Ultrasound MaxVolume", "value": "70" },
+      { "type": "config", "path": "UserInterface Features HideAll", "value": "False" },
+      { "type": "config", "path": "Standby Halfwake Mode", "value": "Auto" },
+      { "type": "config", "path": "WebEngine RemoteDebugging", "value": "Off" }
+    ]
+  }
+}
