@@ -1,0 +1,170 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>2</Order>
+    <PanelId>settingspro</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Sliders</Icon>
+    <Color>#1170CF</Color>
+    <Name>Settings Pro</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>General</Name>
+      <Row>
+        <Name>Hide "Work" Buttons</Name>
+        <Widget>
+          <WidgetId>settingspro-hide-work</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Ultrasound Pairing</Name>
+        <Widget>
+          <WidgetId>settingspro-ultrasound-pairing</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Disable Half wake</Name>
+        <Widget>
+          <WidgetId>settingspro-disable-halfwake</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <PageId>settingspro-standby</PageId>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Media</Name>
+      <Row>
+        <Name>USBC Input Level</Name>
+        <Widget>
+          <WidgetId>settingspro-audio-level-txt</WidgetId>
+          <Name>0 dB</Name>
+          <Type>Text</Type>
+          <Options>size=1;fontSize=normal;align=center</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-audio-level-slider</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=3</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Share Audio Always</Name>
+        <Widget>
+          <WidgetId>settingspro-audio-share-txt</WidgetId>
+          <Name>Share audio when HDMI 1 is connected, event when not sharing presentation (for playing music etc). N/A on Desk series.</Name>
+          <Type>Text</Type>
+          <Options>size=3;fontSize=small;align=left</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-audio-share-toggle</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Immersive Share</Name>
+      <Row>
+        <Name>Scale &amp; Opacity</Name>
+        <Widget>
+          <WidgetId>widget_12</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_11</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Horizontal &amp; Vertical</Name>
+        <Widget>
+          <WidgetId>widget_12</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=2</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_12</WidgetId>
+          <Type>Slider</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Presets</Name>
+        <Widget>
+          <WidgetId>widget_13</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>1</Key>
+              <Name>Bottom Left</Name>
+            </Value>
+            <Value>
+              <Key>2</Key>
+              <Name>Bottom Right</Name>
+            </Value>
+            <Value>
+              <Key>3</Key>
+              <Name>Custom</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+    <Page>
+      <Name>Web</Name>
+      <Row>
+        <Name>Open Web Site</Name>
+        <Widget>
+          <WidgetId>settingspro-web-open</WidgetId>
+          <Name>Open...</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Keep Web Data</Name>
+        <Widget>
+          <WidgetId>settingspro-keep-cookies-txt</WidgetId>
+          <Name>Keep staying logged on web sites, etc. Otherwise it's cleared every 24 hours.</Name>
+          <Type>Text</Type>
+          <Options>size=3;fontSize=small;align=right</Options>
+        </Widget>
+        <Widget>
+          <WidgetId>settingspro-keep-cookies</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Clear Web Data</Name>
+        <Widget>
+          <WidgetId>settingspro-delete-webdata</WidgetId>
+          <Name>Clear all</Name>
+          <Type>Button</Type>
+          <Options>size=2</Options>
+        </Widget>
+      </Row>
+      <Row>
+        <Name>Remote Debugging</Name>
+        <Widget>
+          <WidgetId>settingspro-remote-debugging</WidgetId>
+          <Type>ToggleButton</Type>
+          <Options>size=1</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
