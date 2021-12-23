@@ -1,0 +1,13 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>8</Order>
+    <PanelId>energy-prices</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Power</Icon>
+    <Color>#FC5143</Color>
+    <Name>Energy prizes</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>

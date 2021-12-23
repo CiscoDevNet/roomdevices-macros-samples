@@ -42,6 +42,12 @@
         "tags": "calling"
     },
     {
+        "title": "Energy Prices",
+        "description": "Show hourly Norwegian electricity prices on home screen",
+        "symbol": "⚡️",
+        "tags": "home office"
+    },
+    {
         "title": "Join 3rd Party Meeting",
         "description": "A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom)",
         "symbol": "🥉",

@@ -1,0 +1,55 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./energyprice.js",
+          "type": "url",
+          "id": "energyprices"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./energy-prices.xml",
+          "id": "energy-prices",
+          "type": "url"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "zone",
+        "name": "Energy Zone",
+        "info": "Which Norwegian energy zone you belong to",
+        "type": "option",
+        "values": {
+          "NO1": "Zone 1 - South/East Norway",
+          "NO2": "Zone 2 - South Norway",
+          "NO3": "Zone 3 - Central Norway",
+          "NO4": "Zone 4 - North Norway",
+          "NO5": "Zone 5 - West Norway"
+        },
+        "domain": "energy-prices",
+        "required": true
+      },
+      {
+        "id": "hasPlotPanel",
+        "name": "Show plot panel",
+        "info": "Add home screen button to show daily price plot",
+        "type": "bool",
+        "domain": "energy-prices",
+        "default": true
+      }
+    ],
+    "uninstall": [
+      { "type": "config", "path": "Standby Signage Mode", "value": "Off" },
+      { "type": "config", "path": "FacilityService Service 5 Name", "value": "" }
+    ]
+
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
