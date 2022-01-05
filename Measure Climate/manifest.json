@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./storage.js",
+          "type": "library",
+          "id": "storage"
+        },
+        {
+          "payload": "./temperatures.js",
+          "type": "url",
+          "id": "temperatures"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+      ]
+    }
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
