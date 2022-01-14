@@ -10,13 +10,13 @@ The sender of the message will be a bot. You can create the bot user at [develop
 Usage:
 
 ```
-import webex from ‘./webex’;
+import sendMessage from ‘./webex’;
 
 const yourBotToken = ‘…’; // add it
 
-webex.sendMessage(yourBotToken, ‘tbjolset@cisco.com’, null, ‘Send markdown message to me **personally**’);
+sendMessage(yourBotToken, ‘tbjolset@cisco.com’, null, ‘Send markdown message to me **personally**’);
 
-webex.sendMessage(yourBotToken, null, ‘yourRoomId’, ‘Bot must be member of any group spaces you send to’);
+sendMessage(yourBotToken, null, ‘yourRoomId’, ‘Bot must be member of any group spaces you send to’);
 ```
 
 You can also use all the other APIs at developer.webex.com in similar fashion to poll messages, create rooms, add members etc.
