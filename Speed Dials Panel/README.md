@@ -5,6 +5,8 @@ This macro and corresponding UI extension demonstrate how to create a panel with
 Eg to add a button to call reception, add a button and set it's id to:
 `sd_reception@acme.com`
 
+**Note**: If you change the number, be sure to keep the sd_ prefix in front of your number. This tells the macro that the button is a speed dial button.
+
 When you tap it, the macro will parse the id and call that number.
 
 ![Home screen button](homescreen.png)
