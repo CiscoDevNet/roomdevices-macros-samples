@@ -10,7 +10,7 @@ USB Passthrough is a feature, found on products like the Webex Room Kit Mini and
 
 To better illustrate how this macro works, please click on the video demo below to see USB mode in action
 
-<a href="https://www.youtube.com/watch?v=fFKpSABTkDQ" target="_blank">![USB Mode Video Demo](https://img.youtube.com/vi/fFKpSABTkDQ/0.jpg)</a>
+[![USB Mode Video Demo](https://img.youtube.com/vi/fFKpSABTkDQ/0.jpg)](https://www.youtube.com/watch?v=fFKpSABTkDQ)
 
 ## Before you begin
 USB Mode is only 1 flavor of the USB Passthrough solution. Many new Room Devices support this nativley and we recommend you work with the native tools built into the product if available.
@@ -27,7 +27,9 @@ Check out the [USB Mode Endpoint Compatibility Matrix](#usb-mode-endpoint-compat
 - Compatible USB Capture Device
 
 ## How does the script work
-USB Mode modify's your Room Devices base configuration in order to route your devices Selfview Video Feed and Microphone Audio data to a compatible USB capture card. Your system's base configuration is stored each time USB Mode is enabled in a separate script and is fully restored when disabling USB mode
+USB Mode modify's your Room Devices base configuration in order to route your devices Selfview Video Feed and Microphone Audio data to a compatible USB capture card. Your system's base configuration is stored each time USB Mode is enabled in a separate script and is fully restored when disabling USB mode.
+
+While USB mode is enabled, the Room Device is placed in an Infinite Do Not Disturb state, 
 
 ## Author(s)
 - Project Lead: Enrico Conedera
