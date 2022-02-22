@@ -4,7 +4,7 @@
 
 ## About
 
-The USB Mode macro is a community driven solution that enables USB Passthrough for Cisco Room devices that do not nativley support this feature.
+The USB Mode macro is a community driven solution that enables USB Passthrough for Cisco Room devices that do not natively support this feature.
 
 USB Passthrough is a feature, found on products like the Webex Room Kit Mini and the Webex Desk Pro, that allows you to take advantage the device's rich microphone(s), intelligent camera(s) and powerful speaker(s) as a sophisticated webcamera for various 3rd party software clients.
 
@@ -13,23 +13,51 @@ To better illustrate how this macro works, please click on the video demo below 
 [![USB Mode Video Demo](https://img.youtube.com/vi/fFKpSABTkDQ/0.jpg)](https://www.youtube.com/watch?v=fFKpSABTkDQ)
 
 ## Before you begin
-USB Mode is only 1 flavor of the USB Passthrough solution. Many new Room Devices support this nativley and we recommend you work with the native tools built into the product if available.
+USB Mode is only 1 flavor of the USB Passthrough solution. Many new Room Devices support this natively and we recommend you work with the native tools built into the product if available.
 
 Check out the [USB Mode Endpoint Compatibility Matrix](#usb-mode-endpoint-compatibility-matrix) below to see which USB solution is right for you.
 
+## How does the script work
+While USB mode is enabled, your Room Device's base configuration is stored in memory and then reconfigured to send Microphone Data out the Line Output of your device and your Main Source video out the last video output connection(Model Dependent); these feeds are fed into a compatible USB capture card(See docs for details). 
+
+The room devices native UI elements, such as calling, sharing, meetings etc, are hidden, your presentation is started and the device is placed into an infinite Do Not Disturb(DND) Loop.
+
+These elements are hidden and DND is enabled to prevent calling out or in while USB mode is enabled in order to prevent confusing the user as to what the system is doing.
+
+![USB Mode Home Screen](images/UsbMode_Enabled.png)
+
+When USB mode is Disabled, your system will show all Native UI Elements, disengage infinite DND and recover your system's base configuration for full Webex and SIP use.
+
 ## Requirements
 - A copy of the full deployment guide
-- Compaitble Room Device either on
+- Compatible Room Device either on
   - Latest stable software channel
-  - Non-defered software release
-- Admin Priveldges to your Room Device
+  - Non-deferred software release
+- Admin Privileges to your Room Device
 - Ability to navigate the Macro Editor
 - Compatible USB Capture Device
 
-## How does the script work
-USB Mode modify's your Room Devices base configuration in order to route your devices Selfview Video Feed and Microphone Audio data to a compatible USB capture card. Your system's base configuration is stored each time USB Mode is enabled in a separate script and is fully restored when disabling USB mode.
+## How to get started
+- Download the deployment guide and follow the instructions
 
-While USB mode is enabled, the Room Device is placed in an Infinite Do Not Disturb state, 
+## Additional Documentation
+- Coming Soon
+
+## Macro Deployment Tools
+- Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
+- For bulk deployment, Ce-Deploy has you covered
+  - [Ce-Deploy Community Space](https://eurl.io/#SJWfk6qUV)
+  - [Ce-Deploy Builds](https://github.com/voipnorm/CE-Deploy/releases/)
+
+## More Useful Links
+### Blog Posts
+  - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
+  - [USB Passthrough Mode on Video Endpoints](https://gblogs.cisco.com/ch-tech/usb-passthrough-mode-on-video-endpoints/)
+### Videos
+| USB- Passthrough with Cisco Video Devices | Turn Cisco Video Endpoint into USB Camera |
+| ------------------ | ---------- |
+| [![USB- Passthrough with Cisco Video Devices](https://img.youtube.com/vi/R5Hde9Zvbvw/0.jpg)](https://www.youtube.com/watch?v=R5Hde9Zvbvw) | [![Turn Cisco Video Endpoint into USB Camera](https://img.youtube.com/vi/ta4OZ0_wbVQ/0.jpg)](https://www.youtube.com/watch?v=ta4OZ0_wbVQ) |
+
 
 ## Author(s)
 - Project Lead: Enrico Conedera
@@ -52,6 +80,12 @@ While USB mode is enabled, the Room Device is placed in an Infinite Do Not Distu
   - You're all awesome, thank you for your ideas, patience and testing 😃
 
 ## USB Mode Endpoint Compatibility Matrix
+### Key
+- Native USB: Devices that have USB Passthrough built into their hardware. No need for a macro and highly recommended 😃
+- Native Inogeni: Native OS support for USB mode, no macro required. Inogeni 4KX-Plus Capture device required. (Not currently available)
+- Macro 1-3: Original USB Mode Macro, accessible in the USB Mode community space. Recommend upgrading to USB Mode Version 2 when possible.
+- Macro 2-2-10: USB Mode Version 2
+
 
 | CODEC              | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
@@ -86,4 +120,3 @@ While USB mode is enabled, the Room Device is placed in an Infinite Do Not Distu
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis
-
