@@ -29,7 +29,7 @@ These elements are hidden and DND is enabled to prevent calling out or in while 
 When USB mode is Disabled, your system will show all Native UI Elements, disengage infinite DND and recover your system's base configuration for full Webex and SIP use.
 
 ## Requirements
-- Download a copy of the [full deployment guide](/USB%20Mode%20V2%20Guides.zip)
+- Download a copy of the [full deployment guide](USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
 - Compatible Room Device either on
   - Latest stable software channel
   - Non-deferred software release
