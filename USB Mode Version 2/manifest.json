@@ -1,0 +1,42 @@
+
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "USB_Mode_Version_2.js",
+          "id": "USB Mode Version 2",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "usbWelcomePrompt",
+        "name": "Enable USB Mode Welcome Prompt",
+        "info": "Welcome text that guides the user every time the Enable USB Mode button is pressed",
+        "type": "option",
+        "values": {
+          "true": "Enable",
+          "false": "Disable"
+        },
+        "domain": "USB_Mode_Version_2"
+      },
+      {
+        "id": "screenShare_Mode",
+        "name": "Screenshare Mode",
+        "info": "Choose the default Screenshare Behavior",
+        "type": "option",
+        "values": {
+          "standard": "Standard",
+          "auto": "Auto"
+        },
+        "domain": "USB_Mode_Version_2"
+      }
+    ]
+  }
+}
