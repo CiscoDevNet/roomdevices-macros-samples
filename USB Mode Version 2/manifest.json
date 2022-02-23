@@ -28,7 +28,7 @@
       {
         "id": "screenShare_Mode",
         "name": "Screenshare Mode",
-        "info": "Standard(Recommended) uses your default presentation source when entering USB mode. Auto will use the active presentation source when entering USB mode, else it will use your default source if none are found",
+        "info": "Choose the default Screenshare Behavior",
         "type": "option",
         "values": {
           "standard": "Standard",
