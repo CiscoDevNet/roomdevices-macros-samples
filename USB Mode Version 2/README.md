@@ -29,7 +29,7 @@ These elements are hidden and DND is enabled to prevent calling out or in while 
 When USB mode is Disabled, your system will show all Native UI Elements, disengage infinite DND and recover your system's base configuration for full Webex and SIP use.
 
 ## Requirements
-- Download a copy of the [full deployment guide](USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
+- Download a copy of the [deployment guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
 - Compatible Room Device either on
   - Latest stable software channel
   - Non-deferred software release
@@ -38,7 +38,7 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 - Compatible USB Capture Device
 
 ## How to get started
-- Download the deployment guide and follow the instructions
+- Download the [deployment guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip) and follow the instructions
 
 ## Macro Deployment Tools
 - Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
@@ -47,10 +47,15 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
   - [Ce-Deploy Builds](https://github.com/voipnorm/CE-Deploy/releases/)
 
 ## More Useful Links
+### Join the Community!
+The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases all around USB Mode. Defintley a great place to ask questions.
+
 ### Blog Posts
+
   - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
   - [USB Passthrough Mode on Video Endpoints](https://gblogs.cisco.com/ch-tech/usb-passthrough-mode-on-video-endpoints/)
 ### Videos
+
 | USB- Passthrough with Cisco Video Devices | Turn Cisco Video Endpoint into USB Camera |
 | ------------------ | ---------- |
 | [![USB- Passthrough with Cisco Video Devices](https://img.youtube.com/vi/R5Hde9Zvbvw/0.jpg)](https://www.youtube.com/watch?v=R5Hde9Zvbvw) | [![Turn Cisco Video Endpoint into USB Camera](https://img.youtube.com/vi/ta4OZ0_wbVQ/0.jpg)](https://www.youtube.com/watch?v=ta4OZ0_wbVQ) |
