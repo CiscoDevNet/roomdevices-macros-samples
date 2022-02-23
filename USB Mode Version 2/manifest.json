@@ -35,6 +35,17 @@
           "auto": "Auto"
         },
         "domain": "USB Mode Version 2"
+      },
+      {
+        "id": "continuousShare_Mode",
+        "name": "Continuous Mode",
+        "info": "When USB mode is Disabled, do you want to stop or continue the active presentation?",
+        "type": "option",
+        "values": {
+          "false": "Stop Presentation",
+          "true": "Continue Presentation"
+        },
+        "domain": "USB Mode Version 2"
       }
     ]
   }
