@@ -29,7 +29,7 @@ These elements are hidden and DND is enabled to prevent calling out or in while 
 When USB mode is Disabled, your system will show all Native UI Elements, disengage infinite DND and recover your system's base configuration for full Webex and SIP use.
 
 ## Requirements
-- A copy of the full deployment guide
+- Download a copy of the [full deployment guide](/USB%20Mode%20V2%20Guides.zip)
 - Compatible Room Device either on
   - Latest stable software channel
   - Non-deferred software release
@@ -39,9 +39,6 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 
 ## How to get started
 - Download the deployment guide and follow the instructions
-
-## Additional Documentation
-- Coming Soon
 
 ## Macro Deployment Tools
 - Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
