@@ -46,6 +46,17 @@
           "true": "Continue Presentation"
         },
         "domain": "USB Mode Version 2"
+      },
+      {
+        "id": "sx80_Mx700_800_videoOutput_Override",
+        "name": "Sx80/Mx800-700 Output Override",
+        "info": "Assign the Second(HDMI) or Third(DVI) output to feed into the USB Capture Device",
+        "type": "option",
+        "values": {
+          "Third": "Third (DVI)",
+          "Second": "Second (HDMI)"
+        },
+        "domain": "USB Mode Version 2"
       }
     ]
   }
