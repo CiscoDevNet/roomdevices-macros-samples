@@ -26,9 +26,9 @@ or implied.
  *                    	bomcgoni@cisco.com
  *                    	Cisco Systems
  * 
- * Version: 2-2-10
+ * Version: 2-2-11
  * Released: 03/24/21
- * Last Update: 2/22/2022
+ * Last Update: 2/25/2022
  *    
  *    This USB Mode macro requires additional hardware for full operation
  *       Please review the setup documentation before you proceed
@@ -58,7 +58,7 @@ or implied.
 import xapi from 'xapi';
 
 //[USB Mode Configuration Start]************************/
-const usbWelcomePrompt = true;                        // Default Value: false; Accepted Values: <true, false>
+const usbWelcomePrompt = true;                        // Default Value: true; Accepted Values: <true, false>
 
 const hideCustomPanels_inUSBMode = false;             // Default Value: false; Accepted Values: <true, false>
 const hideCustomPanels_inUSBMode_PanelIds = [];       // Example Format: ["panel_1", "panel_2", "panel_3", "panel_Etc"]
@@ -106,7 +106,7 @@ const pinProtection_Fail_Title = "Invalid Pin, Try Again";
 //DO NOT EDIT below this LINE. You do so at your own risk :)
 
 //*****[General]************************/
-const version = '2-2-10'
+const version = '2-2-11'
 
 var sysInfo;
 class Scope {
@@ -140,7 +140,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     case 'prjUSB_widget_enabled':
       runDefaults()
       swapUI(false)
-      if (!continuousShare_Mode) {
+      if (continuousShare_Mode.toString() == "false" ? true : false) {
         handleDisconnectMessage = true;
         xapi.Command.Presentation.Stop()
       }
@@ -1150,7 +1150,7 @@ function customPanel_visibility(state) {
     "Message": "",
     "Panels": []
   }
-  if (hideCustomPanels_inUSBMode) {
+  if (hideCustomPanels_inUSBMode.toString() == "true" ? true : false) {
     if (state == "Hidden") {
       panels.Message = 'Hide Custom UI in USB Mode is enabled, Hiding the following panel IDs: '
     } else {
@@ -1173,7 +1173,7 @@ function customPanel_visibility(state) {
       }).catch(e => console.debug(e))
     }
   }
-  if (hideCustomPanels_inDefaultMode) {
+  if (hideCustomPanels_inDefaultMode.toString() == "true" ? true : false) {
     if (state == 'Auto') {
       inverse = 'Hidden';
       panels.Message = 'Hide Custom UI in Default Mode is enabled, Hiding the following panel IDs: '
@@ -1205,7 +1205,7 @@ const pinRegex = /^\d{4}$|^\d{5}$|^\d{6}$|^\d{7}$|^\d{8}$/
 
 function checkPinConfig() {
   return new Promise((resolve, reject) => {
-    if (pinProtection_Mode) {
+    if (pinProtection_Mode.toString() == "true" ? true : false) {
       let checkSetPin = pinRegex.test(pinProtection_Pin)
       if (checkSetPin) {
         let report = {
@@ -1229,7 +1229,7 @@ function checkPinConfig() {
 checkPinConfig()
 
 function checkForPin() {
-  if (pinProtection_Mode) {
+  if (pinProtection_Mode.toString() == "true" ? true : false) {
     xapi.command('UserInterface Message TextInput Display', {
       Title: pinProtection_FlavorText_Title,
       Text: pinProtection_FlavorText_Text,
@@ -1398,7 +1398,7 @@ async function shareScreen() {
 
 async function usbWelcome() {
   if (!isFTS) {
-    if (usbWelcomePrompt) {
+    if (usbWelcomePrompt.toString() == "true" ? true : false) {
       await xapi.command('UserInterface Message Prompt Display', {
         Title: usbWelcomePrompt_Title,
         Text: usbWelcomePrompt_Text,
@@ -1413,7 +1413,7 @@ async function avatarCorrection(state) {
   let monitors = await xapi.Config.Video.Monitors.get().catch(e => console.debug(e))
   switch (sysInfo.compatibilityLevel) {
     case 'room55': case 'plus':
-      if (touchAvatarCorrection_Mode) {
+      if (touchAvatarCorrection_Mode.toString() == "true" ? true : false) {
         switch (monitors) {
           case 'Single':
             if (state) {
@@ -1435,7 +1435,7 @@ async function avatarCorrection(state) {
       }
       break;
     case 'pro':
-      if (touchAvatarCorrection_Mode) {
+      if (touchAvatarCorrection_Mode.toString() == "true" ? true : false) {
         switch (monitors) {
           case 'Single':
             if (state) {
