@@ -50,7 +50,7 @@
       {
         "id": "sx80_Mx700_800_videoOutput_Override",
         "name": "Sx80/Mx800-700 Output Override",
-        "info": "Assign the Second(HDMI) or Third(DVI) output to feed into the USB Capture Device",
+        "info": "Assign the Second(HDMI) or Third(DVI) output to feed into the USB Capture Device for Sx80 based CODECs",
         "type": "option",
         "values": {
           "Third": "Third (DVI)",
