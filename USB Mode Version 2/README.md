@@ -29,16 +29,17 @@ These elements are hidden and DND is enabled to prevent calling out or in while 
 When USB mode is Disabled, your system will show all Native UI Elements, disengage infinite DND and recover your system's base configuration for full Webex and SIP use.
 
 ## Requirements
-- Download a copy of the [deployment guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
-- Compatible Room Device either on
+- A copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
+- A [compatible Room Device](#usb-mode-endpoint-compatibility-matrix) either on
   - Latest stable software channel
   - Non-deferred software release
 - Admin Privileges to your Room Device
 - Ability to navigate the Macro Editor
 - Compatible USB Capture Device
+- Knowledgable on AV design and Implementation
 
 ## How to get started
-- Download the [deployment guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip) and follow the instructions
+- Download a copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip), which contains all the files you need, and follow the instructions in the guide
 
 ## Macro Deployment Tools
 - Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
@@ -48,7 +49,7 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 
 ## More Useful Links
 ### Join the Community!
-The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases all around USB Mode. Defintley a great place to ask questions.
+The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases all around USB Mode. Definitely a great place to ask questions.
 
 ### Blog Posts
 
@@ -80,6 +81,27 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
   - His contributions to the memory storage functionality are invaluable
 - All of our community members in the Project USB space on Webex
   - You're all awesome, thank you for your ideas, patience and testing 😃
+
+## FAQ
+- Will Cisco TAC give me assistance?
+  - TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
+- Why is selfview full screen on one of my displays?
+  - USB Mode relies on your selfview feed being sent to the USB Capture Device
+  - If using a Loop Through capture card like the Inogeni 4KX-Plus, then you'll see a full selfview on your second display while USB mode is in use
+- Where can I get assistance?
+  - USB mode is a community driven solution. We recommend you read the all the documentation in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip).
+  - If you still need more assistance, join the [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex
+- Can I hide selfview on the second display?
+  - This would require additional design and hardware outside this scope. Ask your AV integrator on possible solutions
+- USB stops working and I get an error message?
+  - When USB mode detects no Video Input signal from a computer, it's designed to disengage USB mode. An active presentation is required for USB mode to work, so be sure to share your screen before activating USB mode
+- Why do I see my presentation source as my USB camera feed?
+  - Enable USB Mode must be pressed for the camera view to become available
+  - If you still don't see your camera, disable USB mode and restart your codec
+- Why can't people on my call hear my Audio?
+  - USB Mode requires an audio connection be made to the USB Capture card
+  - Check the wiring guide in the deployment guide
+  - Keep in mind, not all USB capture cards are the same, some may require a special attenuation cable for audio to function properly
 
 ## USB Mode Endpoint Compatibility Matrix
 ### Key
