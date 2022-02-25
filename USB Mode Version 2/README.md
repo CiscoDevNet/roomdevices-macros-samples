@@ -63,18 +63,13 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 
 ## Author(s)
-- Project Lead: Enrico Conedera
-  - Senior Technical Marketing Engineer
-  - econeder@cisco.com
-  - Cisco Systems
-- Consulting Engineer: John Yost
-  - Technical Marketing Engineer
-  - johyost@cisco.com
-  - Cisco Systems
-- Macro Author: Robert(Bobby) McGonigle Jr
-  - Technical Marketing Engineer
-  - bomcgoni@cisco.com
-  - Cisco Systems
+
+|                  | **Enrico Conedera**                 | **John Yost**                | **Robert(Bobby) McGonigle**  |
+|------------------|-------------------------------------|------------------------------|------------------------------|
+| **Contribution** | Project Lead                        | Consulting Engineer          | Macro Author                 |
+| **Title**        | Senior Technical Marketing Engineer | Technical Marketing Engineer | Technical Marketing Engineer |
+| **Org**          | Cisco Systems                       | Cisco Systems                | Cisco Systems                |
+| **Contact**      | econeder@cisco.com                  | johyost@cisco.com            | bomcgoni@cisco.com           |
 
 ## Acknowledgments
 - Zacharie Gignac from Université Laval in Canada
@@ -83,25 +78,25 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
   - You're all awesome, thank you for your ideas, patience and testing 😃
 
 ## FAQ
-- Will Cisco TAC give me assistance?
-  - TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
-- Why is selfview full screen on one of my displays?
-  - USB Mode relies on your selfview feed being sent to the USB Capture Device
-  - If using a Loop Through capture card like the Inogeni 4KX-Plus, then you'll see a full selfview on your second display while USB mode is in use
-- Where can I get assistance?
-  - USB mode is a community driven solution. We recommend you read the all the documentation in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip).
-  - If you still need more assistance, join the [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex
-- Can I hide selfview on the second display?
-  - This would require additional design and hardware outside this scope. Ask your AV integrator on possible solutions
-- USB stops working and I get an error message?
-  - When USB mode detects no Video Input signal from a computer, it's designed to disengage USB mode. An active presentation is required for USB mode to work, so be sure to share your screen before activating USB mode
-- Why do I see my presentation source as my USB camera feed?
-  - Enable USB Mode must be pressed for the camera view to become available
-  - If you still don't see your camera, disable USB mode and restart your codec
-- Why can't people on my call hear my Audio?
-  - USB Mode requires an audio connection be made to the USB Capture card
-  - Check the wiring guide in the deployment guide
-  - Keep in mind, not all USB capture cards are the same, some may require a special attenuation cable for audio to function properly
+### Will Cisco TAC give me assistance?
+- TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
+### Why is selfview full screen on one of my displays?
+- USB Mode relies on your selfview feed being sent to the USB Capture Device
+- If using a Loop Through capture card like the Inogeni 4KX-Plus, then you'll see a full selfview on your second display while USB mode is in use
+### Where can I get assistance?
+- USB mode is a community driven solution. We recommend you read the all the documentation in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip).
+- If you still need more assistance, join the [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex
+### Can I hide selfview on the second display?
+- This would require additional design and hardware outside this scope. Ask your AV integrator on possible solutions
+### USB stops working and I get an error message?
+- When USB mode detects no Video Input signal from a computer, it's designed to disengage USB mode. An active presentation is required for USB mode to work, so be sure to share your screen before activating USB mode
+### Why do I see my presentation source as my USB camera feed?
+- Enable USB Mode must be pressed for the camera view to become available
+- If you still don't see your camera, disable USB mode and restart your codec
+### Why can't people on my call hear my Audio?
+- USB Mode requires an audio connection be made to the USB Capture card
+- Check the wiring guide in the deployment guide
+- Keep in mind, not all USB capture cards are the same, some may require a special attenuation cable for audio to function properly
 
 ## USB Mode Endpoint Compatibility Matrix
 ### Key
