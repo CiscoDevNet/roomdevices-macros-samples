@@ -52,9 +52,10 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases all around USB Mode. Definitely a great place to ask questions.
 
 ### Blog Posts
-
   - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
   - [USB Passthrough Mode on Video Endpoints](https://gblogs.cisco.com/ch-tech/usb-passthrough-mode-on-video-endpoints/)
+  - [Unlocking BYOM in a Webex Environment](https://community.cisco.com/t5/announcements/walkthrough-wednesday-unlocking-byom-in-a-webex-environment/m-p/4549307#M850)
+
 ### Videos
 
 | USB- Passthrough with Cisco Video Devices | Turn Cisco Video Endpoint into USB Camera |
