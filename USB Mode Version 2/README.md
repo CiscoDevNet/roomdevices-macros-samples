@@ -3,16 +3,17 @@
 ![USB Mode Home Screen](images/UsbMode_Home.png)
 
 ## Table of Contents
-- [About](#about)
-- [Before You Begin](#before-you-begin)
-- [How does the script work](#how-does-the-script-work)
-- [Requirements](#requirements)
-- [How to get started](#how-to-get-started)
-- [Macro Installation](#macro-installation)
-- [Useful Links](#useful-links)
-- [Authors and Acknowledgments](#authors)
-- [FAQ](#faq)
-- [USB Mode Room Device Compatibility Matrix](#usb-mode-room-device-compatibility-matrix)
+_⬆️ => Click this arrow to bring you back to the Table of Contents_
+- [About](#about-%EF%B8%8F)
+- [Before You Begin](#before-you-begin-%EF%B8%8F)
+- [How does the script work](#how-does-the-script-work-%EF%B8%8F)
+- [Requirements](#requirements-%EF%B8%8F)
+- [How to get started](#how-to-get-started-%EF%B8%8F)
+- [Macro Installation](#macro-installation-%EF%B8%8F)
+- [Useful Links](#useful-links-%EF%B8%8F)
+- [Authors and Acknowledgments](#authors-%EF%B8%8F)
+- [FAQ](#faq-%EF%B8%8F)
+- [USB Mode Room Device Compatibility Matrix](#usb-mode-room-device-compatibility-matrix-%EF%B8%8F)
 
 ## About [⬆️](#table-of-contents)
 
@@ -183,5 +184,5 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | Board Pro 75       | **Yes**    | **No**    | **No**          | **No**              |
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
-FR => Future Release, Tentative release version within parenthesis
-[⬆️](#table-of-contents)
+FR => Future Release, Tentative release version within parenthesis<br />
+## [⬆️](#table-of-contents)
