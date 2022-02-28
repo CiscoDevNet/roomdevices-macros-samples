@@ -98,7 +98,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 ## FAQ
 ### Will Cisco TAC give me assistance?
-- TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
+- TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB Mode while you troubleshoot with them.
 ### Why is Selfview full screen on one of my displays?
 - If you use a dual screen Room Kit or Plus, you will see that your second screen shows fullscreen SelfView. (This does hot happen if you use a single screen system).
 - USB Mode relies on your Selfview feed being sent to the USB Capture Device, so this is normal.
