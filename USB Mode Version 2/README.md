@@ -105,7 +105,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | ------------------ | ---------- |
 | [<img src="https://img.youtube.com/vi/R5Hde9Zvbvw/0.jpg" width="400">](https://www.youtube.com/watch?v=R5Hde9Zvbvw) | [<img src="https://img.youtube.com/vi/ta4OZ0_wbVQ/0.jpg" width="400">](https://www.youtube.com/watch?v=ta4OZ0_wbVQ) |
 |USB Mode 2 - Configuration||
-|[<img src="https://cdn-3-d.app.vidcast.io/f4/0b/05/f40b0539-d9fe-478b-9164-da52bc868d93/thumbnail_screen_1645822157211.jpeg?Expires=1645829397&amp;Signature=H0tbr2uCkaP3-idv~OZEsS2Gx0jNpNEpiv4KazXQ2zJ1nG9yS28zCUYo3MQ63Fe3FhPMmSbn2EPSJ0qquT13L2gFzP-nZvAR-v7XPdFEhwsjClO-qdY5hiIWq6xPuoCw5b3YJOSOS0sLzXo6sHH70a8akZhqzc1SvkYONH-4I7H-~ZEO9UsBHIHqz3hJ15ST2kFEGL4QGpSksWql6ewHshVEvOcFmFFncJL-fZP5tm6Iv8EdXRyIL0-lFo1UUA4VklNK29prkH2765YbIwky2lQCbo3vLJzwo3QFpXsO3zqS0peWg6dT3~S7RjwkjxG7eiXC1zOomFIRCBg22ZTtPA__&amp;Key-Pair-Id=K7MMR7AZ73QPM" width="400">](https://app.vidcast.io/share/67079b20-5fa7-4fbb-80ba-099d485728b3)||
+|[USB Mode 2 - Configuration](https://app.vidcast.io/share/67079b20-5fa7-4fbb-80ba-099d485728b3)||
 
 ## Author(s)
 [⬆️](#table-of-contents)
