@@ -31,7 +31,7 @@ To better illustrate how this macro works, please click on the video demo below 
 
 USB Mode is only 1 flavor of the USB Passthrough solution. Many new Room Devices support this natively and we recommend you work with the native tools built into the product if available.
 
-Check out the [USB Mode Endpoint Compatibility Matrix](#usb-mode-room-device-compatibility-matrix) below to see which USB solution is right for you.
+Check out the [USB Mode Room Device Compatibility Matrix](#usb-mode-room-device-compatibility-matrix) below to see which USB solution is right for you.
 
 **IMPORTANT**: If you're upgrading from USB Mode Version 1.X, please follow these steps before installing version 2
 - Take a backup of your endpoint
@@ -203,4 +203,4 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis<br />
-## [⬆️](#table-of-contents)
+[⬆️](#table-of-contents)
