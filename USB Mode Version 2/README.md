@@ -172,7 +172,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 | Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
-| C-Series and older | <img src="https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/USB%20Mode%20Version%202/images/icon/red.png" width="15" height="15"> **No**     | **No**    | **No**          | **No**              |
+| C-Series and older | **No**     | **No**    | **No**          | **No**              |
 | Mx200/300 G1       | **No**     | **No**    | **No**          | **No**              |
 | Mx200/300 G2       | **No**     | **No\***  | **No**          | **No**              |
 | Dx70/Dx80          | **No**     | **No**    | **No**          | **No**              |
