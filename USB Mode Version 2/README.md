@@ -17,6 +17,19 @@ USB Mode is only 1 flavor of the USB Passthrough solution. Many new Room Devices
 
 Check out the [USB Mode Endpoint Compatibility Matrix](#usb-mode-endpoint-compatibility-matrix) below to see which USB solution is right for you.
 
+**IMPORTANT**: If you're upgrading from USB Mode Version 1.X, please follow these steps before installing version 2
+- Take a backup of your endpoint
+- Disable USB Mode Version 1.X on your touch panel if enabled
+- Delete all USB Mode Version 1.X Macros from the Macro Editor
+  - projUSB_Main_1-X-X
+  - projUSB_FirstTimeSetup_1-X-X
+  - memStoreV2
+- Delete the USB Mode Version 1.X UI Elements in the UI Extensions Editor
+  - Enable USB Mode Panel
+  - Disable USB Mode Panel
+- **Review and confirm your devices default configuration for a normal non-USB use**
+- Continue with installing USB Mode Version 2
+
 ## How does the script work
 While USB mode is enabled, your Room Device's base configuration is stored in memory and then reconfigured to send Microphone Data out the Line Output of your device and your Main Source video out the last video output connection(Model Dependent); these feeds are fed into a compatible USB capture card(See docs for details). 
 
@@ -33,15 +46,19 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 - A [compatible Room Device](#usb-mode-endpoint-compatibility-matrix) either on
   - Latest stable software channel
   - Non-deferred software release
-- Admin Privileges to your Room Device
+  - Minimum RoomDevice Software needed **ce9.14.3**
+- Administrator privileges to your Room Device
 - Ability to navigate the Macro Editor
+- Ability to Navigate the UI Extensions Editor
 - Compatible USB Capture Device
+  - Review [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip) for recommendations
 - Knowledgable on AV design and Implementation
 
 ## How to get started
 - Download a copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip), which contains all the files you need, and follow the instructions in the guide
 
-## Macro Deployment Tools
+## Macro Installation
+- Access the web interface of your endpoint directly, and use the macro editor to Import the Javascript file
 - Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
 - For bulk deployment, Ce-Deploy has you covered
   - [Ce-Deploy Community Space](https://eurl.io/#SJWfk6qUV)
@@ -49,7 +66,7 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 
 ## More Useful Links
 ### Join the Community!
-The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases all around USB Mode. Definitely a great place to ask questions.
+The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled with over 1500 partners, integrators, customers and USB enthusiasts; all sharing their experience, creativity and use cases around USB Mode. Definitely a great place to ask questions.
 
 ### Blog Posts
   - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
@@ -83,14 +100,15 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 ### Will Cisco TAC give me assistance?
 - TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
 ### Why is selfview full screen on one of my displays?
-- USB Mode relies on your selfview feed being sent to the USB Capture Device
-- If using a Loop Through capture card like the Inogeni 4KX-Plus, then you'll see a full selfview on your second display while USB mode is in use
+- If you use a dual screen Room Kit or Plus, you will see that your second screen shows fullscreen SelfView. (This does hot happen if you use a single screen system).
+- USB Mode relies on your Selfview feed being sent to the USB Capture Device, so this is normal.
+- If you are using a Room Kit Pro, Room 70 G2, SX80, or MX700/800, you can use one or two screens without seeing Selfview.  If you happen to use three screens, then you will see Selfview on the third screen.display while USB mode is in use
 ### Where can I get assistance?
 - USB mode is a community driven solution. We recommend you read the all the documentation in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip).
 - If you still need more assistance, join the [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex
 ### Can I hide selfview on the second display?
-- This would require additional design and hardware outside this scope. Ask your AV integrator on possible solutions
-### USB stops working and I get an error message?
+- In a complex audiovisual installation that uses a video matrix switcher, it is feasible to have the second screen show something else. Ask your Audio Visual integrator on possible solutions.
+### USB Mode stops working and I get an error message?
 - When USB mode detects no Video Input signal from a computer, it's designed to disengage USB mode. An active presentation is required for USB mode to work, so be sure to share your screen before activating USB mode
 ### Why do I see my presentation source as my USB camera feed?
 - Enable USB Mode must be pressed for the camera view to become available
@@ -99,11 +117,18 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 - USB Mode requires an audio connection be made to the USB Capture card
 - Check the wiring guide in the deployment guide
 - Keep in mind, not all USB capture cards are the same, some may require a special attenuation cable for audio to function properly
+### Can I have USB Mode Version 1 and Version 2 running on the same device?
+- No and very much not recommended
+- We Encourage you switch to Version 2 when you can
+### How can I hide other customization when USB Mode is active?
+- USB Mode Version 2 has a configuration sections where you can hide other customizations when USB Mode is Enabled
+- You can even show customization you built for USB Mode specifically
+- Review the Release notes in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip) to learn how
 
 ## USB Mode Endpoint Compatibility Matrix
 ### Key
 - Native USB: Devices that have USB Passthrough built into their hardware. No need for a macro and highly recommended 😃
-- Native Inogeni: Native OS support for USB mode, no macro required. Inogeni 4KX-Plus Capture device required. (Not currently available)
+- Native Inogeni: Native OS support for USB mode, no macro required. Inogeni 4KX-PLUS Capture device required (future software release)
 - Macro 1-3: Original USB Mode Macro, accessible in the USB Mode community space. Recommend upgrading to USB Mode Version 2 when possible.
 - Macro 2-2-10: USB Mode Version 2
 
