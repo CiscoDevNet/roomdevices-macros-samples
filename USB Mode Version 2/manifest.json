@@ -28,7 +28,7 @@
       {
         "id": "screenShare_Mode",
         "name": "Screenshare Mode",
-        "info": "Choose the default Screenshare Behavior",
+        "info": "Standard: (Recommended) When Enable USB Mode is pressed, your default presentation source will shared; Auto: When Enable USB Mode is pressed, your active presentation continues into USB Mode",
         "type": "option",
         "values": {
           "standard": "Standard",
