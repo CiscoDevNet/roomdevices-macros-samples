@@ -141,34 +141,34 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 | Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
-| C-Series and older | **No**     | **No**    | **No**          | **No**              |
-| Mx200/300 G1       | **No**     | **No**    | **No**          | **No**              |
-| Mx200/300 G2       | **No**     | **No\***  | **No**          | **No**              |
-| Dx70/Dx80          | **No**     | **No**    | **No**          | **No**              |
-| Sx10               | **No**     | **No**    | **No**          | **No**              |
-| Sx20               | **No**     | **No\***  | **No**          | **No**              |
-| Sx80               | **No**     | **Yes**   | **Yes**         | **No**              |
-| Mx700/700ST        | **No**     | **Yes**   | **Yes**         | **No**              |
-| Mx800/800ST/800D   | **No**     | **Yes**   | **Yes**         | **No**              |
-| Board 55/55s       | **No**     | **No**    | **No**          | **No**              |
-| Board 70/70s       | **No**     | **No**    | **No**          | **No**              |
-| Board 85s          | **No**     | **No**    | **No**          | **No**              |
-| Room USB           | **Yes**    | **No**    | **No**          | **No**              |
-| Room Kit Mini      | **Yes**    | **No**    | **No**          | **No**              |
-| Room Kit           | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| CODEC Plus         | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| CODEC Pro          | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| Room 55/55D        | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| Room 70D/70S       | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| Room 70D/70S G2    | **No**     | **Yes**   | **Yes**         | **FR (Room OS 11)** |
-| Room 70 Panorama   | **No**     | **No**    | **FR (2-3-0)**  | **FR (Room OS 11)** |
-| Room Panorama      | **No**     | **No**    | **FR (2-3-0)**  | **FR (Room OS 11)** |
-| Desk Mini          | **Yes**    | **No**    | **No**          | **No**              |
-| Desk               | **Yes**    | **No**    | **No**          | **No**              |
-| Desk Hub           | **Yes**    | **No**    | **No**          | **No**              |
-| Desk Pro           | **Yes**    | **No**    | **No**          | **No**              |
-| Board Pro 55       | **Yes**    | **No**    | **No**          | **No**              |
-| Board Pro 75       | **Yes**    | **No**    | **No**          | **No**              |
+| C-Series and older | ![Not Compatible](images/icon/red.png) **No**| ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Mx200/300 G1       | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Mx200/300 G2       | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No\***  | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Dx70/Dx80          | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Sx10               | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Sx20               | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No\***  | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Sx80               | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Mx700/700ST        | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Mx800/800ST/800D   | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Board 55/55s       | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Board 70/70s       | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Board 85s          | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Room USB           | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Room Kit Mini      | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Room Kit           | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| CODEC Plus         | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| CODEC Pro          | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Room 55/55D        | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Room 70D/70S       | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Room 70D/70S G2    | ![Not Compatible](images/icon/red.png) **No**    | ![Compatible](images/icon/green.png) **Yes**   | ![Compatible](images/icon/green.png) **Yes**         | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Room 70 Panorama   | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Future Release](images/icon/yellow.png) **FR (2-3-0)**  | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Room Panorama      | ![Not Compatible](images/icon/red.png) **No**    | ![Not Compatible](images/icon/red.png) **No**   | ![Future Release](images/icon/yellow.png) **FR (2-3-0)**  | ![Future Release](images/icon/yellow.png) **FR (Room OS 11)** |
+| Desk Mini          | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Desk               | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Desk Hub           | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Desk Pro           | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Board Pro 55       | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
+| Board Pro 75       | ![Compatible](images/icon/green.png) **Yes**    | ![Not Compatible](images/icon/red.png) **No**   | ![Not Compatible](images/icon/red.png) **No**         | ![Not Compatible](images/icon/red.png) **No**             |
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis
