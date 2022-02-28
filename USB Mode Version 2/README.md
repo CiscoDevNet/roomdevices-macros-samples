@@ -52,7 +52,7 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 - Ability to Navigate the UI Extensions Editor
 - Compatible USB Capture Device
   - Review [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip) for recommendations
-- Knowledgable on AV design and Implementation
+- Knowledgeable on AV design and Implementation
 
 ## How to get started
 - Download a copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip), which contains all the files you need, and follow the instructions in the guide
@@ -99,26 +99,32 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 ## FAQ
 ### Will Cisco TAC give me assistance?
 - TAC does not support Macros, thus the USB mode macro won't be supported. Any hardware and software support you have with Cisco will still be covered, but they may require you to disable USB while you troubleshoot with them.
-### Why is selfview full screen on one of my displays?
+### Why is Selfview full screen on one of my displays?
 - If you use a dual screen Room Kit or Plus, you will see that your second screen shows fullscreen SelfView. (This does hot happen if you use a single screen system).
 - USB Mode relies on your Selfview feed being sent to the USB Capture Device, so this is normal.
 - If you are using a Room Kit Pro, Room 70 G2, SX80, or MX700/800, you can use one or two screens without seeing Selfview.  If you happen to use three screens, then you will see Selfview on the third screen.display while USB mode is in use
 ### Where can I get assistance?
 - USB mode is a community driven solution. We recommend you read the all the documentation in the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip).
 - If you still need more assistance, join the [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex
-### Can I hide selfview on the second display?
+### Can I hide Selfview on the second display?
 - In a complex audiovisual installation that uses a video matrix switcher, it is feasible to have the second screen show something else. Ask your Audio Visual integrator on possible solutions.
+### How can I see my selfview on screen?
+- If you're running a single screen deployment of USB Mode, then the native Selfview is only being sent to your USB capture device and won't be visible while USB mode is enabled
+- We recommend you use the Selfview feature built into the software client you're currently using. Most, if not all, software based clients have a way to preview your camera feed
 ### USB Mode stops working and I get an error message?
 - When USB mode detects no Video Input signal from a computer, it's designed to disengage USB mode. An active presentation is required for USB mode to work, so be sure to share your screen before activating USB mode
 ### Why do I see my presentation source as my USB camera feed?
 - Enable USB Mode must be pressed for the camera view to become available
-- If you still don't see your camera, disable USB mode and restart your codec
+- If you still don't see your camera, disable USB mode and restart your Room Device
+### Why did my Camera View on my software client dissapear?
+- If you chose to hide selfview or exit selfview fullscreen under the camera control menu, then you've made a change to what the USB capture device is receiving
+- Undo the changes you made, or disable then re-enable USB Mode to fix this
 ### Why can't people on my call hear my Audio?
 - USB Mode requires an audio connection be made to the USB Capture card
 - Check the wiring guide in the deployment guide
 - Keep in mind, not all USB capture cards are the same, some may require a special attenuation cable for audio to function properly
 ### Can I have USB Mode Version 1 and Version 2 running on the same device?
-- No and very much not recommended
+- No and not recommended either
 - We Encourage you switch to Version 2 when you can
 ### How can I hide other customization when USB Mode is active?
 - USB Mode Version 2 has a configuration sections where you can hide other customizations when USB Mode is Enabled
@@ -133,7 +139,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 - Macro 2-2-10: USB Mode Version 2
 
 
-| CODEC              | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
+| Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
 | C-Series and older | **No**     | **No**    | **No**          | **No**              |
 | Mx200/300 G1       | **No**     | **No**    | **No**          | **No**              |
