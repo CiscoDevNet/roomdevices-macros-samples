@@ -176,34 +176,34 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 | Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
-| C-Series and older | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Mx200/300 G1       | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Mx200/300 G2       | :red_square: **No**     | :red_square:  **No\***  | :red_square: **No**          | :red_square: **No**              |
-| Dx70/Dx80          | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Sx10               | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Sx20               | :red_square: **No**     | :red_square:  **No\***  | :red_square: **No**          | :red_square: **No**              |
-| Sx80               | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :red_square: **No**              |
-| Mx700/700ST        | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :red_square: **No**              |
-| Mx800/800ST/800D   | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :red_square: **No**              |
-| Board 55/55s       | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Board 70/70s       | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Board 85s          | :red_square: **No**     | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Room USB           | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Room Kit Mini      | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Room Kit           | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| CODEC Plus         | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| CODEC Pro          | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| Room 55/55D        | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| Room 70D/70S       | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| Room 70D/70S G2    | :red_square: **No**     | :green_square: **Yes**   | :green_square: **Yes**         | :yellow_square: **FR (Room OS 11)** |
-| Room 70 Panorama   | :red_square: **No**     | :red_square: **No**    | :yellow_square: **FR (2-3-0)**  | :yellow_square: **FR (Room OS 11)** |
-| Room Panorama      | :red_square: **No**     | :red_square: **No**    | :yellow_square: **FR (2-3-0)**  | :yellow_square: **FR (Room OS 11)** |
-| Desk Mini          | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Desk               | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Desk Hub           | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Desk Pro           | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Board Pro 55       | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
-| Board Pro 75       | :green_square: **Yes**    | :red_square: **No**    | :red_square: **No**          | :red_square: **No**              |
+| C-Series and older | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Mx200/300 G1       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Mx200/300 G2       | 🟥 **No**     | 🟥  **No\***  | 🟥 **No**          | 🟥 **No**              |
+| Dx70/Dx80          | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Sx10               | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Sx20               | 🟥 **No**     | 🟥  **No\***  | 🟥 **No**          | 🟥 **No**              |
+| Sx80               | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
+| Mx700/700ST        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
+| Mx800/800ST/800D   | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
+| Board 55/55s       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Board 70/70s       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Board 85s          | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Room USB           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Room Kit Mini      | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2-3-0)**  | 🟨 **FR (Room OS 11)** |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2-3-0)**  | 🟨 **FR (Room OS 11)** |
+| Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Desk Pro           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Board Pro 55       | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Board Pro 75       | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis<br />
