@@ -27,7 +27,7 @@ To better illustrate how this macro works, please click on the video demo below 
 [![USB Mode Video Demo](https://img.youtube.com/vi/fFKpSABTkDQ/0.jpg)](https://www.youtube.com/watch?v=fFKpSABTkDQ)
 
 ### Script Info
-Version: 2-2-10
+Version: 2-2-10<br />
 Last Updated: February 22, 2022
 
 ## Before you begin
