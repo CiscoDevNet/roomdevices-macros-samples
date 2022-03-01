@@ -26,6 +26,10 @@ To better illustrate how this macro works, please click on the video demo below 
 
 [![USB Mode Video Demo](https://img.youtube.com/vi/fFKpSABTkDQ/0.jpg)](https://www.youtube.com/watch?v=fFKpSABTkDQ)
 
+### Script Info
+Version: 2-2-10
+Last Updated: February 22, 2022
+
 ## Before you begin
 [⬆️](#table-of-contents)
 
@@ -207,5 +211,5 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis<br />
-RoS => Room Os
+RoS => Room Os<br />
 [⬆️](#table-of-contents)
