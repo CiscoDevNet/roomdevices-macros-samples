@@ -98,6 +98,8 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
   - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
   - [USB Passthrough Mode on Video Endpoints](https://gblogs.cisco.com/ch-tech/usb-passthrough-mode-on-video-endpoints/)
   - [Unlocking BYOM in a Webex Environment](https://community.cisco.com/t5/announcements/walkthrough-wednesday-unlocking-byom-in-a-webex-environment/m-p/4549307#M850)
+  - [Lightware Camera Share Bundle](https://lightware.com/cisco/camera-share)
+    - [Lightware Bundles Product IDs](https://community.cisco.com/t5/webex-user-documents/lightware/ta-p/4484725)
 
 ### Videos
 
