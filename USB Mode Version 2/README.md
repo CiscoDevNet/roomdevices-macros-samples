@@ -98,8 +98,6 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
   - [Innovations from Webex Experts](https://blog.webex.com/webex-devices/innovations-from-webex-experts-making-devices-even-better/)
   - [USB Passthrough Mode on Video Endpoints](https://gblogs.cisco.com/ch-tech/usb-passthrough-mode-on-video-endpoints/)
   - [Unlocking BYOM in a Webex Environment](https://community.cisco.com/t5/announcements/walkthrough-wednesday-unlocking-byom-in-a-webex-environment/m-p/4549307#M850)
-  - [Lightware Camera Share Bundle](https://lightware.com/cisco/camera-share)
-    - [Lightware Bundles Product IDs](https://community.cisco.com/t5/webex-user-documents/lightware/ta-p/4484725)
 
 ### Videos
 
@@ -107,7 +105,11 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | ------------------ | ---------- |
 | [<img src="https://img.youtube.com/vi/R5Hde9Zvbvw/0.jpg" width="400">](https://www.youtube.com/watch?v=R5Hde9Zvbvw) | [<img src="https://img.youtube.com/vi/ta4OZ0_wbVQ/0.jpg" width="400">](https://www.youtube.com/watch?v=ta4OZ0_wbVQ) |
 |USB Mode 2 - Configuration||
-|[USB Mode 2 - Configuration](https://app.vidcast.io/share/67079b20-5fa7-4fbb-80ba-099d485728b3)||
+|[<img src="images/thumbnails/thumb_usb2_configuration.png" width="400">](https://app.vidcast.io/share/67079b20-5fa7-4fbb-80ba-099d485728b3)||
+
+### Multi-Device Solutions
+  - [Lightware Camera Share Bundle](https://lightware.com/cisco/camera-share)
+    - [Lightware Bundles Product IDs](https://community.cisco.com/t5/webex-user-documents/lightware/ta-p/4484725)
 
 ## Author(s)
 [⬆️](#table-of-contents)
