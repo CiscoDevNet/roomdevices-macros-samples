@@ -80,7 +80,7 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 - Download a copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip), which contains all the files you need, and follow the instructions in the guide
 
 ## Macro Installation
-⬆️](#table-of-contents)
+[⬆️](#table-of-contents)
 
 - Access the web interface of your endpoint directly, and use the macro editor to Import the Javascript file
 - Use the [RoomOs](https://roomos.cisco.com/macros) website to connect to your device and install the script with installer tool
@@ -178,10 +178,10 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
 | C-Series and older | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Mx200/300 G1       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| Mx200/300 G2       | 🟥 **No**     | 🟥  **No\***  | 🟥 **No**          | 🟥 **No**              |
+| Mx200/300 G2       | 🟥 **No**     | 🟥  **No<sup>\*</sup>**  | 🟥 **No**          | 🟥 **No**              |
 | Dx70/Dx80          | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Sx10               | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| Sx20               | 🟥 **No**     | 🟥  **No\***  | 🟥 **No**          | 🟥 **No**              |
+| Sx20               | 🟥 **No**     | 🟥  **No<sup>\*</sup>**  | 🟥 **No**          | 🟥 **No**              |
 | Sx80               | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
 | Mx700/700ST        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
 | Mx800/800ST/800D   | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**              |
@@ -190,14 +190,14 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | Board 85s          | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room USB           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit Mini      | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (Room OS 11)** |
-| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2-3-0)**  | 🟨 **FR (Room OS 11)** |
-| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2-3-0)**  | 🟨 **FR (Room OS 11)** |
+| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**  | 🟨 **FR (RoS 11)** |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**  | 🟨 **FR (RoS 11)** |
 | Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
@@ -207,4 +207,5 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 FR => Future Release, Tentative release version within parenthesis<br />
+RoS => Room Os
 [⬆️](#table-of-contents)
