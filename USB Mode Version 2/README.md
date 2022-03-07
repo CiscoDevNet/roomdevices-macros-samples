@@ -2,6 +2,8 @@
 
 ![USB Mode Home Screen](images/UsbMode_Home.png)
 
+[![Download USB Mode Deployments Guudes and Macro](images/icon/button_click-to-download-usb-mode-deployment-guides-and-macro.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
+
 ## Table of Contents
 _⬆️ => Click this arrow to bring you back to the Table of Contents_
 - [About](#about)
@@ -81,7 +83,9 @@ When USB mode is Disabled, your system will show all Native UI Elements, disenga
 ## How to get started
 [⬆️](#table-of-contents)
 
-- Download a copy of the [Deployment Guide](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip), which contains all the files you need, and follow the instructions in the guide
+- Download a copy of the **Deployment Guide**, which contains all the files you need, and follow the instructions in the guide
+
+[![Download USB Mode Deployments Guudes and Macro](images/icon/button_click-to-download-usb-mode-deployment-guides-and-macro.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
 
 ## Macro Installation
 [⬆️](#table-of-contents)
