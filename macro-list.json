@@ -42,6 +42,12 @@
         "tags": "calling"
     },
     {
+        "title": "Datadog Call Performance Monitoring",
+        "description": "Vizualize and alert on the performance of your calls while they happen",
+        "symbol": "🚨",
+        "tags": "calling, meeting room, peripherals, performance, monitoring"
+    },
+    {
         "title": "Energy Prices",
         "description": "Show hourly Norwegian electricity prices on home screen",
         "symbol": "⚡️",

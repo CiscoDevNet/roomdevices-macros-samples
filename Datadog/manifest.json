@@ -1,0 +1,75 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./datadog.js",
+          "type": "url",
+          "id": "datadog"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": [
+      {
+        "id": "DD_TOKEN",
+        "name": "Datadog Client Token",
+        "info": "Get from https://app.datadoghq.com/organization-settings/client-tokens",
+        "type": "string",
+        "default": "REPLACE_ME",
+        "domain": "datadog",
+        "required": true
+      },
+      {
+        "id": "DD_TAGS",
+        "name": "Datadog Tags",
+        "info": "Comma Delimited, adds important metadata to your performance data",
+        "type": "string",
+        "default": "env:stg,team:rocket",
+        "domain": "datadog",
+        "required": true
+      },
+      {
+        "id": "CHECK_IF_CALL_FREQUENCY",
+        "name": "Call Check Frequency",
+        "info": "Frequency that the device will check if there is an active call to monitor",
+        "type": "number",
+        "default": 60000,
+        "domain": "datadog",
+        "required": true
+      },
+      {
+        "id": "IN_CALL_CHECK_FREQUENCY",
+        "name": "In-Call Collection Frequency",
+        "info": "Frequency that the device will collect data if there is an active call to monitor",
+        "type": "number",
+        "default": 60000,
+        "domain": "datadog",
+        "required": true
+      },
+      {
+        "id": "GENERAL_CHECK_FREQUENCY",
+        "name": "General Collection Frequency",
+        "info": "Frequency that the device will collect general device status data",
+        "type": "number",
+        "default": 300000,
+        "domain": "datadog",
+        "required": true
+      },
+      {
+        "id": "MONITOR_PERIPHERALS",
+        "name": "Monitor Peripherals",
+        "info": "Do you want to monitor the connection status of peripheral devices",
+        "type": "bool",
+        "default": true,
+        "domain": "datadog",
+        "required": true
+      }
+    ]
+  },
+  "profileName": "stephenlechner",
+  "generatedAt": "20220317-1201"
+}
