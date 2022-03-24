@@ -1,4 +1,4 @@
-const xapi = require('xapi');  // should be require('xapi')
+const xapi = require('xapi');
 
 const DD_TOKEN = 'REPLACE_ME';  // get a Client Token from your Datadog account here: https://app.datadoghq.com/organization-settings/client-tokens
 const DD_URL = `https://browser-http-intake.logs.datadoghq.com/v1/input/${DD_TOKEN}`;  // if your Datadog instance is in the EU region, use "datadog.eu" instead of "datadog.com"
@@ -19,13 +19,12 @@ const IN_CALL_STATUS_COMMAND_LIST = [
 // configure the check frequency and status commands to run all the time, regardless of whether the room kit device is in a call
 const GENERAL_CHECK_FREQUENCY = 300000; // 5 minutes by default; NOTE: must be larger (in seconds) than the number of STATUS_LIST commands + the number of peripherals connected to the roomkit.
 const GENERAL_STATUS_COMMAND_LIST = [
-  'network',
-  'peripherals connecteddevice'
+  'network'
 ];
 const MONITOR_PERIPHERALS = true;  // perhipherals monitoring requires extra logic and processing
 
 var tags = '';
-const version = 'version:0.2.0';
+const version = 'version:0.2.3';
 if (DD_TAGS) {
   tags = `${version},${DD_TAGS}`;
 }
@@ -106,27 +105,13 @@ function sendHealthData(message){
 // getting data
 
 function getEachPeripheralData(perifData){
-  // the `xStatus Perhipherals ConnectedDevice [n]` commands must be run 
-  // per peripheral device and with the id as an argument. we get the 
-  // peripheral id list first from `xCommand Peripherals List`.
-  // we schedule the sending of data in 1s increments so as to avoid running out of HttpClient handlers on the device
-  // TODO: confirm that the results capture all device data. Early results suggest that some devices might be getting missed.
-  if (perifData['Device'].length > 0) {
-    for (let i = 0; i < perifData['Device'].length; i++) {
-      setTimeout(() => xapi.status.get('peripherals connecteddevice '+perifData['Device'][i]['id'])
-        .then((stat) => { sendHealthData(formatHealthResults(
-          Object.assign(stat, {'peripherals_list_data': perifData['Device'][i]}),
-          'peripherals connecteddevice'
-        ));
-      }), (i + STATUS_LIST.length + 1)*1000);
+  // iterate through the peripherals data and send them as unique events
+  if ((Object.prototype.toString.call(perifData) === '[object Array]') && perifData.length >= 1) {
+    for (let i = 0; i < perifData.length; i++) {
+      setTimeout(() => sendHealthData(formatHealthResults([perifData[i]], 'peripherals connecteddevice')), (i + GENERAL_STATUS_COMMAND_LIST.length + 1)*1000);
     }
   } else {
-    setTimeout(
-      () => sendHealthData(formatHealthResults(
-        [{'command_response': 'none'}], 
-        'peripherals connecteddevice'
-      )), (STATUS_LIST.length + 1)*1000
-    );
+    setTimeout(() => sendHealthData(formatHealthResults([{'command_response': 'none'}], 'peripherals connecteddevice')), (GENERAL_STATUS_COMMAND_LIST.length + 1)*1000);
   }
 }
 
@@ -158,14 +143,16 @@ function getSystemData(){
   });
 }
 
+
 function runInCallStatusCheck() {
   checkStatus(IN_CALL_STATUS_COMMAND_LIST);
 }
 
+
 function runGeneralStatusCheck() {
   checkStatus(GENERAL_STATUS_COMMAND_LIST);
   if (MONITOR_PERIPHERALS) {
-    xapi.command('peripherals list').then((perifs) => { getEachPeripheralData(perifs); })
+    xapi.status.get('peripherals connecteddevice').then((perifs) => { getEachPeripheralData(perifs); })
   }
 }
 
