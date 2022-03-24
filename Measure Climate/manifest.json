@@ -4,14 +4,14 @@
     "macro": {
       "items": [
         {
-          "payload": "./storage.js",
+          "payload": "./storage-csv.js",
           "type": "library",
-          "id": "storage"
+          "id": "storage-csv"
         },
         {
-          "payload": "./temperatures.js",
+          "payload": "./measureclimate.js",
           "type": "url",
-          "id": "temperatures"
+          "id": "measureclimate"
         }
       ]
     },

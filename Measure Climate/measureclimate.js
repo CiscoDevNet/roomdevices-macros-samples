@@ -1,5 +1,5 @@
 const xapi = require('xapi');
-const storage = require('./storage');
+const storage = require('./storage-csv');
 
 // how often to sample data
 const SampleMinutes = 10;
@@ -19,7 +19,6 @@ async function measure() {
   const sample = [getTime(), temp, humidity];
   currentData.push(sample);
   currentData = currentData.slice(-MaxSamples);
-  console.log('saving', currentData);
   await storage.save(currentData.slice(currentData));
 }
 
@@ -43,7 +42,6 @@ async function showPlot() {
 
 async function init() {
   currentData = (await storage.load()) || [];
-  measure();
   setInterval(measure, SampleMinutes * 60 * 1000);
 }
 
