@@ -12,6 +12,12 @@
         "tags": "calling"
     },
     {
+        "title": "Automatic Room Booking",
+        "description": "Automatically books a room when the room being used",
+        "symbol": "📅",
+        "tags": "calling, meeting room"
+    },
+    {
         "title": "Audio Safe Guard",
         "description": "Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands",
         "symbol": "🔒",
