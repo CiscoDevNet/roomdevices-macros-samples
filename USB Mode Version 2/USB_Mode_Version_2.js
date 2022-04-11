@@ -775,6 +775,17 @@ async function runUsbMode() { //Fix Me - Add Plus Profile and Edit Others
         }
         console.debug(error)
       })
+      await xapi.config.set('Video Output Connector 1 MonitorRole', 'First').then(() => {
+        console.debug('runUsbMode()', 'monitor_Role conx_1 set')
+      }).catch((e) => {
+        let error = {
+          'Error': e,
+          'Message': 'Error caught on getting the config of "Video Output Connector 1 MonitorRole"',
+          'Associated_Function': 'runUsbMode()',
+          'Connect': connect
+        }
+        console.debug(error)
+      })
       await xapi.config.set('Video Output Connector 3 MonitorRole', 'Third').then(() => {
         console.debug('runUsbMode()', 'monitor_Role conx_3 set')
       }).catch((e) => {
