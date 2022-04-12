@@ -17,6 +17,11 @@
     },
     "roomcontrol": {
       "items": [
+        {
+          "payload": "climate.xml",
+          "id": "climate",
+          "type": "url"
+        }
       ]
     }
   },

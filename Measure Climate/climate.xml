@@ -1,0 +1,12 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>climate</PanelId>
+    <Type>Statusbar</Type>
+    <Icon>Hvac</Icon>
+    <Color>#C233C4</Color>
+    <Name>Climate Plot</Name>
+    <ActivityType>Custom</ActivityType>
+  </Panel>
+</Extensions>

@@ -31,18 +31,25 @@ async function showPlot() {
     type:'bar',
     data: {
       labels,
-      datasets: [{ label: 'Temperature', data: temp }]
+      datasets: [{ label: 'Temperature', data: temp }, { label: 'Humidiy', data: humidity }],
     }
   };
   const Url = 'https://quickchart.io/chart?c=' + JSON.stringify(params);
-  console.log(Url);
-  // xapi.Command.UserInterface.WebView.Display({ Url, Title: "Today's energy prizes (incl tax)", Mode: 'Modal' });
-  xapi.Command.UserInterface.WebView.Display({ Url, Title: "Today's energy prizes (incl tax)" });
+  // console.log(Url);
+  xapi.Command.UserInterface.WebView.Display({ Url, Title: "Temperature" });
+}
+
+function onPanelClicked(e) {
+  if (e.PanelId === 'climate') {
+    showPlot();
+  }
 }
 
 async function init() {
   currentData = (await storage.load()) || [];
+  measure();
   setInterval(measure, SampleMinutes * 60 * 1000);
+  xapi.Event.UserInterface.Extensions.Panel.Clicked.on(onPanelClicked);
 }
 
 init();
