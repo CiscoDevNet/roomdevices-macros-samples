@@ -198,20 +198,22 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | Board 85s          | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room USB           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit Mini      | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+| Room Bar           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**  | 🔲 **In Review<sup>❖</sup>** |
-| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**  | 🔲 **In Review<sup>❖</sup>** |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
 | Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Pro           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Board Pro 55       | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Board Pro 75       | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
+
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 ❖ => Support for this is in review for RoS 11<br />
