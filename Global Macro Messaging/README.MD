@@ -297,3 +297,24 @@ Example Event Payload
 }
 */
 ```
+- - -
+
+#### GMM.Event.Schedule.on(24HourTime, callBack)
+- Subscription
+- Used to schedule repeatable tasks based on the devices local time
+- 24HourTime = 00:00 > 23:59
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib'
+
+GMM.Event.Schedule.on('04:00', event => {
+  console.log(event)
+  //Run the code you need to run at 4am here
+})
+
+GMM.Event.Schedule.on('14:00', event => {
+  //Run the code you need to run at 2pm here
+})
+```
