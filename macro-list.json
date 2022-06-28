@@ -12,6 +12,12 @@
         "tags": "calling"
     },
     {
+        "title": "Automatic Video Mute",
+        "description": "Automatically mute video when you mute audio",
+        "symbol": "🔇",
+        "tags": "calling, audio"
+    },
+    {
         "title": "Automatic Room Booking",
         "description": "Automatically books a room when the room being used",
         "symbol": "📅",

@@ -1,0 +1,14 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "automute.js",
+          "id": "automute",
+          "type": "url"
+        }
+      ]
+    }
+  }
+}
