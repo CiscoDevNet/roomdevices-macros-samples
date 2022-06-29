@@ -128,6 +128,9 @@ const myObject = {
 }
 localCallout.error(myObject).post()
 ```
+Visual Design Aid
+
+[![GMM.Connect.Local() Visual Diagram](./images/GMM_Visual_Local.jpg)](#)
 - - -
 
 #### GMM.Connect.IP(CommonUsername, CommonPassword, IP_Array)
@@ -178,6 +181,9 @@ ip_callout.status('Test Status String').passAuth('myUsername', 'mySecretCode').p
 //Append IP & Auth
 ip_callout.command('Test Command String').passIP('v6').passAuth('myOtherUsername', 'myOtherSecretCode').post()
 ```
+Visual Design Aid
+
+[![GMM.Connect.Local() Visual Diagram](./images/GMM_Visual_IP.jpg)](#)
 - - -
 
 #### GMM.Connect.Webex(CommonAuthToken, DeviceId_Array)
@@ -227,6 +233,9 @@ webex_callout.status('Test Status String').passAuth().post()
 //Append Device ID & Auth
 webex_callout.command('Test Command String').passDeviceId().passAuth().post()
 ```
+Visual Design Aid
+
+[![GMM.Connect.Local() Visual Diagram](./images/GMM_Visual_Webex.jpg)](#)
 - - -
 
 #### GMM.Message.Webex.User('CommonAuthToken', email_Array)
