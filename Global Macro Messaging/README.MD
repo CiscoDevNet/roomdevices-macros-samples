@@ -1,7 +1,13 @@
 # Global Macro Messaging
 
 ## About
-Global Macro Messaging (GMM) is a set of functions to standardize the communication across macros running localy on a Webex Room Device, between Room Devices on the same network, or devices within the same Webex Control Hub org. They are meant to provide an integrator/developer a set of simple to use tools to provide consistent and meaningful context to your work as well as jump start developement on more complext solutions.=
+Global Macro Messaging (GMM) is a library of functions to standardize the communication across macros running locally on a Webex Room Device, between Room Devices on the same network, or Room Devices within the same Webex Control Hub instance. 
+
+GMM is meant to provide an integrator/developer a set of simple to use tools to provide consistent and meaningful context to your work as well as jump start developement on more complex solutions involving multiple Webex Room Devices.
+
+In addition to inter-macro/codec communication tools, GMM provides a developer the means to schedule tasks, read and write persistant data and a mechnism to post messages into the Webex App.
+
+Good luck and Happy Coding!
 
 ## Features
 - Create Status, Error and Command events within a macro to be intercepted by:
@@ -26,10 +32,47 @@ Global Macro Messaging (GMM) is a set of functions to standardize the communicat
 - Admin access to your Webex Control Hub instance
 
 ## How to Install
-- Navigate to the GlobalMacroMessaging.js file
-- Copy the entirety of ```const GMM``` into any macro that needs to pass Status, Error or Command messages between Macros or Devices
+- Download and upload the GMM_Lib.js file on your Room Device's Macro Editor
+- Keep this file disabled
+  - We're using GMM as a common library, no need to activate this Macro
+- Import GMM into you're Macro
 
-## Functions
+## Importing GMM into your Project
+```javascript
+//The xapi object is a standard import in all Macros
+//  This let's you reference the xApi on the device
+import xapi from 'xapi';
+
+//GMM is imported in a similar manner
+//  Add this line below the xApi import to include GMM
+import { GMM } from './GMM_Lib'
+```
+
+## GMM Library References
+
+- Classes
+  - [GMM.Connect.Local()](#)
+    - Methods: ```.status(message)``` ```.command(message)``` ```.error(message)``` ```.post()``` ```.queue(id)```
+  - [GMM.Connect.IP(CommonUsername, CommonPassword, ...IP_Array)](#)
+    - Methods: ```.status(message)``` ```.command(message)``` ```.error(message)``` ```.passIP(stack)``` ```.passAuth(username, password)``` ```.post()``` ```.queue(id)```
+  - [GMM.Connect.Webex(CommonAuthToken, ...DeviceId_Array)](#)
+    - Methods: ```.status(message)``` ```.command(message)``` ```.error(message)``` ```.passDeviceId()``` ```.passAuth()``` ```.post()``` ```.queue(id)```
+  - [GMM.Message.Webex.User(CommonAuthToken, ...UserEmail_Array)](#)
+    - Methods: ```.body(message)``` ```.formattedBody(title, subtitle, body, data, footer)```
+  - [GMM.Message.Webex.Room(CommonAuthToken, ...RoomId_Array)](#)
+    - Methods: ```.body(message)``` ```.formattedBody(title, subtitle, body, data, footer)```
+- Subscriptions
+  - [GMM.Event.Receiver.on(callBack)](#)
+  - [GMM.Event.Queue.on(callBack)](#)
+  - [GMM.Event.Schedule.on(24hourTime, callBack)](#)
+- Functions
+  - GMM.memoryInit()
+  - [GMM.read(key)](#)
+    - GMM.read.global(key)
+    - GMM.read.all(key)
+  - [GMM.write(key, value)](#)
+    - GMM.write.global(key, value)
+- - -
 
 ### Classes
 - - -
@@ -229,6 +272,7 @@ report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper
 - - - 
 
 ### Subscriptions
+- - -
 
 #### GMM.Event.Receiver.On(callBack)
 - Subscription
@@ -318,3 +362,14 @@ GMM.Event.Schedule.on('14:00', event => {
   //Run the code you need to run at 2pm here
 })
 ```
+- - -
+
+### Functions
+- - -
+
+#### GMM.memoryInit()
+#### GMM.read(key)
+#### GMM.read.global(key)
+#### GMM.read.all(key)
+#### GMM.write(key, value)
+#### GMM.write.global(key, value)
