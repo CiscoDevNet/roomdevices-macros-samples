@@ -3,18 +3,23 @@
 ## About
 Global Macro Messaging (GMM) is a library of functions to standardize the communication across macros running locally on a Webex Room Device, between Room Devices on the same network, or Room Devices within the same Webex Control Hub instance. 
 
-GMM is meant to provide an integrator/developer a set of simple to use tools to provide consistent and meaningful context to your work as well as jump start developement on more complex solutions involving multiple Webex Room Devices.
+GMM is meant to provide an integrator/developer a set of simple to use tools to provide consistent and meaningful context to your work as well as jump start development on more complex solutions involving multiple Webex Room Devices.
 
-In addition to inter-macro/codec communication tools, GMM provides a developer the means to schedule tasks, read and write persistant data and a mechnism to post messages into the Webex App.
+In addition to inter-macro/codec communication tools, GMM provides a developer the means to schedule tasks, read and write persistent data and a mechanism to post messages into the Webex App.
 
 Good luck and Happy Coding!
+
+## Disclaimer
+- When communicating to other devices using GMM know that writing authentication credentials or authorization tokens in your macros would be considered poor practice as any administrator to this device would be able to access this data
+- The examples provided are meant to educate on how to use GMM, but it would be best if you could pass authentication into the function using a secure process, not to emulate the examples 1:1
+- Please check with with your IT security team on best practices for your use case when developing integrations
 
 ## Features
 - Create Status, Error and Command events within a macro to be intercepted by:
   - Another macro running on the same device
   - Another macro running on another device on the same Network
   - Another device within your Webex Organization
-- Read and Write persitent data
+- Read and Write persistent data
   - Forked from [Macro Memory Storage](https://github.com/Bobby-McGonigle/Cisco-RoomDevice-Macro-Projects-Examples/tree/master/Macro%20Memory%20Storage)
   - Allows you to write data to a secondary macro, and read from that file within your script
 - Task Scheduling
@@ -48,7 +53,18 @@ import xapi from 'xapi';
 import { GMM } from './GMM_Lib'
 ```
 
-## GMM Library References
+## Download GMM
+- GMM_Lib
+- GMM_Lib with Example Files
+
+## Use Cases GMM could solve for
+- Rooms with Divisible Walls
+- Multi-Codec use cases
+- Custom Remote Management/Monitoring Tools
+- Conflicts between complex macros
+- Keep an open mind, I'm sure you can imagine more :smiley: 
+
+## GMM Library Reference
 
 - Classes
   - [GMM.Connect.Local()](#)
@@ -66,7 +82,7 @@ import { GMM } from './GMM_Lib'
   - [GMM.Event.Queue.on(callBack)](#)
   - [GMM.Event.Schedule.on(24hourTime, callBack)](#)
 - Functions
-  - GMM.memoryInit()
+  - [GMM.memoryInit()](#)
   - [GMM.read(key)](#)
     - GMM.read.global(key)
     - GMM.read.all(key)
@@ -231,13 +247,13 @@ import xapi from 'xapi';
 import { GMM } from './GMM_Lib'
 
 //Instantiate new GMM.Message.Webex.User() object
-const report = new GMM.Message.Webex.User('myToken', user_Email_1, user_Email_2, ...) // Accpets 1 or More email addresses
+const report = new GMM.Message.Webex.User('myToken', user_Email_1, user_Email_2, ...) // Accepts 1 or More email addresses
 
 //Send message to webex
 report.body('My Simple Message to Webex').post()
 
 //Send Pre-formatted message to Webex
-report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper managment to provide hot meals in addition to keeping to snacks at the ready', 'Last known snack break: 13:45', '- Room 5025').post()
+report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper management to provide hot meals in addition to keeping to snacks at the ready', 'Last known snack break: 13:45', '- Room 5025').post()
 ```
 - - -
 
@@ -260,14 +276,14 @@ import xapi from 'xapi';
 import { GMM } from './GMM_Lib'
 
 //Instantiate new GMM.Message.Webex.Room() object
-const report = new GMM.Message.Webex.Room('myToken', roomID_1, roomID_2, ...) // Accpets 1 or More Room IDs
+const report = new GMM.Message.Webex.Room('myToken', roomID_1, roomID_2, ...) // Accepts 1 or More Room IDs
 // Be sure to add this bot to each Room ID before posting message, else this will error
 
 //Send message to webex
 report.body('My Simple Message to Webex').post()
 
 //Send Pre-formatted message to Webex
-report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper managment to provide hot meals in addition to keeping to snacks at the ready', 'Last known snack break: 13:45', '- Room 5025').post()
+report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper management to provide hot meals in addition to keeping to snacks at the ready', 'Last known snack break: 13:45', '- Room 5025').post()
 ```
 - - - 
 
@@ -317,7 +333,7 @@ Event Payload Format
 |Key|Value|
 |:---|:---|
 |Queue_ID|Current ID processed in the queue. Used for request tracking|
-|Response|HTTPClient Repsones|
+|Response|HTTPClient Responses|
 |QueueStatus| Contains a count of remaining queued items, a pool of IDs left in the queue, and the current delay of the queue|
 
 
@@ -351,7 +367,7 @@ Example Event Payload
 Use
 ```javascript
 import xapi from 'xapi';
-import { GMM } from './GMM_Lib'
+import { GMM } from './GMM_Lib';
 
 GMM.Event.Schedule.on('04:00', event => {
   console.log(event)
@@ -368,8 +384,155 @@ GMM.Event.Schedule.on('14:00', event => {
 - - -
 
 #### GMM.memoryInit()
+- Asynchronous
+- Checks to see if the ```Memory_Storage``` macro is installed on your device
+  - If ```Memory_Storage``` is missing, it will create memory storage, to ensure you have a place to read and write from
+- Call this when your script initializes
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  //Call GMM.memoryInit() when your script initializes
+  await GMM.memoryInit()
+}
+
+init()
+```
+- - -
+
 #### GMM.read(key)
+- Asynchronous
+- Reads a key from the Memory_Storage macro
+- Data read is unique to the Macro that this function is called in
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  await GMM.memoryInit()
+  try {
+    const data = await GMM.read('customStatus')
+    console.log(data)
+  } catch (e){
+    console.error(e)
+  }
+}
+
+init()
+```
+- - -
+
 #### GMM.read.global(key)
-#### GMM.read.all(key)
+- Asynchronous
+- Reads a key from the Memory_Storage macro
+- Data read using .global() can access data from other macros by referencing the macro name as the key
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  await GMM.memoryInit()
+  try {
+    const data = await GMM.read.global('macroName')
+    console.log(data)
+  } catch (e){
+    console.error(e)
+  }
+}
+
+init()
+```
+- - -
+
+#### GMM.read.all()
+- Asynchronous
+- Reads a key from the Memory_Storage macro
+- Data read using .all() accesses all data found in Memory_Storage
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  await GMM.memoryInit()
+  try {
+    const data = await GMM.read.all()
+    console.log(data)
+  } catch (e){
+    console.error(e)
+  }
+}
+
+init()
+```
+- - -
+
 #### GMM.write(key, value)
+- Asynchronous
+- Writes a key and a Value for that key to the Memory_Storage macro
+  - The Value can be a string or a JSON object literal
+- Data written to Memory_Storage is unique to the key provided
+  - If you write to the same key, that key will be overwritten
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  await GMM.memoryInit()
+  
+  //Writing a string to Memory_Storage
+  GMM.write('myKey', 'Hello World')
+  
+  //Writing a JSON object literal to Memory_Storage
+  const myData = {
+    roomState: 'combined',
+    shadeState: 'lowered',
+    favoriteColor: 'purple'
+  }
+  GMM.write('room_Info', myData)
+}
+
+init()
+```
+- - -
+
 #### GMM.write.global(key, value)
+- Asynchronous
+- Writes a key and a Value for that key to the Memory_Storage macro
+  - The Value can be a string or a JSON object literal
+- Data written to Memory_Storage is unique to the key provided
+  - If you write to the same key, that key will be overwritten
+- Data written using .global() can overwrite data stored by any macro or be used to create a custom global object to store data into
+
+Use
+```javascript
+import xapi from 'xapi';
+import { GMM } from './GMM_Lib';
+
+async function init(){
+  await GMM.memoryInit()
+  
+  //Writing a string to Memory_Storage
+  GMM.write.global('myKey', 'macroName')
+  
+  //Writing a JSON object literal to Memory_Storage
+  const customGlobalObject = {
+    roomState: 'combined',
+    shadeState: 'lowered',
+    favoriteColor: 'purple'
+  }
+  GMM.write('room_Info', customGlobalObject)
+}
+
+init()
+```
