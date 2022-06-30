@@ -9,6 +9,8 @@ In addition to inter-macro/codec communication tools, GMM provides a developer t
 
 Good luck and Happy Coding!
 
+[![Download GMM Library](./images/DownloadGmmLib.png)](#) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](#)
+
 ## Disclaimer
 - When communicating to other devices using GMM know that writing authentication credentials or authorization tokens in your macros would be considered poor practice as any administrator to this device would be able to access this data
 - The examples provided are meant to educate on how to use GMM, but it would be best if you could pass authentication into the function using a secure process, not to emulate the examples 1:1
@@ -37,10 +39,15 @@ Good luck and Happy Coding!
 - Admin access to your Webex Control Hub instance
 
 ## How to Install
-- Download and upload the GMM_Lib.js file on your Room Device's Macro Editor
-- Keep this file disabled
+- Download the GMM library
+
+[![Download GMM Library](./images/DownloadGmmLib.png)](#) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](#)
+
+- Import the GMM_Library to your Room Device's Macro Editor
+- Save the Macro, but keep this macro Disabled
   - We're using GMM as a common library, no need to activate this Macro
-- Import GMM into you're Macro
+  - The Macro Editor can only support 10 active macros (as of July 2022), but numerous inactive macros. It's best to leave library references like GMM inactive as we'll be importing these tools into your active scripts
+- Import GMM into you're Macro Project
 
 ## Importing GMM into your Project
 ```javascript
@@ -53,16 +60,31 @@ import xapi from 'xapi';
 import { GMM } from './GMM_Lib'
 ```
 
-## Download GMM
-- GMM_Lib
-- GMM_Lib with Example Files
-
 ## Use Cases GMM could solve for
-- Rooms with Divisible Walls
 - Multi-Codec use cases
+  - Ex. Divisible Wall spaces
+  - Custom Multi-Camera Arrangements
+  - Custom Companion Codec solutions
 - Custom Remote Management/Monitoring Tools
+  - Have a Kiosk system notify a Webex Space
+  - Give support staff a Desk System with controls to simplify their workflow
 - Conflicts between complex macros
+  - Handle macros using similar processes and maintain your experience
+  - Add GMM and post messages between macros, rather than merging them
 - Keep an open mind, I'm sure you can imagine more :smiley: 
+
+## Author(s)
+
+|                   | **Robert(Bobby) McGonigle**          | **Gerardo Chaves**             |
+|:------------------|:-------------------------------------|:--------------------------------|
+| **Contribution**  | Author                               | Consulting Engineer            |
+| **Title**         | Technical Marketing Engineer         | Technology Solutions Architect |
+| **Org**           | Cisco Systems                        | Cisco Systems                  |
+| **Contact**       | bomcgoni@cisco.com                   | gchaves@cisco.com              |
+
+## Acknowledgments
+- Zacharie Gignac from Université Laval in Canada
+  - His contributions to the memory storage functionality are invaluable
 
 ## GMM Library Reference
 
