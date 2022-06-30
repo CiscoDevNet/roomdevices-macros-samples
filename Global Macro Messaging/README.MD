@@ -9,7 +9,7 @@ In addition to inter-macro/codec communication tools, GMM provides a developer t
 
 Good luck and Happy Coding!
 
-[![Download GMM Library](./images/DownloadGmmLib.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/Global%20Macro%20Messaging/GMM_wExamples_v1-9-2.zip)
+[![Download GMM Library](./images/DownloadGmmLib.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_wExamples_v1-9-2.zip)
 
 ## Disclaimer
 - When communicating to other devices using GMM know that writing authentication credentials or authorization tokens in your macros would be considered poor practice as any administrator to this device would be able to access this data
@@ -41,7 +41,7 @@ Good luck and Happy Coding!
 ## How to Install
 - Download the GMM library
 
-[![Download GMM Library](./images/DownloadGmmLib.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/blob/master/Global%20Macro%20Messaging/GMM_wExamples_v1-9-2.zip)
+[![Download GMM Library](./images/DownloadGmmLib.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_wExamples_v1-9-2.zip)
 
 - Import the GMM_Library to your Room Device's Macro Editor
 - Save the Macro, but keep this macro Disabled
