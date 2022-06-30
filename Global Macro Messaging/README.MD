@@ -205,7 +205,7 @@ ip_callout.command('Test Command String').passIP('v6').passAuth('myOtherUsername
 ```
 Visual Design Aid
 
-[![GMM.Connect.Local() Visual Diagram](./images/GMM_Visual_IP.jpg)](#)
+[![GMM.Connect.IP() Visual Diagram](./images/GMM_Visual_IP.jpg)](#)
 - - -
 
 #### GMM.Connect.Webex(CommonAuthToken, DeviceId_Array)
@@ -257,7 +257,7 @@ webex_callout.command('Test Command String').passDeviceId().passAuth().post()
 ```
 Visual Design Aid
 
-[![GMM.Connect.Local() Visual Diagram](./images/GMM_Visual_Webex.jpg)](#)
+[![GMM.Connect.Webex() Visual Diagram](./images/GMM_Visual_Webex.jpg)](#)
 - - -
 
 #### GMM.Message.Webex.User('CommonAuthToken', email_Array)
@@ -316,6 +316,17 @@ report.body('My Simple Message to Webex').post()
 //Send Pre-formatted message to Webex
 report.body('Alert', 'Out of snacks in the cafeteria', 'We should convince upper management to provide hot meals in addition to keeping to snacks at the ready', 'Last known snack break: 13:45', '- Room 5025').post()
 ```
+- - - 
+
+Example Message output on the Webex App for both [GMM.Message.Webex.User/Room()](#)
+
+Using .body(message)
+
+[![.body()](./images/MessageBody.png)](#)
+
+Using .formattedBody(message)
+
+[![.body()](./images/FormattedMessageBody.png)](#)
 - - - 
 
 ### Subscriptions
