@@ -41,7 +41,7 @@ Good luck and Happy Coding!
 ## How to Install
 - Download the GMM library
 
-[![Download GMM Library](./images/DownloadGmmLib.png)](#) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](#)
+[![Download GMM Library](./images/DownloadGmmLib.png)](./Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](#)
 
 - Import the GMM_Library to your Room Device's Macro Editor
 - Save the Macro, but keep this macro Disabled
