@@ -108,7 +108,12 @@
         "symbol": "🎨",
         "tags": "library"
     },
-
+    {
+        "title": "Global Macro Messaging",
+        "description": "Library for Inter-Macro and Inter-Codec messaging",
+        "symbol": "📚",
+        "tags": "library"
+    },
     {
         "title": "Multi-Content Solution",
         "description": "Compose multiple video inputs to one presentation source and send to far-end",
