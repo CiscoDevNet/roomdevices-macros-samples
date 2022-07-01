@@ -1,0 +1,18 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "GMM_Lib.js",
+          "id": "GMM_Lib",
+          "type": "library"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": []
+    },
+    "userParams": []
+  }
+}
