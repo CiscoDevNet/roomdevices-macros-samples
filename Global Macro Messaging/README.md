@@ -1,13 +1,15 @@
 # Global Macro Messaging
 
 ## About
-Global Macro Messaging (GMM) is a library of functions to standardize the communication across macros running locally on a Webex Room Device, between Room Devices on the same network, or Room Devices within the same Webex Control Hub instance. 
+Global Macro Messaging (GMM) is a library of functions to standardize the communication across macros running locally on a Webex Room Device, between Room Devices on the same network, or Room Devices within the same Webex Control Hub instance.
 
 GMM is meant to provide an integrator/developer a set of simple to use tools to provide consistent and meaningful context to your work as well as jump start development on more complex solutions involving multiple Webex Room Devices.
 
 In addition to inter-macro/codec communication tools, GMM provides a developer the means to schedule tasks, read and write persistent data and a mechanism to post messages into the Webex App.
 
-Good luck and Happy Coding!
+Feel free to Join the [GMM Community on Webex](https://eurl.io/#ANxvjGaT6)
+
+Good luck and Happy Coding! :smiley:
 
 [![Download GMM Library](./images/DownloadGmmLib.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_Lib.js.zip) [![Download GMM Library and Examples](./images/DownloadGmmLib_Examples.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/Global%20Macro%20Messaging/GMM_wExamples_v1-9-2.zip)
 
