@@ -18,6 +18,9 @@ Good luck and Happy Coding! :smiley:
 - The examples provided are meant to educate on how to use GMM, but it would be best if you could pass authentication into the function using a secure process, not to emulate the examples 1:1
 - Please check with with your IT security team on best practices for your use case when developing integrations
 
+## Version
+- 1.9.2
+
 ## Features
 - Create Status, Error and Command events within a macro to be intercepted by:
   - Another macro running on the same device
