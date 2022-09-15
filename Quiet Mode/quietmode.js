@@ -244,9 +244,6 @@ async function init() {
   const isOfficeHoursNow = !isWeekend() && isBeforeNow(userSettings.dayStart) && !isBeforeNow(userSettings.dayEnd);
   setQuietMode(!isOfficeHoursNow);
 
-  // bug in ui extensions: need to make widgets update properly
-  xapi.Command.UserInterface.Extensions.Panel.Update({ PanelId: 'quietmode', Color: '#1D805E' });
-
   // detect when exiting standy
   xapi.Status.Standby.State.on(onStandbyChanged);
 }
