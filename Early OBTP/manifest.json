@@ -1,0 +1,19 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "early-obtp.js",
+          "id": "early-obtp",
+          "type": "url"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+      ]
+    },
+    "userParams": []
+  }
+}

@@ -60,6 +60,12 @@
         "tags": "calling, meeting room, peripherals, performance, monitoring"
     },
     {
+        "title": "Early OBTP",
+        "description": "Show One Button To Push earlier than the default 5 minutes.",
+        "symbol": "🟢",
+        "tags": "calling, meeting room, booking"
+    },
+    {
         "title": "Energy Prices",
         "description": "Show hourly Norwegian electricity prices on home screen",
         "symbol": "⚡️",
