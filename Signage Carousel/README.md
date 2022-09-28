@@ -4,6 +4,8 @@ Change the digital signage URL on your device periodically.
 
 ![Signage carousel illustration](carousel.png)
 
+**Author: Tore Bjolseth**
+
 ## Description
 
 Instead of showing a fixed page as signage, swap between several different ones with a fixed time interval.
