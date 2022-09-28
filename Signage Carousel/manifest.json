@@ -1,0 +1,14 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./SignageCarousel.js",
+          "type": "url",
+          "id": "SignageCarousel"
+        }
+      ]
+    }
+  }
+}

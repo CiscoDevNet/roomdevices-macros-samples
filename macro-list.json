@@ -186,7 +186,12 @@
         "symbol": "🛠",
         "tags": "home office, web, audio"
     },
-
+    {
+        "title": "Signage Carousel",
+        "description": "Change between several different signage URLs at regular intervals.",
+        "symbol": "🎠",
+        "tags": "screensaver"
+    },
     {
         "title": "Scheduled Actions",
         "description": "Have the endpint device automatically perform actions, like placing a call, at a specified time and day.",
