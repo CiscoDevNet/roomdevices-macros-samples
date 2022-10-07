@@ -15,7 +15,7 @@ import xapi from 'xapi';
 /////////////////////////////////////////////////////////////
 const willPromptUser = false;
 const bookOnPresence = true;
-const debug_mode = true;
+const debug_mode = false;
 /////////////////////////////////////////////////////////////
 
 var booked = true;
