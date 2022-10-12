@@ -10,7 +10,7 @@ You can customize the text on the widgets using the __UI Extension editor__.
 **Author: Svein Terje Steffensen**
 
 <div style="color: red; background: #ffe8e3; padding: 1em">
-Warning: This extension is not currently supported by RoomOS 11 / the new multi-taksing user interface.
+Warning: This extension is not currently supported by RoomOS 11 / the new multi-tasking user interface.
 </div>
 
 ---
