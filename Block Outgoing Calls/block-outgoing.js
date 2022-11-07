@@ -3,6 +3,8 @@ import xapi from 'xapi';
 // variable that can be changed from settings ui on roomos.cisco.com
 const NumberToBlock = 'macro.polo@cisco.com';
 
+const delayBlockSec = 0; // For webex edge, set this to 5
+
 const denyList = [
   NumberToBlock,
 
@@ -20,6 +22,8 @@ xapi.Status.Call.on(e => {
       Text: 'The number you called was not allowed by a user script on the device',
       Duration: 10,
     });
-    xapi.Command.Call.Disconnect();
+    setTimeout(() => {
+      xapi.Command.Call.Disconnect();
+    }, delayBlockSec * 1000);
   }
 });
