@@ -7,7 +7,7 @@ const DefaultInCallMode = 'Blur';
 // Which virtual bg spot to use
 const spot = 'User3';
 
-const base = 'https://raw.githubusercontent.com/CiscoDevNet/roomdevices-macros-samples/master/Be Right Back/';
+const base = 'https://raw.githubusercontent.com/CiscoDevNet/roomdevices-macros-samples/master/BeRightBack/';
 
 const urls = {
   toilet: base + 'toilet.jpeg',
