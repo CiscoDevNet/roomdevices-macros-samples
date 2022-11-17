@@ -30,6 +30,12 @@
         "tags": "audio"
     },
     {
+        "title": "Be Right Back",
+        "description": "Set a virtual bacground that says you are away, but still on audio.",
+        "symbol": "☕️",
+        "tags": "home office, calling"
+    },
+    {
         "title": "Big Red Button",
         "description": "Quick action such as muting with a connected USB device",
         "symbol": "🔴",
