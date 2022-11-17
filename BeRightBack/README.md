@@ -8,7 +8,7 @@ On the call from phone, but need to step away for a bit, but still listening on 
 
 The extension will automatically detect when you are back in front of the device, and ask if you would like to remove the notice.
 
-![Example message](coffee.jpeg)
+![Example message](preview.png)
 ![Menu](menu.png)
 ![Confirm that you are back](confirm.png)
 ![Example message](toilet.jpeg)
