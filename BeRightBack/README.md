@@ -4,7 +4,7 @@ Set a virtual background displaying that you are away from device while in call,
 
 ---
 
-On the call from phone, but need to step away for a bit, but still listening on audio? Let your colleagues know by setting a setting an availabily status like image as virtual background while you are away.
+On a video call on your Cisco Desk device, but need to step away for a bit, but still listening on audio? Let your colleagues know by setting a setting an availabily status like image as virtual background while you are away.
 
 The extension will automatically detect when you are back in front of the device, and ask if you would like to remove the notice.
 
@@ -33,4 +33,4 @@ The extension will automatically detect when you are back in front of the device
 You can easily edit the macro and:
 
 * Set your own background images instead
-* Set what kind of backgroundyou go back to after exiting Be Right Back mode
+* Set what kind of background you go back to after exiting Be Right Back mode
