@@ -4,7 +4,7 @@
     <Order>1</Order>
     <PanelId>berightback</PanelId>
     <Origin>local</Origin>
-    <Location>HomeScreenAndCallControls</Location>
+    <Location>CallControls</Location>
     <Icon>Power</Icon>
     <Color>#875AE0</Color>
     <Name>Be Right Back</Name>
