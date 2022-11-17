@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./berightback.js",
+          "type": "url",
+          "id": "berightback"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./berightback.xml",
+          "type": "url",
+          "id": "berightback"
+        }
+      ]
+    }
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
