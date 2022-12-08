@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/roomos-samples/main/report-issue/macro-uiextensions/report-issue.js",
+          "type": "url",
+          "id": "report-issue"
+        }
+       ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "https://raw.githubusercontent.com/cisco-ce/roomos-samples/main/report-issue/macro-uiextensions/report-issue.xml",
+          "id": "report-issue",
+          "type": "url"
+        }
+
+      ]
+    },
+    "userParams": [
+      {
+        "id": "serviceNowInstance",
+        "name": "Service Now Instance",
+        "info": "Eg dev70811",
+        "type": "string",
+        "domain": "report-issue",
+        "required": true
+      },
+      {
+        "id": "serviceNowUsername",
+        "name": "Service Now Username",
+        "type": "string",
+        "domain": "report-issue",
+        "required": true
+      },
+      {
+        "id": "serviceNowPassword",
+        "name": "Service Now Password",
+        "type": "string",
+        "domain": "report-issue",
+        "required": true
+      },
+      {
+        "id": "botToken",
+        "name": "Webex Bot Token",
+        "info": "Used to send notification when issue is created",
+        "type": "string",
+        "domain": "report-issue",
+        "required": false
+      },
+      {
+        "id": "notify",
+        "name": "Webex recipient",
+        "type": "string",
+        "domain": "report-issue",
+        "required": false
+      }
+    ]
+  },
+  "profileName": "backup-tbjolset"
+}

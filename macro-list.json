@@ -169,6 +169,12 @@
         "tags": "meeting room"
     },
     {
+        "title": "Report Issue",
+        "description": "Report Issue web dialog that connects to Service Now",
+        "symbol": "📣",
+        "tags": "meeting room"
+    },
+    {
         "title": "Room Capacity Alert",
         "description": "Display Alert on the device if a set capacity is exceeded - Based on people count API",
         "symbol": "🚨",
