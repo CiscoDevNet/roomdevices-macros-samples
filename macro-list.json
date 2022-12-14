@@ -206,7 +206,7 @@
     },
     {
         "title": "Scheduled Actions",
-        "description": "Have the endpint device automatically perform actions, like placing a call, at a specified time and day.",
+        "description": "Have the endpoint device automatically perform actions, like placing a call, at a specified time and day.",
         "symbol": "📆",
         "tags": "meeting room"
     },
