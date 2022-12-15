@@ -201,6 +201,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | Room Bar           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room EQ           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
 | Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
