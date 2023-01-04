@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./wfh.js",
+          "type": "url",
+          "id": "wfh"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "deviceStatus",
+        "name": "Status text",
+        "info": "Will be set automatically when using the device during office hours.",
+        "type": "string",
+        "default": "🏠 Working from home",
+        "domain": "wfh",
+        "required": true
+      },
+      {
+        "id": "startHour",
+        "name": "Office hour start",
+        "type": "number",
+        "default": 8,
+        "domain": "wfh",
+        "required": true
+      },
+      {
+        "id": "endHour",
+        "name": "Office hour end",
+        "type": "number",
+        "default": 16,
+        "domain": "wfh",
+        "required": true
+      }
+    ]
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
