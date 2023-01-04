@@ -11,9 +11,9 @@
  */
 import xapi from 'xapi';
 
-const deviceStatus = '🏠 Working From Home'; // 'In the Office';
-const startHour = 8;
-const endHour = 16;
+const deviceStatus = '🏠 Working From Home';
+const startHour = 7;
+const endHour = 17;
 const durationHours = 8;
 const pollIntervalMinutes = 5;
 
@@ -50,14 +50,17 @@ async function checkAndUpdateStatus() {
     const standbyState = await xapi.Status.Standby.State.get();
     const isActive = standbyState === 'Off';
     const status = await getStatus();
-    const hour = new Date().getHours();
+    const now = new Date();
+    const hour = now.getHours();
+    const isWeekDay = now.getDay() !== 0 && now.getDay() !== 6;
     const officeHours = hour >= startHour && hour < endHour;
-    if (isActive && officeHours && status && status !== deviceStatus) {
+    if (isActive && isWeekDay && officeHours && status && status !== deviceStatus) {
       promptSetStatus();
     }
   }
   catch(e) {
-    console.log('User presence api not available');
+    console.error('User presence api not available?');
+    console.log(e);
   }
 }
 
