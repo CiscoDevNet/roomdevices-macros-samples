@@ -20,9 +20,16 @@ The status is automatically set if:
 
 You will be notified by a prompt on the main screen when the extension updates your status, and it will of course appear in the status text in the top left corner too.
 
-If you are in a period without working (eg holidays) but still using the device for non-work use, uninstall the extension or just disable it from the macro editor.
+The extension will not update the status there is one already set, so not overriding eg your vacation notice, or any custom message you may set from Webex app or manually from the device..
 
-# Requirements
+## Prompt before setting status
+
+If someelse is also using your device, eg your spouse while you are at the office, you may want to ask before setting the status. Or just because you want to be in control. Set 'askBeforeChanging' to true in the macro or when installing.
+
+![Prompt](./prompt.png)
+
+
+## Requirements
 
 * RoomOS February 2022 software or later
 * Webex registered

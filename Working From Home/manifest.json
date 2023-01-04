@@ -21,6 +21,14 @@
         "required": true
       },
       {
+        "id": "askBeforeChanging",
+        "name": "Ask before changing statis",
+        "info": "Useful if eg your spouse is using the device when you are not.",
+        "type": "bool",
+        "default": false,
+        "domain": "wfh"
+      },
+      {
         "id": "startHour",
         "name": "Office hour start",
         "type": "number",
