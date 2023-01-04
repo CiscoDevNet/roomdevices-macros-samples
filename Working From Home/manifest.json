@@ -22,7 +22,7 @@
       },
       {
         "id": "askBeforeChanging",
-        "name": "Ask before changing statis",
+        "name": "Ask before changing status",
         "info": "Useful if eg your spouse is using the device when you are not.",
         "type": "bool",
         "default": false,
