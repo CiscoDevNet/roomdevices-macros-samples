@@ -8,7 +8,7 @@ Automatically set your Webex status to where you are working from.
 
 Automatically sets your Webex status when you use a certain device, eg at home or in the office. This means you can easily tell your colleagues whether you are physically at the office or working from home that day.
 
-This is possible since a Cisco device registered to Webex will synchronize the user statis.
+This is possible since a Cisco device registered to Webex will synchronize the user status.
 
 If you are lucky enough to have a personal device both at the office and at home, you can install the extension on both devices with a different message appropriate for each place.
 
