@@ -11,18 +11,20 @@
  */
 import xapi from 'xapi';
 
-const deviceStatus = '🏠 Working From Home';
-const startHour = 7;
-const endHour = 17;
-const askBeforeChanging = false;
+const deviceStatus = '🏠 Working from home';
+const startHour = 8;
+const endHour = 16;
+const askBeforeChanging = true;
 const durationHours = 8;
 const pollIntervalMinutes = 5;
 
 // If false, don't update status if one is already set (eg a holiday status)
 const overrideExisting = false;
 
+let lastPromptTime;
+
 const prompt = {
-  Title: 'Update your Webex status?',
+  Title: 'Looks like you are using this device',
   Text: `Set your status to '${deviceStatus}'?`,
   Duration: 600,
   FeedbackId: 'prompt-change-status',
@@ -63,8 +65,12 @@ function setStatus(status, minutes) {
 }
 
 function promptSetStatus() {
+  const now = new Date().toDateString();
   if (askBeforeChanging) {
-    xapi.Command.UserInterface.Message.Prompt.Display(prompt);
+    if (now !== lastPromptTime) {
+      xapi.Command.UserInterface.Message.Prompt.Display(prompt);
+      lastPromptTime = now;
+    }
   }
   else {
     const minutes = 60 * durationHours;
@@ -92,7 +98,7 @@ async function checkAndUpdateStatus() {
   }
   catch(e) {
     console.error('User presence api not available?');
-    console.log(e);
+    console.log(e.toString());
   }
 }
 
