@@ -7,3 +7,5 @@ If you own a Samsung Flip and use it with a Room Kit Mini, this home screen butt
 If you need to switch back, you can do this from the native Samsung menus.
 
 ![Homescreen button](homescreen.png)
+
+**Contact: Magnus Ohm (Cisco DTG Norway)**
