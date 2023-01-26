@@ -14,7 +14,7 @@ Great that you want to contribute RoomOS extensions! Please read the following g
   * Any special requirements
   * Please make sure the file is spelled exactly README.md (with those casings)
 * If you add images, put them in your extension folder and use local addressing (eg ./screenshot01.png)
-* Add the extension name and short description to the table of content in the README.md at the root level
+* To make the extension appear in the list on roomos.cisco.com, also add the extension metadata to the macro-list.json file in the root folder.
 
 ## Integrate with roomos.cisco.com
 
@@ -29,10 +29,6 @@ Common mistakes:
 * Don't put more than one user interface panel in an xml file, the API does not support that
 * Make sure you use unique widget ids - namespace your extension
 
-### Showing the extension in the catalog
-
-To show your extension, roomos.cisco.com reads the main README.md file in the repo and looks in the table of content. Add your extension there and make sure the title is identical to the folder name of your folder.
-
 ### Manifest file
 
 This files can containt three things:
@@ -41,7 +37,7 @@ This files can containt three things:
 - The ui extension files (xml)
 - User settings
 
-The file should be called manifest.json and placed in your extension folder. Copy the manifest-template.json in the root folder and use it as a starting point. If any of your js files are libraries, make sure to set their type to `library` rather than `url`.
+The file should be called manifest.json and placed in your extension folder. Copy the manifest-template.json in the root folder and use it as a starting point. If any of your js files are libraries, make sure to set their type to `library` rather than `url`. Then they won't be activated after installation, and won't count on the 'max 10 active macros' limit.
 
 Example:
 
@@ -77,7 +73,7 @@ Example:
 
 You can define user settings in the manifest file, this will allow users to choose these values before installing. roomos.cisco.com will create a user-friendly web form where users can choose the values, then these will actually be replaced in the macro files before installing.
 
-It's important that the parameters you set in the macro file is similar to this:
+It's important that the parameters you set in the macro file is similar to one of the examples below:
 ```
 const xapi = require('xapi');
 
@@ -87,9 +83,9 @@ var anotherVariable = null;
 ...
 ```
 
-The parameter must be either const, let or var, and its up to you whether it is initialized or not, that part will be replaced by the installer script regardless.
+The parameter must be either const, let or var, and it's up to you whether it is initialized or not, that part will be replaced by the installer script regardless.
 
-The types of parameters currently supported are `string`, `number`, `bool` (tick box) and `option`. Option lets the user pick from a set of predefined options, and also requires a `values` object:
+The types of parameters currently supported are `string`, `number`, `bool` (tick box) and `option`. There's no support for lists currently. Option lets the user pick from a set of predefined options, and also requires a `values` object:
 
 ```
 {
