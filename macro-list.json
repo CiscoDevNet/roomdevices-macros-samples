@@ -193,6 +193,12 @@
         "tags": "meeting room, peripherals"
     },
     {
+        "title": "Samsung Flip",
+        "description": "Easily switch from Webex mode to Samsung Flip mode.",
+        "symbol": "🖌️",
+        "tags": "meeting room"
+    },
+    {
         "title": "Settings Pro",
         "description": "The settings you never knew you always wanted.",
         "symbol": "🛠",

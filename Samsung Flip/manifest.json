@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./flipToFlip.js",
+          "type": "url",
+          "id": "flipToFlip"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./flip.xml",
+          "id": "webexOnFlip",
+          "type": "url"
+        }
+      ]
+    }
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}
