@@ -72,4 +72,4 @@ If you are using the Hue in a corporate network environment, you may have proble
 
 Save the file and your device should now be able to talk to the bridge.
 
-You can also do the same trick if you happen to know the IP address of the bridge by other means.
+You can also do the same trick if you happen to know the IP address of the bridge by other means. In some networks, you might be able to use the MAC address of the bridge as hostname. The MAC address is printed on the back of the bridge - it's located with a bar code and 6 letters/digits, and you need to add '00:17:88' in front for the full address. See https://huetips.com/help/how-to-find-my-hue-bridge-mac-address.
