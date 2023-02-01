@@ -60,3 +60,16 @@ Example: A home screen button to quickly toggle on/off a single light or room
 ## Note
 
 This macro uses the `xConfig FacilityService[4] Name` to store the user's preferences, so you should not install it if you are using facility service actively on your device.
+
+## Network tip
+
+If you are using the Hue in a corporate network environment, you may have problems finding the IP address of the Hue bridge, if you don't happen to have the Cisco device connected to the same subnet as the bridge. A tip in this case may be to connect the bridge to the PoE output port of the collab device instead. The bridge will then get a fixed IP address of **169.254.1.30**. You then need to comment out the line in *hue-lib.js* in *discoverBridge()* so it instead says:
+
+```
+    // this.ip = body[0].internalipaddress;
+    this.ip = '169.254.1.30';
+```
+
+Save the file and your device should now be able to talk to the bridge.
+
+You can also do the same trick if you happen to know the IP address of the bridge by other means.
