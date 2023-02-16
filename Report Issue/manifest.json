@@ -14,7 +14,7 @@
       "items": [
         {
           "payload": "https://raw.githubusercontent.com/cisco-ce/roomos-samples/main/report-issue/macro-uiextensions/report-issue.xml",
-          "id": "report-issue",
+          "id": "report_issue",
           "type": "url"
         }
 
