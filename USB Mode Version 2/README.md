@@ -1,5 +1,11 @@
 # USB Mode Version 2 🎉
 
+## NEWS
+- [Call from Laptop](https://help.webex.com/en-us/article/ney3qxe/Call-from-laptop-using-the-Webex-device-as-a-web-camera#Cisco_Reference.dita_d3c1dbe8-4263-4d55-b19f-6a49478be4c5) is now available on RoomOs 11
+  - Call from Laptop is a native implementation of the USB Macro. If you're on RoomOs 11, we encourage you switch from the USB Mode Macro to the Call from Laptop feature
+- USB Mode Version 3 Beta Ending Soon
+  - A new version of the USB Macro will be made available in the comming months. Call from Laptop is still recommended over the Macro, but for those who prefer a macro, new features and more stability coming soon
+
 ![USB Mode Home Screen](images/UsbMode_Home.png)
 
 [![Download USB Mode Deployments Guudes and Macro](images/icon/button_click-to-download-usb-mode-deployment-guides-and-macro.png)](https://github.com/CiscoDevNet/roomdevices-macros-samples/raw/master/USB%20Mode%20Version%202/USB%20Mode%20V2%20Guides.zip)
