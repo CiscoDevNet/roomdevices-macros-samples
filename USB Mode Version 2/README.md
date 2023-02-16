@@ -182,7 +182,7 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 - Macro 2-2-10: USB Mode Version 2
 
 
-| Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
+| Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | [Native USB Inogeni OS 11](https://help.webex.com/en-us/article/ney3qxe/Call-from-laptop-using-the-Webex-device-as-a-web-camera#Cisco_Reference.dita_d3c1dbe8-4263-4d55-b19f-6a49478be4c5)  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
 | C-Series and older | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Mx200/300 G1       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
@@ -199,15 +199,15 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | Room USB           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit Mini      | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Bar           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
 | Room EQ           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
-| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
+| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11  |
+| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
+| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🔲 **In Review<sup>❖</sup>** |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🔲 **In Review<sup>❖</sup>** |
 | Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
@@ -218,6 +218,6 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 
 \* => USB mode script will function, but this endpoint requires a 3rd party audio solution to be fed into the USB Capture Device<br />
 ❖ => Support for this is in review for RoS 11<br />
-FR => Future Release, Tentative release version within parenthesis<br />
-RoS => Room Os<br />
+FR (3.X) => Available in Future Release of Macro 3.X<br />
+OS11 => Requires RoomOs 11<br />
 [⬆️](#table-of-contents)
