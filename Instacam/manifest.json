@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./instacam.js",
+          "type": "url",
+          "id": "instacam"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./instacam.xml",
+          "id": "instacam",
+          "type": "url"
+        }
+      ]
+    }
+  }
+}
