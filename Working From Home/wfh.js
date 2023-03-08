@@ -11,12 +11,13 @@
  */
 import xapi from 'xapi';
 
-const deviceStatus = '🏠 Working from home';
+const deviceStatus = '🏰 In office today';
 const startHour = 8;
 const endHour = 16;
 const askBeforeChanging = true;
 const durationHours = 8;
-const pollIntervalMinutes = 5;
+const minActiveMinutes = 10;
+let timerId;
 
 // If false, don't update status if one is already set (eg a holiday status)
 const overrideExisting = false;
@@ -102,9 +103,15 @@ async function checkAndUpdateStatus() {
   }
 }
 
+function onStandbyChanged(state) {
+  clearTimeout(timerId);
+  if (state === 'Off') {
+    timerId = setTimeout(checkAndUpdateStatus, minActiveMinutes * 60 * 1000);
+  }
+}
+
 function init() {
-  // dont check right away, we dont want to update if the device woke up by itself
-  setInterval(checkAndUpdateStatus, 1000 * 60 * pollIntervalMinutes);
+  xapi.Status.Standby.State.on(onStandbyChanged);
   xapi.Event.UserInterface.Message.Prompt.Response.on(onResponse);
 }
 
