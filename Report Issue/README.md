@@ -6,6 +6,11 @@ This is a branded web dialog. On a device has a Naviagor connected, the dialog o
 
 ![Screenshot](https://github.com/cisco-ce/roomos-samples/raw/main/report-issue/screenshots/01-whatswrong.png)
 
+Branded version (theme=cisco2):
+
+![Screenshot](https://github.com/cisco-ce/roomos-samples/raw/main/report-issue/screenshots/branded-version.png)
+
+
 For more info and source code, see:
 
 [RoomOS samples - Report Issue](https://github.com/cisco-ce/roomos-samples/tree/main/report-issue)
