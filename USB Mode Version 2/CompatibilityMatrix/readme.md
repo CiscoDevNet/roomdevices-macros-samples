@@ -7,7 +7,7 @@
 - Macro 2-2-10: USB Mode Version 2
 
 
-| Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | Native USB Inogeni  |
+| Room Device        | Native USB | Macro 1-3 | Macro    2-2-10 | [Native USB Inogeni OS 11](https://help.webex.com/en-us/article/ney3qxe/Call-from-laptop-using-the-Webex-device-as-a-web-camera#Cisco_Reference.dita_d3c1dbe8-4263-4d55-b19f-6a49478be4c5)  |
 | ------------------ | ---------- | --------- | --------------- | ------------------- |
 | C-Series and older | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Mx200/300 G1       | 🟥 **No**     | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
@@ -24,15 +24,18 @@
 | Room USB           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Kit Mini      | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Room Bar           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
+| Room Kit           | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
 | Room EQ           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
-| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟨 **FR (RoS 11)** |
-| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
-| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (2.3)**    | 🔲 **In Review<sup>❖</sup>** |
+| CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11  |
+| Room 55        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
+| Room 70D       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 70D G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🟥 **No**  |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🟥 **No**  |
 | Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
