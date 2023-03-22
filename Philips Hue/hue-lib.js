@@ -92,8 +92,8 @@ class Hue {
   //  sat [0-255] // saturation
   // }
   setLightState(id, state) {
-    const isGroup = id.startsWith('g');
-    id = id.replace('g', '');
+    const isGroup = id.toString().startsWith('g');
+    id = id.toString().replace('g', '');
 
     const path = isGroup ? `groups/${id}/action` : `lights/${id}/state`;
     const url = `https://${this.ip}/api/${this.token}/${path}`;
