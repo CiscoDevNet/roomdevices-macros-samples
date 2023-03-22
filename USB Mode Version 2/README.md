@@ -209,11 +209,14 @@ The [PROJECT: USB Mode](https://eurl.io/#L6Rcn39Rn) space on Webex is filled wit
 | CODEC Plus         | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
 | Room EQ           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | CODEC Pro          | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11  |
-| Room 55/55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
-| Room 70D/70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
-| Room 70D/70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
-| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🔲 **In Review<sup>❖</sup>** |
-| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🔲 **In Review<sup>❖</sup>** |
+| Room 55        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 55D        | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70S       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes**  OS11 |
+| Room 70D       | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70S G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟩 **Yes** OS11 |
+| Room 70D G2    | 🟥 **No**     | 🟩 **Yes**   | 🟩 **Yes**         | 🟥 **No**  |
+| Room 70 Panorama   | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🟥 **No**  |
+| Room Panorama      | 🟥 **No**     | 🟥 **No**    | 🟨 **FR (3.X)**    | 🟥 **No**  |
 | Desk Mini          | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk               | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
 | Desk Hub           | 🟩 **Yes**    | 🟥 **No**    | 🟥 **No**          | 🟥 **No**              |
