@@ -1,67 +1,66 @@
 <Extensions>
-  <Version>1.7</Version>
-  <Panel>
-    <Order>1</Order>
-    <PanelId>mcs_panel</PanelId>
-    <Origin>local</Origin>
-    <Type>Statusbar</Type>
-    <Icon>Laptop</Icon>
-    <Color>#02BBCC</Color>
-    <Name>MDT demo</Name>
-    <ActivityType>Custom</ActivityType>
-    <Page>
-      <Name>Select content to share</Name>
-      <Row>
-        <Name> </Name>
-        <Widget>
-          <WidgetId>presentation_source</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=2</Options>
-          <ValueSpace>
-            <Value>
-              <Key>pacs_1</Key>
-              <Name>PACS monitor 1</Name>
-            </Value>
-            <Value>
-              <Key>pacs_2</Key>
-              <Name>PACS monitor 2</Name>
-            </Value>
-            <Value>
-              <Key>pc_1</Key>
-              <Name>Clinic PC monitor 1</Name>
-            </Value>
-            <Value>
-              <Key>pc_2</Key>
-              <Name>Clinic PC monitor 2</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-        <Widget>
-          <WidgetId>presentation_source2</WidgetId>
-          <Type>GroupButton</Type>
-          <Options>size=4;columns=1</Options>
-          <ValueSpace>
-            <Value>
-              <Key>4_sources</Key>
-              <Name>PACS + Clinic PC (4-split)</Name>
-            </Value>
-            <Value>
-              <Key>laptop</Key>
-              <Name>Laptop (HDMI-cable)</Name>
-            </Value>
-          </ValueSpace>
-        </Widget>
-      </Row>
-      <Row>
-        <Name> </Name>
-        <Widget>
-          <WidgetId>presentation_stop</WidgetId>
-          <Name>Remove presentation</Name>
-          <Type>Button</Type>
-          <Options>size=4</Options>
-        </Widget>
-      </Row>
-      <Options>hideRowNames=1</Options>
-    </Page>
-  </Panel>
+	<Panel>
+		<Order>1</Order>
+		<PanelId>mcs_panel</PanelId>
+		<Origin>local</Origin>
+		<Type>Statusbar</Type>
+		<Icon>Laptop</Icon>
+		<Color>#262626</Color>
+		<Name>Share screen</Name>
+		<ActivityType>Custom</ActivityType>
+		<Page>
+			<Name>Select content to share</Name>
+			<Row>
+				<Name> </Name>
+				<Widget>
+					<WidgetId>presentation_source</WidgetId>
+					<Type>GroupButton</Type>
+					<Options>size=4;columns=2</Options>
+					<ValueSpace>
+						<Value>
+							<Key>pacs_1</Key>
+							<Name>PACS monitor 1</Name>
+						</Value>
+						<Value>
+							<Key>pacs_2</Key>
+							<Name>PACS monitor 2</Name>
+						</Value>
+						<Value>
+							<Key>pc_1</Key>
+							<Name>Clinic PC monitor 1</Name>
+						</Value>
+						<Value>
+							<Key>pc_2</Key>
+							<Name>Clinic PC monitor 2</Name>
+						</Value>
+					</ValueSpace>
+				</Widget>
+				<Widget>
+					<WidgetId>presentation_source2</WidgetId>
+					<Type>GroupButton</Type>
+					<Options>size=4;columns=1</Options>
+					<ValueSpace>
+						<Value>
+							<Key>4_sources</Key>
+							<Name>PACS + Clinic PC (4-split)</Name>
+						</Value>
+						<Value>
+							<Key>laptop</Key>
+							<Name>Laptop (HDMI-cable)</Name>
+						</Value>
+					</ValueSpace>
+				</Widget>
+			</Row>
+			<Row>
+				<Name> </Name>
+				<Widget>
+					<WidgetId>presentation_stop</WidgetId>
+					<Name>Remove presentation</Name>
+					<Type>Button</Type>
+					<Options>size=4</Options>
+				</Widget>
+			</Row>
+			<Options>hideRowNames=1</Options>
+		</Page>
+	</Panel>
 </Extensions>

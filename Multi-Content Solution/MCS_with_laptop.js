@@ -1,20 +1,20 @@
-const xapi = require('xapi');
+//version 1.1 - updated with new syntax and optimized for RoomOS 11
 
-let connectedSources ={ '1': false, '2': false, '3': false, '4': false , '5': false , '6': false }
+import xapi from 'xapi';
 
 function StartPresentation(sources){
-    xapi.command('Presentation Start', {PresentationSource: sources });
+    xapi.Command.Presentation.Start({PresentationSource: sources});
 }
 
 function StopPresentation(){
-  xapi.command('Presentation Stop');
-  xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source'});
-  xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source2'});
+	xapi.Command.Presentation.Stop();
+	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source' });
+	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source2' });
 }
 
-xapi.event.on('UserInterface Extensions Widget Action', (event) => {
+xapi.Event.UserInterface.Extensions.Widget.Action.on(event => {
   if (event.WidgetId === 'presentation_source' && event.Type === 'released') {
-  xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source2'});
+  	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source2' });
     switch (event.Value){
       case 'pacs_1':
         StartPresentation(2);
@@ -30,16 +30,11 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
         break;
     }
   }
-  else if (event.WidgetId === 'presentation_source2' && event.Type === 'released') {
-    xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source'});
+  if (event.WidgetId === 'presentation_source2' && event.Type === 'released') {
+	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source' });
     switch (event.Value){
       case '4_sources':
-        StartPresentation( 
-        [  connectedSources['2'] ? 2 : 'none'
-          ,connectedSources['3'] ? 3 : 'none'
-          ,connectedSources['5'] ? 5 : 'none'
-          ,connectedSources['6'] ? 6 : 'none'
-        ]);
+        StartPresentation([2,3,5,6]);
         break;
       case 'laptop':
         StartPresentation(4);
@@ -50,33 +45,20 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
     StopPresentation();
     }
   
-    console.log(JSON.stringify(event)); 
+    //console.log(JSON.stringify(event)); 
   } 
 );
 
-function updateSourceList(id, formatStatus){
-    connectedSources[id] = formatStatus === "Ok" ? true : false;
-    console.log(JSON.stringify(connectedSources)); 
-}
-
-xapi.status.on('Conference Presentation Mode', (status) => {
-  if (status === 'Off' || status === 'Receiving'){
-    xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source'});
-    xapi.command('UserInterface Extensions Widget UnSetValue', {WidgetId: 'presentation_source2'});
+xapi.Status.Conference.Presentation.Mode.on(presentationStatus =>{
+  if (presentationStatus === 'Off' || presentationStatus === 'Receiving'){
+	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source' });
+	xapi.Command.UserInterface.Extensions.Widget.UnsetValue({ WidgetId: 'presentation_source2' });
   }
 });
 
-async function init() {
-  await xapi.status.get('Video Input Source').then((sourceStatuses) => {   
-  sourceStatuses.forEach(element => updateSourceList(element.id, element.FormatStatus))
-  });
-}
+xapi.Status.Standby.State.on(standbyState => {
+  if (standbyState === "Off"){
+    StopPresentation();
+}});
 
-
-xapi.status.on('Video Input Source', (status) => {
-  if(status.FormatStatus){
-    updateSourceList(status.id, status.FormatStatus);
-  }
-});
-
-init();
+StopPresentation();
