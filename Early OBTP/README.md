@@ -7,6 +7,8 @@ This macro and UI Extension was created to provide an easy way to early dial int
 
 **Author: Svein Terje Steffensen and Marcel Neidinger**
 
+Update, March 2023: This functionality may now be enabled natively in the user interface but enabling the EarlyJoin feature: [xConfiguration UserInterface Bookings Visibility EarlyJoin](https://roomos.cisco.com/xapi/Configuration.UserInterface.Bookings.Visibility.EarlyJoin/)
+
 ---
 Snapshot of Room Navigator after the "Early OBTP" button has been pressed and there are no upcomping meetings:
 ![Room Navigator Screenshot](prompt2.png)
