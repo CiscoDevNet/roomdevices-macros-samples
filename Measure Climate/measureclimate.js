@@ -1,5 +1,5 @@
-const xapi = require('xapi');
-const storage = require('./storage-csv');
+import xapi from 'xapi';
+import storage from './storage-csv';
 
 // how often to sample data
 const SampleMinutes = 10;

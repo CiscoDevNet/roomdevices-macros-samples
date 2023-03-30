@@ -75,7 +75,7 @@ You can define user settings in the manifest file, this will allow users to choo
 
 It's important that the parameters you set in the macro file is similar to one of the examples below:
 ```
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const myCustomNumber = 1234;
 let myCustomString;

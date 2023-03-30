@@ -65,4 +65,4 @@ class Scheduler {
   }
 }
 
-module.exports = { Scheduler, parseTime, isBeforeNow, isWeekend };
+export { Scheduler, parseTime, isBeforeNow, isWeekend };

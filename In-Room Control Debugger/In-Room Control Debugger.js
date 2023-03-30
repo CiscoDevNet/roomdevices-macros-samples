@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 // Generic Event handler for in-room control extensions
 
@@ -6,7 +6,7 @@ function showInRoomControlEvent(eventtext){
     eventtext = eventtext.replace(/\"/g,"'"); // replace double quotes wiht single quotes for rendering purposes
     console.log(eventtext);
     xapi.command("UserInterface Message TextLine Display", {Text: eventtext, Duration: 3});
-     
+
 }
 
 xapi.event.on('UserInterface Extensions Widget LayoutUpdated', (event) => {
@@ -46,7 +46,7 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
          console.log(`myWidgetId was Clicked`);
          xapi.command("dial", {number: 'somenumber@mydomain.com'});
         }
-    }     
+    }
 */
 
 });

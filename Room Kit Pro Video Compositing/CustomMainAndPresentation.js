@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 const MAX_NUMBER_OF_SOURCES_IN_COMPOSITING = 4;
 const MAX_SOURCES_ON_UI = 6;
 const MAINLAYOUTCHANGEPREVIEWTIMEOUT = 8000;
@@ -21,7 +21,7 @@ function updateMainLayout(){
   xapi.command("Video Input SetMainVideoSource", {ConnectorId: mainSources, Layout: layoutfamily_main, PIPSize: layoutfamily_pipsize, PIPPosition: layoutfamily_pipposition});
   console.log('Main-sources: ' + JSON.stringify(mainSources) + ' Layout:' + layoutfamily_main + ' PipSize:' + layoutfamily_pipsize + ' PipPosition:' + layoutfamily_pipposition);
   previewSelfViewAfterLayoutChange();
-  
+
 }
 
 
@@ -78,7 +78,7 @@ function removeAllFromMainList(){
   xapi.command("UserInterface Extensions Widget SetValue", {'WidgetId': 'main_source_' + defaultMainVideoSource, 'Value':'on'});
 }
 
- 
+
 function addToPresentationList(presentationSource){
   if(presentationSources.length < MAX_NUMBER_OF_SOURCES_IN_COMPOSITING){
     presentationSources.push(presentationSource);
@@ -183,7 +183,7 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
               }
                 updateMainLayout();
               break;
-        }  
+        }
   }
   else if (event.Type == 'changed'){
     let match = /(presentation_source_|main_source_)(\d+)/.exec(event.WidgetId);

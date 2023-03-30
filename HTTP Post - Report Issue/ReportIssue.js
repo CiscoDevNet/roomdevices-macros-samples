@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 
 const SERVICE_NOW_INSTANCE_URL = 'yourinstance.service-now.com'; // Specify a URL to a service like serviceNow etc.

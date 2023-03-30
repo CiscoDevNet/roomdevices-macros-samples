@@ -1,9 +1,9 @@
-const ui = require('./ui');
-const {
+import ui from './ui';
+import {
   Config, Panel, Page, Row, Text, Button, ToggleButton, Slider, IconButton
-} = require('./ui-builder');
-const Hue = require('./hue-lib');
-const xapi = require('xapi');
+} from './ui-builder';
+import Hue from './hue-lib';
+import xapi from 'xapi';
 
 const hue = new Hue();
 

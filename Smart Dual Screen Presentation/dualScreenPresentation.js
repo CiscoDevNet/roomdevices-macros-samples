@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const MONITOR_ROLES = {AUTO: 'Auto',
                        FIRST: 'First',
@@ -26,8 +26,8 @@ async function getVideoCallState() {
       let index, channel = null;
       for (index = 0; index < media[0].Channel.length; index++) {
         channel = media[0].Channel[index];
-        if (channel.Direction == 'Incoming' && 
-            channel.Type == 'Video' && 
+        if (channel.Direction == 'Incoming' &&
+            channel.Type == 'Video' &&
             channel.Video.ChannelRole == 'Main' &&
             channel.Video.Protocol != 'Off') {
           rxVideo = true;
@@ -35,7 +35,7 @@ async function getVideoCallState() {
       }
     });
   }
-  return rxVideo; 
+  return rxVideo;
 }
 
 function setMonitorRole(role) {
@@ -63,7 +63,7 @@ async function checkPresoState(statusEvent) {
             else {
                 log('not in a video call, override monitor');
                 setMonitorRole(OVERRIDE_ROLE);
-            } 
+            }
         }
     }
 

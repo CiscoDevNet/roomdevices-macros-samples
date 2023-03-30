@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 let startTime = -1; // minutes
 let timeLeft = 0; // seconds
@@ -61,7 +61,7 @@ function showTime() {
 }
 
 function tick() {
-  
+
   if (timeLeft < 0) timerFinished();
   else{
     timer = setTimeout(tick, 1000);

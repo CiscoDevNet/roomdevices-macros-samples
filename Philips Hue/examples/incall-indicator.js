@@ -1,5 +1,5 @@
-const xapi = require('xapi');
-const Hue = require('../hue-lib');
+import xapi from 'xapi';
+import Hue from './hue-lib';
 
 const hue = new Hue();
 

@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 const MAX_SCREENS = 3;
 const MAX_SOURCES = 6;
 
@@ -46,7 +46,7 @@ function addSourceToOutput(source, output){
   output = getScreenId(output);
   show_screens_sourcelist[output-1].push(source);
   xapi.command("Video Matrix Assign", {Output: output, SourceId: source, Mode: 'Add', Layout: layoutfamily});
-  
+
   console.log('Outputs-sources: ' + JSON.stringify(show_screens_sourcelist));
 }
 
@@ -96,7 +96,7 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                   xapi.command("UserInterface Extensions Widget UnSetValue", {'WidgetId': event.WidgetId});
                 }
                 break;
-                
+
             case 'local_source_layout':
               switch(event.Value){
                 case 'equal':
@@ -129,22 +129,22 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                   addSourceToOutput(1,1);
                   addSourceToOutput(2,1);
                   addSourceToOutput(3,1);
-                  
+
                   addSourceToOutput(4,2);
                   addSourceToOutput(5,2);
                   addSourceToOutput(6,2);
-                  
+
                   addSourceToOutput(1,3);
                   addSourceToOutput(3,3);
                   addSourceToOutput(5,3);
                   updateUI();
                   break;
               }
-        }  
+        }
   }
   else if (event.Type == 'changed'){
     var regex = /local_(left|center|right)_source_(\d)/;
-    var found = event.WidgetId.match(regex); 
+    var found = event.WidgetId.match(regex);
     if(found){
       var output = found[1];
       var source = found[2];

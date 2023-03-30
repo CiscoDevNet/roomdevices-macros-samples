@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 // https://kwikwai.com/knowledge-base/the-hdmi-cec-bus/
 const CEC_PLAYBACK_DEVICE_LOGICAL_ADR = 4;

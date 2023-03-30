@@ -7,7 +7,7 @@
  */
 
 
- const xapi = require('xapi');
+ import xapi from 'xapi';
 
  /*
   * ********************************

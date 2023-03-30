@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const MYSPEED_DIAL_NUMBER = 'mynumber@mydomain.com';
 

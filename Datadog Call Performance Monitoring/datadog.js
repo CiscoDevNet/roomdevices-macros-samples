@@ -1,4 +1,4 @@
-const xapi = require('xapi');  // should be require('xapi')
+import xapi from 'xapi';
 
 const DD_TOKEN = 'REPLACE_ME';  // get a Client Token from your Datadog account here: https://app.datadoghq.com/organization-settings/client-tokens
 const DD_URL = `https://browser-http-intake.logs.datadoghq.com/v1/input/${DD_TOKEN}`;  // if your Datadog instance is in the EU region, use "datadog.eu" instead of "datadog.com"
@@ -72,7 +72,7 @@ function formatHealthResults(message, command){
           message['Channel'][i]['Direction']
         ].join('_')
         message[namespace] = Object.assign(
-          message['Channel'][i]['Netstat'], 
+          message['Channel'][i]['Netstat'],
           message['Channel'][i][message['Channel'][i]['Type']]
         )
       } else {
@@ -106,8 +106,8 @@ function sendHealthData(message){
 // getting data
 
 function getEachPeripheralData(perifData){
-  // the `xStatus Perhipherals ConnectedDevice [n]` commands must be run 
-  // per peripheral device and with the id as an argument. we get the 
+  // the `xStatus Perhipherals ConnectedDevice [n]` commands must be run
+  // per peripheral device and with the id as an argument. we get the
   // peripheral id list first from `xCommand Peripherals List`.
   // we schedule the sending of data in 1s increments so as to avoid running out of HttpClient handlers on the device
   // TODO: confirm that the results capture all device data. Early results suggest that some devices might be getting missed.
@@ -123,7 +123,7 @@ function getEachPeripheralData(perifData){
   } else {
     setTimeout(
       () => sendHealthData(formatHealthResults(
-        [{'command_response': 'none'}], 
+        [{'command_response': 'none'}],
         'peripherals connecteddevice'
       )), (STATUS_LIST.length + 1)*1000
     );
@@ -133,8 +133,8 @@ function getEachPeripheralData(perifData){
 function checkStatus(statusList){
   // we schedule the sending of data in 1s increments so as to avoid running out of HttpClient handlers on the device
   for (let i = 0; i < statusList.length; i++) {
-    setTimeout(() => xapi.status.get(statusList[i]).then((stat) => { 
-      sendHealthData(formatHealthResults(stat, statusList[i])); 
+    setTimeout(() => xapi.status.get(statusList[i]).then((stat) => {
+      sendHealthData(formatHealthResults(stat, statusList[i]));
     }), i*1000);
   }
 }
@@ -187,8 +187,8 @@ function scheduleStatusChecks(countdown_general, countdown_in_call, calls) {
     setTimeout(() => runGeneralStatusCheck(), countdown_in_call > 0 ? 1 : (IN_CALL_STATUS_COMMAND_LIST.length + 1) * 1000);
     countdown_general = GENERAL_CHECK_FREQUENCY;
   }
-  setTimeout(() => xapi.status.get('call').then((res) => { 
-    scheduleStatusChecks(countdown_general, countdown_in_call, res); 
+  setTimeout(() => xapi.status.get('call').then((res) => {
+    scheduleStatusChecks(countdown_general, countdown_in_call, res);
   }), CHECK_IF_CALL_FREQUENCY);
 }
 
@@ -196,8 +196,8 @@ function scheduleStatusChecks(countdown_general, countdown_in_call, calls) {
 function monitorRoomKit() {
   getSystemData();
   console.log("got system data, now schedule status checks")
-  xapi.status.get('call').then((res) => { 
-    scheduleStatusChecks(GENERAL_CHECK_FREQUENCY, 0, res); 
+  xapi.status.get('call').then((res) => {
+    scheduleStatusChecks(GENERAL_CHECK_FREQUENCY, 0, res);
   });
 }
 

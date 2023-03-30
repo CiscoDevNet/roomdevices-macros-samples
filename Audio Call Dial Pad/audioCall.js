@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const KEYBOARD_TYPES = {
       NUMERIC     :   'Numeric'
@@ -24,10 +24,10 @@ function showDialPad(text){
 
          xapi.command("UserInterface Message TextInput Display", {
                InputType: KEYBOARD_TYPES.NUMERIC
-             , Placeholder: "Use keypad to enter number" 
+             , Placeholder: "Use keypad to enter number"
              , Title: "Audio Call"
              , Text: text
-             , SubmitText: "Call" 
+             , SubmitText: "Call"
              , FeedbackId: DIALPAD_ID
          }).catch((error) => { console.error(error); });
 }
@@ -45,12 +45,12 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
 xapi.event.on('UserInterface Message TextInput Response', (event) => {
     switch(event.FeedbackId){
         case DIALPAD_ID:
-            
+
             var regex =REGEXP_URLDIALER; //change this to whatever filter you want to check for validity
-            var match = regex.exec(event.Text);    
+            var match = regex.exec(event.Text);
             if (match !== null) {
                 var numbertodial = match[1];
-                numbertodial = DIALPREFIX_AUDIO_GATEWAY + numbertodial; // Here you can do some massaging of the number to dial, e.g. if it need prefixing or postfixing 
+                numbertodial = DIALPREFIX_AUDIO_GATEWAY + numbertodial; // Here you can do some massaging of the number to dial, e.g. if it need prefixing or postfixing
                  xapi.command("dial", {Number: numbertodial, CallType: CALL_TYPES.AUDIO}).catch((error) => { console.error(error); });
 
             }

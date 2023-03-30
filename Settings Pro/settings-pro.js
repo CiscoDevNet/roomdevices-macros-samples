@@ -1,5 +1,5 @@
-const xapi = require('xapi');
-const ui = require('./ui');
+import xapi from 'xapi';
+import ui from './ui';
 
 // ------------------- HELPER FUNCTIONS -----------------------------------------
 

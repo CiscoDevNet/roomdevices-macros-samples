@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const Sunday = 0, Saturday = 6;
 
@@ -15,7 +15,7 @@ function schedule(time, action) {
 //    print("Time now:" + now);
     let difference = parseInt(alarmH) * 3600 + parseInt(alarmM) * 60 - now;
     if (difference <= 0) difference += 24 * 3600;
-    
+
     return setTimeout(action, difference * 1000);
 }
 

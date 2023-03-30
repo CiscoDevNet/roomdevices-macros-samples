@@ -12,4 +12,4 @@ function sendMessage(token, toPersonEmail, roomId, markdown) {
   return xapi.Command.HttpClient.Post({ Header: headers, Url: webexMsgUrl }, JSON.stringify(body));
 }
 
-module.exports = sendMessage;
+export default sendMessage;

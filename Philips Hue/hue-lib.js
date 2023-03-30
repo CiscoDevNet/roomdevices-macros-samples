@@ -1,5 +1,5 @@
 
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 function fetch(url, type, body) {
   const data = body ? JSON.stringify(body) : undefined;
@@ -149,4 +149,4 @@ class Hue {
   }
 }
 
-module.exports = Hue;
+export default Hue;

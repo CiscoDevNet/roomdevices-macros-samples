@@ -1,5 +1,5 @@
 // child safe end call slider
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 function guiEvent(e) {
   if (e.WidgetId === 'end-call' && e.Type === 'released' && e.Value > 225) {

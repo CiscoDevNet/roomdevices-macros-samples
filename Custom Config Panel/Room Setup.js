@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 function showRoomSetupNotification(eventtext){
     eventtext = eventtext.replace(/\"/g,"'"); // replace double quotes wiht single quotes for rendering purposes

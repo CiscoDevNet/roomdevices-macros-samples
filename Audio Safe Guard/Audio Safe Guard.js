@@ -2,7 +2,7 @@
  * Limit the volume of a video system to a user definede level < 100.
  * Show a message if this happens
  */
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const MAX_VOLUME = 70;
 

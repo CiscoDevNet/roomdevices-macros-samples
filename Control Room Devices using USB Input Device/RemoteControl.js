@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const speedDialNumber = 'mynumber@mydomain.webex.com';
 const cameraId = 3; // Set this to the camera id of camera you want to control. See "xStatus Cameras Camera"
@@ -48,7 +48,7 @@ xapi.event.on('UserInterface InputDevice Key Action', (event) => {
         default:
           xapi.command('UserInterface Message Alert Display', {'Title': 'Remote Control Warning', 'Text':'This button is not in use yet. To program it use the "Key: ' + event.Key + ' (or Code: ' + event.Code + ')', 'Duration': 2});
           break;
-    }  
+    }
   }
   else if(event.Type == 'Released'){
     switch(event.Key){
@@ -66,8 +66,8 @@ xapi.event.on('UserInterface InputDevice Key Action', (event) => {
       case 'KEY_FASTFORWARD':
         xapi.command('Camera Ramp ', {CameraId: cameraId, 'Zoom':'Stop'});
         break;
-    }    
+    }
   }
-  
+
 });
 

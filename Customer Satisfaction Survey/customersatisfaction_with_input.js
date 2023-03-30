@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));

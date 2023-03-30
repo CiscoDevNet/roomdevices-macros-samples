@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const CAMERAID_CAMERA_LEFT = 1;
 const CAMERAID_CAMERA_RIGHT = 2;

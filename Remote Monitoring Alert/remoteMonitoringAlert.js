@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 // Tune notice to match your deployment needs
 const MESSAGE = "System is being remotely monitored by an administrator";
@@ -34,5 +34,5 @@ setInterval(function(){
     snapshotTrigger = false;
   }
 }, CHECK_INTERVAL * 1000);
-  
+
 xapi.event.on('VideoSnapshotTaken', remoteMonitorTriggered);

@@ -1,14 +1,14 @@
 /**
  * Room Capacity Alerting Macro
- * 
+ *
  * Uses The Room Analytics People Count API to alert users in a room if they exceed the set capacity limits.
- * 
+ *
  * Contributers:
  * Richard Bayes (ribayes@cisco.com)
  * Susanna Moneta (smoneta@cisco.com)
  */
 
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 //Variables you are able to adjust as needed for the Room Capacity and Messaging
 const alertTime = 20; //Time in seconds to display alert on screen and touch 10

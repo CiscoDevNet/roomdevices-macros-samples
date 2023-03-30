@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 const LANGUAGE_DEFAULT = 'English';
 const LANGUAGE_REVERT_TO_DEFAULT_IN_STANDBY = 1;
@@ -7,11 +7,11 @@ function initUILanguage(language) {
   var languageWidgetId = language.toLowerCase();
   console.log('Setting lang id to ' + languageWidgetId);
   xapi.command('UserInterface Extensions Widget SetValue', {'WidgetId': 'lang', 'Value': languageWidgetId}).catch((error) => { console.error(error); }); // This expects an in-room control group-widget named 'lang' and the selected language in the list named lowercase name of language
-  
+
 }
 
 function setLanguage(language) {
-  let newlanguage = null;  
+  let newlanguage = null;
   console.log('setlang:' + language)
   switch(language) {
       case 'lang_arabic':
@@ -96,10 +96,10 @@ function setLanguage(language) {
     default:
       newlanguage = LANGUAGE_DEFAULT;
   }
-  
+
   xapi.config.set('UserInterface Language', newlanguage).catch((error) => { console.error(error); });
   xapi.command('UserInterface Extensions Panel Close').catch((error) => { console.error(error); }); //This command was added to CE 9.5. This line will fail if running on older firmware
-  
+
 }
 
 function onGui(event) {
