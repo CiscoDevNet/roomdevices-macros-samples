@@ -193,6 +193,12 @@
         "tags": "meeting room, peripherals"
     },
     {
+        "title": "Room Metrics",
+        "description": "Show the utilization and environmental metrics about the device of the day",
+        "symbol": "📊",
+        "tags": "meeting room"
+    },
+    {
         "title": "Samsung Flip",
         "description": "Easily switch from Webex mode to Samsung Flip mode.",
         "symbol": "🖌️",
