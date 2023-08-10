@@ -1,4 +1,5 @@
 <Extensions>
+	<Version>1.9</Version>
 	<Panel>
 		<Order>1</Order>
 		<PanelId>mcs_panel</PanelId>
