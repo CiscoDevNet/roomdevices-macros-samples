@@ -1,5 +1,6 @@
 # Cisco CE / RoomOS / MTR Video Endpoints Macros - DailyReboot
-This macro will reboot the device once every day. If the device is in call at the time of reboot, it will postpone the reboot for one hour. 
+
+This macro is designed to perform a daily reboot of the Cisco CE/RoomOS/MTR video endpoints. If the device is in an active call at the scheduled reboot time, the reboot will be postponed for one hour.
 
 ---
 
@@ -7,43 +8,25 @@ This macro will reboot the device once every day. If the device is in call at th
 
 ---
 
-
-This sample gadget contains the following files:
-
-     macro-samples/
-	Daily Reboot/
-		README.md (this file)
-		DailyReboot.js (the macro)
-		daily_reboot.png (image)
-
-
 ## Requirements
 1. Cisco Room Device 
 2. Firmware RoomOS 10.19.1.x or newer.
 
+## Configuration steps
+Edit the following constants:
 
-## Additional Information
-##### xAPI
-Documentation for the xAPI can be found in the [Command References overview](https://www.cisco.com/c/en/us/support/collaboration-endpoints/telepresence-quick-set-series/products-command-reference-list.html).
+- 'hourBoot' to specify the hour of the day for the device reboot (values: 0-23)
+- 'minuteBoot' to specify the minute of the specified 'hourBoot' (values: 0-59)
 
-## How to configure
-Edit the constants 'hourBoot' for the hour of the day you want the device to reboot (0-23)
+For example, if you set 'hourBoot' to 21 and 'minuteBoot' to 10, the device will reboot at 21:10 on the same or next day, depending on when the macro was initiated.
 
-## Disclaimer
-This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
+## How it works
 
-The sample macros are meant to:
-- Illustrate how to use the CE Macros.
-- Serve as an example of the step-by-step process of building a macro using JavaScript and integration with the device xAPI
-- Provided as a guide for a developer to see how to initialize a macro and set up handlers for user and dialog updates.
+Upon launching the macro, it will retrieve the current time and check if the specified 'hourBoot' and 'minuteBoot' have already passed for the current day or are scheduled for the future. If the specified time has already passed, the macro will automatically schedule the reboot for the same hour on the next day.
 
-The sample macros are made available to Cisco partners and customers as a convenience to help minimize the cost of Cisco Finesse customizations. Cisco does not permit the use of this library in customer deployments that do not include Cisco Video Endpoint Hardware.
+If the device is engaged in an active call at the scheduled reboot time, the reboot will be repeatedly postponed for a duration of 1 hour until the device becomes available and is no longer in a call.
 
-## Support Notice
-[Support](http://developer.cisco.com/site/devnet/support) for the macros is provided on a "best effort" basis via DevNet. Like any custom deployment, it is the responsibility of the partner and/or customer to ensure that the customization works correctly and this includes ensuring that the macro is properly integrated into 3rd party applications.
+## Support for this macro
 
-It is Cisco's intention to ensure macro compatibility across versions as much as possible and Cisco will make every effort to clearly document any differences in the xAPI across versions in the event that a backwards compatibility impacting change is made.
+For support related to this macro, please contact Magnus Ohm (mohm@cisco.com). Contacting via the Webex Messenging App is preferred.
 
-Cisco Systems, Inc.<br>
-[http://www.cisco.com](http://www.cisco.com)<br>
-[http://developer.cisco.com/site/roomdevices](http://developer.cisco.com/site/roomdevices)
