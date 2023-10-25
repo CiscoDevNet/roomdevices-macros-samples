@@ -251,5 +251,11 @@
         "description": "Let's you easily add/remove web apps from a ui on the device itself",
         "symbol": "🔗",
         "tags": "home office, web"
+    },
+    {
+        "title": "Daily Reboot",
+        "description": "Set a time of day you want your device to reboot",
+        "symbol": "🔄",
+        "tags": "home office, meeting room"
     }
 ]
