@@ -1,8 +1,8 @@
 const xapi = require('xapi');
 
 //Define hour and minute for boot every day (device time)
-const hourBoot = 21; // 0-23
-const minuteBoot = 0; // 0-59
+const hourBoot = 12; // 0-23
+const minuteBoot = 19; // 0-59
 
 function rebootTimer() {
 
@@ -30,24 +30,22 @@ function rebootTimer() {
 
 async function readyForBoot() { // Safety function, test if the device is part of a call before reboot, other tests can be added here if needed
 
-  const testActiveCalls = (v1, v2, v3) => parseInt(v1) > 0 || parseInt(v2) > 0 || parseInt(v3) > 0;
+  const testState = (v) => !['Initialized', 'Sleeping'].includes(v)
+  var state = await xapi.Status.SystemUnit.State.System.get()
 
-  var activeCalls = await xapi.Status.SystemUnit.State.NumberOfActiveCalls.get()
-  var activeCallsInProgress = await xapi.Status.SystemUnit.State.NumberOfInProgressCalls.get()
-  var activeCallsSuspended = await xapi.Status.SystemUnit.State.NumberOfSuspendedCalls.get() 
+  console.log(state)
 
-  if (testActiveCalls(activeCalls, activeCallsInProgress, activeCallsSuspended)) { // Part of an active call? Postpone for 1 hour
+  if (testState(state)) { // Part of an active call? Postpone for 1 hour
 
-    console.log('Device seems to be part of a call.. postponing reboot for 1 hour.. (Daily Reboot scheduler macro)')
+    console.log(`Device seems not to be ready for reboot due to device state being: ${state}. Postponing reboot for 1 hour.. (Daily Reboot scheduler macro)`)
     setTimeout(readyForBoot, 60 * 60 * 1000)
 
   } else { // Not part of a call, go ahead and reboot
-
+    
     boot();
 
   }
 }
-
 function boot() {
 
     xapi.Command.SystemUnit.Boot();
