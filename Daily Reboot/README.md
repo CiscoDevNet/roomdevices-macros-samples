@@ -11,6 +11,7 @@ This macro is designed to perform a daily reboot of the Cisco CE/RoomOS/MTR vide
 ## Requirements
 1. Cisco Room Device 
 2. Firmware RoomOS 10.19.1.x or newer.
+3. Devices running MTR must be registered on Control Hub for this macro to work. 
 
 ## Configuration steps
 Edit the following constants:
