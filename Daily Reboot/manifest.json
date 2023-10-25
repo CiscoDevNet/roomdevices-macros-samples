@@ -20,7 +20,7 @@
             "info": "Number is required",
             "type": "integer",
             "default": 21,
-            "domain": "daily-reboot",
+            "domain": "DailyReboot",
             "required": true
         },
         {
