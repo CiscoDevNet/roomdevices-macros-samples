@@ -1,0 +1,18 @@
+{
+    "version": "1",
+    "profile": {
+      "macro": {
+        "items": [
+          {
+            "payload": "./DailyReboot.js",
+            "id": "DailyReboot",
+            "type": "url"
+          }
+        ]
+      },
+      "roomcontrol": {
+        "items": []
+      },
+      "userParams": []
+    }
+  }
