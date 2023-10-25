@@ -1,4 +1,4 @@
-const xapi = require('xapi');
+import xapi from 'xapi';
 
 //Define hour and minute for boot every day (device time)
 const hourBoot = 12; // 0-23
