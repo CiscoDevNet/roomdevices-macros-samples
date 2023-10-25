@@ -25,7 +25,7 @@
         },
         {
             "id": "minuteBoot",
-            "name": "Hour of boot time (0-59)",
+            "name": "Minute of boot time (0-59)",
             "info": "Number is required",
             "type": "number",
             "default": 30,
