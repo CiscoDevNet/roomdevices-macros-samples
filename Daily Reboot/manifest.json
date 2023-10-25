@@ -28,7 +28,7 @@
             "name": "Hour of boot time (0-59)",
             "info": "Number is required",
             "type": "number",
-            "default": 0,
+            "default": 30,
             "domain": "DailyReboot",
             "required": true
         }
