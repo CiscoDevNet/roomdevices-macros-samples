@@ -13,6 +13,25 @@
       "roomcontrol": {
         "items": []
       },
-      "userParams": []
+      "userParams": [
+        {
+            "id": "hourBoot",
+            "name": "Hour of boot time (0-23)",
+            "info": "Number is required",
+            "type": "integer",
+            "default": 21,
+            "domain": "daily-reboot",
+            "required": true
+        },
+        {
+            "id": "minuteBoot",
+            "name": "Hour of boot time (0-59)",
+            "info": "Number is required",
+            "type": "integer",
+            "default": 0,
+            "domain": "daily-reboot",
+            "required": true
+        }
+      ]
     }
   }
