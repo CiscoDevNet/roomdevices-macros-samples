@@ -29,7 +29,7 @@
             "info": "Number is required",
             "type": "number",
             "default": 0,
-            "domain": "daily-reboot",
+            "domain": "DailyReboot",
             "required": true
         }
       ]
