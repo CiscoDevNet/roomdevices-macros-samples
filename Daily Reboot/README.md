@@ -21,6 +21,9 @@ Edit the following constants:
 
 For example, if you set 'hourBoot' to 21 and 'minuteBoot' to 10, the device will reboot at 21:10 on the same or next day, depending on when the macro was initiated.
 
+Note: The time used is the device timezone.
+Note: The hours and minutes are configured without a leading zero. 3 for 3am not 03.
+
 ## How it works
 
 Upon launching the macro, it will retrieve the current time and check if the specified 'hourBoot' and 'minuteBoot' have already passed for the current day or are scheduled for the future. If the specified time has already passed, the macro will automatically schedule the reboot for the same hour on the next day.
