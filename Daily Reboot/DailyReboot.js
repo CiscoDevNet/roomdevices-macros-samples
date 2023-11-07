@@ -1,3 +1,5 @@
+import xapi from 'xapi';
+
  //Define hour and minute for boot every day (device time)
  const hourBoot = 3; // 0-23 (Default 3am, numbers are without leading zeroes)
  const minuteBoot = 0; // 0-59 (Default sharp)
