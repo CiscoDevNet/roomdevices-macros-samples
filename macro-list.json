@@ -229,6 +229,12 @@
         "tags": "meeting room"
     },
     {
+        "title": "Soft Mute",
+        "description": "Mute the device before you start a call",
+        "symbol": "🔇",
+        "tags": "calling"
+    },
+    {
         "title": "Speed Dials Panel",
         "description": "Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?",
         "symbol": "🏎",
