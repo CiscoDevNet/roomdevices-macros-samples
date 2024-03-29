@@ -4,7 +4,7 @@
     <Order>1</Order>
     <PanelId>soft-mute</PanelId>
     <Location>HomeScreen</Location>
-    <Icon>Lightbulb</Icon>
+    <Icon>Microphone</Icon>
     <Color>#D43B52</Color>
     <Name>Soft mute</Name>
     <ActivityType>Custom</ActivityType>
