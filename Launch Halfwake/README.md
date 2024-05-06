@@ -1,4 +1,4 @@
-# Launch Halfwkae
+# Launch Halfwake
 
 A simple action button on the home screen to set the system in halfwake (signage) state
 
