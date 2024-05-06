@@ -10,6 +10,6 @@ Screenshot:
 
 
 ## Requirements
-1. Cisco Video endpoint (MX, SX, DX and Room Kit devices)
+1. Cisco Video endpoint (MX, SX, DX, Room series, Board series, Desk series)
 2. Firmware CE9.2.1 or newer.
 3. Admin user access to endpoint
