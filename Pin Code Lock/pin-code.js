@@ -17,6 +17,7 @@ function onResponse(code) {
   if (code === PIN_CODE)
   {
     console.log('pin correct');
+    xapi.config.set('UserInterface Features HideAll', 'False');
   }
   else {
     console.log('pin failed');
@@ -35,7 +36,10 @@ function listenToEvents() {
     }
   });
   xapi.status.on('Standby State', (state) => {
-    if (state === 'Off') askForPin();
+    if (state === 'Off') {
+      xapi.config.set('UserInterface Features HideAll', 'True');
+      askForPin();
+    }
   });
 }
 
