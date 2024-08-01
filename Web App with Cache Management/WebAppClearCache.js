@@ -13,10 +13,9 @@ or implied.
 *********************************************************
 
  * Author(s):               
- *                          Jacob Miller
- *                          Solutions Engineer
- *                          Cisco Systems
- *                          
+ *               Jacob Miller
+ *               Solutions Engineer
+ *               Cisco Systems
 */
 
 import xapi from 'xapi';
@@ -74,9 +73,10 @@ async function buildUI() {
     console.log("Enabling Button");
 
     await xapi.Command.UserInterface.Extensions.Panel.Save({ PanelId: panelName }, panel_xml);
-    let getIconAndId = (await xapi.Command.UserInterface.Extensions.Icon.Download({ Url: webAppLogo })).IconId;
-    let uploadIcon = await xapi.Command.UserInterface.Extensions.Panel.Update({ IconId: getIconAndId, Icon: 'Custom', PanelId: panelName });
-  }
+    if (webAppLogo != '' || webAppLogo != undefined){
+        let getIconAndId = (await xapi.Command.UserInterface.Extensions.Icon.Download({ Url: webAppLogo })).IconId;
+        let uploadIcon = await xapi.Command.UserInterface.Extensions.Panel.Update({ IconId: getIconAndId, Icon: 'Custom', PanelId: panelName });
+    }
 
   console.info({ Info: "UserInterface Constructed!" });
 }
