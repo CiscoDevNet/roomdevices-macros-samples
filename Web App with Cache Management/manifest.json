@@ -35,11 +35,11 @@
         {
             "id": "webAppLogo",
             "name": "Web App Logo URL",
-            "info": "Logo URL is required, please include https://",
+            "info": "Logo URL is optional, please include https://",
             "type": "string",
             "default": "https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png",
             "domain": "WebAppClearCache",
-            "required": true
+            "required": false
         }
         {
             "id": "waitTimer",
