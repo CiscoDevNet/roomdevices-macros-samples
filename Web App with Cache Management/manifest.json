@@ -1,0 +1,37 @@
+{
+    "version": "1",
+    "profile": {
+      "macro": {
+        "items": [
+          {
+            "payload": "./WebAppClearCache.js",
+            "id": "WebAppClearCache",
+            "type": "url"
+          }
+        ]
+      },
+      "roomcontrol": {
+        "items": []
+      },
+      "userParams": [
+        {
+            "id": "hourBoot",
+            "name": "Hour of boot time (0-23)",
+            "info": "Number is required",
+            "type": "number",
+            "default": 21,
+            "domain": "WebAppClearCache",
+            "required": true
+        },
+        {
+            "id": "minuteBoot",
+            "name": "Minute of boot time (0-59)",
+            "info": "Number is required",
+            "type": "number",
+            "default": 30,
+            "domain": "WebAppClearCache",
+            "required": true
+        }
+      ]
+    }
+  }
