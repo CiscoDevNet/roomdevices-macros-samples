@@ -36,6 +36,7 @@ async function setVirtualBg(url, spot) {
     await xapi.Command.Cameras.Background.Fetch({ Url: url, Image: spot });
     await xapi.Command.Cameras.Background.Set({ Image: spot, Mode: 'Image' });
     setTimeout(() => xapi.Command.Video.Selfview.Set({ Mode: 'Off' }), 6000);
+    await xapi.Command.Audio.Volume.Mute();
   }
   catch(e) {
     console.log(e);
@@ -69,6 +70,7 @@ function removeNotice() {
   xapi.Command.Cameras.Background.Set({ Mode: DefaultInCallMode });
   xapi.Command.UserInterface.Extensions.Widget.SetValue({ WidgetId: 'berightback_img', Value: 'none' });
   alert('Notice removed. Enjoy your call.');
+  xapi.Command.Audio.Volume.Unmute();
 }
 
 function init() {
