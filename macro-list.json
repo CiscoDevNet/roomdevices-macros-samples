@@ -267,7 +267,7 @@
     {
         "title": "Web App + Login Deletion",
         "description": "Create a button to launch a web app that, upon exit, prompts the user to clear their cached login credentials.",
-        "symbol": "🔗",
+        "symbol": "🔐",
         "tags": "meeting room, web"
     }
 ]
