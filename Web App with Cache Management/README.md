@@ -3,14 +3,19 @@ This macro allows the creation of local web apps on a device that, when exited, 
 
 ## Requirements
 1. A Cisco Webex Board or Desk device
-2. Firmware CE9.13 or newer or RoomOS
+
+| Minimum RoomOs Version | Webex Cloud | Webex Edge (Hybrid Cloud) | On-Premise | Microsoft Teams Room On Cisco Devices    |
+|:-----------------------|:------------|:--------------------------|:-----------|:-----------------------------------------|
+| 11.13.1.16 - Board Pro | ✅ Yes      | ✅ Yes                     | ✅ Yes     | ✅ Yes                                   |  
+| 11.6.1.5 - Desk Pro    | ✅ Yes      | ✅ Yes                     | ✅ Yes     | ✅ Yes                                   |  
 
 ## Usage
 1. Customize the WebAppClearcache.js variables section.
 2. Leverage the local web interface of the device or Control Hub to deploy and activate this macro.
 
 ## Disclaimer
-This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
+
+This solution will clear the cache to ALL web apps. This may have an impact on other solutions and was validated in a pre-production environment. This example is only a sample and is **NOT guaranteed to be bug free and production quality**.
 
 The sample macros are meant to:
 - Illustrate how to use the CE Macros.
