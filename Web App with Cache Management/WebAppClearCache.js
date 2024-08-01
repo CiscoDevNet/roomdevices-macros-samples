@@ -31,6 +31,7 @@ let webviewId = null;
 
 const webAppURL = 'https://app.mural.co';
 const webAppLogo = 'https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png';
+const waitTimer = 20;
 
 // Name of the button below:
 const appName = 'Mural';
@@ -104,7 +105,7 @@ function monitorWebView() {
             Title: 'Clear Login?',
             Text: 'Would you like to delete your stored login?',
             FeedbackId: 'clearCache',
-            Duration: 20,
+            Duration: waitTimer,
             "Option.1": 'Yes',
             "Option.2": 'No',
         })
@@ -132,7 +133,7 @@ function monitorWebView() {
 
 // Clear cached credentials
 function deleteCredentials() {
-  xapi.Command.WebEngine.DeleteStorage({ Type: 'All' });
+  xapi.Command.WebEngine.DeleteStorage({ Type: 'WebApps' });
   console.info({Info: "Logging User Out" });
 }
 
