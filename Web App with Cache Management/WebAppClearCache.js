@@ -29,16 +29,16 @@ let webviewId = null;
 
 // CUSTOMIZE THESE VARIABLES!!!!!!!
 
-let webAppURL = 'https://app.mural.co';
-let webAppLogo = 'https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png';
+const webAppURL = 'https://app.mural.co';
+const webAppLogo = 'https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png';
 
 // Name of the button below:
-let appName = 'Mural';
+const appName = 'Mural';
 
 // END VARIABLES
 
 
-let panelName = appName.toLowerCase() + 'App';
+let panelName = appName.replaceAll(" ","").toLowerCase() + 'App';
 
 async function init() {
   console.log({ Message: "Initializing Macro..." });
