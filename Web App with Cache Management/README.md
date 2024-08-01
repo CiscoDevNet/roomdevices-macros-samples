@@ -10,7 +10,7 @@ This macro allows the creation of local web apps on a device that, when exited, 
 | 11.6.1.5 - Desk Pro    | ✅ Yes      | ✅ Yes                     | ✅ Yes     | ✅ Yes                                   |  
 
 ## Usage
-1. Customize the WebAppClearcache.js variables section.
+1. Customize the WebAppClearCache.js variables section.
 2. Leverage the local web interface of the device or Control Hub to deploy and activate this macro.
 
 ## Disclaimer
