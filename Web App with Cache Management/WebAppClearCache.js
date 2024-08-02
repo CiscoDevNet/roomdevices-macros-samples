@@ -77,7 +77,7 @@ async function buildUI() {
         let getIconAndId = (await xapi.Command.UserInterface.Extensions.Icon.Download({ Url: webAppLogo })).IconId;
         let uploadIcon = await xapi.Command.UserInterface.Extensions.Panel.Update({ IconId: getIconAndId, Icon: 'Custom', PanelId: panelName });
     }
-
+  }
   console.info({ Info: "UserInterface Constructed!" });
 }
 
