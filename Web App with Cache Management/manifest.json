@@ -40,7 +40,16 @@
             "default": "https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png",
             "domain": "WebAppClearCache",
             "required": false
-        }
+        },
+        {
+            "id": "autoClear",
+            "name": "Automatically Clear",
+            "info": "Do you want to automatically clear login data without a prompt?",
+            "type": "boolean",
+            "default": false,
+            "domain": "WebAppClearCache",
+            "required": true
+        },
         {
             "id": "waitTimer",
             "name": "Prompt Countdown",
