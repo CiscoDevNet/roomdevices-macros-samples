@@ -32,6 +32,9 @@ const webAppURL = 'https://app.mural.co';
 const webAppLogo = 'https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png';
 const waitTimer = 20;
 
+// To disable user prompt and automatically clear data, set this to true.
+const autoClear = false;
+
 // Name of the button below:
 const appName = 'Mural';
 
@@ -100,29 +103,34 @@ function monitorWebView() {
   xapi.Status.UserInterface.WebView.on((update) => {
     if (update.id === webviewId && update.Status === 'NotVisible') {
       webviewId = null;
-      // Clear cached logins upon closure of WebView
-      xapi.Command.UserInterface.Message.Prompt.Display({
-            Title: 'Clear Login?',
-            Text: 'Would you like to delete your stored login?',
-            FeedbackId: 'clearCache',
-            Duration: waitTimer,
-            "Option.1": 'Yes',
-            "Option.2": 'No',
+      if (autoClear === true) {
+        deleteCredentials();
+      }
+      else {
+        // Clear cached logins upon closure of WebView
+        xapi.Command.UserInterface.Message.Prompt.Display({
+              Title: 'Clear Login?',
+              Text: 'Would you like to delete your stored login?',
+              FeedbackId: 'clearCache',
+              Duration: waitTimer,
+              "Option.1": 'Yes',
+              "Option.2": 'No',
+          })
+  
+        // Delete credentials if user answers 'Yes'
+        xapi.Event.UserInterface.Message.Prompt.Response.on((event) => {
+          if (event.OptionId === '1') {
+            deleteCredentials();
+          }
         })
-
-      // Delete credentials if user answers 'Yes'
-      xapi.Event.UserInterface.Message.Prompt.Response.on((event) => {
-        if (event.OptionId === '1') {
-          deleteCredentials();
-        }
-      })
-
-      // Delete credentials if prompt times out
-      xapi.Event.UserInterface.Message.Prompt.Cleared.on(value => {
-        if (value.id === '1') {
-          deleteCredentials();
-        }
-      })
+  
+        // Delete credentials if prompt times out
+        xapi.Event.UserInterface.Message.Prompt.Cleared.on(value => {
+          if (value.id === '1') {
+            deleteCredentials();
+          }
+        })
+      }
 
     }
     if (update.URL === webAppURL) {
