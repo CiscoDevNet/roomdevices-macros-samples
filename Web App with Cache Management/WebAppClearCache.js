@@ -23,86 +23,27 @@ import xapi from 'xapi';
 // Ensure WebGL is enabled
 xapi.Config.WebEngine.Features.WebGL.set('On');
 
-let product = '';
-let webviewId = null;
-
 // CUSTOMIZE THESE VARIABLES!!!!!!!
 
-const webAppURL = 'https://app.mural.co';
-const webAppLogo = 'https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png';
-const waitTimer = 20;
-
-// To disable user prompt and automatically clear data, set this to true.
+// To disable user prompt and automatically clear data without prompting, set this to true.
 const autoClear = false;
 
-// Name of the button below:
-const appName = 'Mural';
+// Seconds for prompt to display before auto-clearing.
+
+const waitTimer = 20;
 
 // END VARIABLES
 
 
-let panelName = appName.replaceAll(" ","").toLowerCase() + 'App';
-
 async function init() {
-  console.log({ Message: "Initializing Macro..." });
-  product = await xapi.Status.SystemUnit.ProductPlatform.get();
-  // Build UI Elements
-  await buildUI();
-
-  console.log({ Message: "Macro fully initialized and ready!" });
-
   // Monitor WebView status
   monitorWebView();
 }
 
-// UI Builder Function
-async function buildUI() {
-  console.info({ Info: "Constructing UserInterface..." });
-
-  const panel_xml = `<Extensions>
-                      <Panel>
-                        <Order>1</Order>
-                        <Origin>local</Origin>
-                        <Location>ControlPanel</Location>
-                        <Icon>Info</Icon>
-                        <Name>${appName}</Name>
-                        <ActivityType>Custom</ActivityType>
-                      </Panel>
-                    </Extensions>
-                    `;
-
-  // Check for Interactive System before pushing Web app
-  if (product.includes('Desk') || product.includes('Board')) {
-    console.log("Enabling Button");
-
-    await xapi.Command.UserInterface.Extensions.Panel.Save({ PanelId: panelName }, panel_xml);
-    if (webAppLogo != '' || webAppLogo != undefined){
-        let getIconAndId = (await xapi.Command.UserInterface.Extensions.Icon.Download({ Url: webAppLogo })).IconId;
-        let uploadIcon = await xapi.Command.UserInterface.Extensions.Panel.Update({ IconId: getIconAndId, Icon: 'Custom', PanelId: panelName });
-    }
-  }
-  console.info({ Info: "UserInterface Constructed!" });
-}
-
-// Listener for Web Apps
-xapi.Event.UserInterface.Extensions.Panel.Clicked.on(event => {
-  switch (event.PanelId) {
-    case panelName:
-      // Log Press
-      console.log(appName + " web app started via panel button press");
-      xapi.Command.UserInterface.WebView.Display({ Mode: 'FullScreen', Target: 'OSD', Title: appName, Url: webAppURL })
-        .then(response => {
-          webviewId = response.id; // Store the webview ID
-        });
-      break;
-  }
-});
-
 // Monitor WebView status for closure and prompt for login deletion
 function monitorWebView() {
   xapi.Status.UserInterface.WebView.on((update) => {
-    if (update.id === webviewId && update.Status === 'NotVisible') {
-      webviewId = null;
+    if (update.Status === 'NotVisible') {
       if (autoClear === true) {
         deleteCredentials();
       }
@@ -132,9 +73,6 @@ function monitorWebView() {
         })
       }
 
-    }
-    if (update.URL === webAppURL) {
-      webviewId = update.id;
     }
   });
 }
