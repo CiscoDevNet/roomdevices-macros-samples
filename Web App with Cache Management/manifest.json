@@ -1,0 +1,37 @@
+{
+    "version": "1",
+    "profile": {
+      "macro": {
+        "items": [
+          {
+            "payload": "./WebAppClearCache.js",
+            "id": "WebAppClearCache",
+            "type": "url"
+          }
+        ]
+      },
+      "roomcontrol": {
+        "items": []
+      },
+      "userParams": [
+        {
+            "id": "autoClear",
+            "name": "Automatically Clear",
+            "info": "Do you want to automatically clear login data without a prompt?",
+            "type": "boolean",
+            "default": false,
+            "domain": "WebAppClearCache",
+            "required": true
+        },
+        {
+            "id": "waitTimer",
+            "name": "Prompt Countdown",
+            "info": "How many seconds should the prompt for clearing login display?",
+            "type": "number",
+            "default": 20,
+            "domain": "WebAppClearCache",
+            "required": true
+        }
+      ]
+    }
+  }
