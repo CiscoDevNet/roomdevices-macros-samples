@@ -15,33 +15,6 @@
       },
       "userParams": [
         {
-            "id": "appName",
-            "name": "Application Name",
-            "info": "Name the app button",
-            "type": "string",
-            "default": "App",
-            "domain": "WebAppClearCache",
-            "required": true
-        },
-        {
-            "id": "webAppURL",
-            "name": "Web App URL",
-            "info": "URL is required, please include https://",
-            "type": "string",
-            "default": "https://app.mural.co",
-            "domain": "WebAppClearCache",
-            "required": true
-        },
-        {
-            "id": "webAppLogo",
-            "name": "Web App Logo URL",
-            "info": "Logo URL is optional, please include https://",
-            "type": "string",
-            "default": "https://cdn.prod.website-files.com/62e11362da2667ac3d0e6ed5/659d7f9e582a15e81030a3cf_Mural_Symbol_Multicolor_RGB.png",
-            "domain": "WebAppClearCache",
-            "required": false
-        },
-        {
             "id": "autoClear",
             "name": "Automatically Clear",
             "info": "Do you want to automatically clear login data without a prompt?",
