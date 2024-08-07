@@ -1,5 +1,5 @@
 # Cisco Room Devices Macros - Create Web App with Authentication Controls
-This macro allows the creation of local web apps on a device that, when exited, prompt the user to clear their login information. This is useful for apps like whiteboarding where confidential or personal user information remains accessible.
+This macro triggers all web apps to, upon exit, prompt the user to clear their login information. This is useful for running apps like whiteboarding in shared devices when logins are stored in the cache.
 
 ## Requirements
 1. A Cisco Webex Board or Desk device
