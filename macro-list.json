@@ -263,5 +263,11 @@
         "description": "Set a time of day you want your device to reboot",
         "symbol": "🔄",
         "tags": "home office, meeting room"
+    },
+    {
+        "title": "Web App + Login Deletion",
+        "description": "Monitors web apps so, upon exit, a prompt appears that asks the user to clear their cached login credentials.",
+        "symbol": "🔐",
+        "tags": "meeting room, web"
     }
 ]
