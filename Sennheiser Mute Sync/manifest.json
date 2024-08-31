@@ -1,0 +1,42 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./sennheiser-lib.js",
+          "type": "library",
+          "id": "sennheiser-lib"
+        },
+        {
+          "payload": "./sennheiser-sync.js",
+          "type": "macro",
+          "id": "sennheiser-sync"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "ip",
+        "name": "IP address",
+        "type": "string",
+        "domain": "sennheiser-sync",
+        "required": true
+      },
+      {
+        "id": "username",
+        "name": "API username",
+        "type": "string",
+        "domain": "sennheiser-sync",
+        "required": true
+      },
+      {
+        "id": "password",
+        "name": "API password",
+        "type": "string",
+        "domain": "sennheiser-sync",
+        "required": true
+      }
+    ]
+  }
+}

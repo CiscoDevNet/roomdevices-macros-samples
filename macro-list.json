@@ -269,5 +269,12 @@
         "description": "Monitors web apps so, upon exit, a prompt appears that asks the user to clear their cached login credentials.",
         "symbol": "🔐",
         "tags": "meeting room, web, whiteboard"
+    },
+    {
+        "title": "Sennheiser Mute Sync",
+        "description": "Sync the mute state on a Sennheiser TCCM ceiling microphone",
+        "symbol": "🔇",
+        "tags": "calling, audio, peripherals"
     }
+
 ]
