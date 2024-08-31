@@ -10,6 +10,11 @@ If for any reason the video device is not able to update the Sennheiser mute sta
 
 The integration consists of a simple library module containing the HTTP API calls necessary to talk to the ceiling mic, and a macro for calling those APIs whenever the video system mute state changes.
 
+It can be easily installed by connecting to your device from this device (tap Connect),
+enter your device credentials, tap Install and enter the ip/username/password for the Sennheiser API user.
+
+To install manually:
+
 * Install `sennheiser-lib.js` and `sennheiser-sync.js` on the video device
 * Enter the IP address, the api username and password in the `sennheiser-sync.js` file
 * Enable the `sennheiser-sync.js` macro
