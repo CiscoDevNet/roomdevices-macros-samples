@@ -12,6 +12,7 @@ Memory Functions by Zacharie Gignac & Robert McGonigle
 import xapi from 'xapi';
 
 const MACRO_VERSION       = '0.9.220206-9';
+const SCRIPT_NAME         = 'room-metrics';
 
 const B_SHOW_WELCOME                = true;
 const B_SEND_FEEDBACK_RESET_METRICS = true;
@@ -816,7 +817,7 @@ const config = {
 };
 
 var mem = {
-    "localScript": module.name
+    "localScript": SCRIPT_NAME
 };
 
 function memoryInit() {
