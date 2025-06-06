@@ -78,6 +78,12 @@
         "tags": "home office"
     },
     {
+        "title": "Enroll Certificate",
+        "description": "Enroll a certificate on the device using SCEP",
+        "symbol": "🔑",
+        "tags": "security"
+    },
+    {
         "title": "Join 3rd Party Meeting",
         "description": "A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom)",
         "symbol": "🥉",
