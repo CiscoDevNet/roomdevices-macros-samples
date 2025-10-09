@@ -1,0 +1,81 @@
+<Extensions>
+  <Version>1.11</Version>
+  <Panel>
+    <Order>1</Order>
+    <PanelId>panel_6</PanelId>
+    <Origin>local</Origin>
+    <Location>HomeScreen</Location>
+    <Icon>Home</Icon>
+    <Color>#008094</Color>
+    <Name>Wallpaper</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>🎨 Wallpaper</Name>
+      <Row>
+        <Name>Row</Name>
+        <Widget>
+          <WidgetId>theme</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4;columns=3</Options>
+          <ValueSpace>
+            <Value>
+              <Key>ArcticNight</Key>
+              <Name>Arctic Night</Name>
+            </Value>
+            <Value>
+              <Key>CarbonBlack</Key>
+              <Name>Carbon Black</Name>
+            </Value>
+            <Value>
+              <Key>ChiliPlum</Key>
+              <Name>Chili Plum</Name>
+            </Value>
+            <Value>
+              <Key>CrystalMist</Key>
+              <Name>Crystal Mist</Name>
+            </Value>
+            <Value>
+              <Key>EveningFjord</Key>
+              <Name>Evening Fjord</Name>
+            </Value>
+            <Value>
+              <Key>FirstLight</Key>
+              <Name>First Light</Name>
+            </Value>
+            <Value>
+              <Key>FoggyMoor</Key>
+              <Name>Foggy Moor</Name>
+            </Value>
+            <Value>
+              <Key>MeadowStone</Key>
+              <Name>Meadow Stone</Name>
+            </Value>
+            <Value>
+              <Key>PebbleShoal</Key>
+              <Name>Pebble Shoal</Name>
+            </Value>
+            <Value>
+              <Key>PoppyBreeze</Key>
+              <Name>Poppy Breeze</Name>
+            </Value>
+            <Value>
+              <Key>SandShoal</Key>
+              <Name>Sand Shoal</Name>
+            </Value>
+            <Value>
+              <Key>SmokedRose</Key>
+              <Name>Smoked Rose</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+        <Widget>
+          <WidgetId>widget_3</WidgetId>
+          <Name>To install wallpaper on your 📱 phone, visit cs.co/roomos26</Name>
+          <Type>Text</Type>
+          <Options>size=4;fontSize=small;align=center</Options>
+        </Widget>
+      </Row>
+      <Options>hideRowNames=1</Options>
+    </Page>
+  </Panel>
+</Extensions>

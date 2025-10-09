@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./wallpaperpicker.js",
+          "type": "url",
+          "id": "wallpaper"
+        }
+      ]
+    },
+    "roomcontrol": {
+      "items": [
+        {
+          "payload": "./wallpaper.xml",
+          "id": "wallpaper-ui",
+          "type": "url"
+        }
+      ]
+    }
+  }
+}
