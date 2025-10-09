@@ -18,12 +18,6 @@
         "tags": "calling, audio"
     },
     {
-        "title": "Automatic Room Booking",
-        "description": "Automatically books a room when the room being used",
-        "symbol": "📅",
-        "tags": "calling, meeting room"
-    },
-    {
         "title": "Audio Safe Guard",
         "description": "Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands",
         "symbol": "🔒",
@@ -82,12 +76,6 @@
         "description": "Enroll a certificate on the device using SCEP",
         "symbol": "🔑",
         "tags": "security"
-    },
-    {
-        "title": "Join 3rd Party Meeting",
-        "description": "A Join Meeting Panel/Text Input lets you join 3rd party non-Webex meetings (SIP, eg MicroSoft Teams or Zoom)",
-        "symbol": "🥉",
-        "tags": "calling"
     },
     {
         "title": "Language Selector",
@@ -155,12 +143,6 @@
         "description": "Ensure your volume setting is remembered, even after reboot.",
         "symbol": "🔊",
         "tags": "home office"
-    },
-    {
-        "title": "Unbook Empty Room",
-        "description": "If a room is booked but no one is there, unbook it.",
-        "symbol": "📅",
-        "tags": "meeting room"
     },
     {
         "title": "Remote Monitoring Alert",
@@ -251,12 +233,6 @@
         "description": "Enable a USB passthrough solution on your non USB hardware",
         "symbol": "🎦",
         "tags": "calling"
-    },
-    {
-        "title": "WebApps Manager",
-        "description": "Let's you easily add/remove web apps from a ui on the device itself",
-        "symbol": "🔗",
-        "tags": "home office, web"
     },
     {
         "title": "Daily Reboot",
