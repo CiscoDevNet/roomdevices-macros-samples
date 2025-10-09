@@ -275,6 +275,11 @@
         "description": "Sync the mute state on a Sennheiser TCCM ceiling microphone",
         "symbol": "🔇",
         "tags": "calling, audio, peripherals"
+    },
+    {
+        "title": "Wallpaper Picker",
+        "description": "Easily change the wallpaper on your RoomOS 26 device.",
+        "symbol": "🎨",
+        "tags": "home office"
     }
-
 ]
