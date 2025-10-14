@@ -1,4 +1,4 @@
-# Settings Pro
+# Soft Mute
 
 Button on the home screen that let's you toggle microphone mute.
 
