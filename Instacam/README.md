@@ -2,6 +2,8 @@
 
 Tweak the color saturation and color compenstation of your Desk device.
 
+![Preview](./preview.png)
+
 ![Settings panel](./settings-panel.png)
 
 Requirement
