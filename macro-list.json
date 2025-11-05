@@ -78,6 +78,12 @@
         "tags": "security"
     },
     {
+        "title": "Instacam",
+        "description": "Tweak the color saturation and color compenstation of your Desk device.",
+        "symbol": "📸",
+        "tags": "home office"
+    },
+    {
         "title": "Language Selector",
         "description": "By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments.",
         "symbol": "💬",
