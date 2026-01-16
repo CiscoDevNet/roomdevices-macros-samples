@@ -19,13 +19,13 @@
     },
     {
         "title": "Audio Safe Guard",
-        "description": "Enforce a maximum output volume on the device. Demostrates a simple macro using API statuses and commands",
+        "description": "Enforce a maximum output volume on the device. Demonstrates a simple macro using API statuses and commands",
         "symbol": "🔒",
         "tags": "audio"
     },
     {
         "title": "BeRightBack",
-        "description": "Set a virtual bacground that says you are away, but still on audio.",
+        "description": "Set a virtual background that says you are away, but still on audio.",
         "symbol": "☕️",
         "tags": "home office, calling"
     },
@@ -79,7 +79,7 @@
     },
     {
         "title": "Instacam",
-        "description": "Tweak the color saturation and color compenstation of your Desk device.",
+        "description": "Tweak the color saturation and color compensation of your Desk device.",
         "symbol": "📸",
         "tags": "home office"
     },
@@ -103,7 +103,7 @@
     },
     {
         "title": "Library - Weather Forecast",
-        "description": "Get global weather forecase from free Norwegian weather service",
+        "description": "Get global weather forecast from free Norwegian weather service",
         "symbol": "🌤",
         "tags": "library"
     },
@@ -212,7 +212,7 @@
     },
     {
         "title": "Smart Dual Screen Presentation",
-        "description": "Allows primary monitor on multiscreen systems to display preso content when not in a video call.",
+        "description": "Allows primary monitor on multi-screen systems to display present content when not in a video call.",
         "symbol": "🧑‍🏫",
         "tags": "meeting room"
     },
@@ -233,12 +233,6 @@
         "description": "Fun Game which allows the user to see how to update images and panels in real time with relation to user input!",
         "symbol": "🕹",
         "tags": "fun"
-    },
-    {
-        "title": "USB Mode Version 2",
-        "description": "Enable a USB passthrough solution on your non USB hardware",
-        "symbol": "🎦",
-        "tags": "calling"
     },
     {
         "title": "Daily Reboot",
