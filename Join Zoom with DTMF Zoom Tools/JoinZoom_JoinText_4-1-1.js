@@ -88,7 +88,7 @@ page.passcode = function (input = '[error]', submitButton = 'Next') {
         duration: 0,
         feedback: "join_zoom_v_" + config.version + "~03~opr",
         submit: submitButton,
-        placeholder: "Enter Passcode of Leave Blank",
+        placeholder: "Enter Passcode or Leave Blank",
         type: 'Numeric' //SingleLine/Numeric/Password/PIN
     }
     return prompt.textInput(content)
@@ -101,7 +101,7 @@ page.passcode.error = function (input = '[error]', submitButton = 'Next') {
         duration: 0,
         feedback: "join_zoom_v_" + config.version + "~03~err",
         submit: submitButton,
-        placeholder: "Enter Passcode of Leave Blank",
+        placeholder: "Enter Passcode or Leave Blank",
         type: 'Numeric' //SingleLine/Numeric/Password/PIN
     }
     return prompt.textInput(content, true)
