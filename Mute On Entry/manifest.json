@@ -1,0 +1,27 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "./MuteOnEntry.js",
+          "type": "url",
+          "id": "mute-on-entry"
+        }
+      ]
+    },
+    "userParams": [
+      {
+        "id": "muteVideo",
+        "name": "Also mute video",
+        "info": "Mute both video and audio when starting a call.",
+        "type": "boolean",
+        "default": false,
+        "domain": "mute-on-entry",
+        "required": true
+      }
+    ]
+  },
+  "profileName": "backup-tbjolset",
+  "generatedAt": "20210526-1707"
+}

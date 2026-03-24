@@ -121,6 +121,12 @@
         "tags": "library"
     },
     {
+        "title": "Mute On Entry",
+        "description": "Auto-mute anytime you join a call.",
+        "symbol": "🤫",
+        "tags": "privacy, home office, calling"
+    },
+    {
         "title": "Multi-Content Solution",
         "description": "Compose multiple video inputs to one presentation source and send to far-end",
         "symbol": "🔀",
