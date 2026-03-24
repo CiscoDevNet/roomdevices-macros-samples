@@ -15,7 +15,7 @@
         "id": "muteVideo",
         "name": "Also mute video",
         "info": "Mute both video and audio when starting a call.",
-        "type": "boolean",
+        "type": "bool",
         "default": false,
         "domain": "mute-on-entry",
         "required": true
