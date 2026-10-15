@@ -1,267 +1,273 @@
 [
-    {
-        "title": "AppleTV Control",
-        "description": "Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.",
-        "symbol": "📺",
-        "tags": "home office, peripherals"
-    },
-    {
-        "title": "Audio Call Dial Pad",
-        "description": "Create an in-room control application that adds a dedicated audio call dial pad to the Touch 10",
-        "symbol": "☎️",
-        "tags": "calling"
-    },
-    {
-        "title": "Automatic Video Mute",
-        "description": "Automatically mute video when you mute audio",
-        "symbol": "🔇",
-        "tags": "calling, audio"
-    },
-    {
-        "title": "Audio Safe Guard",
-        "description": "Enforce a maximum output volume on the device. Demonstrates a simple macro using API statuses and commands",
-        "symbol": "🔒",
-        "tags": "audio"
-    },
-    {
-        "title": "BeRightBack",
-        "description": "Set a virtual background that says you are away, but still on audio.",
-        "symbol": "☕️",
-        "tags": "home office, calling"
-    },
-    {
-        "title": "Big Red Button",
-        "description": "Quick action such as muting with a connected USB device",
-        "symbol": "🔴",
-        "tags": "home office, peripherals"
-    },
-    {
-        "title": "Block Outgoing Calls",
-        "description": "Block certain numbers in a reject list from being called from the system.",
-        "symbol": "🛑",
-        "tags": "calling"
-    },
-    {
-        "title": "Camera control with wide angle view",
-        "description": "Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.",
-        "symbol": "📽",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Conditional Autoanswer with Prompt",
-        "description": "Auto answer on incoming calls - but only for a select number of remote sites",
-        "symbol": "😴",
-        "tags": "calling"
-    },
-    {
-        "title": "Datadog Call Performance Monitoring",
-        "description": "Vizualize and alert on the performance of your calls while they happen",
-        "symbol": "🚨",
-        "tags": "calling, meeting room, peripherals, performance, monitoring"
-    },
-    {
-        "title": "Early OBTP",
-        "description": "Show One Button To Push earlier than the default 5 minutes.",
-        "symbol": "🟢",
-        "tags": "calling, meeting room, booking"
-    },
-    {
-        "title": "Energy Prices",
-        "description": "Show hourly Norwegian electricity prices on home screen",
-        "symbol": "⚡️",
-        "tags": "home office"
-    },
-    {
-        "title": "Enroll Certificate",
-        "description": "Enroll a certificate on the device using SCEP",
-        "symbol": "🔑",
-        "tags": "security"
-    },
-    {
-        "title": "Instacam",
-        "description": "Tweak the color saturation and color compensation of your Desk device.",
-        "symbol": "📸",
-        "tags": "home office"
-    },
-    {
-        "title": "Language Selector",
-        "description": "By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments.",
-        "symbol": "💬",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Launch Halfwake",
-        "description": "Set your system in halfwake / signage mode instantly from the home screen",
-        "symbol": "😴",
-        "tags": "screensaver"
-    },
-    {
-        "title": "Library - Send Webex Message",
-        "description": "Send a Webex (chat) message from the video device using the Webex APIs",
-        "symbol": "💌",
-        "tags": "library"
-    },
-    {
-        "title": "Library - Weather Forecast",
-        "description": "Get global weather forecast from free Norwegian weather service",
-        "symbol": "🌤",
-        "tags": "library"
-    },
-    {
-        "title": "Library - Guido",
-        "url": "https://github.com/cisco-ce/guido",
-        "description": "Library for working the Webex Device UI",
-        "symbol": "🎨",
-        "tags": "library"
-    },
-    {
-        "title": "Global Macro Messaging",
-        "description": "Library for Inter-Macro and Inter-Codec messaging",
-        "symbol": "🔀",
-        "tags": "library"
-    },
-    {
-        "title": "Mute On Entry",
-        "description": "Auto-mute anytime you join a call.",
-        "symbol": "🤫",
-        "tags": "privacy, home office, calling"
-    },
-    {
-        "title": "Multi-Content Solution",
-        "description": "Compose multiple video inputs to one presentation source and send to far-end",
-        "symbol": "🔀",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Philips Hue",
-        "description": "Control your lights from the video device",
-        "symbol": "💡",
-        "tags": "peripherals, home office"
-    },
-    {
-        "title": "Pin Code Lock",
-        "description": "Require user to enter pin code when using the video system",
-        "symbol": "🔐",
-        "tags": "privacy, home office"
-    },
-    {
-        "title": "Quiet Mode",
-        "description": "Make your device silent at the end of your workday",
-        "symbol": "🔕",
-        "tags": "privacy, home office"
-    },
-    {
-        "title": "Remember My Volume",
-        "description": "Ensure your volume setting is remembered, even after reboot.",
-        "symbol": "🔊",
-        "tags": "home office"
-    },
-    {
-        "title": "Remote Monitoring Alert",
-        "description": "Display OSD\\Touch warning text when video snapshots (aka remote monitoring) are being captured",
-        "symbol": "🚨",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Report Issue",
-        "description": "Report Issue web dialog that connects to Service Now",
-        "symbol": "📣",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Room Capacity Alert",
-        "description": "Display Alert on the device if a set capacity is exceeded - Based on people count API",
-        "symbol": "🚨",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Room Cleaning and Usage",
-        "description": "Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions.",
-        "symbol": "🧼",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Room Kit Pro SX80 GPIO",
-        "description": "See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall.",
-        "symbol": "🔌",
-        "tags": "meeting room, peripherals"
-    },
-    {
-        "title": "Room Metrics",
-        "description": "Show the utilization and environmental metrics about the device of the day",
-        "symbol": "📊",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Samsung Flip",
-        "description": "Easily switch from Webex mode to Samsung Flip mode.",
-        "symbol": "🖌️",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Settings Pro",
-        "description": "The settings you never knew you always wanted.",
-        "symbol": "🛠",
-        "tags": "home office, web, audio"
-    },
-    {
-        "title": "Signage Carousel",
-        "description": "Change between several different signage URLs at regular intervals.",
-        "symbol": "🎠",
-        "tags": "screensaver"
-    },
-    {
-        "title": "Scheduled Actions",
-        "description": "Have the endpoint device automatically perform actions, like placing a call, at a specified time and day.",
-        "symbol": "📆",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Smart Dual Screen Presentation",
-        "description": "Allows primary monitor on multi-screen systems to display present content when not in a video call.",
-        "symbol": "🧑‍🏫",
-        "tags": "meeting room"
-    },
-    {
-        "title": "Soft Mute",
-        "description": "Mute the device before you start a call",
-        "symbol": "🔇",
-        "tags": "calling"
-    },
-    {
-        "title": "Speed Dials Panel",
-        "description": "Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?",
-        "symbol": "🏎",
-        "tags": "calling"
-    },
-    {
-        "title": "TicTacToe",
-        "description": "Fun Game which allows the user to see how to update images and panels in real time with relation to user input!",
-        "symbol": "🕹",
-        "tags": "fun"
-    },
-    {
-        "title": "Daily Reboot",
-        "description": "Set a time of day you want your device to reboot",
-        "symbol": "🔄",
-        "tags": "home office, meeting room"
-    },
-    {
-        "title": "Web App with Cache Management",
-        "description": "Monitors web apps so, upon exit, a prompt appears that asks the user to clear their cached login credentials.",
-        "symbol": "🔐",
-        "tags": "meeting room, web, whiteboard"
-    },
-    {
-        "title": "Sennheiser Mute Sync",
-        "description": "Sync the mute state on a Sennheiser TCCM ceiling microphone",
-        "symbol": "🔇",
-        "tags": "calling, audio, peripherals"
-    },
-    {
-        "title": "Wallpaper Picker",
-        "description": "Easily change the wallpaper on your RoomOS 26 device.",
-        "symbol": "🎨",
-        "tags": "home office"
-    }
+  {
+    "title": "AppleTV Control",
+    "description": "Add an Apple TV remote control to the touch 10. All communication is done directly via HDMI-CEC. No control system needed.",
+    "symbol": "📺",
+    "tags": "home office, peripherals"
+  },
+  {
+    "title": "Audio Call Dial Pad",
+    "description": "Create an in-room control application that adds a dedicated audio call dial pad to the Touch 10",
+    "symbol": "☎️",
+    "tags": "calling"
+  },
+  {
+    "title": "Automatic Video Mute",
+    "description": "Automatically mute video when you mute audio",
+    "symbol": "🔇",
+    "tags": "calling, audio"
+  },
+  {
+    "title": "Audio Safe Guard",
+    "description": "Enforce a maximum output volume on the device. Demonstrates a simple macro using API statuses and commands",
+    "symbol": "🔒",
+    "tags": "audio"
+  },
+  {
+    "title": "BeRightBack",
+    "description": "Set a virtual background that says you are away, but still on audio.",
+    "symbol": "☕️",
+    "tags": "home office, calling"
+  },
+  {
+    "title": "Big Red Button",
+    "description": "Quick action such as muting with a connected USB device",
+    "symbol": "🔴",
+    "tags": "home office, peripherals"
+  },
+  {
+    "title": "Block Outgoing Calls",
+    "description": "Block certain numbers in a reject list from being called from the system.",
+    "symbol": "🛑",
+    "tags": "calling"
+  },
+  {
+    "title": "Camera control with wide angle view",
+    "description": "Your custom camera control page, including creating a wide angle view of two cameras and controlling both simultaneously.",
+    "symbol": "📽",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Conditional Autoanswer with Prompt",
+    "description": "Auto answer on incoming calls - but only for a select number of remote sites",
+    "symbol": "😴",
+    "tags": "calling"
+  },
+  {
+    "title": "Datadog Call Performance Monitoring",
+    "description": "Vizualize and alert on the performance of your calls while they happen",
+    "symbol": "🚨",
+    "tags": "calling, meeting room, peripherals, performance, monitoring"
+  },
+  {
+    "title": "Early OBTP",
+    "description": "Show One Button To Push earlier than the default 5 minutes.",
+    "symbol": "🟢",
+    "tags": "calling, meeting room, booking"
+  },
+  {
+    "title": "Energy Prices",
+    "description": "Show hourly Norwegian electricity prices on home screen",
+    "symbol": "⚡️",
+    "tags": "home office"
+  },
+  {
+    "title": "Enroll Certificate",
+    "description": "Enroll a certificate on the device using SCEP",
+    "symbol": "🔑",
+    "tags": "security"
+  },
+  {
+    "title": "Instacam",
+    "description": "Tweak the color saturation and color compensation of your Desk device.",
+    "symbol": "📸",
+    "tags": "home office"
+  },
+  {
+    "title": "Language Selector",
+    "description": "By default the touch 10 does not have a way for the end user to select the interface language. This macro adds this feature. Great for those multi-language environments.",
+    "symbol": "💬",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Launch Halfwake",
+    "description": "Set your system in halfwake / signage mode instantly from the home screen",
+    "symbol": "😴",
+    "tags": "screensaver"
+  },
+  {
+    "title": "Library - Send Webex Message",
+    "description": "Send a Webex (chat) message from the video device using the Webex APIs",
+    "symbol": "💌",
+    "tags": "library"
+  },
+  {
+    "title": "Library - Weather Forecast",
+    "description": "Get global weather forecast from free Norwegian weather service",
+    "symbol": "🌤",
+    "tags": "library"
+  },
+  {
+    "title": "Library - Guido",
+    "url": "https://github.com/cisco-ce/guido",
+    "description": "Library for working the Webex Device UI",
+    "symbol": "🎨",
+    "tags": "library"
+  },
+  {
+    "title": "Global Macro Messaging",
+    "description": "Library for Inter-Macro and Inter-Codec messaging",
+    "symbol": "🔀",
+    "tags": "library"
+  },
+  {
+    "title": "Mute On Entry",
+    "description": "Auto-mute anytime you join a call.",
+    "symbol": "🤫",
+    "tags": "privacy, home office, calling"
+  },
+  {
+    "title": "Multi-Content Solution",
+    "description": "Compose multiple video inputs to one presentation source and send to far-end",
+    "symbol": "🔀",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Philips Hue",
+    "description": "Control your lights from the video device",
+    "symbol": "💡",
+    "tags": "peripherals, home office"
+  },
+  {
+    "title": "Pin Code Lock",
+    "description": "Require user to enter pin code when using the video system",
+    "symbol": "🔐",
+    "tags": "privacy, home office"
+  },
+  {
+    "title": "Quiet Mode",
+    "description": "Make your device silent at the end of your workday",
+    "symbol": "🔕",
+    "tags": "privacy, home office"
+  },
+  {
+    "title": "Remember My Volume",
+    "description": "Ensure your volume setting is remembered, even after reboot.",
+    "symbol": "🔊",
+    "tags": "home office"
+  },
+  {
+    "title": "Remote Monitoring Alert",
+    "description": "Display OSD\\Touch warning text when video snapshots (aka remote monitoring) are being captured",
+    "symbol": "🚨",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Report Issue",
+    "description": "Report Issue web dialog that connects to Service Now",
+    "symbol": "📣",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Room Capacity Alert",
+    "description": "Display Alert on the device if a set capacity is exceeded - Based on people count API",
+    "symbol": "🚨",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Room Cleaning and Usage",
+    "description": "Records cleaning events, shows time since last used, time since last cleaned, number of times since last cleaned, warns of capacity restrictions.",
+    "symbol": "🧼",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Room Kit Pro SX80 GPIO",
+    "description": "See how to get the device to perform some actions when triggering a change on the built in GPIO. Add an one-button-to-dial button on the wall.",
+    "symbol": "🔌",
+    "tags": "meeting room, peripherals"
+  },
+  {
+    "title": "Room Metrics",
+    "description": "Show the utilization and environmental metrics about the device of the day",
+    "symbol": "📊",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Samsung Flip",
+    "description": "Easily switch from Webex mode to Samsung Flip mode.",
+    "symbol": "🖌️",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Settings Pro",
+    "description": "The settings you never knew you always wanted.",
+    "symbol": "🛠",
+    "tags": "home office, web, audio"
+  },
+  {
+    "title": "Signage Carousel",
+    "description": "Change between several different signage URLs at regular intervals.",
+    "symbol": "🎠",
+    "tags": "screensaver"
+  },
+  {
+    "title": "Scheduled Actions",
+    "description": "Have the endpoint device automatically perform actions, like placing a call, at a specified time and day.",
+    "symbol": "📆",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Smart Dual Screen Presentation",
+    "description": "Allows primary monitor on multi-screen systems to display present content when not in a video call.",
+    "symbol": "🧑‍🏫",
+    "tags": "meeting room"
+  },
+  {
+    "title": "Soft Mute",
+    "description": "Mute the device before you start a call",
+    "symbol": "🔇",
+    "tags": "calling"
+  },
+  {
+    "title": "Speed Dials Panel",
+    "description": "Always dialling the same few numbers from the meeting room. Maybe want to add calling 911 or the Pizza Place more prominent?",
+    "symbol": "🏎",
+    "tags": "calling"
+  },
+  {
+    "title": "TicTacToe",
+    "description": "Fun Game which allows the user to see how to update images and panels in real time with relation to user input!",
+    "symbol": "🕹",
+    "tags": "fun"
+  },
+  {
+    "title": "Daily Reboot",
+    "description": "Set a time of day you want your device to reboot",
+    "symbol": "🔄",
+    "tags": "home office, meeting room"
+  },
+  {
+    "title": "Web App with Cache Management",
+    "description": "Monitors web apps so, upon exit, a prompt appears that asks the user to clear their cached login credentials.",
+    "symbol": "🔐",
+    "tags": "meeting room, web, whiteboard"
+  },
+  {
+    "title": "Sennheiser Mute Sync",
+    "description": "Sync the mute state on a Sennheiser TCCM ceiling microphone",
+    "symbol": "🔇",
+    "tags": "calling, audio, peripherals"
+  },
+  {
+    "title": "Third Party Occupancy Sensor",
+    "description": "Set the device and booking panel's room occupancy by using a third party occupancy sensor and a macro for syncronising them.",
+    "symbol": "🚨",
+    "tags": "meeting room, occupancy, peripherals, booking"
+  },
+  {
+    "title": "Wallpaper Picker",
+    "description": "Easily change the wallpaper on your RoomOS 26 device.",
+    "symbol": "🎨",
+    "tags": "home office"
+  }
 ]
