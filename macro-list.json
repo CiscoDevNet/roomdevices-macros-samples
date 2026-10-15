@@ -259,6 +259,12 @@
         "tags": "calling, audio, peripherals"
     },
     {
+        "title": "Third party occupancy sensors",
+        "description": "Third party occupancy sensors",
+        "symbol": "🔀",
+        "tags": "library"
+    },
+    {
         "title": "Wallpaper Picker",
         "description": "Easily change the wallpaper on your RoomOS 26 device.",
         "symbol": "🎨",
