@@ -1,0 +1,14 @@
+{
+  "version": "1",
+  "profile": {
+    "macro": {
+      "items": [
+        {
+          "payload": "occupancy.js",
+          "id": "occupancy",
+          "type": "url"
+        }
+      ]
+    }
+  }
+}
