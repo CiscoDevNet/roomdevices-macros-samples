@@ -12,6 +12,15 @@
     },
     "userParams": [
       {
+        "id": "minParticipants",
+        "name": "Minimum number of participants",
+        "info": "If set to 1, you will always mute when joining a call.",
+        "type": "number",
+        "default": 10,
+        "domain": "mute-on-entry",
+        "required": true
+      },
+      {
         "id": "muteVideo",
         "name": "Also mute video",
         "info": "Mute both video and audio when starting a call.",

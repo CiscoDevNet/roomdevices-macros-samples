@@ -4,8 +4,14 @@
  */
 import xapi from 'xapi'
 
+// minimum number of participants already in meeting for auto-mute to happen
+const minParticipants = 10
+
+// whether to video mute too
+const muteVideo = true;
+
+
 let wasInCall = false
-const muteVideo = false
 
 function alert(text, duration = 2) {
   xapi.Command.UserInterface.Message.Alert.Display({
@@ -14,10 +20,18 @@ function alert(text, duration = 2) {
   })
 }
 
+async function countParticipants() {
+  const list = await xapi.Command.Conference.ParticipantList.Search()
+  // dont count laptops that are paired with a video device
+  return list?.Participant?.filter(p => p?.Status !== 'observer')?.length || 0
+}
+
 async function callsChanged() {
   const inCall = Number(await xapi.Status.SystemUnit.State.NumberOfActiveCalls.get())
   // detect new call
   if (!wasInCall && inCall) {
+    const count = await countParticipants()
+    if (count < minParticipants) return
     try {
       xapi.Command.Audio.Microphones.Mute()
       if (muteVideo) {
